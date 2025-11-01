@@ -1,0 +1,585 @@
+// clear name resolvers... don't know if this is necessary.
+// Can this be factored out...?   // Should be be adding the L...; here instead?
+// stupid: caret will automatically be incremented
+//{{{ HyperSearchResults constructor
+//{{{ getPluginList() method
+//{{{ ScrollHandler class
+// Get catch block
+// number of times eval hit 'this.caller'
+//{{{ update() method
+"/* I guess translated events do not have the 'evt' field set		so consuming won't work. I don't think this is a problem as		nothing uses translation anyway */"
+//{{{ _saveComplete() method
+"/*		Notes: See notes on findMostSpecificMethod.		This method should be rolled into findMostSpecificMethod.	*/"
+//{{{ isSelectionRectangular() method
+// This could be static
+//{{{ literalBeanShellReplace() method
+//{{{ StyleChoice class
+//{{{ getService() method
+// This should be per instance
+// Hack done to fix bringing the window to the front. // At least on windows, Frame.toFront() doesn't cut it. // Remove the isWindows check if it's broken under other // OSes too.
+//{{{ initTextArea() method
+// Do we have the necessary jdk1.2 packages and optional package?
+//{{{ NoPluginsPane class
+// Can we use the proxy mechanism to cast a bsh.This to  // the correct interface?
+//{{{ StyleRenderer class
+// OK, do it by the book.
+"/*					Note: do *not* change this to 					BshClassManager plainClassForName() or equivalent.					This class must not touch any other bsh classes.				*/"
+// this vfs has an extended attribute which is not // in the list. add it to the end with a ref count // of 1
+//{{{ version() method
+//{{{ showDockable() method
+//{{{ createToolBar() method
+//{{{ UnixWorkaround class
+//{{{ getDockablesURI() method
+//{{{ TextAreaPainter constructor
+// if we've got an object, resolve the method
+// need to add static block here
+//{{{ parseColor() method
+// strings might be equal!
+"/*		Note: this should really just throw NoSuchFieldException... need		to change related signatures and code.	*/"
+// heuristic #1
+// so that quick copy works
+// while this might be questionable, some // menus depend on properties
+/* Line highlight */
+// end JcmdProcess.java
+//{{{ getLeadingWhiteSpace() method
+//{{{ Encoding
+/* Auto detect encoding */
+//{{{ sendVFSUpdate() method
+"/*		Note: we need a form of eval that passes the callstack through...	*/"
+//{{{ Windows work around
+// eg, trying to bind C+e if C+e is a prefix
+// Set the instance This reference on the instance
+"/*                 * Find the coding table which is best for this group,                 * and record its identity in the selector table.                 */"
+// we no longer have any // dirs using this extended // attribute
+//{{{ Buttons
+"/*			Wrap nulls.			This is a bit of a cludge to address a deficiency in the class			generator whereby it does not wrap nulls on method delegate.  See			Class Generator.java.  If we fix that then we can remove this.			(just have to generate the code there.)		*/"
+// simplified these settings a little...
+//{{{ getSelectAllOnFocus() method
+//{{{ showBufferSwitcher() method
+// otherwise, determine the next visible line
+//{{{ applicationShouldHandleReopen() method
+//{{{ setRecursive() method
+//{{{ quicksort() method
+//{{{ setLineContext() method
+// need to let \b through so that backspace will work // in HistoryTextFields
+// pattern test
+// Split the methods into constructors and regular method lists
+"/*	 *  XXX: hairy code that is basically just a functional(?) port of some	 *  other code i barely understood	 */"
+//{{{ runInWorkThread() method
+//{{{ generateSkipArray() method
+"/*				TODO:					to get cast and boxing working e.g.					e.g. Byte [] ia = { 1, 2 }					If the baseType is a wrapper type then we need to get the 					primitive TYPE class for the base type here in order for 					the cast to allow it... Then boxing will happen naturally in					the Array.set().					e.g. Integer [] ia = { 1, 2 }				*/"
+//{{{ setAbbrev() method
+//{{{ getJARCacheDirectory() method
+//{{{ getBrowserView() method
+//{{{ addBufferToList() method
+//{{{ showPopupMenu() method
+// some other primitive // should avoid calling methods on primitive, as we do // in Name (can't treat primitive like an object message) // but the hole is useful right now.
+// on insert, start search from beginning of // current match. This will continue to highlight // the current match until another match is found
+// e.g. this.x=5;  or someThisType.x=5;
+"/*		Note: we need a singleton here so that things like 'this == this' work		(and probably a good idea for speed).		Caching a single instance here seems technically incorrect,		considering the declaringInterpreter could be different under some		circumstances.  (Case: a child interpreter running a source() / eval() 		command ).  However the effect is just that the main interpreter that		executes your script should be the one involved in call-backs from Java.		I do not know if there are corner cases where a child interpreter would		be the first to use a This reference in a namespace or if that would		even cause any problems if it did...  We could do some experiments		to find out... and if necessary we could cache on a per interpreter		basis if we had weak references...  We might also look at skipping 		over child interpreters and going to the parent for the declaring 		interpreter, so we'd be sure to get the top interpreter.	*/"
+// I wish I could make this "friendly" to only NameSpace
+////////////////////////////////////////////////////////////////////// // High-level I/O. //////////////////////////////////////////////////////////////////////
+//{{{ MarkerHighlight class
+//{{{ getFirstInvalidLineContext() method
+// Restore the previous state.
+// computes the real size of the bytecode of this class
+// XXX if we keep the createClassManager in getClassManager then we can axe // this?
+//{{{ UnixWorkaround constructor
+// Workaround for JDK bug 4071281, where system.in.available()  // returns too large a value. This bug has been fixed in JDK 1.2.
+// XXXX re-evaluate this // can getSuper work by itself now? // If we're a class instance and the parent is also a class instance // then super means our parent.
+// Normalise whitespace if necessary.
+// Scripting classes currently requires accessibility // This can be eliminated with a bit more work.
+// Open files, create the view and hide the splash screen.
+"/**    * Parse the attribute type.    * [54] AttType ::= StringType | TokenizedType | EnumeratedType    * [55] StringType ::= 'CDATA'    * [56] TokenizedType ::= 'ID' | 'IDREF' | 'IDREFS' | 'ENTITY' | 'ENTITIES' |    *                        'NMTOKEN' | 'NMTOKENS'    * [57] EnumeratedType ::= NotationType | Enumeration    * *TODO: validate the type!!    */"
+// a little hack for reverse replace and find
+// for backwards compatibility
+// ??? this should only be called with // fully loaded action set
+//{{{ getMacroActionSet() method
+"/*		Note: the bsh command code should probably not be here...  we need to		scope it by the namespace that imported the command... so it probably		needs to be integrated into NameSpace.	*/"
+// is this a syncrhonized method?
+// Generate the fields
+// Windows bug workaround in case a YES/NO confirm // was shown
+// for SPACE or S+SPACE we pass the // key typed since international // keyboards sometimes produce a // KEY_PRESSED SPACE but not a // KEY_TYPED SPACE, eg if you have to // do a "<space> to insert ".
+// (should we cache info in not a class case too?)
+// else fall through...
+// fix the bug where the horiz. // scroll bar was not updated // after creating a new file.
+//{{{ removeDockableWindow() method
+//{{{ getAbovePosition() method
+// stupidity
+//{{{ recalculateVisibleLines() method
+// Recent Buffers
+//{{{ ShowBufferMenuItem class
+// next version: remove this
+//{{{ getListener() method
+//{{{ getLineLength() method
+// do nothing, user clicked 'Stop'
+// the sooner ppl move to the new api, the less we'll need // crap like this
+//{{{ Maybe show add abbrev dialog
+"/*			Note: this could be made clearer by adding an inner class for the			cases and an object context for the child traversal.		*/"
+// Make sure the window is displayed in visible region
+//{{{ LineContext class
+// two additional bytes will be required to replace this // GOTO or JSR instruction with a GOTO_W or a JSR_W
+//{{{ getFileParent() method
+// single line mode (/s)
+"/*         * Now the block's CRC, so it is in a known place.         */"
+"/*			Implement String += value;			According to the JLS, value may be anything.			In BeanShell, we'll disallow VOID (undefined) values.			(or should we map them to the empty string?)		*/"
+// hack...
+// get the previous context (see notes for this class)
+/*@bgen(jjtree) Arguments */
+// get the title here, not in the factory constructor, // since the factory might be created before a plugin's // props are loaded
+"/*		Note: it may see like with the new 1.3 scoping this test could be		removed, but it cannot.  When recurse is false we still need to set the		variable in our parent, not here.	*/"
+//{{{ getHandlerForFileName() method
+//{{{ setStyles() method
+//{{{ PluginJAR constructor
+"/*			If we didn't find a class or variable name (or prefix) above			there are two possibilities:			- If we are a simple name then we can pass as a void variable 			reference.			- If we are compound then we must fail at this point.		*/"
+// could refactor these a bit
+//{{{ getNonAlphaNumericChars() method
+//{{{ getDefault() method
+// JDK 1.4 workaround
+// don't try this at home
+//{{{ ReplaceActionHandler class
+/* Create buttons */
+// Look for a default invoke() handler method in the namespace // Note: this code duplicates that in This.java... should it? // Call on 'This' can never be a command
+// Additional bracket indent // For lining up closing // and opening brackets
+//{{{ setFontProperty() method
+//{{{ initPlugins() method
+// find the matching this() constructor for the args
+// broken Eclipse workaround! // 24 Febuary 2004
+"/*	Note: This class essentially just delegates most of its methods to its	parent.  The setVariable() indirection is very small.  We could probably	fold this functionality back into the base NameSpace as a special case.	But this has changed a few times so I'd like to leave this abstraction for	now.*/"
+// drag and drop support // I'd just move the code to // JEditTextArea but it // depends on JDK 1.4 APIs
+// Note: incorrect here - we are using the hack in bsh class // manager that allows lookup by base name.  We need to eliminate // this limitation by working through imports.  See notes in class // manager.
+// this is a dirty hack and it relies on the fact // that updates for parents are sent before updates // for the changed nodes themselves (if this was not // the case, the browser wouldn't be updated properly // on delete, etc). // // to avoid causing '> 1 request' errors, don't reload // directory if request already active
+// not a field, try property access
+//{{{ getStringWidth() method
+//{{{ updateMultiStatus() method
+// Cut off from parent, we must have our own class manager. // Can't do this in the run() command (needs to resolve stuff) // Should we do it by default when we create a namespace will no // parent of class manager?
+// only record this if doing a find next
+// Should cache this subject to classloader change message // Evaluation of the formal parameter simply resolves its // type via the specified namespace.. it doesn't modify the // namespace.
+// Call script "invoke( String methodName, Object [] args );
+// General case - performe the instanceof based on assignability
+"/*	Originally called ResultType in the grammar*/"
+// should we do this for both cases above?
+// just scroll to the dragged location
+//{{{ getEditPanes() method
+"/*		This method should be rewritten to use getFields() and avoid catching		exceptions during the search.	*/"
+//{{{ addPluginProps() method
+// Perhaps here we would want to guard with // a property for parallel backups or not.
+//{{{ handleAbout() method
+//{{{ setLineNumberAlignment() method
+//{{{ _endVFSSession() method
+// wrap the exception in a TargetException to propogate it up
+//{{{ getAutosaveFile() method
+/* this should be before dockables are initialized */
+// source is directory or filter field
+//{{{ Edit modes, syntax highlighting
+//{{{ isVMS() method
+// undocumented hack to allow browser actions to work. // XXX - clean up in 4.3
+//{{{ Create buttons
+// INTERVAL OPERATOR: //  {x} | {x,} | {x,y}  (RE_INTERVALS && RE_NO_BK_BRACES) //  \{x\} | \{x,\} | \{x,y\} (RE_INTERVALS && !RE_NO_BK_BRACES) // // OPEN QUESTION:  //  what is proper interpretation of '{' at start of string?
+"/* Silly bug workaround #8694. If you look at the above code,		 * note that we restore the saved caret position first, then		 * scroll to the saved location. However, the caret changing		 * can itself result in scrolling to a different location than		 * what was saved; and since moveCaretPosition() calls		 * updateBracketHighlight(), the bracket highlight's out of		 * bounds calculation will rely on a different set of physical		 * first/last lines than what we will end up with eventually.		 * Instead of confusing the user with status messages that		 * appear at random when switching buffers, we simply hide the		 * message altogether. */"
+"/*	Implementation notes:	Note: we may need some synchronization in here	Note on version dependency:  This base class is JDK 1.1 compatible,	however we are forced to use weak references in the full featured	implementation (the optional bsh.classpath package) to accomodate all of	the fleeting namespace listeners as they fall out of scope.  (NameSpaces	must be informed if the class space changes so that they can un-cache	names).  	<p>	Perhaps a simpler idea would be to have entities that reference cached	types always perform a light weight check with a counter / reference	value and use that to detect changes in the namespace.  This puts the 	burden on the consumer to check at appropriate times, but could eliminate	the need for the listener system in many places and the necessity of weak 	references in this package.	<p>*/"
+// this will probably not get used // Object type
+// EOF, not zero read apparently
+// XXX: This should not be hardcoded
+"/* 			Resolve relative to a class type			static field, inner class, ?		*/"
+"/*	Notes:	It would not be hard to eliminate the use of org.objectweb.asm.Type from	this class, making the distribution a tiny bit smaller.*/"
+//{{{ RosterThread class
+// this method is a nightmare
+//{{{ ensureCapacity() method
+// Send EditorExiting
+//{{{ CaretBlinker class
+// this is such a bad way of doing it, but oh well...
+// copy and paste from RESyntaxMatcher to make syntax package // independent of jEdit itself
+//{{{ getAfterCaretTextArea() method
+// we later use this to compute a relative ranking
+// Need some format checking here
+//{{{ Check for an escape sequence
+//{{{ uninit() method
+// Generate code to return the value
+// Fetch properties
+// -------------------------------------------------------------------------- // Implementation of the CodeVisitor interface // --------------------------------------------------------------------------
+// // Utility flag: have we noticed a CR while reading the last // data chunk?  If so, we will have to go back and normalise // CR/LF. //
+// Perhaps if Xerces wasn't slightly brain-damaged, we would // not need this
+//{{{ Result class
+////////////////////////////////////////////////////////////////////// // Error reporting. //////////////////////////////////////////////////////////////////////
+"/*				Somewhat of a hack.  If the special fields are visible (we're				operating relative to a 'this' type already) dissallow further				.this references to prevent user from skipping to things like				super.this.caller			*/"
+// // Constants for element content type. //
+//{{{ ButtonCellRenderer class
+//{{{ fireCaretEvent() method
+// buffers retain a reference to the fold handler in // question... and the easiest way to handle fold // handler unloading is this...
+// send full range of events to avoid breaking plugins
+// fuck me dead
+//{{{ getPlugin() method
+// Why is object in the args?
+//{{{ endRequest() method
+// Create a new hashtable if necessary.
+/* Recent file list size */
+// Arrays incomplete... need to use the array setter
+// This will happen when a new file is created
+//{{{ getBooleanProperty() method
+"/*	Thanks to Slava Pestov (of jEdit fame) for import caching enhancements.	Note: This class has gotten too big.  It should be broken down a bit.*/"
+//{{{ addOrRemoveMarker() method
+"/* this is stupid and misleading.				 * but 'path' is not used anywhere except				 * the above line, and if this is done				 * after the 'continue', then we will				 * either hang, or be forced to duplicate				 * it inside the buffer == null, or add				 * a 'finally' clause. you decide which one's				 * worse. */"
+//{{{ handleOpenFile() method
+// Get available screens // O(n^3), this is nasty, but since we aren't dealling with // many items it should be fine
+//{{{ AbbrevCompare class
+//{{{ getGutter() method
+// If found cache the full name in the BshClassManager
+"/* 		This is the namespace in which the method is set.		It is a back-reference for the node, which needs to execute under this 		namespace.  It is not necessary to declare this transient, because 		we can only be saved as part of our namespace anyway... (currently).	*/"
+// Enable/Disable tooltips
+// copy and paste from bsh/classpath/ClassManagerImpl.java...
+// we remember which classes we don't exist // because BeanShell tries loading all possible // <imported prefix>.<class name> combinations
+//{{{ SearchBar constructor
+// If any subexpressions didn't terminate, they don't count // TODO check if this code ever gets hit
+// this part sucks
+/*type*/
+// they never taught you this in undergrad computer science
+//{{{ DropHandler class
+// wtf?
+//{{{ BrowserCommandsMenu constructor
+// hack since HelpViewer needs a URL...
+//{{{ requestFocus() method
+//{{{ Handler constructor
+// get rid of any edit pane that is a child // of the current edit pane's parent splitter
+// this is a weird hack. // we don't want C+e a to insert 'a' in the // search bar if the search bar has focus...
+// skip header bytes // maybe should check if they're valid or not?
+// Null value is just a declaration // Note: we might want to keep any existing value here instead of reset
+// Temporary hack to support inner classes  // If the obj is a non-static inner class then import the context... // This is not a sufficient emulation of inner classes. // Replace this later...
+/* Backup filename prefix */
+// internal constructor used for alternation
+// convert the byte read into a char
+/*map*/
+// Push the name of the method as a constant
+//{{{ resize selections if necessary
+// Check for field on object  // Note: could eliminate throwing the exception somehow
+// this is where checked exceptions piss me off. this method only uses // a StringReader which can never throw an exception...
+// Why both of these?
+// unwrap Primitive.Null to null
+// Parse pattern into tokens.  Does anyone know if it's more efficient // to use char[] than a String.charAt()?  I'm assuming so.
+//{{{ setModeAbbrevs() method
+//{{{ SizeLabel class
+// when the text area switches to us, it will do // a reset anyway
+// I guess this is when we pass it as an argument? // Setting locally
+// Read the attribute type.
+/* XXX magic number */
+//{{{ DockBorder constructor
+// if no requests are running, requestDone() // will not be called, so we must queue the // AWT runner ourselves.
+// Then the pre-release status
+// wrapper to primitive // Convert value to Primitive and check/cast it.
+//case Constants.PUTFIELD:
+"/*		Debug utils are static so that they are reachable by code that doesn't		necessarily have an interpreter reference (e.g. tracing in utils).		In the future we may want to allow debug/trace to be turned on on		a per interpreter basis, in which case we'll need to use the parent 		reference in some way to determine the scope of the command that 		turns it on or off.	*/"
+"/*             * Now ftab contains the first loc of every small bucket.             * Calculate the running order, from smallest to largest             * big bucket.             */"
+// clean up old listeners
+// Begin constructors
+// updates the instructions addresses in the // catch, local var and line number tables
+//{{{ maybeReloadDirectory() method
+// UCS-2 without a BOM must begin with "<?XML" // 0x3c 0x00 0x3f 0x00: UCS-2, little-endian, no byte-order mark
+//{{{ nextBuffer() method
+// hack so that 'select all' does not change current buffer
+// not sure if we should really recurse here for explicitly imported // class in parent...
+// This is a particularly nasty bit // of code, that checks for a parameter // entity reference but peeks ahead to // catch the '%' in parameter entity // declarations.
+// -------------------------------------------------------------------------- // Implementation of the ClassVisitor interface // --------------------------------------------------------------------------
+//{{{ Undo
+// Move me to classpath/ClassManagerImpl???
+// check for match inside line
+// I'm too tired to think of a better way // to handle this right now.
+"/*			Is it a simple variable name?			Doing this first gives the correct Java precedence for vars 			vs. imported class names (at least in the simple case - see			tests/precedence1.bsh).  It should also speed things up a bit.		*/"
+// package-private members
+//{{{ TextAreaDialog constructor
+// We do need to save every possible point, but the number of clone() // invocations here is really a killer for performance on non-stingy // repeat operators.  I'm open to suggestions...
+//{{{ setMessageAndClear() method
+//{{{ getLastView() method
+//{{{ insertIndented() method
+// Check if a plugin with the same name // is already loaded
+"/*		Notes:		This is broken.  It finds public but less specific methods over		non-public but more specific ones.		This method needs to be rewritten to eliminate findAccessibleMethod.		We should implement the findMostSpecificMethod that uses the publicOnly		flag.  FindMostSpecificMethod should also operate in two passes to give		standard Java assignable matches priority over extended bsh type		matches.	*/"
+// switch eats a multi-level break here? // not empty statement
+//{{{ isCurrentLineHighlightEnabled() method
+// should use try/finally here to pop ns
+//{{{ Key class
+//buffer.readLock();
+//{{{ readBooleanArray() method
+// Precondition: pattern[index-1] == ':' // we will return pos of closing ']'.
+// workaround for Swing's annoying processing of // labels starting with <html>, which often breaks
+// // Hashtables for DTD information on elements, entities, and notations. //
+"/*		Note: this impor pattern is becoming common... could factor it out into		an importedObject Vector class.	*/"
+// found a non-backslash char.
+"/*		Note: We will ll move this behavior out to a subclass of 		NameSpace, but we'll start here.	*/"
+//{{{ removeEntry() method
+/* Workaround for uncooperative Windows L&F */
+// redundant with constructor
+//{{{ RegistersHandler class
+"/* if backup file was created less than			 * 'backupTimeDistance' ago, we do not			 * create the backup */"
+// Need to calculate this... just fudging here for now.
+//{{{ CompletionPopup class
+// only used if what is "plugin"
+//{{{ caretAutoScroll() method
+// this is a hack, and really needs to be done better.
+// none of the others are ever meant to be // removed. retarded, eh? this needs to be // fixed eventually, for plugins might // want to do weird stuff to jEdit's UI
+//{{{ getFirstPhysicalLine() method
+//{{{ VFSBrowser constructor
+//{{{ selectLine() method
+//{{{ updateSize() method
+//{{{ paintInvalidLine() method
+//{{{ Folding
+// can't override prefix shortcuts
+// Roll back state.
+//{{{ HistoryBorder class
+// stupid Swing
+//{{{ old API
+// crusty workaround
+// Change the parent (which was the class static) to the class instance // We really need to check if we're a static inner class here first... // but for some reason Java won't show the static modifier on our // fake inner classes...  could generate a flag field.
+// Return the value.
+"/* * Statement syntax follows. */"
+//{{{ Update this buffer for the new path
+//{{{ AllBufferSet constructor
+//{{{ getNextRequest() method
+//{{{ getKeyEventInterceptor() method
+//{{{ isTemporary() method
+// Register for notification of classloader change
+//{{{ removeAllMarkers() method
+// Imported full name wasn't found as an absolute class // If it is compound, try to resolve to an inner class.   // (maybe this should happen in the BshClassManager?)
+//{{{ PaintText class
+//XXX
+// hacked BufferIORequest to send VFSUpdates in case // two stage save is off now...
+// Nasty hardcoded values
+"/* If this line has become longer or shorter				 * (in which case the new physical line number				 * is different from the cached one) we need to:				 * - continue updating past the last line				 * - advise the text area to repaint				 * On the other hand, if the line wraps beyond				 * lastScreenLine, we need to keep updating the				 * chunk list to ensure proper alignment of				 * invalidation flags (see start of method) */"
+"/* This doesn't look pretty and mode line should			 * probably be split up into seperate			 * components/strings			 */"
+//{{{ ColorWell class
+//{{{ getModes() method
+"/* 							Catch the mismatch and continue to try the next							Note: this is innefficient, should have an 							isAssignableFrom() that doesn't throw 						*/"
+//{{{ selectToMatchingBracket() method
+// super is now the closure's super or class instance
+// protected members
+//{{{ isExiting() method
+// No need to wrap this debug
+// XXX clean up this conditional
+"/*		Should check for strict java here and use isJavaAssignable() instead	*/"
+// the +1's ensure that 99 gets 3 digits, 103 gets 4 digits, // and so on.
+// see what JARClassLoader this class is in
+//{{{ intern() method
+// empty line. inherit previous line's fold level
+// 2nd step: // copies the bytecode of the method into a new bytevector, updates the // offsets, and inserts (or removes) bytes as requested.
+//  first node will either be PrimitiveType or AmbiguousName
+// not in settings directory or jEdit home directory. // no need to reload anything.
+//{{{ Report any plugin errors
+// ugly workaround
+// fucking GTK look and feel
+//{{{ MouseHandler class
+//{{{ getSetName() method
+// // Flags for parsing context. //
+// TODO: Also check REG_ANCHORINDEX vs. anchor
+// replaces the temporary jump opcodes introduced by Label.resolve.
+// Order these from longest to shortest // Start by assuming longest (more repeats)
+// first line for last 10 lines, make sure not to overlap // with the first 10
+"/*		Note: object is only used here for precondition... get rid of it?	*/"
+//{{{ getDocument() method
+// Get the class body BSHBlock
+//{{{ ref() method
+// is this right?
+/* Encoding */
+//{{{ 1. Check whether tools.jar is in the system classpath:
+//{{{ showLineRange() method
+// This could be smarter...
+"/**    * Parse an element-content model.    * [42] elements ::= (choice | seq) ('?' | '*' | '+')?    * [44] cps ::= S? %cp S?    * [45] choice ::= '(' S? %ctokplus (S? '|' S? %ctoks)* S? ')'    * [46] ctokplus ::= cps ('|' cps)+    * [47] ctoks ::= cps ('|' cps)*    * [48] seq ::= '(' S? %stoks (S? ',' S? %stoks)* S? ')'    * [49] stoks ::= cps (',' cps)*    * *NOTE: the opening '(' and S have already been read.    * *TODO: go over parameter entity boundaries more carefully.    */"
+// check if web start
+"/* Defer to whoever loaded us (such as JShell,			 * Echidna, etc) */"
+// some regexps (eg ^ by itself) have a length == 0, so we // implement this hack. if you don't understand what's going on // here, then go back to watching MTV
+// returns Object covering both Double and Boolean return types
+// turns out under some circumstances this // method can switch the current buffer in // BROWSER mode.
+//{{{ Methods that really shouldn't be public...
+//{{{ PluginsMenuButton class
+"/*		Notes:		This is broken.  It finds public but less specific methods over		non-public but more specific ones.		findMostSpecficMethod() needs to be rewritten to eliminate 		findAccessibleMethod.  We should implement the findMostSpecificMethod 		that uses the publicOnly flag.  FindMostSpecificMethod should also		operate in two passes to give standard Java assignable matches priority		over extended bsh type matches.	*/"
+//{{{ ButtonLayout class
+//{{{ Top...
+"/* this is stupid and misleading.					 * but 'path' is not used anywhere except					 * the above line, and if this is done					 * after the 'continue', then we will					 * either hang, or be forced to duplicate					 * it inside the buffer == null, or add					 * a 'finally' clause. you decide which one's					 * worse. */"
+//{{{ Rect class
+//{{{ createNode() method
+//{{{ Do digits
+"/**    * Register an attribute declaration for later retrieval.    * Format:    * - String type    * - String default value    * - int value type    * *TODO: do something with attribute types.    */"
+// ------------------------------------------------------------------------- // Exceptions table entries, max stack size and max locals // -------------------------------------------------------------------------
+// evaluate the static portion of the block in the static space
+// remember the most recent dockable
+//{{{ showFilePopup() method
+// hack... sticking to first interpreter that resolves this // see comments on type instance variable
+// should implement getMinimumLength() -- any ideas?
+// this listener priority thing is a bad hack...
+"/* addToFavorites(), which is a static method		 * (for convinience) needs an instance of the		 * VFS to pass to VFSManager.sendVFSUpdate(),		 * hence this hack. */"
+/* There is no official Perl spec, but here's a "best guess" */
+//{{{ DockablePanel class
+//{{{ createSequenceRule() method
+//{{{ getHighlightInterval() method
+//{{{ getMagicCaretPosition() method
+//   //  End mutable instance variables. // ---------------------------------------------------------
+"/*		Note: is using SignatureKey in this way dangerous?  In the pathological		case a user could eat up memory caching every possible combination of		argument types to an untyped method.  Maybe we could be smarter about		it by ignoring the types of untyped parameter positions?  The method		resolver could return a set of ""hints"" for the signature key caching?		There is also the overhead of creating one of these for every method		dispatched.  What is the alternative?	*/"
+// Generate method body
+//{{{ setIconPath() method
+// this is retarded. excuse me while I drool // and make stupid noises
+// On Unix, set permissions of port file to rw-------, // so that on broken Unices which give everyone read // access to user home dirs, people can't see your // port file (and hence send arbitriary BeanShell code // your way. Nasty.)
+//{{{ resolveImports() method
+// Found "<" followed by something else
+// Allow getThis() to work through BlockNameSpace to the method // namespace // XXX re-eval this... do we need it?
+//{{{ setSelectionEnd() method
+//{{{ runTemporaryMacro() method
+//{{{ lookup() method
+//{{{ ResultRenderer class
+//{{{ saveAs() method
+"/* if an occurence occurs at the		beginning of the selection, the		selection start will get moved.		this sucks, so we hack to avoid it. */"
+// pushes handler block onto the stack of blocks to be visited
+//{{{ setLimit() method
+// find the enclosing class instance space of the class name
+//{{{ escapesToChars() method
+// number of positional parameters in abbreviation expansion
+// over estimation of the number of bytes to be added to this // instruction = 3 - current number of padding bytes = 3 - (3 - // u%4) = u%4 = u & 3
+// push super class name // use superClassName var?
+//{{{ Scrolling
+// This should probably be in Reflect.java
+//{{{ showVFSFileDialog() method
+//{{{ Loading, saving window geometry
+//{{{ Handle any remaining crud
+// Create the instance 'This' namespace, set it on the object // instance and invoke the instance initializer
+// Read the version.
+// work through to class 'this'
+// should probably error
+"/* 		Primary interpreter set and get variable methods		Note: These are squeltching errors... should they?	*/"
+//{{{ getMultipleSelectionColor() method
+//{{{ scrollUpPage() method
+//{{{ addToken() method
+// need to loosen this to any throwable... do we need to handle // that in interpreter somewhere?  check first...
+//{{{ getParserRuleSet() method
+//{{{ checkFileForSave() method
+"/*		Note: technically I think we could get by passing in only the		current namespace or perhaps BshClassManager here instead of 		CallStack and Interpreter.  However let's just play it safe in case		of future changes - anywhere you eval a node you need these.	*/"
+// If they're the same length, // check for a match. // If the loop finishes, 'index' will // contain the current bucket // position.
+//{{{ getSegmentMapKey() method
+//{{{ getEditPane() method
+/* Get full command line */
+// Hack... need a more direct way of obtaining a view? // JEditTextArea.getView() method?
+// implement the recursion for getClassImpl()
+// Note: in this case parent must have a class manager.
+//{{{ Painting
+// stupid hack to handle referencing // a rule set that is defined later!
+// Prepare to execute the block. // We must create a new BlockNameSpace to hold the catch // parameter and swap it on the stack after initializing it.
+// Static methods that operate on compound ('.' separated) names // I guess we could move these to StringUtil someday
+//{{{ updateCaretStatus() method
+"/*		Note: this method and resolveExpectedJavaField should be rewritten		to invert this logic so that no exceptions need to be caught		unecessarily.  This is just a temporary impl.		@return the field or null if not found	*/"
+//{{{ registerHandler() method
+// hack to get fixed length 'length' field
+//{{{ Position tool bars if they are managed by us
+"/*	Can't this be combined with run() ?	run seems to have stuff in it for interactive vs. non-interactive...	compare them side by side and see what they do differently, aside from the	exception handling.	*/"
+//{{{ addExtension() method
+//{{{ Parse command line
+/* do nothing! */
+// // When the class is loaded, populate the hash table of // attribute types. //
+"/* silly that we reference the vertical				   scroll bar here directly. we do this so				   that the horizontal scroll bar is flush				   with the vertical scroll bar */"
+//{{{ goToParentFold() method
+// moved to GUIUtilities as it makes no sense being here.
+// Look for a default invoke() handler method in the namespace // Note: this code duplicates that in NameSpace getCommand() // is that ok?
+/*leave null*/
+//{{{ getSelectionStartLine() method
+// else set it and return
+"/** * An output stream that compresses into the BZip2 format (without the file * header chars) into another stream. TODO: Update to BZip2 1.0.1 * * @author <a href=""mailto:keiron@aftexsw.com"">Keiron Liddle</a> */"
+//{{{ registerVFS() method
+// This feels sloppy, especially for non-U.S. locales.
+// If return type void, return void as the value.
+/* --- End instance data --- */
+// Windows JDK workaround
+//{{{ User interface
+// redraw the whole table because a second shortcut // might have changed, too
+// no parenthesis on previous line (prevLineParenWeight == 0) so the normal indenting rules are used
+//{{{ getLabel() method
+//{{{ handleQuit() method
+// Set type/creator codes for files
+// XXX: does this really belong here?
+// retarded GTK look and feel!
+// It was explicitly imported, but we don't know what it is. // should we throw an error here??
+"/*		Issues to resolve here...		1) In which classloader should we define the class?		if there is a BshClassLoader should we define it there?		2) should we use reflection to set it in a non-bsh classloader		if there is one or should we always create a bsh classloader		(and expose its defineClass)?	*/"
+//{{{ ViewUpdate constructor
+// theoretically a segment could // have seg.offset != 0 but // SegmentBuffer never does that
+// Write a warning message:
+//{{{ FavoritesVFS constructor
+//{{{ addCurrentToHistory() method
+// hack to move the spaces to the front
+//{{{ IconListEntry class
+"/* this is a sloppy hack to fix bug				   ""[ 677902 ] hitting return after collapsed				   fold""				   the idea is that if we extend the range then				   the problem described in the bug happends, so				   if the insert is at the very end of the range				   we don't extend it, instead we push the				   insert into the next range, however for this				   to work properly we also have to mess with				   screen line counts. */"
+"/*		Get variables declared in this namespace.	*/"
+// Generate code to unwrap bsh Primitive types
+// fucking GTK look and feel!
+//{{{ Install constructor
+// backgrounded
+// need this bullshit scroll bar policy for the preferred size // hack to work
+"/**    * Parse the XML declaration.    * <pre>    * [25] XMLDecl ::= '&lt;?xml' VersionInfo EncodingDecl? SDDecl? S? '?&gt;'    * [26] VersionInfo ::= S 'version' Eq ('""1.0""' | ""'1.0'"")    * [33] SDDecl ::= S 'standalone' Eq ""'"" ('yes' | 'no') ""'""    *               | S 'standalone' Eq '""' (""yes"" | ""no"") '""'    * [78] EncodingDecl ::= S 'encoding' Eq QEncoding    * </pre>    * <p>([80] to [82] are also significant.)    * <p>(The <code>&lt;?xml</code> and whitespace have already been read.)    * <p>TODO: validate value of standalone.    * @see #parseTextDecl    * @see #checkEncoding    */"
+"/* workaround for A+keys producing				 * garbage on Windows */"
+// there must be a better way of fixing this... // the problem is that this method can sometimes // be called as a result of a text area scroll // event, in which case the caret position has // not been updated yet.
+//{{{ eval() method
+"/* TableColumn col1 = getColumnModel().getColumn(0);		col1.setMinWidth(20);		col1.setMaxWidth(20);		col1.setPreferredWidth(20); */"
+// \d,\D,\w,\W,\s,\S
+// Should clean this up to a single return statement
+// initialize the skip array to all zeros
+// Send EditorExitRequested
+// have to do this hack until VFSPath class is written
+//{{{ Extended attributes
+"/*		I wish protected access were limited to children and not also 		package scope... I want this to be a singleton implemented by various		children.  	*/"
+// Some kind of 8-bit encoding without "<?XML" // (otherwise) UTF-8 without encoding/XML declaration
+"/* Having all the info packed into an int is not very OO and makes the	 * code somewhat more complicated, but it saves a lot of memory.	 *	 * The new document model has just 12 bytes of overhead per line.	 * LineContext instances are now internalized, so only a few should	 * actually be in the heap.	 *	 * In the old document model there were 5 objects per line, for a	 * total of about 100 bytes, plus a cached token list, which used	 * another 100 or so bytes. */"
+// the start and end flags will be wrong with reverse search enabled, // but they are only used by the regexp matcher, which doesn't // support reverse search yet. // // REMIND: fix flags when adding reverse regexp search.
+//{{{ needFullRepaint() method
+// compatibility kludge for jEdit 3.1 and earlier
+// exception fell through, throw it upward...
+//{{{ isBlockCaretEnabled() method
+//{{{ canonPath() method
+// If this is a unary increment of decrement (either pre or postfix) // then we need an LHS to which to assign the result.  Otherwise // just do the unary operation for the value.
+//{{{ Buffers, edit panes, split panes
+//{{{ loadModeCatalog() method
+// Replace this is Cocoa API calls later
+// The following two boolean checks were tacked on. // This could probably be smoothed out.
+/* Footer */
+// AHA! // this is probably the only way to fix this
+//{{{ Do more stuff
+//{{{ GetFileTypeRequest class
+"/*	Note: This class is messy.  The method and field resolution need to be	rewritten.  Various methods in here catch NoSuchMethod or NoSuchField	exceptions during their searches.  These should be rewritten to avoid	having to catch the exceptions.  Method lookups are now cached at a high 	level so they are less important, however the logic is messy.*/"
+// I don't know of any other way to fix this, since invoking this // command from a menu results in the focus owner being the menu // until the menu goes away.
+//{{{ getServiceTypes() method
+"/*			First try for an accessible version of the exact match.			This first lookup seems redundant with below, but is apparently			needed.  This whole thing is messy.		*/"
+"/*	Note: which of these things should be checked at parse time vs. run time?*/"
+// this convention may change...
+// Optimization - If classOfStaticMethod is set then we have already  // been here and determined that this is a static method invocation. // Note: maybe factor this out with path below... clean up.
+// ConsoleInterface // The interpreter reflexively implements the console interface that it  // uses.  Should clean this up by using an inner class to implement the // console for us.
+//{{{ Buffer management methods
+// This doesn't seem very correct, but it fixes a problem // when setting the initial caret position for a buffer // (eg, from the recent file list)
+// Layers for top group
+// Try looking up the element
+// If null callstack
+// stupid scrollbar policy is an attempt to work around // bugs people have been seeing with IBM's JDK -- 7 Sep 2000
+//{{{ construct() method
+//{{{ getElementAt() method
+// these are used to eliminate code duplication. i don't normally use // the visitor or "template method" pattern, but this code was contributed // by Peter Cox and i don't feel like changing it around too much.
+// Wait for pending I/O requests
+// Try absolute
+//{{{ paintBorder() method
+/* Returns the node currently on the top of the stack. */
+// Case-insensitive fs workaround
+// // We have to deal with assembly!!! // The programmer can be writing little 32 byte chunks for all // we know, and we must assemble complete records for writing. // REVIEW Maybe this should be in TarBuffer? Could that help to //        eliminate some of the buffer copying. //
+//{{{ setHyperSearch() method
+"/*		Note: this implementation is temporary. We currently keep a flat		namespace of the base name of classes.  i.e. BeanShell cannot be in the		process of defining two classes in different packages with the same		base name.  To remove this limitation requires that we work through		namespace imports in an analogous (or using the same path) as regular		class import resolution.  This workaround should handle most cases 		so we'll try it for now.	*/"
+// This is used for {x,y} calculations
+// Stop when we hit a null index.
+// this method might get called at startup
+//{{{ BrowserIORequest constructor
+// Push the new namespace on the call stack
+// Get the bucket.
+// should the next two be public, maybe?
+"/* On Windows, paths of the form X: list the last *working		 * directory* on that drive. To list the root of the drive,		 * you must use X:\.		 *		 * However, the VFS browser and friends strip off trailing		 * path separators, for various reasons. So to work around		 * that, we add a '\' to drive letter paths on Windows.		 */"
+// we consume this to work around the bug // where A+TAB window switching activates // the menu bar on Windows.
+// work around for broken FTP plugin!
+"/* workaround for hang if match was					 * zero-width. not sure if there is					 * a better way to handle this */"
+//{{{ copy() method
+//{{{ cacheDockableWindows() method
+//{{{ Paint line numbers
+// Set up the DTD hash tables
+/* Spacing workaround */
+//shadow size
+// Generate the static bsh static reference holder field
+/*@bgen(jjtree) VariableDeclarator */
+// position in newline
+// Save settings to disk
+// REVIEW How do we resolve this discrepancy?!
+// workaround for Swing rendering labels starting // with <html> using the HTML engine

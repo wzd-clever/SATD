@@ -1,0 +1,1605 @@
+//  TODO - this should also be using the decorating instantiator but cannot for backwards compatibility
+// target does not exist in the map, there's no cycle for sure
+//  TODO:LPTR We should collect all source sets in the project source set, however this messes up ComponentReportRenderer
+// TODO:rbo Change the parameter type to `Transformer<String, @Nullable String>` once we migrate to Java 8
+/*          * Remembers the unresolved dependency for later logging and also adds a fake         * file dependency, with the file path pointing to the attempted component selector.         * This shows up in the IDE as a red flag in the dependencies view. That's not the best         * usability and it also muddies the API contract, because we disguise an unresolved         * dependency as a file dependency, even though that file really doesn't exist.         *         * Instead, when generating files on the command line, the logged warning is enough.         * When using the Tooling API, a dedicated "unresolved dependency" object would be better         * and could be shown in a notification. The command line warning should probably be omitted in that case.          */
+//  The wrapper uses the .ok file to identify distributions that are safe to use.   If we delete anything from the distribution before deleting the OK file, the   wrapper will attempt to use the distribution as-is and fail in strange and unrecoverable   ways.
+//  used for log and date only
+//  Delegate class is not visible to managed view type -> view type is more general than delegate type, so use the delegate classloader instead
+//  Separate Java class because IBM JDK 6 -- See https://issues.apache.org/jira/browse/GROOVY-7010
+//  Checking if there is a type variable to resolve, since resolving the type variable via `TypeToken` is quite expensive.
+// Making the daemon infrastructure log with DEBUG. This is only for the infrastructure!
+//  Convert a second time with only the published configurations: this ensures that the correct artifacts are included
+//  Not sure under what scenario (if any) this would occur,   but there's no sense in collecting the descriptor if it does.
+//  GENERATE private DynamicObject dynamicObjectHelper
+//  And now let's make sure we do not have another version of that virtual platform missing its metadata
+//  TODO: This will have to be changed when we support setting credentials directly on the authentication
+//  round to nearest second
+// we expect that all options must be applicable for each task
+//  we don't know if the underlying collection can return a size in constant time
+//  The name of the test class
+//  at this point we know the component exists
+//  TODO Use IvyArtifact here
+//  Workaround for https://issues.gradle.org/browse/GRADLE-2625
+//  A local, anonymous class or a private inner class - ignore the reference
+//  there's a possibility that this listener is called concurrently with   the build finished listener. If the message happens to be a graceful expire   one, then there's a large risk that we create a deadlock, because we're trying to   remove the same listener from 2 different notifications. To avoid this, we just   set the reference to null, which says that we're taking care of removing the listener
+//  Calculate the actual type
+//  TODO: Publishing for test executable?
+//  Execute the health check that should send out a DaemonExpiration event   if the daemon is unhealthy
+//  A cached ClassLoader
+//  Don't force evaluation of rules here, let the task container do what it needs to
+//  Implementation note: It is only necessary to override visit methods   for AST nodes that reference statements. For ClosureExpression we rely on   the assumption that it always references a BlockStatement and hence our   visitBlockStatement() method gets called.
+//  Force graph resolution as this is required to calculate build dependencies
+//  Mix the implicit launcher JVM args in with the requested JVM args
+//  Ensure a clean end of the line when the area scrolls
+//  Do NOT change the order of members used in hash code here, it's been empirically   tested to reduce the number of collisions on a large dependency graph (performance test)
+//  Already visited this node
+//  Generate: <init>(Object[] state) { }
+//  Flushing data split across previous and current appending
+//  Generate sourceLocation() method
+/*      * TODO once source compatibility is raised to 1.7, this should be rewritten using the java.nio.FileSystem API,     * which can deal with jars and folders the same way instead of duplicating code.      */
+//  First step is to find an entry with the explicit inputs in the cache
+//  the name is a type so remove it from the scoping   as it is only a classvariable, it is only in   referencedClassVariables, but must be removed   for each parentscope too
+//  externals are mapped to linked resources so we just need a name of the resource, without full path   non unique folder names are naively deduped by adding parent filename as a prefix till unique   since this seems like a rare edge case this simple approach should be enough
+//  Lock is in use - mark as contended
+//  Add dependencies for this goal
+//  Only download in parallel if there is more than 1 component to download
+//  When dependency resolution has failed, we don't want the build operation listeners to fail as well   because:   1. the `failed` method will have been called with the user facing error   2. such an error may still lead to a valid dependency graph
+//  Only use this for top level init scripts
+//  This is called from the download thread. Only forward the events when not cancelled
+//  We do not need to check instances of LowerCaseClass   to be a Class, because unless there was an import for   for this we do not lookup these cases. This was a decision   made on the mailing list. To ensure we will not visit this   method again we set a NO_CLASS for this name
+//  Read worker implementation classpath
+//  can be null in tests, ResolveState cannot be mocked   can be null in tests, ComponentState cannot be mocked
+//  Exclude rules
+//  On macOS, we assume co-located Xcode is installed into /opt/xcode and default location at /Applications/Xcode.app
+// root should be the last entry
+//  TODO: Ultimately, this should be some kind of 3rd party dependency that's visible to dependency management.
+//      throw new IllegalStateException("Accessor already registered: " + type + " " + accessor);   }
+//  Collect any container level add actions then add the object specific action
+//  When a Provider is used as a task dependency (rather than as a task input), need to unpack the value
+//  tag::functional-test-junit[]
+//  https://docs.oracle.com/javase/specs/jls/se12/html/jls-3.html#jls-NullLiteral
+//  stderr of Gradle is redirected to stdout of xcodebuild tool. To work around, we consider xcodebuild stdout and stderr as   the error output only if xcodebuild failed most likely due to Gradle.
+//  That is the state a node is in when it was selected but the selection violates a constraint (reject or strictly)
+//  ignore anonymous classes
+//  It is possible that multiple threads will execute this branch concurrently, when the type is missing. However, the contract for `get()` below will ensure that   only one thread will actually generate the implementation class
+//  This is not super nice, but dependencies are created through reflection, for decoration   and assume a constructor with 3 arguments (Group, Name, Version) which is suitable for   most cases. We could create an empty attribute set directly in the AbstractDependencyImpl,   but then it wouldn't be mutable. Therefore we proceed with "late injection" of the attributes
+//  if exclusions == nothing, then the intersection will be "nothing"
+//  Prefer having javac validate the location over us, by calling it first.
+//  GENERATE objectFactory.listProperty(type)
+//  Generate: static Class generatedFrom() { ... }
+//  Lock the state region, with the requested mode
+//  to strip the ANSI sequences..
+//  check module node import packages
+//  Generate args
+//  TODO This should actually extend from the api dependencies, but since Swift currently   requires all dependencies to be treated like api dependencies (with transitivity) we just   use the implementation dependencies here.  See https://bugs.swift.org/browse/SR-1393.
+//  A nullable reference
+//  push back remaining bytes of multi-byte unicode character
+//  legacy mode for internal APIs
+// we're making an assumption that all <pre> elements contain java code  this should mostly be true :)  if it isn't true then the syntax highlighting won't spoil the view too much anyway
+//  TODO - this is not quite right, eg given *,!A->A;*,!B->B the result should be B->A and A->B but will in fact be B-> and A->
+//  not fully accurate but a sensible fallback   see http://stackoverflow.com/questions/1288102/how-do-i-detect-whether-the-file-system-is-case-sensitive
+//  TODO This is not nice: work out a better way to collect the plugin requests from invoking the plugins block.
+//  TODO - also close console when it is replaced
+//  TODO: Should not be ignoring DEPENDENCY_ATTRIBUTE modifications after resolve
+// TODO adding the parent project first because the converter needs it this way ATM. This is oversimplified.  the converter should not depend on the order of reactor projects.  we should add coverage for nested multi-project builds with multiple parents.
+// this rule is just here to ensure backwards compatibility for builds that create publications with model rules
+//  An identifier with no separator, so this is not an #include or #import directive, it is some other directive
+//  show all operation output when debug is enabled
+//  Shouldn't really be here. Currently this goal is used by {@link #bindAllReferences} which also expects the subject to be bound
+/*          * Linux 4.x: MemAvailable         * Linux 3.x: MemFree + Buffers + Cached + SReclaimable - Mapped          */
+//  The isEmpty check is not required, might look innocent, but Guava's performance bad for an empty immutable list   because it still creates an inner class for an iterator, which delegates to an Array iterator, which does... nothing.   so just adding this check has a significant impact because most components do not declare any capability
+//  Resolvable configurations
+//  Skip this for now
+//  CBZip2InputStream expects the opening "BZ" to be skipped
+//  unspecified
+//  Register at least the project buildDir as a directory to be deleted.
+//  TODO - do not assume Maven layout
+//  This happens for IBM JDK 6 for nested interfaces -- see https://issues.apache.org/jira/browse/GROOVY-7010   Let's try to return something as close as possible to the intended value
+//  static classes are used for the actions to avoid implicitly dragging project/tasks into the model registry
+//  This is a special case for backwards compatibility: it is possible to have   a cycle where the root component depends on a library which transitively   depends on a different version of the root module. In this case, we effectively   allow 2 modules to have the same capability, so we filter the nodes coming   from transitive dependencies
+//  TODO - DSL documentation?
+//  Missing parameter name
+// we don't merge anything in the iws, yet.  I kept the logic for the sake of consistency   and compatibility with pre M4 ways of configuring IDEA information.
+//  The configuration has been used in a resolution, and it is an error for build logic to change any dependencies,   exclude rules or parent configurations (values that will affect the resolved graph).
+//  We temporarily want to allow skipping the publication of Gradle module metadata
+//  This means the client has not reported memory usage yet
+//  TODO: Deprecate and eventually prevent these mutations when already resolved
+//  We only cache the result of parsing the Maven settings files, but allow this value to be updated in-flight   via system properties. This allows the local maven repo to be overridden when publishing to maven   (see http://forums.gradle.org/gradle/topics/override_location_of_the_local_maven_repo).
+//  only create an intermediate collection if there's something to copy
+//  assume indentation uses spaces
+//  Note: this is currently not visible on {@link org.gradle.api.internal.TaskInternal} to avoid it leaking onto AbstractTask and so on to the public API.
+//  Add plugin implementation here
+//  get rid of the ivy [] token, as [ ] are not valid URI characters
+//  Version isn't used, except by a human looking at the output of jps.
+//  Corner case of Maven -SNAPSHOT compat
+//  By default the local cache is a directory cache
+//  Once the root build starts configuring, we are in Configuring phase
+//  There is no setter for this property
+// 2) new module is a replacement to a module we've seen already, register conflict and return
+//  No 2.11 version of routes compiler published
+//  We don't have mutable access to the project, so we throw a deprecation warning and then continue with   lenient locking to prevent deadlocks in user-managed threads.
+//  Intentionally not the text
+//  can't be equal otherwise wouldn't have been collected
+//  Different implementation - assume value has changed
+//  Serialize the shared packages, this is consumed by GradleWorkerMain
+//  TODO: Whenever we allow _user_ services to be injected, this would have to know   from which classloader we need to load the service
+//  Versions before 5.1 would unpack the exception and throw part of it, losing some context
+//  Ignore the decorated service
+//  Use this instead of Description.getClassName(), it is not available in JUnit <= 4.5
+//  Some interesting type references
+//  No support for command file
+//  literal followed by at least one *
+//  make sure we don't interpret any tag while in description tag
+//  FileCollection is-a Iterable, Buildable and TaskDependencyContainer, so check before checking for these things
+//  using a transforming classloader is only required for older buggy Groovy versions
+//  1.x works on Java 5 - 8
+//  TODO - this should be an outgoing variant of the component under test
+//  This agent should be loaded via the custom system ClassLoader
+//  Filter imported classes which are not available yet
+//  may be we have C[k1:v1] -> should become (C)([k1:v1])
+//  We don't support shrinking at the moment
+//  A system class, skip it
+//  Make sure all entries are always written in the same order
+//  TODO:instant-execution - remove this
+//  We don't use Attribute.INTENSITY_BOLD_OFF as it's rarely supported like Windows 10
+//  TODO - exceptions thrown here should point to some extensive documentation on the concept of class rule sources
+//  TODO:LPTR Remove projection for reference node   This shouldn't be needed, but if there's no actual value referenced, model report can only   show the type of the node if we do this for now. It should use the schema instead to find   the type of the property node instead.
+/*  Parsing state  */
+//  Read logging config and setup logging
+//  Because these properties can be convention mapped we need special handling in here.   If you add another one of these “modelled” properties, you need to update:   - maybeAppendModelledInstruction()   - maybePrependModelledInstruction()   - maybeSetModelledInstruction()   - getModelledInstructions()   - instructionValue()
+//  If no current test can be associated to the output, the last known descriptor is used.   See https://bugs.swift.org/browse/SR-1127 for more information.
+//  Include file not found (but previously was found)
+//  The selector failed or the module has been deselected. Do not attach.
+//  Convert the UTF-8 manifest bytes to the requested content charset
+//  Setup the dependency on the main binary   This should all be replaced by a single dependency that points at some "testable" variants of the main binary
+//  Copy built-on-demand state
+//  No overlap no cry
+//  Should run after edges only exist between tasks, so this cast is safe
+//  Redirect stderr to stdout when both stdout and stderr are attached to a console. Assume that they are attached to the same console   This avoids interleaving problems when stdout and stderr end up at the same location
+//  TODO - bust up this hierarchy and compose using interfaces instead
+//  If this task uses a pre-compiled header
+//  Generate inputReferences() method
+//  Re-wording to exception message to get rid of the fqcn it contains
+//  GENERATE (args instanceof Object[]) ? args : new Object[] { args }
+//  Currently need to resolve the file, so that the artifact can be used in both a script classpath and the main build. Instead, this should be resolved as required
+//  Matches: task <name-value-pairs>, <identifier>, <arg>?   Map to: task(<name-value-pairs>, '<identifier>', <arg>?)
+// is it sane enough?
+//  Restore the existing object being deserialized.
+// offset based implementation is only safe up to certain figure  because of the int max value  for large streams/files (huge builds), we need to roll the file
+//  TODO It would be better if these were added via a separate managed view, rather than hard coded.
+//  Generate: int getFactoryId() { return <factory-id-field> }
+//  TODO:pm Move this to RunAsBuildOperationBuildActionRunner when BuildOperationWorkerRegistry scope is changed
+//  Use the jar when nothing has been requested
+//  Query the declared methods of the meta class
+//  Dependencies
+//  We have to keep this for a while: https://github.com/gradle/gradle/issues/4856
+//  We've already validated the inputs: should never get here.
+//  Suppress - checkstyle gets confused with type params on the outer type
+//  Get the CompilationLevel.SIMPLE_OPTIMIZATIONS class and set it on the CompilerOptions class
+//  Check already resolved results for a compatible version, and use it for this dependency rather than re-resolving.
+//  Send a end-of-line. This is a workaround to convince the console that the cursor is at the start of the line to avoid indenting the next line of text that is displayed   It would be better for the console to listen for stuff read from stdin that would also be echoed to the output and update its state based on this
+//  Add an install task   TODO - should probably not add this for all executables?
+//  Does not need to be redrawn if component is out of bound
+//  Remove all the classes other than the main class
+//  Currently retains strong references to types that are not loaded using a VisitableURLClassLoader   This is fine for JVM types, but a problem when a custom ClassLoader is used (which should probably be deprecated instead of supported)
+//  end::host-and-path[]
+//  need to run operation under cache lock
+//  The following values are relatively expensive to create, so defer creation until required
+//  Only handle the command line for now
+//  Same as above, if we have wrapped a closure in a WrappedConfigureAction or a ClosureBackedAction, we want to
+//  skipped versions were not used in a release
+//  `getMaxWorkerCount() - 1` because main thread executes work as well. See https://github.com/gradle/gradle/issues/3273   TODO This could be more efficient, so that we only start a worker when there are none idle _and_ there is a worker lease available
+//  consumer expressed no preference, defaults to library
+//  Simulate a stuck worker. There's probably a way to inject this failure...
+//  GroovySystem.getMetaClassRegistry()
+//  Verify that none of the listed "versions" do match another pattern
+//  check for duplicate entries in java and resources
+//  TODO - we've already calculated the common prefix and calling plus() will calculate it again
+//  Have an unprocessed/new selector for this module. Need to re-select the target version.
+//  Stop the pipeline:   1. mark daemon as stopped, so that any incoming requests will be rejected with 'daemon unavailable'   2. remove presence from registry   3. stop accepting new connections   4. wait for commands in progress to finish (except for abandoned long running commands, like running a build)
+//  Read body
+//  Treat all models returned to the action as part of the same object graph
+//  doesn't exist on either side, nothing to compare
+//  Find first position where values are different
+//  Not quite immutable, see ImmutablePatternSet
+//  production code should handle these exceptions more gracefully
+//  For now, 'requires' implies 'prefers', and 'strictly' implies 'requires'   Only publish the defining constraint.
+//  Universal CRT is required only for VS2015
+//  The iteration order of zip.getEntries() is based on the hash of the zip entry. This isn't much use   to us. So, collect the entries in a map and iterate over them in alphabetical order.
+//  Do not cache the task if we are not writing execution data to a file
+//  also check interfaces in case we have interfaces with nested classes
+//  Include file changed
+//  tries to relocate literals in the form of foo/bar/Bar
+//  anything other than PropertyExpressions or   VariableExpressions will stop resolving
+//  Nothing found locally - try a remote search for all resolve states that were not yet searched remotely
+//  we need to compute a hash for a constant, which is based on the name of the constant + its value   otherwise we miss the case where a class defines several constants with the same value, or when   two values are switched  non-private const
+//  BCPGOutputStream seems to do some internal buffering, it's unclear whether it's strictly required here though
+//  only need to decorate when this callback is delayed
+/*      * we have a name foo.bar and an import foo.foo. This means foo.bar is possibly     * foo.foo.bar rather than foo.bar. This means to cut at the dot in foo.bar and     * foo for import      */
+//  Expire when Daemon Registry becomes unreachable for some reason
+//  Else, something has changed in the include file graph for this source file, so analyse again
+//  Clean up old stop events
+//  TODO - should split this up, so that the inputs are attached to an object that represents the binary, which is then later used to configure the link/assemble tasks
+//  When an artifact is being published it is first checked whether it is available.   If a transport returns `null` then it is assumed that artifact does not exist.   If we throw, an attempt to publish will fail altogether even if we use ResourceExceptions#getMissing(uri).
+//  TODO: we should really find a better solution for this...   maybe we could use a FilterReader instead of a FilterInputStream?
+//  not the same provider
+//  have visited all consumers, so visit this node
+//  revisit all dependencies and possibly change the classpath order!
+//  Must prepare to bind inputs first
+//  Before there was --scan, there was -Dscan or -Dscan=true or -Dscan=yes
+// Skip content download
+//  Can only set once: should really be part of the constructor
+//  If there's more than group, merge them into a group set
+//  stream has been closed, don't bother reading anything else
+//  cleanup() will abort the process as desired
+//  separator
+//  get(<type>)
+//  throws Exception
+//  null if type == UNDEFINED
+//  Optimizes comparisons by making sure that the 2 elements of   the pair are "sorted" by hashcode ascending
+//  TODO better exception type
+//  Add these as separate specs, so they are not affected by the changes to the main spec
+//  Native Services
+//  CopySourceSpec overrides to broaden return type
+//  Maven repos are handled by MavenPlugin
+//  Add the items in this page of results to the list we'll return.
+//  TODO generic model related super exception?
+//  property requires >= JAXP 1.5 / Java8
+//  Not attached to a console
+//  No Visual Studio information available in the registry
+//  Only unpack one level of Providers, since Provider<Provider<>> is not supported - we don't need two levels of laziness.
+//  Update the state region
+//  The 'get'-getter was ignored, we can override it with the 'is'`-getter
+//  TODO - should use the _install_ task for an executable
+// end of workaround.
+/*  * TODO: This class sources Gradle metadata files, but there's no corresponding ModuleComponentResolveMetadata for this metadata yet. * Because of this, we will generate an empty instance (either a Ivy or Maven) based on the repository type.  */
+//  else, unchanged; check next file
+//  TODO bind with the sourceCompatibility property   TODO link to runtime configuration ?
+//  Must run each action
+//  This isn't quite right. Should close the worker classpath cache once we're finished with the worker processes. This may be before the end of this build   or they may be used across multiple builds
+//  var = this.<field>
+//  Handle trivial cases with 0 or 1 elements in both current and previous
+/*             There's a potential problem here in that DisconnectableInputStream reads from input in the background.            This won't automatically stop when the process is over. Therefore, if input is not closed then this thread            will run forever. It would be better to ensure that this thread stops when the process does.          */
+//  Need to do this here, so that the transfer is 'restarted' when HttpClient reopens the resource (DIGEST AUTH only)
+//  Drain the buffer before returning end-of-stream
+//  TODO: This should actually be a Routable message with a single handler,   but we need some way to correlate a given request with a specific response channel
+//  Create trust manager
+//  need to take copy to prevent ConcurrentModificationException
+//  TODO - error if there are unknowns?
+//  Yeah, setting the background intensity is not underlining.. but it's best we can do   using the Windows console API
+//  ProjectStateWrapper might contain the configured eclipse project name
+//  To determine the dependencies of the class, load up the byte code and look for CONSTANT_Class entries in the constant pool
+//  First scan for annotation, and short circuit transformation if not present
+// already handled elsewhere
+//  only interrupt poller thread if it's not current thread
+//  only set the TaskOperation as the parent if the Tooling API Consumer is listening to task progress events
+//  TODO:lptr why don't we check runningNodes here like we do in hasNodesRemaining()?
+//  Using the test sources feature introduced in Eclipse Photon
+//  add groovy-templates for Groovy 2.5+
+//  full match
+//  If the previous result was rejected, do not need to re-resolve (new rejects will be a superset of previous rejects)
+//  1.8
+//  This is a workaround for https://github.com/gradle/gradle/issues/4241   Several early typed operations have `buildPath` property,   the value of which can only be determined after the settings file for the build has loaded.     The workaround is to buffer all operation notifications in memory until the root build's settings have loaded.   This works because all possible settings files have been evaluated by the time the root one has been.   This is not guaranteed to hold into the future.   A proper solution would be to change the operation details/results to be   truly immutable and convey values known at the time.
+//  TODO:LPTR What happens when the property has multiple accessors in the same role but with different type?
+//  Fall back to serialization
+//  Self close parent in order to discover its children, or its target in the case of a reference
+//  TODO(daniel): Should support in a better way multi file invocation.   Override this method to have multi file invocation
+//  setProperty(this, name, value)
+//  end::options-of-dynamic-processor[]
+//  Index of the artifact set == the id of the artifact set
+//  At this point we must have annotations on this private getter
+//  wait for it to open
+//  GENERATE public MetaClass getMetaClass() {
+//  start element marker
+//  Download to temporary location
+//  Write count
+//  Need to perform the actual resolve
+//  Should be excluded
+//  end::isolating-annotation-processor[]
+//  Skip prebuilt libraries
+//  We need to resolve the classes into a set of files so @SkipWhenEmpty will work   Otherwise, a collection of empty directories is not seen as "empty"
+//  from this point down, the daemon is 'busy'
+//    Add factory method
+//  This is a legacy quirk.   Scans use this to determine that progress logging is indicating start/finish of tasks.   This can be removed in Gradle 5.0 (along with the concept of a “logging category” of an operation)
+//  Ignored
+//  TODO - this should work for any build, rather than just an included build
+//     naming conventions via call to sourceSet.getTaskName()
+//  @Todo: refactor this task configuration to extend a copy task and use replace tokens
+//  Forced dependencies are only supported for enforced platforms, so it is currently hardcoded.   Should we want to add this as a first class concept to Gradle metadata, then it should be available on the component variant   metadata as well.
+//  Zero or more * characters followed by at least one !*
+//  Restrict the decorations to those required to decorate all views reachable from this type
+//  Axe everything after the expected exception
+//  Left over data from previous append is only possible when a multi-chars new line is   been processed and split across multiple append calls.
+//  Restart each configuration. For the evicted configuration, this means moving incoming dependencies across to the   matching selected configuration. For the select configuration, this mean traversing its dependencies.
+//  Use an IdeaModule to reference a project
+//  we have for example a class name A, are in class X   and there is a nested class A$X. we want to be able   to access that class directly, so A becomes a valid   name in X.
+//  Nothing found - do a second pass
+//  Mappings between public and impl types   If the list of mappings grows we should move it to a data structure
+//  TODO: projectDependency should be transformed based on defaultProject (and other context) elsewhere.
+//  no dynamic constraints defined, so dynamicId equals revId
+//  the collection will only be initialized if more than one project candidate is found
+//  Includes trailing '/'
+//  Any work execution happening in nested or buildSrc builds before the root build has started executing work is ignored
+//  re-use not possible across modules currently
+//  https://github.com/gradle/gradle/issues/5763
+//  If this default is ever changed, ensure the documentation on PathSensitive is updated as well as this guide:   https://guides.gradle.org/using-build-cache/#relocatability
+//  TODO: Migrate this to the worker API once the FileSystem and FileOperations services can be injected
+//  could be caused by https://bugs.openjdk.java.net/browse/JDK-8011537 ignore problems in stopping
+//  Keep the files and discard the origin values instead?
+//  TODO - move this to PropertyValue instead
+//  Virtual platforms require their constraints to be recomputed each time as each module addition can cause a shift in versions
+//  No compilers available, complain about the missing C compiler
+// noinspection SwitchStatementWithTooFewBranches
+//  Remove the "Daemon will be shut down" message
+//  Do nothing by default
+//  TODO Resolve the JavaPlatform and ScalaPlatform from their PlatformResolvers, rather than instantiating directly
+//  Else, already visited
+//  buffer has been fully read, start at the beginning
+//  Failed in another thread
+//  GENERATE public boolean hasProperty(String name) { return getAsDynamicObject().hasProperty(name) }
+//  Need Transformer (part of AntBuilder API) from base services
+/*      * Closes the tooling API, releasing all resources. Blocks until completed.     *     * <p>May attempt to expire some or all daemons started by this tooling API client. The exact behaviour here is implementation-specific and not guaranteed.     * The expiration is best effort only. This method may return before the daemons have stopped.</p>     *     * <p>Note: this is not yet part of the public tooling API yet.</p>     *     * TODO - need to model this as a long running operation, and allow stdout, stderr and progress listener to be supplied.     * TODO - need to define exceptions.     * TODO - no further operations are allowed after this has been called     * TODO - cancel current operations or block until complete     * TODO - introduce a 'tooling API client' interface and move this method there      */
+//  Read path to Gradle user home
+//  Look for a realized object
+//  Mark this version as rejected
+//  TODO - error messages   TODO - display names for this container and the Provider implementations
+/*        The GroovyObject interface defines dynamic property and dynamic method methods. Implementers       are free to implement their own logic in these methods which makes it invisible to the metaclass.       The most notable case of this is Closure.       So in this case we use these methods directly on the GroovyObject in case it does implement logic at this level.      */
+//  If the jansi.force property is set, then we force to output
+//  Queue this up for checking again later   This is done because we're checking what we have locally in cache, and there may be nothing   so we're queuing it back so that the next time we check in remote access.
+//  TODO - binaries aren't an input to this rule, they're an input to the action
+//  Build `buildSrc`, load settings.gradle, and construct composite (if appropriate)
+//  TODO LD use something more stable than a cast here
+//  invoked by Groovy
+// (SF) this is a workaround until this story is completed. I'm hardcoding setting the idle timeout to be max X mins.  this way we avoid potential runaway daemons that steal resources on linux and break builds on windows.
+//  Show the direct cause of the last contextual cause only
+//  Matches: task <identifier>(<options-map>)
+//  List modules based on metadata files (artifact version is not considered in listVersionsForAllPatterns())
+/*      * Produces an ArtifactIdentifier for this artifact (it's not actually an identifier - just a bucket of attributes).     * TODO:ADAM - remove this      */
+//  Should repositories be able to participate in incremental?   At the least, they may be able to express themselves as output files   They *might* have input files and other dependencies as well though   Inputs: The credentials they need may be expressed in a file   Dependencies: Can't think of a case here
+//  Configure test binary to link against tested component compiled objects
+//  There is a possibility that a platform version was selected before a new member   of the platform was discovered. In this case, we need to restart the selection,   or some members will not be upgraded
+//  Set this.name = param1
+//  We moved the API back into internal, so this isn't really correct.
+//  Intentionally asymmetrical to getExecuted()   This prevents recursion on `project.afterEvaluate { project.evaluate() }`
+//  return this.name
+//  On rare occasions, exitValue == 0 when the process is expected to fail, and the error output indicates failure.
+//  System types come from the system classloader and their classloader is null.
+//  standalone test suite
+//  TODO - remove this once the above is removed
+//  Default Eclipse JRE paths:   https://github.com/eclipse/eclipse.jdt.debug/blob/master/org.eclipse.jdt.launching/plugin.xml#L241-L303
+//  TODO:ADAM - need to do this earlier
+//  if the plugin has already been added
+// when root suite is completed we stop redirecting
+//  Discard the body when the expression is not resolvable
+//  TODO: This should be modeled as a source set
+//  used in integration tests
+//  TODO - implement these cases
+// Is there any other parent properties?
+//  TODO find a better way to present this information in the error message   Attempt to mimic Gradle nested exception output
+/*      * Checks whether the plugin marker artifact exists in the backing artifacts repositories.      */
+//  TODO - wire this stuff in properly
+//  Any Swift 3.x compiler
+//  Probe for artifact with classifier
+//  No auto-applied plugins available
+//  TODO: Provide an abstraction for accessing resources within the same module (maven-metadata, directory listing, etc)   That way we can avoid passing `ivyPatterns` and `artifactPatterns` around everywhere
+// a list instance is needed here, as org.gradle.internal.snapshot.ValueSnapshotter.processValue() does not support  serializing Iterators directly
+//  Gradle core plus worker implementation classes
+//  superName can be null if what we are analyzing is `java.lang.Object`   which can happen when a custom Java SDK is on classpath (typically, android.jar)
+//  Swap the Foreground and Background bits.
+//  TODO - this will leave invalid types in the cache when it fails
+//  Currently not required
+//  Classloader scope will be handled by the cache, class will be released when the classloader is.
+//  Float f = (Float) tmp   f==null?0:f.floatValue()
+//  TODO - need to do a better job of routing messages when there are multiple endpoints. This is just going to forward all queued messages to the first   waiting endpoint, even if there are multiple waiting to do work
+//  TODO this doesn't belong here, that java plugin should add an extension to this guy with this
+//  Have already visited this node - skip it
+//  Configure the component
+//  super class not on the classpath - unable to scan parent class
+//  This piece of ugliness copies the JAXP (ie XML API) provider, if any, from the system ClassLoader. Here's why:     1. When looking for a provider, JAXP looks for a service resource in the context ClassLoader, which is our isolated ClassLoader. If our classpath above does not contain a      provider, this returns null. If it does contain a provider, JAXP extracts the classname from the service resource.   2. If not found, JAXP looks for a service resource in the system ClassLoader. This happens to include all the application classes specified on the classpath. If the application      classpath does not contain a provider, this returns null. If it does contain a provider, JAXP extracts the implementation classname from the service resource.   3. If not found, JAXP uses a default classname   4. JAXP attempts to load the provider using the context ClassLoader. which is our isolated ClassLoader. This is fine if the classname came from step 1 or 3. It blows up if the      classname came from step 2.     So, as a workaround, locate and make visible XML parser classes from the system classloader in our isolated ClassLoader.     Note that in practise, this is only triggered when running in our tests
+//  _state == ARTIFACT_EXCLUDE || EXCLUDE
+//  this.super(p0 .. pn)
+//  only define a Scala SDK for a module if we could create a scalaSdkLibrary
+//  We limit the inner class lookups here by using ConstructedClassWithPackage.   This way only the name will change, the packagePrefix will   not be included in the lookup. The case where the   packagePrefix is really a class is handled elsewhere.   WARNING: This code does not expect a class that has a static            inner class in DEFAULT_IMPORTS
+//  This is copied from Ant (see org.apache.tools.ant.util.FileUtils.tryHardToDelete).   It mentions that there is a bug in the Windows JDK impls that this is a valid   workaround for. I've been unable to find a definitive reference to this bug.   The thinking is that if this is good enough for Ant, it's good enough for us.
+//  TODO - implement this by moving this resolver to live alongside the external resolvers
+//  unboxing and boxing does the trick
+//  TODO: Register these mappings somewhere
+//  Note that @CompileClasspath here is an approximation and must be fixed before de-incubating getAstTransformationClasspath()   See https://github.com/gradle/gradle/pull/9513
+//  One of the Scala plugins is applied, but ScalaRuntime extension is missing or the ScalaPlatform is undefined.   we can't create a Scala SDK without either one
+//  TODO: These should come from somewhere else, probably
+//  Discard state that is no longer required
+//  Ignore and fall back to growl notify
+//  Determine the net exclusion for this node, by inspecting all transitive incoming edges
+//  Windows at least will sometimes throw odd exceptions like java.nio.file.AccessDeniedException   if the file gets deleted while the watch is being set up.
+//  this.getMetaClass()
+//  TODO: This exists because we detect all available native tool chains on a system (clang, gcc, swiftc, msvc).     Many of our old tests assume that available tool chains can compile many/most languages, so they do not try to   restrict the required set of tool chains.     The swiftc tool chain can build _only_ Swift, so tests that expect to use the swiftc tool chain properly annotate   their requirements with ToolChainRequirement.SWIFTC (or a version-specific requirement).     Our multi-test runner is smart enough to disable tests that do not meet the test's requirements, but since many   of the old tests do not have requirements, we assume the tests require a "C" like tool chain (GCC, Clang, MSVC).     In the future... we want to go back to old tests and annotate them with tool chains requirements.
+//  create our own metaInf which runs after mainSpec's files
+//  Trigger a replay on this node, to add new constraints to graph
+//  Calculate how many rows of the status area overlap with the text area
+// The maximum number of times to retry a request when S3 responds with a http 5xx error
+//  Intentionally not a “create” method as this should not be exposed as a service
+//  Include file graph for this source file has not changed, skip this file
+//  Some other meta-class implementation - fall back to the public API
+//  Turn off request logging, this can end up logging OAUTH   tokens which should not ever be in a build log
+//  If there's more than one node selected for the same component, we need to add   the implicit capability to the list, in order to make sure we can discover conflicts   between variants of the same module. Note that the fact the implicit capability is   in general not included is not a bug but a performance optimization
+//  Already invoking a method on the mix-in
+//  We have an exclusive lock (whether we asked for it or not).
+//  this is not very beautiful but at some point we will   get rid of ArchiveOutputStreamFactory in favor of the writable Resource
+//  TODO: We should set this for macOS, but this currently breaks XCTest support for Swift   when Swift depends on C++ libraries built by Gradle.
+//  not enough data points
+//  Rely on the default linkage for providing the headers
+//  Climb up the hierarchy looking for the highest parent
+//  Source file has changed
+//  here, we need to check that applying the new resolution filter   we would actually exclude exactly the same dependencies as in   the previous visit. It is important that this is NOT a heuristic   (it used to be) because if the filters are _equivalent_, we would
+//  Don't go up the parent chain.   Don't want to risk classes crossing “scope” boundaries and being non collectible.
+//  This URL is not recognized by the Mac console (too few leading slashes). We solve   this be creating an URI with an empty authority.
+// the default
+//  A set of progress operations that have been forwarded
+//  TODO: Make plan executor respond to changes in parallelism configuration
+//  else, throw it away
+//  try the owner
+//  This is a performance optimization. Most modules do not declare capabilities. So, instead of systematically registering   an implicit capability for each module that we see, we only consider modules which _declare_ capabilities. If they do,   then we try to find a module which provides the same capability. It that module has been found, then we register it.   Otherwise, we have nothing to do. This avoids most of registrations.
+//  known value, only write index
+//  Object propertyMissing(String name, Object value)
+// in theory this should not happen
+//  Have visited this node's dependencies - add it to the end of the plan
+//  TODO - exception when type cannot be created
+//  This will propagate through the graph and prune configurations that are no longer required.
+//  GENERATE new ConventionAwareHelper(this, getConvention())
+//  Nexus uses sha1 etags, with a constant prefix   e.g {SHA1{b8ad5573a5e9eba7d48ed77a48ad098e3ec2590b}}
+//  Required for MavenLocal to verify the presence of the artifact
+//  TODO This is a brain-dead way to ensure that the reference project's model is ready to access
+//  Encode the character using hex notation
+//  We have a matching component id that was rejected. These are handled later in the resolution process   (after conflict resolution), so it is not a failure at this stage.
+//  Classes or resources requested, some Jars found, let's prefer these
+//  Move into cache
+//  Retain buffer if there is capacity in the queue, otherwise discard
+//  It's true right now that this is always coming from the TestKit, but might not be in the future.
+//  Was previously traversed, and no change to the set of modules that are linked by outgoing edges.   Don't need to traverse again, but hang on to the new filter since it may change the set of excluded artifacts.
+//  Write the output
+//  A launchable created by the provider - just hand it back
+//  Prevent further tests (ignored) from triggering start actions
+//  Try to configure an element
+//  discard static initializers
+// we don't handle Variables at the moment because users didn't request it yet  and it would probably push us to add support in the tooling api to retrieve the variable mappings.
+//  TODO:LPTR Remove projection for reference node   This shouldn't be needed, but if there's no actual value referenced, model report can only   show the type of the node if we do this for now. It should use the schema instead to find
+//  Matches: task <method-call>
+//  found more than one
+//  Invalid paths fall through to here
+//  kept for backwards compatibility of plugins using internal APIs
+//  Configure the included build to discover available modules
+//  found the first project dependency
+//  If the current target is a project component, it must be unmodified from the requested
+//  TODO - this should be applied to all methods, including delegating methods
+//  ignore this installation for validation, it will be caught later
+//  No macro includes were seen in the include graph of this file, so the result can be reused if this file is seen again
+//  Known, but not buildable
+//  The “remote” may have already given us the checksum
+//  Start the pipeline in reverse order:   1. mark daemon as running   2. start handling incoming commands   3. start accepting incoming connections   4. advertise presence in registry
+//  Already at the front. If not at the front, need to recreate
+//  This factory should be injected but leaves non-daemon threads running when used from the tooling API client
+//  The other is better, current is not part of result
+//  Add a JAVA_HOME if none provided
+//  copy one by one until the underflow has been resolved
+//  Check to see if we should adjust the level based on a set lifecycle log level
+//  Configuration artifacts are determined locally
+//  Defines all projections for the node   Initializes the node   Allows a mutation to setup default values for an element   Mutation action provided when an element is defined   Customisations   Post customisation default values   Post mutation validations
+//  Add new labels to the unused queue
+//  this.getServices()
+//  Exactly Visual Studio 2013
+//  If any of the child strategies don't expire the daemon, the daemon will not expire.   Otherwise, the daemon will expire and aggregate the reasons together.
+//  Iterate over the metadata sources to see if they can provide the version list
+//  Include all 'optional' dependencies in "optional" configuration
+//  Lock is held while creating ClassLoader - nothing else can happen while this is running
+//  Rethrow
+//  Automatically substitute all available modules
+//  TODO(daniel): Should support in a better way multi file invocation.
+//  TODO Only log expired workers count, log their "identity" once they are nameable/describable
+// calling overloaded method with extra behavior:
+// we can try sending something to the daemon and try out if he is really dead or use jps  if he's really dead we should deregister it if it is not already deregistered.  if the daemon is not dead we might continue receiving from him (and try to find the bug in messaging infrastructure)
+//  Convert properties to ParallelismConfiguration object
+//  That means if the current class is not an InnerClassNode
+//  When age == 0, verified since the start of this build, assume the meta-data hasn't changed
+//  This is necessary so that the watcher indicates its not running if the runnable gets cancelled
+// partial match
+//  TODO:ADAM - switch the logging back on. Need to make sending messages from daemon to client async wrt log event generation                  LOGGER.debug("Ignoring failure to extract throwable stack trace.", ignored);
+//  verify URL by making a HTTP call
+//  if the target was invalid
+//  A sequence of tokens that look like a function call argument list. Should support an arbitrary token sequence
+//  <method>.getGenericReturnType()
+//  TODO: Locate this tool from a tool provider
+//  TODO Will be implemented without hard-coded access to `$GRADLE_USER_HOME/gradle.properties` for 5.1 in #6084
+//  Run the build and get the build outcomes model
+//  Force loading to check if method handle is supported
+//  check package this class is defined in. The usage of ConstructedClassWithPackage here   means, that the module package will not be involved when the   compiler tries to find an inner class.
+//  This isn't quite right, as we may lose precision when converting to a double
+//  This logger has been replaced (for example using `Gradle.useLogger()`), so don't log anything
+/*      * TODO - hack to avoid classloading issues. We should use org.gradle.util.TextUtil     *     * Currently we can't use it reliably because it causes CNF issues with cross version integration tests running against tooling api < 1.3.      */
+//  This test class should be loaded via the custom system ClassLoader
+//  An empty capability list means that it's an implicit capability only
+//  Everything else treat as a generic operation
+//  Register each child of each component
+//  Capture the current state of things that we will change during execution
+//  Construct a new Compiler class
+//  from this point down, logging is sent back to the client
+//  Only use this for top level project scripts
+// quote ', ", \, $. Probably not perfect. TODO: identify non-working cases, fail-fast on them
+//  Compile the interface to a temp file and then copy it to the cache folder.   This avoids sporadic cache lock timeouts when the compiler interface JAR takes   a long time to generate while avoiding starving multiple compiler daemons.
+//  TODO - allow @InputFile and @SkipWhenEmpty to be attached to getExecutableFile()
+//  if more than one conflicting project dependencies
+//  any of the ansi sequences.
+//  Enabled caching if task type is annotated with @CacheableTask
+//  Controls when to disable reading default authentication credentials, should be used in tests only
+//  Not the first top level node
+//  Ignore: All selectors failed, and will have failures recorded
+// TODO - outputEventListener and buildStandardInput are per-build settings  so down the road we should refactor the code accordingly and potentially attach them to BuildActionParameters
+//  Don't serialize the causes - we'll serialize them separately later
+//  Lifecycle messages
+//  These methods return strings rather than types because it may be more complicated than what is able to be expressed via a ModelType.   Also, we don't want to encourage compatibility checking occurring by looping through such types as we have more options for optimising the compatibility check internally.   Also also, these methods are only called for reporting so values should typically not be precomputed.
+//  Show any contextual cause recursively
+//  Eventually convert manifest content to UTF-8 before handing it to java.util.jar.Manifest
+// This one should go away once we complete the auto-apply plugins
+//  Ugly, but there are a few places where we need to instantiate a JavaDebugOptions and a regular ObjectFactory service   is not available.
+//  These are implemented as a system property, but don't really function like one   So we include it in this “no system property” set.
+//  not a single candidate
+//  TODO: Replace this with `JvmAssembly` once that type is public
+//  rename project dependencies
+//  Add artifact format as an implicit attribute when all artifacts have the same format
+//  Do not process Object's or GroovyObject's methods
+//  If there is no previous state, then we do have output changes
+//  Ignore the other values
+//  A cycle, treat as resolved here
+//  Versions before 4.1 would log "CONFIGURE SUCCESSFUL" for model/action execution (but "BUILD FAILED" for task/test execution)
+//  Ignore overrides of Object and GroovyObject methods
+//  TODO: turn into Set?
+//  build tasks without project reference
+//  unclear what the best thing to do here would be
+//  Path is-a Iterable, so check before checking for Iterable
+//  TODO: we should just cache these classloaders and eject/stop them when they are no longer in use
+//  Try to move the file out of the way in case its permanently corrupt   Don't delete, so that it can be potentially used for debugging
+//  TODO: Duplicated in DefaultFileLockManager
+//  This method is effectively part of a cross Gradle version contract.
+//  GENERATE super.<setter>(v)
+// (SF) This approach should generally work because at the moment we reset capturing output per suite  (see CaptureTestOutputTestResultProcessor) and that reset happens earlier in the chain.  So in theory when suite is completed, the output redirector has been already stopped  and there shouldn't be any output events passed  See also GRADLE-2035
+//  Handler to detect Gradle metadata redirects
+// TODO:instant-execution - use the class generator instead
+//  TODO deleteOnExit won't clean up non-empty directories (and it leaks memory for long-running processes).
+//  Implicit JVM args that should be used to fork a JVM
+//  with a lower case letter anymore
+//  For each candidate node, add it to the preceding nodes.
+//  Add a line before the first question that has been asked of the user   This makes the assumption that all questions happen together, which is ok for now   It would be better to allow this handler to ask the output renderers to show a blank line before the prompt, if not already present
+//  1.0-milestone-5 was broken where jna was not available  noinspection SimplifiableIfStatement
+//  network authentication required
+//  Foo can match both Foo and Foo$NestedClass
+//  TODO include link to documentation giving more explanation of what's going on here.
+//  Flushing data coming only from current appending
+//  Note: this listener manager is scoped to the root Gradle object.
+//  Always use x86 as default on windows
+//  literal followed by * followed by literal: matches #4 above
+//  the platform itself is greater than the forced version
+//  need to defer loading of Zinc/sbt/Scala classes until we are   running in the compiler daemon and have them on the class path
+//             new Inspector().inspectModel(result);
+//  We do not consider injecting constructors public API
+//  and  (A ∩ ...) ∪ A = A
+//  TODO:HH This should be moved back into languageNative project
+//  GENERATE public ConventionMapping getConventionMapping() {
+//  Wait for work to be submitted if the queue is empty and our worker count is under max workers   This attempts to keep up to max workers threads alive once they've been started.
+//  TODO: This hard-codes the assumption of a 'compile' configuration on the external module   Instead, we should be creating an API configuration for each resolved module
+//    Add `boolean immutable() { return true }`
+//  in the map, store a minimally populated LaunchableGradleTaskSelector that contains just the description and the path   replace the LaunchableGradleTaskSelector stored in the map iff we come across a task with the same name whose path has a smaller ordering   this way, for each task selector, its description will be the one from the selected task with the 'smallest' path
+//  append full stack trace
+//  TODO:Cedric The following validation should in theory happen in its own rule, but it is not possible now because   there's no way to iterate on the map as subject of a `@Validate` rule without Gradle thinking you're trying to mutate it
+//  TODO - display name
+//  GENERATE private boolean <flag-name>;
+//  Only expand the thread pool if there is work in the queue or we know that work is about to be submitted (i.e. force == true)
+//  TODO - move this to a base plugin   Setup the dependency on the main binary   This should all be replaced by a single dependency that points at some "testable" variants of the main binary
+//  java.lang.Object found, which is not a test class
+//  At this point we know that we have a match for pname. This may   mean, that name[pname.length()..<-1] is a static inner class.   For this the rest of the name does not need any dots in its name.   It is either completely a inner static class or it is not.   Since we do not want to have useless lookups we create the name   completely and use a ConstructedClassWithPackage to prevent lookups against the package.
+//  Resolve it later
+//  The provider does not know how to produce the value, so use the value instead
+//  Matches: task <identifier> <operator> <expression> | task <string> <operator> <expression>   Map to: passThrough(task('<identifier>') <operator> <expression>) | passThrough(task(<string>) <operator> <expression>)
+//  For test suites (including suite-like custom Runners), if the test suite class   matches the filter, run the entire suite instead of filtering away its contents.
+//  Save a reference to the dependency that was written before
+//  Called from transformed DSL rules
+//  should never happen here
+//  Capture changes in execution outcome
+//  If node was previously traversed, need to remove outgoing edges.
+//  used only as defaultconf, not used for
+//  Using DefaultTestClassDescriptor to fake JUnit test
+//  TODO LJA Using the root as the NodeState here is a bit of a cheat, investigate if we can track the proper NodeState
+//  We know that we're running single-threaded here, so we can use lenient project locking
+//  Other home dir in use, close these. Otherwise, keep the services for next time
+//  This should live closer to the project itself
+//  load the static type descriptor from class constants
+//  What is actually exposed
+/* Mutable */
+//  Node must be at the predecessor state before calculating dependencies
+//  Hold the lock until we actually start accepting connections for the case when stop is called from another   thread while we are in the middle here.
+//  0.9.1 couldn't handle anything with a timestamp whose timezone was behind GMT
+//  Copy the snapshots whose values are the same, then snapshot remaining values
+//  TODO: Wrong, using the full classpath of the application
+//  Use the origin file when it can satisfy the basename requirements
+//  This should apply some locking, but most access to the build state does not happen via this method yet
+//  asking isResolved here allows to check if a primitive   type name like "int" was used to make t. In such a case   we have nothing left to do.
+//  TODO: This can throw a NPE: will need an identifier for a variant without an owning component
+//  By default, we do not push to the remote cache.
+//  We know that Jvm binaries are BinarySpec instances
+//  TODO:ADAM - need to cleanup completion too, if not used
+//  Any available Swift compiler <= 4
+//  The identity check is intentional here, do not replace with .equals()
+//  SoftwareModel
+//  TODO removing this stuff from the store should be handled through some sort of decoration
+// this shouldn't happen if you call check availability with #available first
+//  Reuse the same version as last build
+//  Workaround for backwards compatibility. Previously, this case would unintentionally cause the method to be invoked on the owner   continue below
+//  Implementation is provided by 'plugin-use' module
+//  If we don't know what the max heap is, approximate it based on OS total memory
+//  Assuming format: 'Swift version 4.0.2 (...)'
+//  Hackery
+//  Have visited this node's dependencies - add it to the graph
+//  fall back to the default logic
+//  Cannot configure Slf4j logger. This will happen if:   - Tests are executed with a custom classloader (e.g using `java.system.class.loader`)   - Tests are run with `--module-path`, effectively hiding Gradle classes
+/*  (non-Javadoc)         * @see org.apache.ivy.plugins.parser.m2.PomDependencyMgt#getVersion()          */
+//  Empty or only whitespace
+//  Ignore tasks created after not closed
+//  Back to being a pending dependency   Clear remaining incoming edges, as they must be all from constraints
+//  TODO - this isn't correct, assumes that a side effect is to add the element
+//  Coercion is an expensive process, so we cache the result of coercing to other attribute types.   We can afford using a hashmap here because attributes are interned, and their lifetime doesn't   exceed a build
+//  TODO Make this work with pending elements
+//  It won't for arbitrary scripts though.
+//  No statements, or no statements that have an effect
+//  Any Swift compiler
+//  Serialize the worker config, this is consumed by SystemApplicationClassLoaderWorker
+//  there is nothing to be done.
+//  Do not include implicit builds in workspace
+//  Log the error but analyze the remaining interfaces. We could for example run into https://bugs.openjdk.java.net/browse/JDK-7032558
+// done writing data, release any resources
+//  TODO - mix this in using decoration. Also validate closure parameter types, if declared
+//  Milestone 8 and 9
+//  Should not happen reading from a StringReader
+//  This is not the root block. Must have children >= minIndexChildNodes
+//  We use static private methods because private/protected methods are disallowed   in managed types.
+//  default Scala version
+//  Don't care, collect the artifacts later (in the correct order)
+//  GENERATE super.getAsDynamicObject()
+//  todo remove this property once configuration can handle normal file system dependencies
+//  TODO: We basically don't support copying custom Javadoc options
+//  result is a scala.util.Either   right is a Seq of files that were generated   left is routes compilation errors   TODO: It might be nice to pass along these errors in some way
+//  NOTE: the space in the directory name is intentional
+//  if the first call to getConfiguration is done before getDerivedVariants() is called   then it means we're using the legacy matching, without attributes, and that the metadata   we construct should _not_ include the constraints. We keep the constraints in the descriptors   because if we actually use attribute matching, we can select the platform variant which   does use constraints.
+//  fully visit the class hierarchy before any interfaces in order to meet the contract   of PropertyDetails.getGetters() etc.
+//  Capture changes to implementation
+//  A member of the class breaks binary compatibility.   That will be handled when the member is passed to `maybeViolation`.
+// by keying the failures only by 'requested' we lose some precision  at edge case we'll lose info about a different exception if we have different failure for the same requested version
+//  TODO - exception when no default type
+/*      * Indicates whether the tests should be run in deterministic order. Preserving the order guarantees that the complete test     * (including @BeforeXXX and @AfterXXX) is run in a test thread before the next test is run.     *     * Not required.     *     * If not present, the order will not be preserved.      */
+// TODO - make this work on windows  originalIn.close();
+//  a local component cannot have attributes (for now). However, variants of the component   itself may.
+//  implicitly don't clean up if this throws
+//  Used for testing the plugins DSL
+//  Mixed case
+//  Chuck away the implicit target. It has already been executed
+//  TODO: Extract the non-filesystem parts of the FileSystemChangeWaiter into a separate interface   This isn't really tied to file system watching, we just need another type of waiter.
+//  check module node imports aliases   the while loop enables a check for inner classes which are not fully imported,
+//  Find the status line for the previous record of this task
+//  TODO - the project model should be reachable from ProjectState without another lookup
+//  What actually shows up on the console
+//  in order to make sure that the CacheEntry is not collected   while the cached class loader is still in use, we need to keep a strong reference onto 0
+//  Check enum equality without checking loading ClassLoader.   There is a slight risk that two versions of the same enum class are compared,   (that's why classloaders are used in equality checks), but checking both name   and ordinal should make this very unlikely.
+//  TODO: do we need any factories here?
+//  This uses the system classloader and will not release any loaded classes for the life of the daemon process.   Do not use this to load any classes which are part of the build; it will not release them when the build is complete.
+//  The fingerprint hashes for non-regular files are slightly different to the snapshot hashes, we only need to compare them for regular files
+//  TODO: Configure 'eclipse' projects too
+//  Ends up with: 1 2 -> 3 <- 4 5 6
+// we could retrieve annotations at construction time and hold references to them but unfortunately  in IBM JDK strong references are held from annotation instance to class in which it is used so we have to reflect
+//  Check each unique edge in the include file graph
+//  Already seen this source file before. See if we can reuse the analysis from last time
+//  The target may already be modified from the original requested
+//  acquiring the exclusive lock can fail in the rare case where another process is just doing or has just done the cache initialization
+//  There is currently a requirement in the JDK9 javac implementation   that when javac is invoked with an explicitly empty sourcepath   (i.e. {@code --sourcepath ""}), it won't allow you to compile a java 9   module. However, we really want to explicitly set an empty sourcepath   so that we don't implicitly pull in unrequested sourcefiles which   haven't been snapshotted because we will consider the task up-to-date   if the implicit files change.     This implementation of hasLocation() pretends that the JavaFileManager   has no concept of a source path.
+//  Check to see if there are any compatible idle daemons
+//  TODO: Need to track version/implementation of symbol strip tool.
+//  TODO: what if this errors?
+//  Generate new Object[] { args }
+//  A ∩ (A ∪ B) ∩ (A ∪ C) -> A
+//  Enable the use of Gradle metadata. This is a temporary opt-in switch until available by default
+//  2) we don't do progress logging for "downloading"
+//  TODO validations on method: synthetic, bridge methods, varargs, abstract, native
+//  TODO: Change the default location for these reports to follow the convention defined in #configureReportOutputDirectory
+//  Discard actions after execution
+//  Need to move those implicit JVM args that contain a space to the Gradle command-line (if possible)   Note that this isn't strictly correct as some system properties can only be set on JVM start up.   Should change the implementation to deal with these properly
+//  otherwise, keep lock open
+//  If unknown, try a remote search
+//  This is a workaround for https://issues.gradle.org/browse/GRADLE-3324.   Somehow the ArrayList 'result' in `org.sonatype.aether.impl.internal.Utils#sortMetadataGeneratorFactories` ends up   being a list of nulls on windows and IBM's 1.6 JDK.
+//  public methods belongs to your API
+//  Add tasks to build various kinds of components
+//  Attempt to merge with the right sibling
+// "type-only model reference of type '%s'%s is ambiguous as multiple model elements are available for this type:%n  %s (created by %s)%n  %s (created by %s)",
+//  inverse process of resolveClasspath to make sure IncrementalResultStoringCompiler stores correct result
+//  Pull-only always comes first
+//  TODO: This should be part of the cached result?
+//  Passing null for sha1 - TODO - consider using the etag which is an MD5 hash of the file (when less than 5Gb)
+//  Create a processor that processes events in its own thread
+//  TODO: Assumes there's a single 'main' Swift component
+//  Basically, if we see an operation with a logging header and it's not grouped, just log it
+//  Note: order is crucial here. Nodes are traversed through these states in the order defined below
+//  Add outgoing configurations and publications
+//  we don't want to add core classloader explicitly here.
+//  no retry
+//  Safety check: dispatching a message should not cause the thread to dispatch another message (eg should not do any logging)
+//  Need to remember if a further element was matched by an earlier one, no need to consider it then
+//  Order from most recent to least recent
+//  Ignore some broken samples
+//  Override this, so that the working directory is not canonicalised. Some int tests require that   the working directory is not canonicalised
+//  solution   IllegalAccessException
+//  Otherwise, we defer to the judgement of our internal backoff handler.
+//  The very first event starts the Initializing phase   TODO - should use BuildRequestMetaData to determine the build start time
+//  the following only needs to be done serially to preserve ordering of dependencies in the graph: we have visited the edges   but we still didn't add the result to the queue. Doing it from resolve threads would result in non-reproducible graphs, where   edges could be added in different order. To avoid this, the addition of new edges is done serially.
+//  Callable<?>
+//  Read configuration from stdin
+//  Maven local
+//  we need to wrap this into a loop, because there's always a risk   that the method, which is weakly referenced, has been collected   in between the creation time and now
+//  line gap between the text area and the status area.
+//  TODO: these should be moved off to a separate type
+/*  * TODO - merge this and the component container  */
+//  Consider every node that must run before the finalizer
+//  There is an inheritance hierarchy in play here, so the order   of the clauses is very important.
+//  Replace if higher priority or version with highest priority and version
+/*  * A performance test that compares Gradle's current performance against * some baseline and fails if it is slower.  */
+//  Find the nearest parent up that we care about and use that as the parent.
+//  todo: consider multithreading/multiprocess issues   Teamcity has the concept of a "wave" of messages   where each thread/process uses a unique wave id
+//  No macro name
+//  core javadoc options
+//  attributes
+//  Do not macro expand parameter
+//  Badly form args list
+//  https://github.com/gradle/gradle/issues/2319
+//  if we ask for "external" dependencies, it's still fine to bring a fat jar if nothing else is available
+//  This is so that VisualCpp has the object file of the generated source file available at link time
+//  Commit all changes in the working tree
+//  Based on the benchmark found in org.gradle.internal.nativeintegration.filesystem.FileMetadataAccessorBenchmark   and the results in the PR https://github.com/gradle/gradle/pull/1183   we're using "native platform" for Mac OS and a  mix of File and NIO API for Linux and Windows   Once JDK 9 is out, we need to revisit the choice, because testing for file.exists() should become much   cheaper using the pure NIO implementation.
+//  TODO: synchronization with other methods
+//  Shutdown the adapter Groovy system
+//  in the binary inputs.
+//  These constants are defined here and not with the rest of their kind in HelpTasksPlugin because they are referenced   in the ‘core’ modules, which don't depend on ‘plugins’ where HelpTasksPlugin is defined.
+//  state, cachedResolvedConfiguration, and extendsFrom intentionally not copied - must re-resolve copy   copying extendsFrom could mess up dependencies when copy was re-resolved
+//  If you update FILE_STORE, you may also need to update LocallyAvailableResourceFinderFactory
+//  copy in case any actions mutate the store
+//  TODO Need a smarter way to map usage to artifact classifier
+//  IDEA doesn't like the result of file.toURI() so use the absolute path instead
+//  TODO: maybe we need to allow additional dirs like SourceSetOutput does   (esp. for backwards compatibility). Wonder if it's still necessary to distinguish   between classes and resources dirs, instead of just maintaining a collection of dirs.   As far as generated resources are concerned, it might be better to model   them as an additional (Buildable) ResourceSet.
+//  Snarl is not running
+//  Resolve the dependency graph
+//  Rewrite the method call to match TransformedModelDslBacking#create(String, Closure), which is what the delegate will be
+// when test is completed we should redirect output for the parent  so that log events emitted during @AfterSuite, @AfterClass are processed
+//  prefer to use the actual memory usage reported by the worker
+//  TODO - this is pretty nasty, look at avoiding using a time bomb stub here
+// add description only to the first module
+//  the ansi escapes.
+//  Adding a small set with no duplicates
+//          mapping = new ConventionAwareHelper(this, getConvention());       }       return mapping;   }
+//  TODO extract common stuff from this and ModelSet and reuse
+//  TODO: This check should really be done in the compiler process
+//  Was it created during execution?
+//  Already realized, just run the action now
+// InputStream originalIn = System.in;
+//  default value for older Gradle clients
+//  legacy mode
+//  else, already visited or currently visiting (which means a cycle), skip
+// btw. the ibm vm+winXP also has some issues detecting closed streams by the child but we handle this problem differently.
+// checks if candidate project is dependent of the origin project with given configuration
+//  for guessing right side part of a mapping
+//  Always publish `ComponentWithVariants`
+/*      * Returns Whether the transformer can transform     * these arguments at all.      */
+// we don't really need to launch the daemon to acquire information needed for BuildEnvironment
+//  setup the default configurations used when mapping to resolved versions
+//  We are handling the root of the tree here
+//  TODO: When we support multiple components or configurable dependencies, we'll need to merge the confs of multiple dependencies with same id.
+//  TODO: Does a static library have runtime elements?
+//  + setter methods for the above - assume we’ve defined them
+//  Fail fast
+//  TODO should this take Object?
+//  Read and verify count
+//  there's a risk, for some methods, that the hash is always   recomputed but it won't be worse than before
+//  First child node
+//  no changes yet   handle case where monotonic clock isn't monotonic
+//  GENERATE instantiator.newInstance(type)
+//  Check environment
+// html does not like <a name="..."/>
+//  Output reports per execution, not mixed.   Cross-project ModelRegistry operations do not happen concurrently.
+//  Capture all output, lazily up until two new lines and an END_OF_TASK designation
+//  Defer creation of failures list, assume dispatch will succeed
+//  Cached state is not copied, since dependency inputs are different.
+//  Using a string instead of a plain ID here might look strange, but this turned out to be   the fastest of several experiments, including:        using ModuleIdentifier (initial implementation)      using ModuleIdentifier through ImmutableModuleIdentifierFactory (for interning)      using a 2-level map (by group, then by name)      using an interned string for the cachedId (interning turned out to cost as much as what we gain from faster checks in maps)     And none of them reached the performance of just using a good old string
+//  Skip processing of any operations that both start and complete in the queue
+//  Print something to verify it is after task execution
+//  If this occurs while running gradle or running integration tests, it is indicative of a problem.   If this occurs while running unit tests, then either use the NativeServicesTestFixture or the '@UsesNativeServices' annotation.
+//  Don't bother resolving local components asynchronously
+//  If any of the input values are not available for this selection, ignore the rule
+// We might fail hard here on the assumption that something weird happened to the daemon.  However, since we haven't yet started running the build, we can recover by just trying again...
+//  Protects the following fields
+//  Both of these values are effectively part of a cross Gradle version contract.   Do not change them.
+//  Dumb terminal doesn't support ANSI control codes.   TODO - remove this when we use Terminal rather than JAnsi to render to console
+//  Keep the argument from this expression
+// prefix internal fields with _ so that they don't get into the way of propertyMissing()
+//  Add included builds defined in settings
+//  Assume everything is loaded into the current classloader
+//  -----------------------------------------------   ---- Delegate CopySpec methods to rootSpec ----   -----------------------------------------------
+//  ordered by how much they filter
+//  Callable<S>
+//  TODO some kind of context of why the method was attached (e.g. which plugin declared the rule)   TODO some kind of instance state for the method (might be the same as context above)
+//  Input events
+//  Remove compile and AST types from the Groovy loader
+//  Only count non-CREATE events, since creation also causes a modification event, unless the event is for a directory.
+//  TODO return a richer data structure that provides meta data about how the source was found, for use is diagnostics
+//  Have not visited the successor node, so add to the queue for visiting
+//  From compile configuration, or when the target's runtime configuration does not extend from compile, include the compile dependencies
+//  whatever the exclude filter, there are no dependencies
+// TODO this class attempts to mimic the behavior of the output of mvn help:effective-pom  instead of this class we should walk the maven project object model (instead of parsing the xml!)
+//  JAR is compatible with classes or resources
+//  Compile all secondary routes files first
+//  We check the params passed to the build factory
+//  https://docs.oracle.com/javase/specs/jls/se12/html/jls-3.html#jls-BooleanLiteral
+/*          * MetaClass.getMetaProperty(name) is very expensive when the property is not known.         * Instead, we reach into the meta class to call a much more efficient lookup method.         * Since we do this in a hot code path, we also reuse the argument array used for the         * reflective call to save memory.          */
+//  when a selector changes from non lock to lock, we must reselect
+//  Setup component
+//  Special case some common combinations of names and paths
+//  Note: don't actually remove this in 6.0, the deprecation is here to encourage people to use ObjectFactory instead. Just remove the overload and the nag and leave the method here
+//  Restore the environment
+// one binary store per id+threadId
+//  block until the listener has finished notifying.
+//  Based on https://github.com/playframework/playframework/blob/2.4.0/framework/src/build-link/src/main/java/play/TemplateImports.java
+//  Wrap the result processor chain up in a blocking actor, to make the whole thing thread-safe
+//  fallback: take the name from the ProjectState
+//  Order is important!
+//  A primitive type
+// Keeps the class set analysis of the given JavaCompile task
+//  Register the project's source set output directories
+//  make sure we can store it in order or we'll have surprises on deserialization
+//  If we're reaching this point, we're very likely going to iterate on the dependencies   several times. It appears that iterating using `dependencies` is expensive because of   the creation of an iterator and checking bounds. Iterating an array is faster.
+//  We don't really need to handle this.
+//  Disabled before 2.3 release due to not wanting to validate task names (which may contain invalid chars), at least not yet   ModelPath.validateName(name);
+//  Apply strategies for "all variants"
+//  Deprecations (these should just be rendered on the client instead of being sent to the daemon to send them back again)
+//  Sort based on version
+//  Start the download in another thread and wait for the result
+//  Mark this listener type as being notified
+//  Return a dummy implementation of this as creating a real hasher drags ~20 more services   along with it, and a hasher isn't actually needed on the worker process side at the moment.
+//  TODO:ADAM - This isn't quite right   MB: I think ^ refers to the first capable classloader loading the class. This could be different   from the loader which originally loaded it, which could pose equality and lifecycle issues.
+//  Only managed implementation and value types are allowed as a managed property type unless marked with @Unmanaged
+//  TODO - refactor this action out so it can be unit tested
+//  remove build listener
+// The values are based on what I have found in sbt-compiler-maven-plugin.googlecode.com and zinc documentation  Hard to say what effect they have on the incremental build
+//  must be an included build
+//  This special case is for Maven snapshots with Gradle Module Metadata when we need to remap the file name, which   corresponds to the unique timestamp, to the SNAPSHOT version, for backwards compatibility
+//  TODO - visit the contents of this collection instead.   This is just a super simple implementation for now
+//  This is here to trigger creation of the ShutdownCoordinator. Could do this in a nicer way
+//  TODO - this selection should happen per target platform
+//  TODO make this work with pending elements
+//  This insanity is needed for the case where someone calls pluginContainer.add(new SomePlugin())   That is, the plugin container has the instance that we want, but we don't think (we can't know) it has been applied
+//  TODO: do we want to keep using SourceDirectorySet in the new API?   would feel more natural if dirs could be added directly to LanguageSourceSet   could also think about extending SourceDirectorySet
+//  Replace result if we fail on warning
+//  Take a snapshot while holding lock
+//  A new module. Check for conflict with capabilities and module replacements.
+//  The accumulated exclusions that apply to this edge based on the path from the root
+//  This can happen when, for example, a @BeforeClass or @AfterClass method fails
+//  Missing ','
+//  store thrown exception
+//  Do not use this. It's here because some of the services this type needs are not easily accessed in certain cases and will be removed ay some point. Use one of the other methods instead
+//  else leading ':', this is ok
+// verify that the parsed descriptor is the correct parent module.
+//  For stats we don't really care about thread safety
+//  Otherwise do deep compare of outputs
+//  we're writing 2 copies of the resource: one relocated, the other not, in order to support `getResource/getResourceAsStream` with   both absolute and relative paths
+//  JVM args that must be used to fork a JVM
+//  this.<services_method>()
+//  This configuration cannot be mutated, but some parent configurations provide artifacts
+/*  * A {@link org.gradle.api.file.ConfigurableFileCollection} that can be used as a task input property. Caches the matching set of files during task execution, and discards the result after task execution. * * TODO - disallow further changes to this collection once task has started * TODO - keep the file entries to snapshot later, to avoid a stat on each file during snapshot  */
+//  test if vanilla name is current class name
+//  Only called when node exists
+//  Should really fail here if sourcesToCompile is not empty: no transform for this source set in this binary
+//  Also use the generated class for itself
+//  We have to go through URIish and back to deal with differences between how   Java File and Git implement file URIs.
+//  TODO - capitalise the target name in the task name   TODO - don't create a launch target for a library
+//  for each source set we will:
+//  TODO - do not hold lock while computing value
+//  Avoid initializing the list if there are no components requiring download (a common case)
+//  Try to configure element
+//  Gradle stuff
+//  TODO: This returns the wrong public type for domain objects   created with the eager APIs or added directly to the container.   This can leak internal types.   We do not currently keep track of the type used when creating   a domain object (via create) or the type of the container when   a domain object is added directly (via add).
+//  Can only set once: should really be part of the constructor   Can only set once: should really be part of the constructor
+//  Pom packaging doesn't matter when we have a single unclassified artifact
+//  This should be replaced by some stronger modelling and made open rather than hardcoding a set of source languages here
+//  GENERATE objectFactory.property(type)
+//  DO NOT USE THIS CONSTRUCTOR DIRECTLY   It's only there for backwards compatibility with the Nebula plugin
+//  TODO Change this to only add SWIFT_API artifacts and instead parse modulemaps to discover compile task inputs
+//  TODO - have to do much better here
+//     ((PropertyInternal)<getter>()).setFromAnyValue(p);   }
+//  TODO: Fix tests that rely on this being set before we process arguments like this...
+//  This is a workaround for https://github.com/gradle/gradle-private/issues/1690
+//  Use this instead of Description.getMethodName(), it is not available in JUnit <= 4.5
+//  currently we only look in script code; could extend this to build script classes
+//  Overwrite property
+//  for storing to field
+//  Project has no publications: simply use the project name in place of the dependency name
+//  This looks ugly, very ugly, but that is apparently what Ant does itself
+// windows needs an additional backslash in jar urls
+//  TODO: Get this from somewhere else?
+//  A work around for not being able to skip the task when an input _file_ does not exist
+// eg. 'someTask' or 'sT'  eg. '', ':' or ':foo:bar'
+//  Needed to use inside lambda below
+//  Use the runtime when nothing has been requested
+//  TODO we should refactor this to general, compatibility mapping solution, as we have it for model loading. See HasCompatibilityMapping class.
+//  Also releases any locks
+//  Lock protects the following state, using an intentionally simple locking strategy
+/*  * Benchmark                     Mode  Cnt          Score         Error  Units * OptionalBenchmark.nullCheck  thrpt   20  107887111.061 ±  882182.482  ops/s * OptionalBenchmark.optional   thrpt   20   86746312.090 ± 1150860.296  ops/s * */
+//  the type of the property node instead.
+//  Create all of the pipeline eagerly as soon as this is enabled, to track the state of build operations.   All of the pipelines do this, so should instead have a single stage that tracks this for all pipelines and that can replay the current state to new pipelines   Then, a pipeline can be added for each listener as required
+//  Absolute coordinate system
+//  Use an injected ObjectFactory to create a Server object
+//  Do nothing since the only side effect is that we wouldn't   be able to log the plugin descriptor file name.  Shouldn't   be a reasonable scenario where this occurs since these   descriptors should be generated from real files.
+//  TODO: remove these special cases
+//  Duplicate, ignore
+/*         When writing a file into the filestore a marker file with this suffix is written alongside,        then removed after the write. This is used to detect partially written files (due to a serious crash)        and to silently clean them.      */
+//  Move default values into body of closure, so they can use <inputs-lvar>
+//  A kotlinc warning, ignore
+//  TODO - should use a resolver so that this method is consistent with Project.uri(string)
+//  ...   end::task-arg-method[]
+//  TODO(daniel): Swift compiler should extends from an abstraction of NativeCompiler (most of is applies to SwiftCompiler)
+//  only way I know of to determine current log level
+//  Can wait if this handler has completed or if the previous handler allows waiting
+//  TODO: else, verify that the build definition is the same
+//  for Groovy <1.6, we need to call org.codehaus.groovy.runtime.InvokerHelper#getVersion
+//  Check already-resolved dependencies and use this version if it's compatible
+//  Discard information region
+//  Based on https://github.com/playframework/playframework/blob/2.6.0/framework/src/build-link/src/main/java/play/TemplateImports.java
+//  don't care
+//  This is really not cool, but we cannot rely on `readAttributes` because it will   THROW AN EXCEPTION if the file is missing, which is really incredibly slow just   to determine if a file exists or not.
+//  TODO not sure if we can clean up the generics here and do less unchecked casting
+// TODO this should be a container of platforms
+//  ...  end::sample[]
+// TODO: Simplify this class by busting it up into a locator for legacy SDKs and locator(s) for Windows 8 kits
+//  Assume that each artifact points to a unique file, and use the relative path from the project as the id
+//  Need to override as error message is hardcoded in constructor of public type ResolveException
+//  No-op
+//  lock on demand
+//  Generated script class name must be unique - take advantage of this to avoid delegation
+// failed to instantiate BlockJUnitRunner. try deprecated JUnitRunner (for JUnit < 4.5)
+//  clean up comments and new lines
+//  checks if it's a derived platform
+//  TODO - do this inside some 'testng' suite, so that failures and logging are attached to 'testng' rather than some 'test worker'
+//  Reached the end of input, worker has exited without failing
+//  scenarioList contains duplicate scenarios because of rerun
+//  First things first, retro compatibility
+//  A new top level node, implicitly finish the previous node
+//  Register capabilities for this node
+//  Else, continue below
+//  References some fixed value expression, return it after macro expanding
+//  Directory has something in it already
+//  TODO:LPTR Should be @Nested with @Console inside
+//  the class property stops resolving, dynamic property names too
+//  GROOVY-3110: It may be an inner enum defined by this class itself, in which case it does not need to be   explicitly qualified by the currentClass name
+//  TODO This should actually compare a SortedSet
+//  On any line except the bottom most one, a new line simply move the cursor to the next row.   Note: the next row has a lower index.
+//  todo - stream serialised value to file   todo - handle hash collisions (properly, this time)   todo - don't store null links to child blocks in leaf index blocks   todo - align block boundaries   todo - thread safety control   todo - merge small values into a single data block   todo - discard when file corrupt   todo - include data directly in index entry when serializer can guarantee small fixed sized data   todo - free list leaks disk space   todo - merge adjacent free blocks   todo - use more efficient lookup for free block with nearest size
+//  Only apply default locations when none explicitly configured
+//  TODO: Reuse more of CommandlineActionFactory
+/*          * SourceSet has no access to configurations where we could ask for a lenient view. This                * means we have to deal with possible dependency resolution issues here. We catch and                * log the exceptions here so that the Eclipse model can be generated even if there are         * unresolvable dependencies defined in the configuration.         *         * We can probably do better by inspecting the runtime classpath and finding out which         * Configurations are part of it and only traversing any extra file collections manually.                 */
+//  Ignore
+//  TODO: This should become smarter and move into the compiler infrastructure instead     of the task, similar to how the other native languages are done.     For now, this does a rudimentary incremental build analysis by looking at     which files changed .
+//  Cannot yet publish module metadata without component
+//  need to make this better
+//  This is used only to retain strong references to the values
+//  TODO: we aren't considering the filter
+//  Capture non-file input changes
+//  when -Xmx1024m, Runtime.maxMemory() returns about 910   assume that Gradle itself uses about 150MB heap
+// TODO:instant-execution: remove this
+/*                              * For someone looking for the difference between this and the duplicate code above                             * this one uses the `testTaskProvider` and the `reportTask`. The other just                             * uses the `reportTask`.                             * https://github.com/gradle/gradle/issues/6343                              */
+//  TODO Change to Set?
+//  On Linux, we assume swift is installed into /opt/swift
+//  Did we already consider it as an output after the previous execution?
+//  Workaround for when the task is given an input file that doesn't exist
+//  Don't write to the right-most column, as on some consoles the cursor will wrap to the next line and currently wrapping causes   layout weirdness
+//  Track currently associated label with its progress operation
+//  Detach the process from the parent terminal/console
+//  The provider is of compatible type and the element was either already realized or we are removing a provider to the element
+//  We cannot clean in progress markers, or in progress files here because   the file system visitor stuff can't handle the file system mutating while visiting
+//  TODO: Need failure handling, e.g., cannot clone repository
+//  Do nothing
+//  GENERATE getAsDynamicObject().setProperty(name, value)
+//  Consume content for non-successful, responses. This avoids the connection being left open.
+//  Update any previously known files with a bogus timestamp to force a rebuild
+//  We limit the inner class lookups here by using ConstructedClassWithPackage.   This way only the name will change, the packagePrefix will   not be included in the lookup. The case where the   packagePrefix is really a class is handled elsewhere.
+//  This is a heuristic, more than truth: it is possible that the 2 long hashs   are identical AND that the sizes of collections are identical, but it's   extremely unlikely (never happened on test cases even on large dependency graph)
+//           dynamicObjectHelper = <init>        }        return dynamicObjectHelper;   }
+// when no daemon process has started yet
+//  Do not hold lock while removing listener, as the listener may still be receiving events on another thread and will need to acquire the lock to handle these events
+//  Not already known, attempt to self-close the parent
+//  Using an array here because we're going to iterate pretty often and it avoids the creation of an iterator   that checks for concurrent modification
+//  Consumable configurations
+//  Clean the interrupted status   because some test class processors do work here, e.g. JUnitPlatform
+//  Just an identifier, this is a token
+//  construct task selectors
+//  No args
+// We might leave that in if we decide it's a good idea for an extra safety net.
+//  <thead>     <tr>       <td>Method</td>       <td>Description</td>     </tr>   </thead>
+//  1) Add a new 'antlr' virtual directory mapping
+//  TODO - this isn't quite right
+//  Host: x86
+//  Only use this for top level settings scripts
+/*         The song and dance with Action<Runnable> is to ease testing.        See DisconnectableInputStreamTest      */
+//  Sort source files to work around https://issues.apache.org/jira/browse/GROOVY-7966
+//  Rough implementation to get something to work
+//  TODO(ew): inject BuildOperationIdentifierRegistry instead of static use
+//  Used by the Kotlin-dsl base plugin   TODO - remove this
+//  TODO: This isn't correct. This means that we've detected a cycle while determining the execution plan, but the graph walker did not find one.   https://github.com/gradle/gradle/issues/2293
+// just returns the original object
+//  Unpacks the request to serialize across to the daemon and creates instance of   TestExecutionRequestAction
+//  TODO: Decide if we want to push the gate concept into TAPI or other entry points   currently, a gate is only used by continuous build and can only be controlled from within the build.
+/*  * Exposes methods for those properties whose value is a closure. * * TODO: use composition instead of inheritance  */
+//  We're sorting the names of the configurations and later attributes   to make sure the output is consistently the same between invocations
+//  TODO: Locate this tool from a tool provider   hide main symbol
+//  A task created by a provider that does not understand launchables
+//  we're asking for a runtime variant, prefer -jars first
+//  Do not cache Test task if Jacoco doesn't produce its output as files
+//  Package private accessor used by MessageDigestHasher.putHash for performance reasons
+/*          * This method returns the dependencies in buckets (projects first, then modules, then files),         * because that's what we used to do since 1.0. It would be better to return the dependencies         * in the same order as they come from the resolver, but we'll need to change all the tests for         * that, so defer that until later.          */
+//  Implement this if you need to specify individual toolchains via "org.gradle.integtest.versions"
+//  TODO: Figure out how to get rid of origin scope id in snapshot outputs step
+//  Else, the provider is of incompatible type, maybe we have a domain object collection of Provider, fallthrough
+//  This is fine, just ignore it
+//  In a similar way to Ivy, Maven may use other hosts for additional artifacts, but not POMs
+//  Is the cached version still current?
+//  A file that we can safely reuse the result for
+//  Add the application and extension
+//  Pad
+//  should be protected, but use of the class generator forces it to be public
+// put the whole arguments string in single quotes, unless defaultJvmOpts was empty,
+//  Exit value is unreliable for determination of process failure.
+// task properties:
+/*  * TODO only here because Kotlin DSL uses this. Please remove once that is fixed.  */
+//  failing, seems to be that set method override doesn't work for iterables - GRADLE-2097  assertThat(call("{ bean, list -> bean.things(list) }", bean, new LinkedList<Object>()), nullValue());  assertThat(bean.getThings().size(), equalTo(0));
+//  validate that the targetPlatform is valid
+//  J flags can not be set in the option file   add additional option files
+//  GENERATE ((MixInExtensibleDynamicObject)getAsDynamicObject()).getConvention()
+//  Check if type is Factory<? extends ElementType>
+//  Currently not supported
+/*      * Create binaries for test suites. TODO: This should really be a @ComponentBinaries rule, but at this point we have no clue what the concrete binary type is, so everything has to be duplicated in     * specific plugins. See usages for example.      */
+//  An application ClassLoader: Inspect class to collect up the classpath for it
+//  Overrides the global ClasspathFingerPrinter, currently need to have the parent parameter
+//  end element marker
+//  We need to attach failures on unattached dependencies too, in case a node wasn't selected   at all, but we still want to see an error message for it.
+// then we want to validate strictly
+//  Add JVM args that were explicitly requested
+//  TODO:LPTR This should be @Defaults @Each PlayApplicationBinarySpecInternal
+//  Should not happen when reading from a StringReader
+//  Isolate parameters in this thread prior to starting work in a separate thread
+// fall back to default runner
+//  Still 'updated' with reason when version remains the same.
+// querying runtime for each invocation
+//  1.1, 1.2
+//  As an optimization first check if the method name is among the candidates before we construct an equivalence wrapper
+//  TODO: Send a message to workers to change their log level rather than stopping
+//  TODO This should use the same `MutationValidator` infrastructure that we use for other mutation types
+//  throws T
+//  Find failure section
+//  TODO - should be incremental
+//  the order is strange logically but here for performance optimization
+//  GENERATE new BeanDynamicObject(this)
+/*      * Creates an instance of the given task type without invoking its constructors. This is used to recreate a task instance from the instant execution cache.     *     * TODO:instant-execution - review this      */
+//  let's override this so that delegate isn't created at autowiring time (which would mean on every build)
+//  invokeMethod(this, name, args)
+//  There was a breaking change after 0.8
+//  TODO - reduce duplication with Swift binary
+//  TODO - should decorate
+//  Order is significant
+//  Object propertyMissing(String name)
+//  return state.equals(((GeneratedView)arg).__view_state());
+//  prevent file system change events when generated content
+//  See the comment in #taskCompleted, above, for why this is here and why this is a problem
+//  TODO hook this in to the (daemon) build lifecycle
+//  Keep until the listener is created
+//  this dependency is internal only
+//  Ignore. Currently the actions don't need to run, it's just better if they do   By the time this node is notified that the task in the other build has completed, it's too late to run the action   Instead, the action should be attached to the task in the other build rather than here
+//  end::functional-test-junit[]
+//  the "status" attribute is mandatory, so if it's missing, we need to add it
+//  in-process Groovy compilation throws a CompilationFailedException from another classloader, hence testing class name equality   TODO:pm Prefer class over class name for equality check once using WorkerExecutor for in-process groovy compilation
+//  if found only one project dependency - return it, otherwise call the next resolver
+//  stop at super and this
+//  Generate an authentication token, which must be provided by the client in any requests it makes
+// we don't like the assumption about the port very much
+//  Example: http://repo2.maven.org/maven2/net/jini/jsk-platform/2.1/jsk-platform-2.1.pom
+//  we see a different value, or the set already exists, in which case we initialize   the set if it wasn't done already, and collect all values.
+//  TODO Need a better mechanism to wire tasks into lifecycle
+//  Collect nodes as implicit capability providers if different than current node, selected and not having explicit capabilities
+//  only add confs if they are specified. if they aren't, endElement will handle this
+//  Convert Swift-like macros to a Map like NativeCompileSpec expects
+//  Find the candidates with the highest base version
+//  We will only add dependencies to the leaves if there is such a published module
+// 1) we've seen the replacement, register new conflict and return
+/*      * Configures the project and all of its sub-projects, including task discovery and binding model rules.      */
+//  for backwards compatibility, we use the last added description
+//  see IdeaScalaConfigurer which requires the ipr to be generated first
+//  this.services = AsmBackedClassGenerator.getServicesForNext()
+//  noop
+//  Collect a map from component to its owning component. This might be better to move to the component or some publications model
+//  Deserialize the old value and use the equals() implementation. This will be removed at some point
+//  retry after getting "Bad file descriptor" exception
+//  Either a macro function, a macro or token concatenation
+//  GENERATE public <return type> <method>(Closure v) { return <method>(…, ConfigureUtil.configureUsing(v)); }
+//  Discard event
+// We cannot just delegate to the add method as we need the file content for checksum calculation here  and reexecuting the action isn't acceptable
+//  Don't need to unpack the serialized failure. It will already have been reported and is not used by anything downstream of this action.
+//  Java source files are supported, too. Therefore we should care about the relative path.
+//  TODO: Assets should probably be a source set too
+//  Serialize configuration to daemon via the process' stdin
+// after redirecting we need to add the new std out/err to the renderer singleton
+//  Some POMs depend on themselves through their parent POM, don't add this dependency   since Ivy doesn't allow this!   Example: http://repo2.maven.org/maven2/com/atomikos/atomikos-util/3.6.4/atomikos-util-3.6.4.pom
+//  Any available tool chain
+//  Buckets of dependencies
+//  let the delegate resolver select among them
+//  The same gatekeeper that opened it must close it
+//  we just need to get the lock for this project
+//  A further work around for missing ability to skip task when input file is missing (see #getInputFileIfExists below)
+/*      * This inner class hides the fact that the actual de-duplication algorithm is stateful.      */
+//  Any available Visual Studio >= 2015
+//  GENERATE public Object getProperty(String name) { return getAsDynamicObject().getProperty(name); }
+//  TODO - should be >= self closed
+//  TODO should include some context on what the rule was trying to do (create vs. mutate)
+//  Ensure that at most one action that may have access to the mutable state of the build runs at a given time   TODO - move this to a better home and reuse
+//  remaining methods are here to make sure we didn't forget anything
+//  GENERATE private <type> <property-field-name>;
+//  Restarting this configuration after conflict resolution.   If this configuration belongs to the select version, queue ourselves up for traversal.   If not, then remove our incoming edges, which triggers them to be moved across to the selected configuration
+//  TODO - don't select again here, as the selection is already performed to select the toolchain
+//  flatten because we need to serialize
+//  Not implemented - not yet required. Please implement if required
+//  usePluginsInInitScripts asserts using https://repo.gradle.org/gradle/repo
+//  No further mutation is allowed and there's no parent: the artifact set corresponds to this configuration own artifacts
+//  Target: x86
+// there is already registered conflict with at least one matching participant, hook up to this conflict
+// First, we replace slashes because they have special meaning in the javadoc options file  Then, we replace every linebreak with slash+linebreak. Slash is needed according to javadoc options file format
+//  This code path will always be a no-op following the changes in DefaultImmutableAttributesFactory   However this code will have to remain forever while the other one should be removed at some point (Gradle 7.0?)
+//  TODO: There has to be a simpler way to do this.   We want to create a buildable filecollection based on a filtered view of selected source directory sets
+//  Maven adds inherited dependencies last
+// there are some exceptions attached to the suite. Let's make sure they are reported to the user.  this may happen for example when suite initialisation fails and no tests are executed
+//  TaskListenerInternal
+//  another case we want to check here is if we are in a   nested class A$B$C and want to access B without   qualifying it by A.B. A alone will work, since that   is the qualified (minus package) name of that class   anyway.
+//  According to absolute positioning
+//  Ensure target project is configured
+//  handle origin metadata
+//    Add `publicType`
+//  Add in tools.jar to the systemClassloader parent
+//  Since Java 9, version should be X instead of 1.X   However, to keep backward compatibility, we change from 11
+//  Token concatenation is only allowed inside a #define body   Arbitrary tokens won't resolve to an include path   Treat both these cases as an unresolvable include directive
+//  do same decoration as in addListener to remove correctly
+//  Use the display name anyway
+//  Configure the binaries
+//  Explain that Groovy, for compile, also needs the resources (#9872)
+//  If no result from 'require', just use the highest preferred version (no range merging)
+//  todo annotate as required
+//  If abortAll is set, also stop enforced tasks.
+//  Always need the files, as we need to run the transform in order to calculate the output artifacts.
+// TODO the async work tracker should wait for children of an operation to finish first.  It should not be necessary to call it here.
+//  Emulate secondary inputs as a single property for now
+//  TODO - deal with more than one header dir, e.g. generated public headers
+//  Traverse graph
+//  Gradle's log levels correspond to slf4j log levels   as implemented in OutputEventListenerBackedLogger.   These levels are mapped to java.util.logging.Levels   corresponding to the mapping implemented in the   SLF4JBridgeHandler which is installed by this logging system.
+//  Swift tests will always have a toolchain requirement for swiftc
+//  We only need to hide "main", so only support short named symbols here.
+// adding custom test listeners before Gradle's listeners.  this way, custom listeners are more powerful and, for example, they can change test status.
+//  The last comment line is the timestamp
+//  Constraint: only consider explicit exclusions declared for this constraint
+//  TODO: Need to check for proper type/cast
+//  Don't traverse path back to root when there is nothing that can possibly match
+//  (macOS) Looks like: Test Case '-[AppTest.PassingTestSuite testCanPassTestCaseWithAssertion]' started.   (Linux) Looks like: Test Case 'PassingTestSuite.testCanPassTestCaseWithAssertion' started.
+//  PatternFilterable overrides to broaden return type
+//  Forward special cases directly to consumer
+//  Path is Iterable, but we don't want to unpack it
+//  Thrown when jna cannot initialize the native stuff
+//  Match recording is optimized for the general case of a single match
+//  check our classpath
+//  If textArea is on a status line but nothing was written, this means a new line was just written. While   we wait for additional text, we assume this row doesn't count as overlapping and use it as a status   line. In the opposite case, we want to scroll the progress area one more line. This avoid having an one
+//  Transforms do not require project state
+//  cancel OP_WRITE selection
+//  Evaluate init scripts
+//  Deployments are considered outOfDate until initial execution with file watching
+//  one should really avoid using this constructor as it is totally inefficient   and reserved to spurious cases when the components have dots in names   (and this can happen if a task name contains dots)
+//  Ends up with: 1 2 -> 3 <- 4 5
+//  Write plain content to stdout and rich content to stderr
+//  Serialize anything else
+//  TODO: This prefix shouldn't be hardcoded
+//  TOOD:LPTR Should be just a relative path
+// this if is a bit cheesy but 1-letter classname surely means a generic type and the warning will be useless
+//  No services to be mixed in
+//  Flush and clean up
+//  TODO - make this lazy
+//  Another process may have already copied the compiler interface JAR   Avoid copying over same existing file to avoid locking problems
+//  TODO: We should see if we can go back to using HttpClient again.   This implementation is borrowed from the Apache HttpClient project   https://github.com/apache/httpclient/blob/4.2.2/httpclient/src/main/java/org/apache/http/conn/ssl/SSLSocketFactory.java#L246-L354
+//  Can't acquire lock, get details of owner to include in the error message
+//  Anything left over only exists in the new list
+// TODO SF add quotes to both formats (there will be *lots* of tests failing so I'm not sure if it is worth it).
+//  Necessary for Groovy compilation to pick up output of regular and joint Java compilation,   and for joint Java compilation to pick up the output of regular Java compilation.   Assumes that output of regular Java compilation (which is not under this task's control) also goes   into spec.getDestinationDir(). We could configure this on source set level, but then spec.getDestinationDir()   would end up on the compile class path of every compile task for that source set, which may not be desirable.
+//  Track any progress operation that either can't be display due to label shortage or child progress operation is already been displayed
+//  File loop exceptions are ignored. When we encounter a loop (via symbolic links), we continue   so we include all the other files apart from the loop.   This way, we include each file only once.
+//  Preserve logging of headers for progress operations started outside of the build operation executor as was done in Gradle 3.x
+//  No include expression, ignore
+//  Note: This would be better housed in a scope that encapsulated the tree of Gradle objects.
+//  if we reach this point, no match was found, either because there are no versions matching the selector
+//  Visit the edges after sorting the components in consumer-first order
+//  TODO: Get rid of destinationDirectory entirely and replace it with a   collection of link outputs
+//  this is cached because used very often in sorting selectors
+//  Notify upwards of currently existing descendant spec hierarchy
+//  This could be handled, just not implemented yet
+//  some implementation uses null to represent bootstrap classloader   i.e. Object.class.getClassLoader()==null
+//  We have a conflict
+//  GENERATE public DynamicObject getAsDynamicObject() {
+//  <thead>     <tr>       <td>Property</td>       <td>Description</td>     </tr>   </thead>
+//  Macro expand parameter
+//  From every configuration other than compile, include both the runtime and compile dependencies
+//  Big-endian
+//  Take ownership
+/*         Note: the intention here is to work towards not having to create new objects        to meet the notification object interfaces.        Instead, the base types like BuildOperationDescriptor should implement them natively.        However, this will require restructuring this type and associated things such as        OperationStartEvent. This will happen later.      */
+//  If nobody said anything about this variant's target platform, use whatever the convention says
+//  Create the tasks for each C++ binary that is registered
+//  When there is a class name match, return true for excluding it so that we can keep   searching in individual test methods for an exact match. If we return false here   instead, then we'll give up searching individual test methods and just ignore the   entire test class, which may not be what we want.
+//  TODO we are relying on the registration having established these links, we should be checking
+//  Transform ProgressCompleteEvent into their corresponding progress OperationIdentifier.
+//  TODO:HH Use managed views for this, only applied when the respective language is applied
+//  If the configuration can still be mutated, we need to create a composite
+//  TODO: fix the way we work out which exception is important: TaskExecutionException is not always the most helpful
+//  Ignore files
+//  Already seen this class, skip it
+//  TODO - property order needs to be deterministic across JVM invocations, i.e. sort the properties by name
+//  There is no script class when there are no statements or methods declared in the script
+//  Matches: task <identifier> <closure>
+/*  * An amount is an immutable value of some quantity, such as duration or length. Each amount has a decimal value and associated units. * * TODO - need to sort out scaling when dividing or converting between units.  */
+//  This line MUST be last!
+//  TODO:LPTR Should be a content-less @InputDirectory
+//  For tests in default method of interface,   we might not be able to get the implementation class directly.   In this case, we need to retrieve test plan to get the real implementation class.
+// TODO: move bootclasspath to platform
+//  Loop over all listed versions, sorted by LATEST first
+/*      * Does a defensive copy to avoid leaking class references through the MutablePropertyDetails     * contained in the maps values. The keyset would keep a strong reference back to the map     * and all its entries.      */
+//  TODO(ew): Consider whether this belongs in BuildProgressArea or here
+//  The compilation will generate the new mapping file   Only merge old mappings into new mapping on incremental recompilation
+//  If no current selection for module, just use the candidate.
+//  It's often the case that all the candidate values are the same. In this case, we avoid   the creation of a set, and just iterate until we find a different value. Then, only in   this case, we lazily initialize a set and collect all the candidate values.
+//  Not supported for now
+//  A CONSTANT_Class entry, read the class descriptor
+//  Have to pass build JVM args directly to launcher JVM
+//  Define a classes variant to use for compilation
+//  If we broke out of the comparison because there was a difference, we can reuse the snapshot of the new element
+//  Add the block line-number as an argument to call `plugins(int lineNumber, Closure pluginsBlock)`
+// FileCollection files = ProjectBuilder.builder().build().files();  assertThat(call("{ bean, fc -> bean.files fc}", bean, files), nullValue());  assertThat(bean.getFiles(), sameInstance(files));
+//  Transition any other nodes that depend on the predecessor state
+//  Used by HasPrefixAndSuffixPatternStep to ensure the suffix isn't matching any part of the prefix.
+//  Use Throwable to record the location where a suffix was registered, to allow diagnostics when a collision is found   This may have performance implications, however the assumption is that class generators are global scoped objects that are created once and in very small numbers
+//  TODO - validate that it's a valid model path
+//  TODO: Migrate this away from here
+//  TODO: Need to track version/implementation of ar tool.
+//  Converts the binaries of a project library into regular binary instances
+//  extract exceptions
+//  Catch any unchecked io exceptions and add the file path for troubleshooting
+//  TODO: match with status, order versions correctly
+// noinspection SimplifiableIfStatement
+//  TODO IntSet
+//  Assume that test has renamed itself (this can actually happen)
+//  TODO(daniel): Swift compiler should extends from an abstraction of NativeCompiler (most of it applies to SwiftCompiler)
+//  Should really be a parameter to the 'withContent' methods or baked into the accessor
+//  Use the resolved component id if available: this ensures that Maven Snapshot ids are correctly reported
+//  tag::isolating-annotation-processor[]
+//  Clear the user's environment
+//  Milestone 4 was broken on the IBM jvm
+//  V
+//  TODO:Cedric This is not quite right. We assume that if we are asking for a specific binary, then we resolve to the assembly instead   of the jar, but it should be somehow parameterized
+//  Null is ok if the ConstructorSelector says it's ok
+//  TODO: this is terrible
+//  Currently only snapshot the console output listener. Should snapshot all output listeners, and cleanup in restore()
+//  Ignore exclusions for dependencies with `<optional>true</optional>`, but not for <dependencyManagement>.
+//  For now, we only create test suites for static library variants
+//  Append to failures for locking and fail on version conflict
+//  Not empty: may match any case above
+//  Exactly Visual Studio 2019
+//  Have received all requests, or have released something, so downstream can wait. This isn't quite right
+//  Use a defensive copy of the build definition, as it may be mutated during build execution
+//  No wildcards: matches #5 above
+//  Currently the converter is stateless, doesn't need any external context, so for performance we return a singleton
+//  We track this as an input since the Scala compiler output may depend on it.   TODO: This should be replaced by a property in the Scala toolchain as soon as we model these.
+//  TODO: CC make capabilities accessible to rules
+//  Lookup.defineClass can only define a class into same classloader as the lookup object   we have to use the fallback defineClass() if they're not same, which is the case of ManagedProxyClassGenerator
+//  TODO: move this to ObjectFactory
+/*      * The manifest if this is a jar file and has a manifest, null otherwise.      */
+//  TODO this should not be using the default charset because it's not an input and might introduce flakiness
+//  All of these field names are really long to prevent collisions with the groovy setters.   Groovy will try to set the private fields if given the opportunity.   This makes it much more difficult for this to happen accidentally.
+//  Add any finalizers to the queue
+//  Ignore missing files
+//  Create key manager
+//  TODO - set ACL here if necessary
+//  This doesn't work.   It used to because at the bottom of the hierarchy chain the object implemented methodMissing().   However, our normal “decorated” classes do not do this so it is not realistic.
+//  Get the metadata first to see if it's there
+//  Do not substitute plugins from same build or builds that were not explicitly included
+//  todo An ExcludeRule is a value object but we don't enforce immutability for DefaultExcludeRule as strong as we   should (we expose the Map). We should provide a better API for ExcludeRule (I don't want to use unmodifiable Map).   As soon as DefaultExcludeRule is truly immutable, we don't need to create a new instance of DefaultExcludeRule.
+// started, enable
+//  Hold the lock while creating the connection. Not generally good form.   In this instance, blocks other threads from creating the connection at the same time
+/*  * A minimal resolver, which does not use any native services. Used during bootstrap only. You should generally use {@link FileResolver} instead. * * TODO - share more stuff with AbstractFileResolver.  */
+//  Set explicit build file, if required
+//  This method is sometimes called directly (i.e. not via an operation executor).   In these cases, the context is null.
+//  Not required, but Guava's performance bad for an empty immutable list
+//  Not looking at a match
+//  Fields guarded by lock
+//  Platform specific arguments   TODO: Need to lazily configure compile task
+//  Unfortunate cast! see LibraryBinaryLocator
+//  TODO:LPTR Have the paths of the projects serve as @Input maybe?
+//  TODO - mix in Groovy support using bytecode decoration instead   TODO - validate closure parameters to check they are within bounds
+//  We need to use the deprecated constructor as it is compatible with certain previous versions of the Zinc compiler
+//  TODO:REUSE Refactor after removing reuse   This is horrendously bad.   We need to set the platform, _before_ the @Defaults rules of NativeBinaryRules assign the toolchain.   We can't just assign the toolchain here because the initializer would be closing over the toolchain which is not reusable, and this breaks model reuse.   So here we are just closing over the safely reusable things and then using proper dependencies for the tool chain registry.   Unfortunately, we can't do it in the create action because that would fire _after_ @Defaults rules.   We have to use a @Defaults rule to assign the tool chain because it needs to be there in user @Mutate rules   Or at least, the file locations do so that they can be tweaked.   LD - 5/6/14
+//  We throw away all state between builds
+//  Serialize the actual security manager type, this is consumed by BootstrapSecurityManager
+//  ordinary Groovy Gradle script   Kotlin Gradle script
+// the unlock was confirmed we are waiting
+//  TODO: `classes` should be a little more tied to the classesDirs for a SourceSet so every plugin   doesn't need to do this.
+//  Doesn't really make sense
+//  decimalFormat is not thread safe - synchronize access to the instance
+// we could potentially avoid creating value that is already being created by a different thread.
+//  First try to determine the artifacts locally before going remote
+//  only print first Gradle script stack trace element
+//  use reflection to support older JVMs while supporting Java 9
+//  TODO: VersionSelector should be more descriptive, so it can be directly translated
+//  isOpen was added in gradle 5.6. for 5.5 we default to true
+//  we decided if we have a vanilla name starting with a lower case   letter that we will not try to resolve this name against .*   imports. Instead a full import is needed for these.   resolveAliasFromModule will do this check for us. This method   does also check the module contains a class in the same package   of this name. This check is not done for vanilla names starting
+//  Do nothing for now
+//  as we don't have this right now we simulate it by reaching up the tree.
+//  The changes about the interface's methods will be reported already
+//  Return the group to use for the given build operation, searching up the build operation hierarchy for the first group
+//  Handle just empty string, single identifier or '(' params? ')', should handle more by parsing the tokens into an expression
+//  no luck
+//  TODO:RBO Clarify what it means and what's possible to do with it.   TODO:RBO E.g. Can the return value always be used to resolve back to the identified component? If so, how?   TODO:RBO Wouldn't it be better to define a proper type for project/model paths?
+// In case the output event arrives after completion of the test  and we need to have a matching descriptor to inform the user which test this output belongs to  we will use the current parent
+//  we are at the first name part. This is the right most part.   If this part is in lower case, then we do not need a class   check. other parts of the property expression will be tested   by a different method call to this method, so foo.Bar.bar   can still be resolved to the class foo.Bar and the static   field bar.
+//  TODO:LPTR What is with the "metaClass" property here?
+//  todo: improve configuration of reports
+//  Do conflict resolution to choose the best out of current selection and candidate.
+//  expand the thread pool until we hit max workers
+//  TODO: CC cannot enable this assertion because moduleSource is not serialized, so doesn't appear in the deserialized form  assert metadata.equals(forceRead);
+//  Finalizing here, as we need this to run after any 'assembling' task (jar, link, etc) is created.   TODO: Convert this to `@BinaryTasks` when we model a `NativeAssembly` instead of wiring compile tasks directly to LinkTask
+//  Retain strong references to the values created for this session
+//  End of path, might match when more elements added
+//  Read -D command line flags
+//  TODO: To get rid of this, we need a `FunctionalSourceSet` instance here, and that's surprisingly difficult to get.
+//  Ignore some broken samples before the given date
+//  consumer didn't express any preference, everything fits
+//  See if all entry points have the same identifier
+/*  unsupported by this transformer  */
+//  Create test suite component   TODO - Reuse logic from Swift*Plugin   TODO - component name and extension name aren't the same   TODO - should use `src/xctest/swift` as the convention?   Add the test suite and extension
+//  TODO: this doesn't quite guarantee immutability, because the source may be holding closures that are doing god knows what
+//  When annotation processing isn't required, it's better to add the Groovy stubs as part of the source path.   This allows compilations to complete faster, because only the Groovy stubs that are needed by the java source are compiled.
+//  check module static imports (for static inner classes)
+//  Always abort execution for an execution failure (as opposed to a node failure)
+//  Cast to return type
+//  Any available Clang
+//  tag::task-arg-method[]
+//  nothing to do, we don't store this
+//  Reference class via `ModelType` to avoid strong reference
+//  https://docs.oracle.com/javase/specs/jls/se12/html/jls-3.html#jls-Identifier
+//  created since last execution, possibly by another task
+//  Unrecognized expression or extra stuff after the expression, possibly another expression
+//  TODO - deal with more than one directory
+//  GENERATE ConfigureUtil.configureUsing(v);
+//  The CustomRunner class will fail this test if this class is initialized before its    run method is triggered.
+//  this is an approximation: all "compiled" sources will use the same task dependency
+//  exclusions optimizations
+//  TODO wolfs - schedule fingerprinting separately, it can be done without having the project lock
+//  Matches: task <arg>{1, 3}
+//  so "leaks" into the public API of this component
+//  This import must be here due to a clash in Java 8 between this and java.util.Optional.   Be careful running “Optimize Imports” as it will wipe this out.   If there's no import below this comment, this has happened.
+//  protects the following state   Contains only application owned ClassLoaders
+//  TODO:instant-execution - remove kotlin predicate after updating the wrapper
+//  The public result for the configuration has been calculated.   It is an error to change anything that would change the dependencies or artifacts
+//  add groovy-ant to bring in Groovydoc for Groovy 2.0+
+//  Exclude framework directories for GCC - they are added as system search paths but they are actually not
+//  The directory is now empty so delete it
+//  Special case for events defined prior to InternalProgressEvent
+//  If we can't discover the version from the normal metadata, make some assumptions
+//  TODO There should be a more explicit way to execute an action against existing services
+// TODO version - could be different from main artifact's version
+//  TODO: remove this special case
+//  if the return type doesn't use generics, then it's faster to just rely on the type name directly
+//  because it's a capability conflict resolution, there is only one candidate per module identifier   so we can be lenient wrt the version number used in the descriptor, which helps whenever the user   used the convenience "notation" method
+//  will flush any unterminated lines out synchronously
+//  registry doesn't exist yet
+//  Ignore the rule if it expects Ivy metadata and this isn't an Ivy module
+/*  * An _immutable_ view of the variant of a component. * * TODO - this should replace or merge into VariantResolveMetadata, OutgoingVariant, ConfigurationMetadata  */
+// TODO SF this method accepts Closure instance as parameter but does not work correctly for it
+//  TODO: CC the special casing of virtual platform should go away if we can implement   disambiguation of variants for a _single_ component
+//  fact. We check here for ConstructedClassWithPackage.
+//  ModelRegistrations.Builder methods
+//  iterate from the inner most to the outer and check for classes   this check will ignore a .class property, for Example Integer.class will be   a PropertyExpression with the ClassExpression of Integer as objectExpression
+//  TODO - reuse graph, discard state once not required
+//  These are here just so that ProjectInternal can implement FileOperations to work around https://github.com/gradle/gradle/issues/6027
+//  Current Model
+//  Use the timestamped version for all published artifacts:   The timestamped version is hidden deep in `Metadata.versioning.snapshotVersions`
+//  TODO - should iterate over each candidate until we successfully copy into the cache
+//  TODO We can probably now support more versions with `strictly` but we'll need more test coverage
+//  Replace 'Returns the ...'/'Sets the ...' with 'The ...'
+// TODO: use Twirl library instead?
+//  Should use some variation of DefaultClassMap below to associate values with classes, as currently we retain a strong reference to each value for one session after the ClassLoader   for the entry's key is discarded, which is unnecessary because we won't attempt to locate the entry again once the ClassLoader has been discarded
+//  Always append a new line at EOF
+//  Just the minimal stuff necessary for the worker infrastructure
+//  TODO: This should be more specific to just the tasks that create the class files?
+//  TODO: Need to track version/implementation of symbol extraction tool.
+//  TODO improve lookup by reusing AvailableJavaHomes testfixture   for now we play it safe and just return false;
+//  Synthesize a start event
+//  On windows we know the console does not interpret ANSI codes..
+//  for tests using rich console standard out and error are combined in output of execution result
+//  TODO - should we support this?   Adds a void $propName(Object value) method that simply delegates to the converting setter method
+//  TODO: should validate that clazz is of a non parameterized type
+//  TODO: this is an approximation as we know swift currently supports only 64-bit runtimes - eventually, we'll want to query for this
+//  slowest path, full distribution   (A ∪ B) ∩ (C ∪ D) = (A ∩ C) ∪ (A ∩ D) ∪ (B ∩ C) ∪ (B ∩ D)
+//  TODO - visit dependencies of this collection instead
+//    Add `getFactoryId()`
+//  TODO - should supply and check for the same parameters as passed to reserveNewClient()
+//  values from `JvmPackageNameTest`
+//  avoid excess creation of Suggestion objects
+//  TODO:ADAM - ARM only if the target OS is Windows 8 or later   TODO:MPUT - ARM also if the target OS is Windows RT or Windows Phone/Mobile/CE   TODO:ADAM - IA64 only if the target OS is Windows 2008 or earlier
+//  Note: this may be a temporary measure while existing infrastructure is being ported to managed model elements
+//  Prevent construction
+//  TODO:LPTR This should be removed once BinaryContainer is a ModelMap   We need to also implement all the interfaces of the delegate type because otherwise   BinaryContainer won't recognize managed binaries as BinarySpecInternal
+//  Milestone 6
+//  Recreate the invoker when deserialized, rather than serialize all its state
+//  default packages do not contain classes like these
+//  ignored
+//  Determine which output to produce at development time.
+//  If these are not null, we are pessimistic (loaders asked for before locking)
+//  TODO: Make this more intelligent by matching the attributes of the runtime usage on the variant identities
+// below does not help on windows environments. I was unable to get plain javadoc utility to work successfully with multiline options _in_ the options file.  at least, it will work out of the box on linux or mac environments.  on windows, the options file will have correct contents according to the javadoc spec but it may not work (the failure will be exactly the same as if we didn't replace line breaks)
+//  This is a slight different condition than that used for a dependency declared in a Gradle project,   which is (targetHasVariants || consumerHasAttributes), relying on the fallback to 'default' for consumer attributes without any variants.
+//  Unresolved - we have a selector that was deferred but the constraint has been removed in between
+//  TODO: This isn't quite right. We're leaking the _implementation_ type here.  But for tasks, this is usually right.
+//  Context of the app under test.
+//  @formatter:off
+//  Old Scala Plugin does not specify a ScalaPlatform
+/*  * The DSL for declaring plugins to inject into an included build. * * TODO: Plugins need to be located in this build's buildSrc. * * @since 4.6  */
+//  Inherit implementation dependencies
+//  We might be able to use a cached/locally available version
+// @Input
+//  lookup class in all classloaders
+//  There is a chance we could not attach target configurations previously
+//  We always want to include className, even if longer than max length
+//  fix problems in updating jar files by disabling default caching of URL connections.   URLConnection default caching should be disabled since it causes jar file locking issues and JVM crashes in updating jar files.   Changes to jar files won't be noticed in all cases when caching is enabled.   sun.net.www.protocol.jar.JarURLConnection leaves the JarFile instance open if URLConnection caching is enabled.
+//  If the jansi.passthrough property is set, then don't interpret
+//  TargetJDK does not include 1.1, 1.2 and 1.8;   Use same fallback as PMD
+//  TODO - better exception
+//  Deserialize the worker action
+//  workaround for bug in TestNG 6.2 (apparently fixed in some 6.3.x): listener is notified twice per event
+//  TODO:Cedric This is an approximation: when a component wants to compile against the assembly of   a library (not the jar), then we should give it the *stubbed classes* instead of the raw classes. However:   - there's no such thing as a "stubbed classes assembly"   - for performance reasons only the classes that belong to the API are stubbed, so we would miss the classes that do not belong to the API   So this makes the UsageKind.API misleading (should this be COMPILE?).
+//  (ia64 is no longer supported on later versions of Visual Studio)
+//  Perform conflict resolution
+//  This implementation is broken. It does not consider include and exclude patterns
+//  On Windows, / and \ are separators, on Unix only / is a separator.
+//  Maps from interned absolute path for a file to metadata for the file.
+//  Maximum pool size is fixed, so we should only need to get it from the first event
+//  This set represents the order in which elements are inserted to the store, either actual   or provided.  We construct a correct iteration order from this set.
+//  TODO We should get rid of this reflection (will need to reimplement the parser to act on the metadata directly)
+// if we don't know the parent we will use the top suite  this way we always have and id to attach logging events for
+//  Track all unused labels to display future progress operation
+//  Groovy does something very strange here.   For some reason (probably because the class is Java), it won't employ any dynamism.   Even implementing invokeMethod at the Java level has no effect.
+//  Special case "build successful" when there is no result object to send
+//  TODO: This should be modeled differently, perhaps as a dependency on the implementation configuration
+//  TODO - sources is not actual an input to binaries, it's an input to each binary
+//  Flush any buffered events and update the clock
+//  Write rich content to stdout and plain content to stderr
+//  Setting the length improves upload performance
+//  Netscape expires pattern
+// without it, the parent hangs without receiving the message above (flushing does not help).
+//  Could potentially also look whether we have the details for an ancestor directory tree   Could possibly infer that the path refers to a directory, if we have details for a descendant path (and it's not a missing file)
+//  The visual C++ tools use the path to find other executables   TODO:ADAM - restrict this to the specific path for the target tool
+//  Can use arg without conversion
+//  NOTE : locateOrBuildGenerationPlan populates the generationPlans map
+//  Didn't find node at path
+//  DependencyResolutionListener
+//  Matches: task <identifier> or task(<identifier>)
+//  only if there are no conf defined in sub elements
+//  Property is readable and all getters and setters are abstract
+//  Disallow work-in-progress to take up more than half of the console display   If the screen size is unknown, allow 4 lines
+//  3.x - 4.6 works on Java 7 - 8
+//  Do not traverse if seen already
+//  Send some messages
+//  Create test lifecycle task
+//  TODO(ew): Consider whether this belongs in Console or here
+//  Reset security manager the tests seem to have installed
+//  If there are 'pending' dependencies that share a target with any of these outgoing edges,   then reset the state of the node that owns those dependencies.   This way, all edges of the node will be re-processed.
+//  NOTE: When removing provider, we don't need to fireObjectRemoved as they were never added in the first place.
+//  TODO: convert output file checks to a resource lock
+//  Not present, assume no failure details
+/*         Note: Aether implicitly uses a thread pool and tasks to perform transfers,        so we manually propagate the current build operation ref so logging is correctly associated.      */
+//  throw new MissingMethodException(name, <view-type>.class, args)
+//  Initialize Matchers once and then reset them for performance
+//  Choose the shortest match
+//  Add to the end of the queue, so that we traverse the graph in breadth-wise order to pick up as many conflicts as   possible before attempting to resolve them
+//  parallel safe version of Compiler.compilerInterface()
+//  TODO:lptr When we drop Java 8 support we can switch to using ClassLoader.getName() instead of storing our own
+//  First try to resolve the artifacts locally before going remote
+//  GENERATE <setter>(v)
+//  If no tasks is specified then the default tasks will be executed.   To work around this, we assign a new empty task for execution.
+//  we have C[] if the list is empty -> should be an array then!
+//  start logging now that the logging manager is connected
+//  When used as an input, add the producing tasks if known
+//  We don't adjust the column value as in the event we unwrap, we want to keep correctness
+//  if the collection is a read-only property, it must be initialized first (it will never be null)   if the collection is *not* read-only, then we will initialize it only if the collection is the   subject of a rule, that is to say that it can be mutated. This may look strange, if a read-write   collection is null to initialize it to an empty list, but this is how the specs define reaw-write   collections of scalar types.
+//  No separating whitespace between the #define and the name
+//  Invert the map of (file extension -> UTI) pairs to   (UTI -> [file extension 1, ...]) pairs.
+//  type, payload size
+//  This is final - use {@link TaskDependencyContainer#visitDependencies} to provide the dependencies instead.
+//  Don't bother searching remotely
+/*  * Specifies how to build and where to place a native executable file. * * <p>TODO:HH resolve naming conflict with existing NativeExecutableSpec</p>  */
+//  TODO Remove this attempt to guess packaging from artifacts. Packaging should come from component, or be explicitly set.
+// this is not very nice might be good enough until we get rid of ResolvedConfiguration and friends  avoid traversing the graph causing the full ResolvedDependency graph to be loaded for the most typical scenario
+//  determine the package name :(
+//  Implementation is currently dumb, can be made smarter
+//  Implementations should not wrap exceptions, this is done in DefaultObjectConfigurationAction
+//  this configuration is a child of toAdd, so no need to add it
+//  Capture input files state
+//  Versions before 3.2 would throw away the cause. There was also a regression in 4.0.x
+// ignore
+//  Should get back some kind of reference that can be queried below instead of looking the task up every time
+// class file versions: 1.1 == 45, 1.2 == 46...
+//  TODO: This is not a great paradigm for creating a temporary directory.   See http://guava-libraries.googlecode.com/svn/tags/release08/javadoc/com/google/common/io/Files.html#createTempDir%28%29 for an alternative.
+//  We can only determine if two DaemonStopEvent point at the same daemon if we know the PIDs
+//  no-op
+//  This is a little coincidental: if view attributes have not been accessed, don't allow no matching variants
+//  The other is disambiguated by current, never consider other again
+//  Default for everything else
+//  Ignore the tag section of the comment
+//  Last entry, complete the result
+//  ...
+//  avoids creation of empty hashset
+//  Use the loaded settings if it includes the target project (based on build file, project dir or current dir)
+//  creating before locking, have to create the most flexible setup
+//  TODO:lptr this should be added only if the scan plugin is applied, but SnapshotTaskInputsOperationIntegrationTest   TODO:lptr expects it to be added also when the build cache is enabled (but not the scan plugin)
+//  This is used to parse a YAML file
+//  Choose the 'main' artifact based on its type.
+//  Snapshot POMs use -SNAPSHOT instead of the timestamp as version, so validate against the expected id
+//  Register as a 'logger' to support this being replaced by build logic.
+//  TODO This class, DefaultBuildOperationQueue and ExecutionPlan have many of the same   behavior and concerns - we should look for a way to generalize this pattern.
+//  This can happen on Windows
+//  Decoration takes care of the implementation
+//  GENERATE getAsDynamicObject().invokeMethod(name, (args instanceof Object[]) ? args : new Object[] { args })
+// directly printing to the stream to avoid log level filtering.
+//  TODO:pm Move this to WARN level once we fixed maven-publish, see gradle/gradle#1662
+//  We do not store the history if there was a failure and the outputs did not change, since then the next execution can be incremental.   For example the current execution fails because of a compile failure and for the next execution the source file is fixed, so only the one changed source file needs to be compiled.
+//  TODO:LPTR Instead of the first view property, we should figure out these parameters from the actual property
+//  Ping the owner via all available local addresses
+//  Target module can change, if this is called as the result of a module replacement conflict.
+//  TODO:LPTR This ignores changes to Project.buildDir after model node has been created
+//  subclass hook, allowing us to fake the context for testing
+//  When running a test in a daemon executer, the input is buffered until a   newline char is received
+//  Forward output immediately when the focus is on this operation group
+// argument quoting:   - " must be encoded as \"   - % must be encoded as %%   - pathological case: \" must be encoded as \\\", but other than that, \ MUST NOT be quoted   - other characters (including ') will not be quoted   - use a state machine rather than regexps
+//  Make sure getters end up before the setters
+// TODO move to base-services once the ProgressLogger dependency is removed
+//  Not subtypes as we don't know whether they are immutable or not
+//  TODO:ADAM - using a UUID means we create a ClassLoader hierarchy for each daemon process we talk to. Instead, use the spec to decide whether to reuse a ClassLoader
+//  Path is a descendant of this
+//  Configure test binary to compile against binary under test
+//  Could return true if all of the read only properties point to immutable objects, but at this stage there are no such types supported
+//  Used by generated code
+//  When the state changes to `SHOULD_RUN`, the dependencies need to be reprocessed since they also may be required now.
+//  The `eclipse` task in the root project should generate Eclipse projects for all Gradle projects
+//  TODO: Removing `debug` from variant name to keep parity with previous Gradle version in tooling models
+//  Use an empty settings for a target build file located in the same directory as the settings file.
+//  TODO - this is all terribly lame. We need some proper reporting here (which means implementing Reporting).
+//  TODO - reduce duplication with C++ binary
+//  If we have a single common resolution, no conflicts to resolve
+//  Copied from ToolProvider.defaultJavaCompilerName
+//  The task dependencies for the configuration have been calculated using Configuration.getBuildDependencies().
+//  2 lines: 1 for BuildStatus and 1 for Cursor parking space
+//  Wrap to prevent exposing Stoppable, as we don't want to stop at this scope
+//  Take a deep copy of the compilerArgs because the following methods mutate it.
+//  Use java 7 APIs, if available
+//  if we are allowing unknowns, just pass through the whole arg
+//  See https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/
+//  Can get duplicate finish events
+//  This is the highest parent in the hierarchy
+//  retrieve content from URL and write to output
+//  TODO: should use target platform to make this decision
+/*  * Meta-info about a Java component. * * TODO - this is some legacy stuff, to be merged into other component interfaces  */

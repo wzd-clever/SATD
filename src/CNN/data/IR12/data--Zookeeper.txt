@@ -1,0 +1,819 @@
+//  setup session tracker
+//  let it through, we don't require auth
+//  find the last snapshot
+//  We start at 1 because / will create an empty part first
+//  5. send a create request to old leader and make sure it's synced to disk,
+//  we know this from the data files   this node is the last node in the snapshot
+//  & 0xFFFFFFFFL;   >> 32;
+//  change leader's leading port - should renounce leadership
+//  Input may be delimited by either commas or newlines so convert to common newline separated format
+//  log warning message if there is no matching commit   old leader send outstanding proposal to observer
+//  Test stat and watch of non existent node
+/*      * Tests that an incremental reconfig fails if the current config is hiearchical.      */
+//  The value of callCount can exceed 1 only if the callback thread
+//  The node doesn't exist anymore, so skip it
+/*  Does it start with an IPv6 literal?  */
+//  now create the direct children
+//  is disabled
+//  ipMap is used to limit connections per IP
+//  expected that
+//  Something is wrong.
+//  Non-priming packet: defer it until later, leaving it in the queue   until authentication completes.
+//  This is a bit weird but we need to return the address and the number of   bytes (to distinguish between IPv4 and IPv6
+//  if node is created successfully then it means that ZooKeeper service
+//  Submit request directly to leader
+//  small chance that an unexpected message was delivered    after this check, but we would catch that next time
+// make that testData exists otherwise it fails on windows
+//  we are setting the bytes quota
+/*  this 'Server' section has an incorrect password, but we're not configured         * to  use it (we're configured by the above System.setProperty(...LOGIN_CONTEXT_NAME_KEY...)         * to use the 'MyZookeeperServer' section below, which has the correct password).          */
+// non-incremental membership change
+//  clear all the connections on which we are selecting
+//  mapping was present, clean up the previous expiry bucket.
+//  Authentication exchange has completed
+//  log request
+//  Make tracked buffers eligible for GC
+//  Problem 2: Before fix, after session close the ephemeral node   was not getting deleted. But now after the fix after session close
+//  Try to provide hints to use about what went wrong so they can fix their configuration.   TODO: introspect about e: look for GSS information.
+/*          * Address of sender          */
+//  standalone starts with 0 epoch while quorum starts with 1
+//  create keytab
+//  than 3.
+//  Simple error checking for conflicting modes
+/*      * Test if a receiveConnection is able to timeout on socket errors      */
+//  We send DIFF to (2, 0) and forward any packet starting at (2, 0)
+// we do not need to make a copy of node.data because the contents  are never changed
+//  Just in case
+//  clear our internal buffer
+//  if session creation Assert.fails dump the thread stack   and try the next server
+/*          * Address of recipient          */
+//  now parse it
+//  determine whether we need to send an AuthFailed event.
+//  survives the exception thrown by the first callback.
+//  Header   Base64 text   Footer
+//  for Learner):
+//  currentIndex was set by the call to updateServerList, which   called next
+//  Java 8 default should have the CBC suites first
+//  Ignore. We'll check instead whether it's a global session
+// the transaction logs
+//  id but different role / port
+//  ignore for purposes of this test
+/*  Reusing the index variable to select a follower to connect to  */
+//  Send a diff
+//  the watch contains the un-chroot path
+//  3. SendThread has not created the authenticating object yet,
+//  Capture the command name from the URL
+//  case-1) 'quorum.auth.enableSasl' is off. Tries to enable learner sasl.
+//  Note: the new buffer size is a hint and socket implementation   is free to ignore it, so we don't verify that we get back the   same value.
+//  If preAllocSize is positive and we are within 4KB of the known end of the file calculate a new file size
+// go over outstanding ops in order, and try to find a candidate that acked the most ops.  this way it will be the most up-to-date and we'll minimize the number of ops that get dropped
+/*      * ZOOKEEPER-2201 - OutputArchive.writeRecord can block for long periods of     * time, we must call it outside of the node lock.     * We call tree.serialize, which calls our modified writeRecord method that     * blocks until it can verify that a separate thread can lock the DataNode     * currently being written, i.e. that DataTree.serializeNode does not hold     * the DataNode lock while calling OutputArchive.writeRecord.      */
+//  get information of current leader
+//  If running outside the context of Ant or Ant is using a single   test process, then use all valid ports.
+//  call is no-op if session isn't tracked so safe to call both
+//  Instantiate Notification and set its attributes
+//  Start sending packets
+//  ensure at least the two clients we created are accounted for
+/*      * getXid() is called externally by ClientCnxnNIO::doIO() when packets are sent from the outgoingQueue to     * the server. Thus, getXid() must be public.      */
+//  if the weights are not above zero, things will get messed up
+//  create session with max value
+//  Note that this thread isn't going to be doing anything else,   so rather than spawning another thread, we will just call   run() in this thread.
+//  Data should get updated
+//  If we failed when flushing, try to close it to not leak   an FD
+//  We send TRUNC and forward any packet starting lastProcessedZxid
+//  Mimic sessionId generated by follower's local session tracker
+//  LOG.warn("sid = " + sid + " addressStr = " + addressStr);
+//  Directories are not used but we need it to avoid NPE
+//  We need to log the stuff that came in between the snapshot and the uptodate
+//  processResult() is used by ClientCnxn's sendThread to respond to   data[] contains the Zookeeper Server's SASL token.   ctx is the ZooKeeperSaslClient object. We use this object's respondToServer() method   to reply to the Zookeeper Server's SASL token
+//  the sleep is necessary so that the leader figures out
+//  prior to this request
+//  Warning: this will reset the x509Util
+//  Global sessions handled on the leader; this call is a no-op if   not tracked as a local session so safe to call in both cases.
+//  add all non-excluded snapshot files to the deletion list
+//  Peer has 0 zxid (new machine turn up), txnlog
+/*                      * We only partially sent this buffer, so we update                     * the position and exit the loop.                      */
+//  After leader election, lastProcessedZxid will point to new epoch
+//  third party customized getAppConfigurationEntry could throw IllegalArgumentException when JAAS   configuration isn't set. We can reevaluate whether to catch RuntimeException instead when more    different types of RuntimeException found
+/*      * This method is called when a client passes authentication data for this     * scheme. The authData is directly from the authentication packet. The     * implementor may attach new ids to the authInfo field of cnxn or may use     * cnxn to send packets back to the client.     *      * @param cnxn     *                the cnxn that received the authentication information.     * @param authData     *                the authentication data received.     * @return TODO      */
+//  If the user explicitly overrides the default Login Context, they probably expected SASL to   succeed. But if we got here, SASL failed.
+//  We send DIFF to (6,0) and forward any packet starting at (5,0)
+/*      * (non-Javadoc)     *      * @seeorg.apache.zookeeper.inspector.manager.ZooInspectorManager#     * loadNodeViewersFile(java.io.File)      */
+//  Set sizeLimit to be very high number, so we can pull all transactions
+//  creating ephemeral with wrong option.
+//  bad hostport string
+//  2nd read is after the renegotiation attempt and will fail
+//  lets try look up the current ID if we failed    in the middle of creating the znode
+//  verify all the servers reporting same number of nodes
+//  If unable to pull a new connection off the accept   queue, pause accepting to give us time to free   up file descriptors and so the accept thread   doesn't spin in a tight loop.
+//  again after leader election
+//  check to see if this user is in the user password database.
+//  ... then disable throttling after 2 seconds.
+//  some unexpected error, warn about it
+//  NIO should not accept conenctions
+//  2) verify that empty child name success if sequential
+//  GSSAPI.
+//  now update if the path is in a quota subtree.
+//  GSSAPI: server sends a final packet after authentication succeeds
+//  NO-OP. Adding a packet will already wake up a netty connection   so we don't need to add a dummy packet to the queue to trigger   a wake-up.
+//  a bit of a hack, but delete(/) will never succeed and ensures   that the same semantics are maintained
+/*                                  * Assert that the state of the thread is the one expected.                                  */
+/*  to be safe we just create a new         * datatree.          */
+// incremental change - must be a majority quorum system
+//  Try to load a password-protected private key without providing a password
+//  Note that 'Configuration' here refers to javax.security.auth.login.Configuration.
+//  TODO: should depend on zoo.cfg specified mechs, but if
+//  Set the factor to high value so that this test case always   resync using txnlog
+//  We now ship the request to the leader. As with all   other quorum operations, sync also follows this code   path, but different from others, we need to keep track   of the sync operations this Observer has pending, so we
+/*      * For each leader offer, find out where we fit in. If we're first, we     * become the leader. If we're not elected the leader, attempt to stat the     * offer just less than us. If they exist, watch for their failure, but if     * they don't, become the leader.      */
+//  BUG: Grizzly needs a doc root if you are going to register multiple adapters
+//  "Connection reset by peer"
+//  this is ugly, you have a better way speak up
+//  lets remove the leader and some other server
+/*  This file copied from Hadoop's security branch,  * with the following changes:  * 1. package changed from org.apache.hadoop.util to  *    org.apache.zookeeper.  * 2. Usage of Hadoop's Configuration class removed since  *    it is not available in Zookeeper: instead, system properties  *    are used.  * 3. The deprecated getUlimitMemoryCommand() method removed since  *    it is not needed.   */
+//  TODO: exit server at this point(?)
+//  Wait for the listener to terminate.
+//  This is likely a problem, it means that file reloading is broken, probably because the   directory we are watching was deleted or otherwise became inaccessible (unmounted, permissions   changed, ???).   For now, we log an error and exit the watcher thread.
+//  Find the log file that starts before or at the same time as the   zxid of the snapshot
+/*      * (non-Javadoc)     *      * @seeorg.apache.zookeeper.inspector.manager.ZooInspectorReadOnlyManager#     * getNodeChild(java.lang.String, int)      */
+//  do not add non quorum packets to the queue.
+//  from local session
+//  should always be the case
+//  'B'
+//  wait for the setData txn being populated
+//  it later
+// are cleared
+//  This server should fail to join the quorum as it is not using one of the supported suites from the other
+//  restore socket timeout to the old value
+//  when a reconfig occurs where the leader is removed or becomes an observer,
+//  ignores its connectstring, and next() always returns localhost:2181   it will count down when updateServerList() is called
+//  getting a quorum from all necessary configurations.
+//  generate new config string
+//  Now participant asks for epoch (mocking LearnerHandler behavior). Second add to connectingFollowers.   Triggers verifier.containsQuorum = true
+//  org.apache.log4j.jmx.HierarchyDynamicMBean hdm = new org.apache.log4j.jmx.HierarchyDynamicMBean();
+//  Either client is not configured to use a tunnelled authentication   scheme, or tunnelled authentication has completed (successfully or
+//  assertFalse(log.hasWarned);
+//  loop through the args (must be key/value sequence)
+// shutdown leader- quorum should still exist
+//  they will be handled in next connection or cleared up if closed.
+//  take one of the new servers if it is possible (there are still such   servers we didn't try),   and either the probability tells us to connect to one of the new   servers or if we already   tried all the old servers
+//  With local session on
+// ////////////////   these internal classes are public, but should not generally be referenced.
+//  capture QuorumPeer logging
+//  I'm not in the view
+//  Number of machines increased, my server is not in the new cluster
+//  3. create a node
+//  my server is in new config, and load should be increased, so   stay with this server and do nothing special
+//  Only update pzxid when the zxid is larger than the current pzxid,   otherwise we might override higher pzxid set by a following create    Txn, which could cause the cversion and pzxid inconsistent
+//  Add child watch
+//  TODO: in the future, serverId should be validated for all cases, not just the extendedEphemeralTypesEnabled case   TODO: however, for now, it would be too disruptive
+//  XXX hack
+//  add back servers 7 and 8 while still in reconfigMode (we didn't call
+//  verify no access
+//  otherwise : is at the end of the string, ignore
+//  on the lookout for timeout
+//  two of the servers as observers, and all ports different
+// The old port should be clear at this stage
+// clear up the kerberos state. But the tokens are not cleared! As per  the Java kerberos login module code, only the kerberos credentials
+//  only take in the first 3 servers as old quorum config.
+//  shutdown previous zookeeper
+//  add all to commandMap
+//  use async, otherwise it will block the logLock in   ZKDatabase and the setData request will timeout
+/*      * Converting an observer into a participant may sometimes fail with a     * NewConfigNoQuorum exception. This test-case demonstrates the scenario.     * Current configuration is (A, B, C, D), where A, B and C are participant     * and D is an observer. Suppose that B has crashed (or never booted). If a     * reconfiguration is submitted where D is said to become a participant, it     * will fail with NewConfigNoQuorum since in this configuration, a majority     * of voters in the new configuration (any 3 voters), must be connected and     * up-to-date with the leader. An observer cannot acknowledge the history     * prefix sent during reconfiguration, and therefore it does not count towards     * these 3 required servers and the reconfiguration will be aborted. In case     * this happens, a client can achieve the same task by two reconfig commands:     * first invoke a reconfig to remove D from the configuration and then invoke a     * second command to add it back as a participant (follower). During the     * intermediate state D is a non-voting follower and can ACK the state     * transfer performed during the second reconfig command.      */
+//  servers 4 and 5 should be able to work independently
+/*      * (non-Javadoc)     *      * @seeorg.apache.zookeeper.inspector.manager.ZooInspectorReadOnlyManager#     * getNodeIndex(java.lang.String)      */
+/*          * Reset incomingBuffer          */
+/*              * The following sequence of code is stupid! You would think that             * only sock.close() is needed, but alas, it doesn't work that way.             * If you just do sock.close() there are cases where the socket             * doesn't actually close...              */
+//  skip to the offset of latest skip point before starttime
+// LOG.info("Closed client: " + zk.describeCNXN());
+//  Since for each snapshot we have a log file with same zxid, expect same # logs as snaps to be kept
+// check to see if zkDb is not null
+// reconfigure out leader and follower 1. Remaining follower
+//  Test that when asking for more snaps than we created, we still only get snaps
+// last committed quorum verifier
+//  wait for the node to appear
+//  parse the output   clear the input stream buffer
+//  Start up a new instance
+//  getting called by PrepRequestProcessor
+//  "myhost.foo.com@FOO.COM"
+//  if not RSA, assume EC
+//  read error and input streams as this would free up the buffers
+//  4. on the customized leader catch the startForwarding call      (without synchronized), set the node to value v1, then      call the super.startForwarding to generate the ongoing
+//  This method can return empty iterator if the requested zxid
+//  This test simulate the usual rolling restart with no membership change:   1. A node is shutdown first (e.g. to upgrade software, or hardware, or cleanup local data.).   2. After upgrade, start the node.   3. Do this for every node, one at a time.
+//  new members are initialized with current config + the new server
+//  Animate from top!
+/*                  * Processing queuedRequests: Process the next requests until we                 * find one for which we need to wait for a commit. We cannot                 * process a read request while we are processing write request.                  */
+/*      * ZOOKEEPER-2693: test white list of four letter words.     * For 3.5.x default white list is empty. Verify that is     * the case (except 'stat' command which is enabled in ClientBase     * which other tests depend on.).      */
+//  Each session should see its cxids in order
+//  visiable for test
+//  "zookeeper/myhost.foo.com@FOO.COM"
+//  wait for selector and worker threads to shutdown
+//  the start of second log, since the first one is removed
+//  see a disconnect for each Assert.failed connection attempt
+//  set saslLoginFailed to true to simulate the LoginException
+// 1000(1 second) is to prevent race condition missing to send the second ping  also make sure not to send too many pings when readTimeout is small
+/*                  * Processing committedRequests: check and see if the commit                 * came in for the pending request. We can only commit a                 * request when there is no other request being processed.                  */
+//  Validate the provided znode path contains the given watcher of   watcherType
+// commit and send some info
+//  this is really a programmatic error and not something that can   happen at runtime
+//  test will still fail even though we just log/ignore
+// using linux bash commands to retrieve info
+// that we can reconfigure down to one participant with observers.
+//  Update lastCommitted and Db's zxid to a value representing the new epoch
+//  Create some additional znodes without taking a snapshot afterwards.
+//  including the header and the last / bytes   the snapshot should be at least 10 bytes
+//  try node creation for around 15 second,
+//  do nothing
+//  "zookeeper.server.realm" is set).
+//  Trying to get a first txn on the third give us the
+//  servers 1 and 2 should be able to work independently
+//  We expect this to happen.
+//  Test that data provided when
+//  This tests the case where ZK ensemble does not have the super user's password configured.   Reconfig should fail as the super user has to be explicitly configured via   zookeeper.DigestAuthenticationProvider.superDigest.
+//  We are simulating an established leader, so the epoch is 1
+//  Use setData instead of sync API to force a view update.   Check ZOOKEEPER-2137 for details.
+//  LoginThread will sleep until 80% of time from last refresh to   ticket's expiry has been reached, at which time it will wake
+//  OK to wait until socket disconnects while reading.
+//  from txnlog
+//  create dummy log and transaction file
+//  could not create tmp directory to hold JAAS conf file.
+// noinspection PointlessBitwiseExpression   TTL_RESERVED_BIT is actually zero - but it serves to document that the proper extended bit needs to be set
+//  give dataTree a chance to sync its lastProcessedZxid
+//  make sure this is always synchronized with Zoodefs!!
+//  create an extra handle, so we can index the handles from 1 to qu.ALL   using the server id.
+//  setdata
+//  Max number of toasters for the sceen
+// check that membership makes sense; leader will make these checks again  don't check for leader election ports since   client doesn't know what leader election alg is used
+//  quorum.auth.learnerRequireSasl=true, quorum.auth.serverRequireSasl=true
+//  serialize the data with one znode with acl
+//  TODO: can not name this method getState since Thread.getState()   already exists   It would be cleaner to make class SendThread an implementation of   Runnable
+// new configuration
+//  Don't log an error for shutdown.
+//  When increment ...
+//  to send the watches
+// / delete the direct children first
+//  Number of machines increases, my server is not in the new cluster   load on old servers must be decreased, so must connect to one of the   new servers   i.e., pNew = 1.
+//  enable it if disabled
+// taken care in finally block
+//  Warn about inconsistent peer type
+//  The created ephemeral nodes are still around.
+// update the current candidate, and if it is the only one remaining, return it
+//  returns all configuration servers -- participants and observers
+/*          * First make the views consistent. Sometimes peers will have different         * zxids for a server depending on timing.          */
+//  2 servers in current config, 3 in next config
+//  Simulate a socket channel between a client and a follower
+//  Reconfig node is access controlled by default (ZOOKEEPER-2014).
+//  list of all the followers
+//  Before sending the request, check if the request requires a   global session and what we have is a local session. If so do   an upgrade.
+//  find most idle node
+//  Construct a connection request
+//  listener thread should stop and throws error which notify QuorumPeer about error.   QuorumPeer should start shutdown process   set wait time, if listener contains bug and thread not stops.
+//  Point server at testDir
+//  sessionMap is used by closeSession()
+//  waiting for the session expiry
+//  send error message to the learner
+//  close listen socket and signal selector threads to stop
+//  Newer than committedLog, send trunc and done
+//  server.  This should fail since it is a local sesion.
+//  expected, sort of
+//  If the connect attempt was cancelled but succeeded   anyway, make sure to close the channel, otherwise   we may leak a file descriptor.
+//  any reconfig is invoked
+//  TODO - investigate why reconfig makes qps null.
+//  ensure all servers started
+//  disconnected
+//  reset cnxn factory
+//  Construct a ConcurrentHashSet using a ConcurrentHashMap
+/*          * If sending message to myself, then simply enqueue it (loopback).          */
+/*      * Separated this method from the main run loop     * for test purposes (ZOOKEEPER-1863)      */
+//  to the start of the txn
+//  resolution occured every time
+//  NIOServerCnxnFactory
+//  make sure we don't mess with request itself
+//  optimization for read heavy workloads   iff this is a read, and there are no pending   flushes (writes), then just pass this to the next   processor
+//  remember these servers so we can add them back later
+//  Verify that the exit code is set properly
+//  of expiring the session.
+//  delete till you can find a node with more than   one child
+/*      * Shutdown flag      */
+/*                          * Consider all notifications from the same epoch                         * together.                          */
+/*          * ZOOKEEPER-1324. the leader sends the new config it must complete         *  to others inside a NEWLEADER message (see LearnerHandler where         *  the NEWLEADER message is constructed), and once it has enough         *  acks we must execute the following code so that it applies the         *  config to itself.          */
+// set that we have been interrupted.
+//  for sending over wire
+//  Member variables for mocking Leader
+//  when we do the Cversion we need to translate from the count of the creates   to the count of the changes (v3 semantics)   for every create there is a delete except for the children still present
+//  test that all servers have:
+//  should be numClients/10 in expectation, we test that its numClients/10 +- slackPercent
+//  Make sure we can't convert from an invalid wrapper
+//  aborting multi shouldn't leave any record.
+//  add it to pendingSyncs.
+//  Observer asks for epoch (mocking LearnerHandler behavior)
+//  Account for running within IKVM and create a new MBeanServer   if the PlatformMBeanServer does not exist.
+//  Here we create 3000 znodes
+//  register, createConnection
+//  servers with authentication interfaces configured
+//  sets quorum sasl authentication configurations
+//  and the leader will complete it.
+/*  this is ok  */
+//  start server 2 with old config, where it is an observer
+//  ephemeral node is getting deleted.
+//  create session with min value
+/*                      * Exponential backoff                      */
+//  generate some transactions
+//  snapCount must be 2 or more. See org.apache.zookeeper.server.SyncRequestProcessor
+//  close clients
+//  send a response...
+//  multi record:     set "/foo" => succeed, leave a outstanding change     delete "/foo" => fail, roll back change
+//  make sure that they timed out and didn't return normally
+//  a session should automatically expire after an amount of time
+//  simply return as there is a connection request to   server 'sid' already in progress.
+//  remove the old files
+// When we lock markerNode, allow writeRecord to continue
+/*              * We no longer process NEWLEADER ack with this method. However,             * the learner sends an ack back to the leader after it gets             * UPTODATE, so we just ignore the message.              */
+/*      * (non-Javadoc)     *     * @see org.apache.zookeeper.Watcher#process(org.apache.zookeeper.WatcherEvent)      */
+//  This just avoids complaints by junit
+//  ValidateProcessor is set up in a similar fashion to ToBeApplied   processor, so it can do pre/post validating of requests
+//  now shut down the servers and restart them
+//  Don't apply any prior change records less than firstZxid.   Note that previous outstanding requests might have been removed   once they are completed.
+//  Now we just start watching the assignments directory
+//  shut the leader down
+//  Since the file padding inserts a 0, we will fill the data with 0xff to ensure we corrupt the data if we put the 0 in the data
+//  Send the snapshot we created earlier
+//  TODO lets assert that we are no longer the leader
+//  inject problem in server
+//  Initialize 'lastLogin' to do a login at first time
+//  maintain semantics even in chroot case   specifically - root cannot be deleted   I think this makes sense even in chroot case.
+/*      * (non-Javadoc)     *      * @see     * org.apache.zookeeper.inspector.manager.ZooInspectorNodeManager#setData     * (java.lang.String, java.lang.String)      */
+/*      * Counter to count connection processing threads.      */
+//  wait to connect to one of these
+//  We know the total JUnit process count and this test process's ID.   Use these values to calculate the valid range for port assignments   within this test process.  We lose a few possible ports to the   remainder, but that's acceptable.
+//  Since this is already a committed proposal, we need to follow
+// Give it some time to process the snap  No Snapshot taken yet, the SNAP was applied in memory
+//  corrupt the logfile
+//  Restore former value.
+//  first convert participant to observer, then observer to participant,
+//  used for assertions later
+//  The child might already be deleted during taking fuzzy snapshot,   but we still need to update the pzxid here before throw exception
+//  Through the magic of byte buffers, txn will not be   pointing
+//  Should never call this: SASL authentication is negotiated at session initiation.   TODO: consider substituting current implementation of direct ClientCnxn manipulation with   a call to this method (SASLAuthenticationProvider:handleAuthentication()) at session initiation.
+/*  We've sent the whole buffer, so drop the buffer  */
+//  Local session
+//  Start the servers with a static config file, without a dynamic config file.
+// Expected
+//  Get zxid of create requests
+//  512k
+//  Arrange & Act
+//  connect to one of them
+//  ensure no late arrivals
+//  Height of the toster
+/*                              * We want to make sure we implement the state machine                             * correctly. If we are a PARTICIPANT, once a leader                             * is elected we can move either to LEADING or                              * FOLLOWING. However if we are an OBSERVER, it is an                             * error to be elected as a Leader.                              */
+//  Authenticate client certificate
+//  Connection set is relied on heavily by four letter commands
+//  sanity check
+//  Just put the description in
+//  setConfiguration() will work even if the above try() fails due   to a missing Kerberos configuration (unless zookeeper.requireKerberosConfig   is set to true, which would not allow execution to reach here due to the   throwing of an IllegalArgumentException above).
+//  Check if stopped while request was on queue
+//  Ignore. This may be local session from other servers.
+//  Throttle acceptance of new requests. If this entailed a state change,
+//  FIXME ignore for now
+//  this node does not have a child   is the leaf node   check if its the leaf node
+//  If a null Stat object is passed the create should still   succeed, but no Stat info will be returned.
+// 4. Restart peer2 with quorum.auth.learnerEnableSasl=false and   quorum.auth.serverRequireSasl=false. It should fail to join the
+//  if we have a loopback and it has an address use it
+/*      * See <a href="{@docRoot}/../../../docs/zookeeperAdmin.html#sc_zkCommands">     * Zk Admin</a>. this link is for all the commands.      */
+//  for a dead peer
+//  Session has not been re-validated !
+//  Try to reduce memory consumption by freeing up buffer space   which is no longer needed.
+//  Servers have been set up. Now go test if secure connection is successful.
+//  Validate that we don't see any txn from the second session
+//  The synchronized block here is for two purpose:   1. synchronize with the final cleanup() in SendThread.run() to avoid race   2. synchronized against each packet. So if a closeSession packet is added,
+//  during second iteration leavingIndex will be the index of the leader
+//  Generate Xid now because it will be sent immediately,   by call to sendThread.sendPacket() below.
+//  We add backwards since we are pushing into the front   Only send if there's a pending watch   TODO: here we have the only remaining use of zooKeeper in   this class. It's to be eliminated!
+//  TODO: maybe we should flush in the loop above every N packets/bytes?   But, how do we determine the right value for N ...
+//  check session close request
+/*          * Requests coming from the learner should have gone through         * submitRequest() on each server which already perform some request         * validation, so we don't need to do it again.         *         * Additionally, LearnerHandler should start submitting requests into         * the leader's pipeline only when the leader's server is started, so we         * can submit the request directly into PrepRequestProcessor.         *         * This is done so that requests from learners won't go through         * LeaderRequestProcessor which perform local session upgrade.          */
+//  add previously existing records back.
+/*  Prep the request and convert to a Txn  */
+//  watch for everyone to die
+//  check set
+//  don't waste memory if there are few watches on a node   rehash when the 4th entry is added, doubling size thereafter   seems like a good compromise
+// LOG.trace(e);
+//  Hard close immediately, discarding buffers
+//  Enumeration enumer = r.getCurrentLoggers();
+//  VisibleForTesting
+//  Calculate sizeLimit that we allow to retrieve txnlog from disk
+//  2 followers out of 3 are a majority of the voting view
+//  Shutdown sequence guarantee that all pending requests
+//  else there is no need to clear the database    * When a new quorum is established we can still apply the diff      on top of the same zkDb data    * If we fetch a new snapshot from leader, the zkDb will be      cleared anyway before loading the snapshot
+//  first address worked
+//  have we read length bytes?   sock is non-blocking, so ok
+//  2. SASL login failed.
+//  Multiply by 1000 to get   reqs/sec
+//  make sure we have these 5 servers listed
+//  Everything is a go, simply start counting the ticks   WARNING: I couldn't find any wait statement on a synchronized   block that would be notified by this notifyAll() call, so   I commented it out  synchronized (this) {      notifyAll();  }   We ping twice a tick, so we only update the tick every other
+//  we expect this to throw an IOException since we're faking socket connect errors every time
+//  small chance that an unexpected message was delivered    after this check, but we would catch that next time    we check events
+//  zxid should still be previous result because record's not changed.
+// 2 should elect itself as leader and run by itself
+//  add snapshot files to the log version dir
+//  property is set to an valid int, we should get the set value
+//  remotePeerBean.1 shouldn't exists in ReplicatedServer_2
+// Keep these two lines together to keep the initialization order explicit
+//  this lock guarantees that channel won't be assigned after cleanup().
+/*      * (non-Javadoc)     *      * @seeorg.apache.zookeeper.inspector.manager.ZooInspectorManager#     * getConnectionPropertiesTemplate()      */
+//  Connect the client after services are restarted (otherwise we would get
+//  now verify autocreate off works
+//  Returned empty set must not be modifiable
+//  run servers 0 and 1 normally
+//  We keep a queue of requests. As requests get submitted they are   stored here. The queue is drained in the run() method.
+// TODO: use a factory rather than a switch
+/*                  * It is possible that committedLog is empty. In that case                 * setting these value to the latest txn in leader db                 * will reduce the case that we need to handle                 *                 * Here is how each case handle by the if block below                 * 1. lastProcessZxid == peerZxid -> Handle by (2)                 * 2. lastProcessZxid < peerZxid -> Handle by (3)                 * 3. lastProcessZxid > peerZxid -> Handle by (5)                  */
+//  check duplication of addresses and ports
+//  Create dummy txn larger than preAllocSize
+//  As above, but don't do the throttled read. Make the request bytes wait in the socket
+//  upgrade this once we have Google-Guava or Java 7+
+// reduce the set of candidates to those that acknowledged p
+//  than peer zxid
+//  We send snap
+//  Leader asks for epoch (mocking Leader.lead behavior)   First add to connectingFollowers
+//  Verify each quorum peer has expected quorum member view.
+//  to removed server
+//  Need check if the record is a DataNode instance because of changes in ZOOKEEPER-2014   which adds default ACL to config node.
+//  3 followers out of 5 are a majority of the voting view
+/*          * epoch of the proposed leader          */
+//  Thrown if the caller does not have permission to retrieve the Configuration.   In this case, simply returning false is correct.
+//  If an exception occurred we misdetected a sequence suffix,   so return -1.
+//  Queue up any outstanding requests enabling the receipt of   new requests
+/*  Create  */
+//  recalculate the init limit time because retries sleep for 1000 milliseconds
+// the path does not exist
+//  This might not be 100% right, but it's only used for printing   connection info in the netty implementation so it's probably ok.
+//  Ignore.
+//  LOG.info("Prep>>> cxid = " + request.cxid + " type = " +
+/*      * Methods to aid in testing follow.     *      * THESE METHODS ARE EXPECTED TO BE USED FOR TESTING ONLY!!!      */
+//  ZOOKEEPER-2467 : Testing negative number for redo command
+// FIXME: need way to more cleanly serialize/deserialize exceptions
+/*      * The control sequence sent by the telnet program when it closes a     * connection. Include simply to keep the logs cleaner (the server would     * close the connection anyway because it would parse this as a negative     * length).      */
+//  Nothing to do, we are shutting things down, so an exception here is irrelevant
+//  same port.
+//  note that clientToken might be empty (clientToken.length == 0):   if using the DIGEST-MD5 mechanism, clientToken will be empty at the beginning of the   SASL negotiation process.
+//  new server 3 has still its invalid joiner config - everyone in old
+//  We don't want to do this check since the session expiration thread   queues up this operation without being the session owner.   this request is the last of the session so it should be ok  zks.sessionTracker.checkSession(request.sessionId, request.getOwner());
+//  e.g. "zoo.cfg.dynamic", it returns null.
+//  this is the limit node   get the parent and add it to the trie
+//  TODO: Rather than checking a disjunction here, should be a single member   variable or method in this class to determine whether the client is   configured to use SASL. (see also ZOOKEEPER-1455).
+/*      * Counter to count worker threads      */
+//  @see jira issue ZOOKEEPER-961
+//  Peer has zxid of epoch 4
+//  create ephemeral sequential node
+//  todo not every tmp directory needs this file
+//  We are requesting half the number of transaction from the snapshot
+//  We might consider changing the processor behaviour of    Observers to, for example, remove the disk sync requirements.   Currently, they behave almost exactly the same as followers.
+//  remove host number 0 (the first one in the current list)
+//  if we don't suspend a peer it will rejoin a quorum
+//  Guarantee that the final token is the one we're expanding
+//  -1 means notification
+//  Peer have some proposals that the leader hasn't seen yet   it may used to be a leader
+//  Nodes 2 and 3 now form quorum and fully start. 1 attempts to vote for 3, fails, returns to LOOKING state
+//  entry point for FinalRequestProcessor.java
+//  a different, larger version dynamic file
+//  Only the root path can end in a /, so strip it off every other prefix
+//  In this case, the hostname equals literal IP address.
+//  Read the uptodate ack
+//  quorum.auth.learnerRequireSasl=false, quorum.auth.serverRequireSasl=false
+//  Verify correctness of data and whether sequential znode creation
+//  the clients may or may not have already reconnected   to the recovered cluster, force a check, but ignore
+/* 	  Count number of log entries. Any line starting with a timestamp counts as an entry	 */
+/*          * (non-Javadoc)         *         * @see org.apache.zookeeper.server.RequestProcessor#processRequest(org.apache.zookeeper.server.Request)          */
+//  Only participant need to get outstanding proposals
+//  Set a combination of child/exists/data watches
+//  LOG.warn("Ack>>> cxid = " + request.cxid + " type = " +   request.type + " id = " + request.sessionId);   request.addRQRec(">prop");
+//   "modprinc -maxlife 3mins <principal>" in kadmin.
+//  TODO(ivmaykov): Not sure if cnxn can be null here. It becomes null if channelInactive()   or exceptionCaught() trigger, but it's unclear to me if userEventTriggered() can run   after either of those. Check for null just to be safe ...
+//  hdm.addLoggerMBean(rootLogger.getName());
+//  do authenticating learner
+//  my server is in new config, but load should be decreased.   Need to decide if this client   is moving to one of the new servers
+/*                      * A real zookeeper would take care of setting the current vote. Here                     * we do it manually.                      */
+//  content preserved
+//  not sure about 3rd arg..what is it?
+//  Since we don't check on the futures created by write calls to the channel complete we need to make sure   that all writes have been completed before closing the channel or we risk data loss   See: http://lists.jboss.org/pipermail/netty-users/2009-August/001122.html
+/*          * Since Configuration initializes the key store and trust store related         * configuration from system property. Reading property from         * configuration will be same reading from system property          */
+//  Restart leader election
+//  could not create tmp directory to hold JAAS conf file : test will   fail now.
+/*      * (non-Javadoc)     *      * @see java.awt.datatransfer.Transferable#getTransferDataFlavors()      */
+//  Expect this to fail, the trust store does not contain a private key
+/*                      * When we call put later, if the directBuffer is to                     * small to hold everything, nothing will be copied,                     * so we've got to slice the buffer if it's too big.                      */
+//  Peer has zxid of epoch 1
+//  Test view does not contain non-existant servers
+//  ulimit isn't supported on Windows
+//  Color for toaster
+//  If the connection is not in the master list it's already been closed
+// Create a DataTree with quota nodes so PathTrie get updated
+//  During session upgrade
+//  got results
+//  these tests are serial, we can speed up InterruptedException
+//  init connection executors
+//  Code unfortunately must be duplicated below since we can't assign   anything   before calling super
+//  Peer has zxid of epoch 3
+//  for them that a reconfiguration was in progress when they failed
+//  Here peerCommunicationAddress is null, also clientAddr is null
+//  Empty snapshot and logfile containing a 1-byte create and 5000-byte set
+//  Integer representation of value
+//  found path watcher
+//  And now it goes back to normal next() so it should be everything
+//  request.addRQRec(">sync");
+//  JAAS non-GSSAPI authentication: assuming and supporting only   DIGEST-MD5 mechanism for now.   TODO: use 'authMech=' value in zoo.cfg.
+//  Registers shutdown handler which will be used to know the
+//  Since the proposal has been committed we need to send the   commit message also
+//  child channels options
+//  newly elected zookeeper quorum.
+//  ZOOKEEPER-2743:   Always unregister connection upon close to prevent   connection bean leak under certain race conditions.
+//  start creating all the parents
+/*      * (non-Javadoc)     *     * @see org.apache.zookeeper.Watcher#process(org.apache.zookeeper.proto.WatcherEvent)      */
+//  check for well formed ACLs   This resolves https://issues.apache.org/jira/browse/ZOOKEEPER-1877
+//  If we've already starting sending the first packet, we better finish
+//  Get memory information.
+//  OK, expected that
+//  watchers2
+//  This is just an arbitrary object to represent requests issued by   (aka owned by) this class
+//  Deleting child using chRoot client.
+/*  save the return error code by the server  */
+//  Width of the toster
+//  Use the odd one out for the client
+//  SessionExpiredException as the previous local session was not persisted).
+//  servers 0 and 1 should connect to all servers, including the one in
+//  ZOOKEEPER-569:   If no votes are received for live peers, reset to voting   for ourselves as otherwise we may hang on to a vote
+//  write length of message
+/*      * (non-Javadoc)     *      * @see     * org.apache.zookeeper.inspector.manager.NodeListener#processEvent(java     * .lang.String, java.lang.String, java.util.Map)      */
+//  localPeerBean.1 of ReplicatedServer_1
+//  Check that return code of all request are correct
+//  this is negative, so that if a learner that does auth, connects to a   server, it'll think the received packet is an authentication packet
+//  Show time
+// This will fast forward the database to the latest recorded transactions
+//  better: actions/help-about, but not in tango
+//  we are the final link in the chain
+//  increase the tick time to delay the leader going to looking
+//  check and make sure the change is persisted
+/*      * (non-Javadoc)     *      * @see java.lang.Object#equals(java.lang.Object)      */
+/*              * The commit workers will have to execute this line before they             * wake up the commit processor. So this value is up-to-date when             * variant check is performed              */
+//  This should fail since the buffer size > the data size due to extra fields
+//  Should not have touched original file
+//  check for differences
+//  good message
+//  The first allowable character
+//  sleep for 10 seconds.
+//  doesn't exist and the acl cache is empty
+//  remove hosts 7 and 8 (the last two in a list of 9 hosts)
+//  updates the dynamic file pointer
+//  make sure it has a chance to write it to disk
+/*          * Snapshots are taken lazily. It can happen that the child         * znodes of a parent are created after the parent         * is serialized. Therefore, while replaying logs during restore, a         * create might fail because the node was already         * created.         *         * After seeing this failure, we should increment         * the cversion of the parent znode since the parent was serialized         * before its children.         *         * Note, such failures on DT should be seen only during         * restore.          */
+//  TODO: if zks.processPacket() is changed to take a ByteBuffer[],   we could implement zero-copy queueing.
+//  remove self as it is local bean
+//  Everything below and until we get back to the select is   non blocking, so time is effectively a constant. That is   Why we just have to do this once, here
+//  create top level znode
+/*  Once we've figured out where we are, we're done.  */
+//  find some server that's staying
+//  update last committed quorum verifier, write the new config to disk
+//  Append and commit 2 transactions to the log
+//  The first time we are configured, it is just to tell   us which machine we are
+//  DIFF only
+//  nothing interesting to do if out == null
+//  scenario where four parameter are passed
+//  read "is read-only" flag
+//  Test a hostname that resolves to a single address
+//  Read the length, now get the buffer
+//  this is the backwardCompatibility mode for no version information
+//  expected
+//  we do this in an attempt to ensure that not all of the servers   in the ensemble take a snapshot at the same time
+/*  this 'Client' section has an incorrect password, but we're not configured                                  to  use it (we're configured by the above System.setProperty(...LOGIN_CONTEXT_NAME_KEY...) to                                   use the 'MyZookeeperClient' section below, which has the correct password). */
+//  should cause "/foo/bar" and "/foo" to get deleted when checkContainers() is called
+//  Only do extra logging so we know what kind of session this is   if we're supporting both kinds of sessions
+//  Note: SimpleChannelInboundHandler releases the ByteBuf for us   so we don't need to do it.
+/*      * Object to synchronize access to recvQueue      */
+//  waiting for child watchers to be notified
+//  this is ok - the leader has dropped leadership
+// LOG.warn("Set clientAddr to " + clientAddr);
+//  Step for the toaster
+//  Set the last accepted epoch and current epochs to be 1
+//  verify access using original auth
+//  On my box, if selector.close() is not called fd diff is > 700.
+//  verifying that other path data watches are removed
+//  Multiple bad arguments
+//  ... and close connection
+//  Attempt to renegotiate after establishing the connection
+//  write extra configurations
+//  hasn't beaten us to it
+//  (*) setting it to what it should be
+//  TODO: this doesn't use a quorum verifier
+//  Check that all clients connect properly
+//  clear the buf so we don't get something we read before we sought   number of entries skipped to get to the end of the iterator, less the number skipped to get to the start
+//  If not null then shutdown this leader
+//  Note that we do not generate the Xid for the packet yet. It is   generated later at send-time, by an implementation of ClientCnxnSocket::doIO(),
+//  TODO refactor QuorumBase to be special case of this
+//  servers in the new list that are not in the old list
+/*      * Class to verify of the thread has become a follower      */
+//  ok this is the limit node   get the real node and update   the count and the bytes
+//  Note that this performance assumption might not hold true for architectures other than x86_64.
+/*      * This class parses the initial identification sent out by peers with their     * sid & hostname.      */
+//  FIXME this test is Assert.failing due to client close race condition fixing in separate patch for ZOOKEEPER-63      /**       * this test checks to see if the sessionid that was created for the       * first zookeeper client can be reused for the second one immidiately       * after the first client closes and the new client resues them.       * @throws IOException       * @throws InterruptedException       * @throws KeeperException       */
+//  session is setup
+//  Ignoring exception. If there is an ioexception   then one of the following assertion will fail
+//  Dump data to peer
+//  We have to get at least a majority of servers in sync with   us. We do this by waiting for the NEWLEADER packet to get   acknowledged
+//  Cannot use createClient here because server may close session before    JMXEnv.ensureAll is called which will fail the test case
+//  Stop selecting this key while processing on its   connection
+//  respective reconnection interval
+//  Check that the second operation failed after the first request
+//  add watcher for each node and add node to collection of   watched nodes
+// TODO should this be synchronized?
+//  simulate log file
+//  Doing a delete
+/*                      * Set the state of the peer to LOOKING and look for leader                      */
+/*          * Address of the sender          */
+//  Arrange   Create a HostProvider with a list of unresolved server address(es)
+//  if so, I'll remain the leader
+//  Using the old PlainSocketImpl (prior to JDK 13) we expect to get Socket Exception
+//  handle below: might be harmless if the user doesn't intend to use JAAS authentication.
+//  lets kill the leader and see if a new one is elected
+//  We send TRUNC to 3 and forward any packet starting at maxCommittedLog
+/*  leaving - comma separated list of server IDs to be removed from the ensemble. Only used for     * incremental reconfigurations.      */
+//  Test view contains other servers
+//  and ensure trueLeader is still the leader
+/*          * Update the election vote here to ensure that all members of the         * ensemble report the same vote to new servers that start up and         * send leader election notifications to the ensemble.         *          * @see https://issues.apache.org/jira/browse/ZOOKEEPER-1732          */
+//  create 3 servers
+//  lets sort them explicitly (though they do seem to come back in order ususally :)
+//  Trying to load a PEM file with JKS loader should fail
+//  this shouldn't be necessary (wrapping data with string)   but without it there are problems on the server - ie it   hangs for 30 seconds and doesn't get the data.   TODO investigate
+//  Find the leader by id
+//  start additional new servers
+//  The leader is going to dump the database
+//  Remove "server.x=" prefix which quorum peer does not include.
+//  It is sad that isro and srvr are used by ZooKeeper itself. Need fix this   before deprecating 4lw.
+/*      * (non-Javadoc)     *      * @seeorg.apache.zookeeper.inspector.manager.ZooInspectorManager#     * getLastConnectionProps()      */
+/*          * (non-Javadoc)         *          * @see javax.swing.tree.TreeNode#isLeaf()          */
+//  Sending a nonexisting opcode should cause the server to disconnect
+//  test the most likely situation only: server is stated as observer in
+//  verify that joiner has up-to-date config, including all four servers.
+//  setup channel, variables, connection, etc.
+//  current leader candidate
+//  Use them all except one to build the ensemble
+//  We need to set isLocalSession to tree for these type of request   so that the request processor can process them correctly.
+//  next scheduled refresh is sooner than (now + MIN_TIME_BEFORE_LOGIN).
+//  check that static config file doesn't include membership info   and has a pointer to the dynamic configuration file
+//  Act
+//  receive the commit message.
+//  succeed. We explicitly disable it at the top of X509Util.java.
+//  should not happen
+//  Purge snapshot and log files.
+//  2: inject network problem in one of the follower
+/*                  * When local session upgrading is disabled, leader will                 * reject the ephemeral node creation due to session expire.                 * However, if this is the follower that issue the request,                 * it will have the correct error code, so we should use that                 * and report to user                  */
+//  reconfigMode = false (next shouldn't return null).
+/*          * Start mock server 1          */
+//  Make sure that the magic number is written before padding.
+//  property is set but can not be parsed to int, we should get the
+//  do nothing for the root.   we are not keeping a quota on the zookeeper   root node for now.
+//  Original contents still in place
+/*              * Receives a socket and max number of attempts as input              */
+//  since user has provided sessionId
+//  The only requests that should be on toBeApplied are write   requests, for which we will have a hdr. We can't simply use   request.zxid here because that is set on read requests to equal   the zxid of the last write op.
+/*  TODO: (br33d) we should either put a ConcurrentHashMap on restore()             *       or use Map on save()  */
+//  Put the new set in the map, but only if another thread
+//  read operation during r/o mode
+//  things needed for waitForNewLeaderAck to run (usually in leader.lead(), but we're not running leader here)
+// no candidate acked p, return the best candidate found so far
+//  Some tests may not have a static config file.
+//  Uh oh.  We need to upgrade before we can proceed.
+//  Local session from other server
+//  static configuration params see writeDynamicConfig()
+//  iteration
+//  Update the node on the leader
+/*  Send a connect request. Any socket that has been closed (or at least                 * not added to the cnxn list on the server) will not have any bytes to                 * read and get an eof.                 *                 *  The trick here was finding a call that caused the server to put                 *  bytes in the input stream without closing the cnxn. None of                 *  the four letter commands do that, so we actually try to create                 *  a session which should send us something back, while maintaining                 *  the connection.                  */
+//  FIXME this was originally 5 seconds, but realistically, on random/slow/virt hosts, there is no way to guarantee this
+//  config + itself
+//  Recovery mode
+//  transport
+/*      * Determine how much time a process has to wait once it believes that it     * has reached the end of leader election.      */
+/*      * Tests that if a quorum of a new config is synced with the leader and a reconfig     * is allowed to start but then the new quorum is lost, the leader will time out and     * we go to leader election.      */
+//  a little hacky way to detect key type, but it works
+//  initializing it for new connection
+//  we are done with deserializing the   the datatree   update the quotas - create path trie   and also update the stat nodes
+//  Start up two of the quorum and add 10 txns
+//  Regardless of TICKET_RENEW_WINDOW setting above and the ticket expiry time,   thread will not sleep between refresh attempts any less than 1 minute (60*1000 milliseconds = 1 minute).
+//     make sure everything is consistent
+//  Simulate a bit of network latency...
+//  this should exceed threshold (ZKDatabase.snapshotSizeFactor)
+//  start server 3 with new config
+//  Leader mock: Prep -> MockProposal -> Commit -> validate -> Final   Have side thread call commitProc.commit()
+// 'groups username' command return is non-consistent across different unixes
+//  zkServer.sh depends on "srvr".
+// $NON-NLS-1$
+/*  In the following IF-THEN-ELSE block, we process syncs on the leader.         * If the sync is coming from a follower, then the follower         * handler adds it to syncHandler. Otherwise, if it is a client of         * the leader that issued the sync command, then syncHandler won't         * contain the handler. In this case, we add it to syncHandler, and         * call processRequest on the next processor.          */
+//  See ZOOKEEPER-2967 for more details
+//  CN matching has been deprecated by rfc2818 and can be used   as fallback only when no subjectAlts are available
+//  This will remove the cnxn from cnxns
+//  XXX this doesn't need to be volatile! (Should probably be final)
+//  Great this is what we were hoping for!
+//  ok
+//  This isn't really an error txn; it just has the same   format. The error represents the timeout
+//  Note: according to the Socket javadocs, setTrafficClass() may be   ignored by socket implementations, so we don't check that the value   we set is returned.
+//  observer calls waitForNewLeaderAck, should fail verifier.containsQuorum
+//  make sure that ops are committed in order. With reconfigurations it is now possible   that different operations wait for different sets of acks, and we still want to enforce   that they are committed in order. Currently we only permit one outstanding reconfiguration   such that the reconfiguration and subsequent outstanding ops proposed while the reconfig is   pending all wait for a quorum of old and new config, so it's not possible to get enough acks   for an operation without getting enough acks for preceding ops. But in the future if multiple
+//  lets either become the leader or watch the new/updated node
+//  directories
+//  Inform /foo2 update
+//  joiner should have the following format: server.x = server_spec;client_spec
+// close the socket to make sure the  other side can see it being close
+/*              * Now we start a new connection              */
+/*  some useful information - log the number of fds used before         * and after a test is run. Helps to verify we are freeing resources         * correctly. Unfortunately this only works on unix systems (the         * only place sun has implemented as part of the mgmt bean api.          */
+//  Create a file at destination
+//  In the DIFF case we don't need to do a snapshot because the transactions will sync on top of any existing snapshot   For SNAP and TRUNC the snapshot is needed to save that history
+/*                              * If this server is looking, then send proposed leader                              */
+//  We should be able to reconnect with the same session id on a
+//  If the socket times out, we count that as Assert.failed -
+//  XXX We really should NOT need this!!!!
+/*              * Wait until leader starts up              */
+//  Similar to follower, we need to log requests between the snapshot   and UPTODATE
+//  for a dead peer
+//  DIFF + 3 proposals + 3 commit
+//  Kill half the servers, make a change, restart the dead
+//  lastProcessedZxid
+//  Start everyone but the leader
+//  Assuming the packet will be sent out successfully. Because if it fails,   the channel will close and clean up queues.
+/*  * This code is originally from HDFS, see the similarly named file there * in case of bug fixing, history, etc. * * Branch : trunk * Github Revision: 1d1ab587e4e92ce3aea4cb144811f69145cb3b33  */
+//  Use a single listener instance to reduce GC
+/*          * Observer should write to disk, so that the it won't request         * too old txn from the leader which may lead to getting an entire         * snapshot.         *         * However, this may degrade performance as it has to write to disk         * and do periodic snapshot which may double the memory requirements          */
+//  There should be 2000 create requests
+//  free the error stream buffer
+//  expected behavior
+//  ignore duplicate create
+//  for i < (numClients/2) this tests the case currentHost == null &&   reconfigMode = true   for i >= (numClients/2) this tests the case currentHost!=null &&   reconfigMode = true
+//  Test basic create, ls, and getData
+//  Bring it back
+//  Client is configured to use a valid login Configuration, so   authentication is either in progress, successful, or failed.
+//  Handle race condition where a node is listed   but gets deleted before it can be queried   ignore
+// zk.close();
+//  e.g. servicePrincipalNameAndHostname :=
+// force server to restart and load from snapshot, not txn log
+//  Don't leak sockets on errors
+//  we need to shutdown and start back up to make sure that the create session isn't the first transaction since
+//  server ids are 1, 2 and 3
+//  if we can't skip, we should just read from the start
+//  FIXME: IPv6 is not supported. Using something like Guava's HostAndPort          parser would be good.
+//  if we can get here, it is a valid global session
+//  Verify AlwaysOnTop Flag...
+/*  * A bunch of constants. * TODO: will get rid of it eventually.  */
+//  Let's grab two ports
+//  compare http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+//  Must be Java 1.8 or earlier
+//  Try to provide hints to use about what went wrong so they   can fix their configuration.   TODO: introspect about e: look for GSS information.
+/*      * Default value of peer is participant      */
+/*          * When leader election is completed, the leader will set its         * lastProcessedZxid to be (epoch < 32). There will be no txn associated         * with this zxid.         *         * The learner will set its lastProcessedZxid to the same value if         * it get DIFF or SNAP from the leader. If the same learner come         * back to sync with leader using this zxid, we will never find this         * zxid in our history. In this case, we will ignore TRUNC logic and         * always send DIFF if we have old enough history          */
+//  we are connected to a 1.0 server so accept the new epoch and read the next packet
+// FIXME: I don't want to have to serialize it here and then         immediately deserialize in next processor. But I'm         not sure how else to get the txn stored into our list.
+//  Form a quorum without ssl
+// 2. Upgrade peer0,1,2 with quorum.auth.enableSasl=true and
+//  TODO: need to tune the default value of thread size
+//  Resolver called 10 times, because we shouldn't cache the resolved addresses
+//  XXX No need to do anything
+//  close the input stream
+//  ignore connectionloss when removing from local   session
+//  This server should join successfully
+//  Verify the data in the second transaction
+/*  password is test  */
+//  password is test
+//  Note, we may exceed our max length by a bit when we add the last   watch in the batch. This isn't ideal, but it makes the code simpler.
+/*  a mocked ZK class that doesn't do client-side verification     * before/after calling removeWatches  */
+// One time scheduling.
+//  No entries in jaas.conf   If there's a configuration exception fetching the jaas section and   the user has required sasl by specifying a LOGIN_CONTEXT_NAME_KEY or a jaas file
+//  XXX This shouldn't be needed, but just in case
+//  Second address doesn't work, so we don't call onConnected() this time   StaticHostProvider should try to re-resolve the address in this case
+//  start 2 peers and verify if they form the cluster
+//  The follower reconfiguration will have failed
+/*              * Since requests are processed in order, we better get a response             * to the first request!              */
+//  done checking - it's the root
+//  Watcher function doesn't exists for the specified params
+//  this call shouldn't trigger any error or watch
+//  create ephemeral node
+//  TODO we need to figure out the security requirement for this!
+/*         * If we have a majority, then we are good to go.         */
+//  If the client is asking to close the session then   mark as closing
+//  good, expected that
+//  first line should be version info
+//  assert remotePeerBean.1 of ReplicatedServer_3
+//  We take advantage of the limited size of the length to look   for cmds. They are all 4-bytes which fits inside of an int
+//  in order to be committed, a proposal must be accepted by a quorum.
+//  State of peer that sent this message
+//  Start up the ZK server to automatically create the necessary directories   and capture the directory where data is stored
+//  and so on
+//  now check if its the limit node
+//  new RuntimeException("Calling shutdown").printStackTrace();
+//  wait for the the request processor to do his job
+/*      * To enable observers to have no identifier, we need a generic identifier     * at least for QuorumCnxManager. We use the following constant to as the     * value of such a generic identifier.      */
+//  An authentication error occurred during authentication with the Zookeeper Server.
+//  creating sequential nodes is stored properly
+//  setData using chRoot client.
+//  mutators
+//  load the epochs
+//  remember to close old instance before replacing it
+//  Problem 1: Follower had one extra ephemeral node /e1
+//  since they can't complete the reconfig

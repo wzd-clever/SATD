@@ -1,0 +1,1564 @@
+//  take one's complement'
+// Sometimes external things used with testing don't shut down all the way
+// start the threads
+//  Get sequence number details from latest sequence number of the blob
+//  schedule last block (90% to 100%)
+//  never rollback
+// Don't let the user set who we launch as
+//  invalidate the iterator
+//  set watermark interval to a high value and trigger manually to fix timing issues
+//  or after a consumer rebalance, or during close/deactivate. Always empty if processing guarantee is none or at-most-once.
+//  archive passed in must contain symlink named tmptestsymlink if not a zip file
+//  Windows should set this to false cause symlink in compressed file doesn't work properly.
+//  REQUESTED_TOTAL_MEMORY
+//  propagate interrupt
+//  returns true if pendingEmits is empty
+//  if the component is a system (__*) component and we are hiding   them in UI, keep going
+//  NUM_ERR_CHOICE
+/*          *  By default parser uses [ ] for quoting identifiers. Switching to DQID (double quoted identifiers)         *  is needed for array and map access (m['x'] = 1 or arr[2] = 10 etc) to work.          */
+//  TODO: consider adding a shuffle grouping after the spout to avoid so much routing of the args/return-info all over the place   (at least until its possible to just pack bolt logic into the spout itself)
+//  get a currently unused unique string id
+//  the WindowManager scan loop early.
+// Hosts this user is authorized to impersonate from.
+// Emit and fail the same tuple until we've reached retry limit
+//  SHARED_RESOURCES
+// create test DNSToSwitchMapping plugin
+// get topology constraints
+// all events are sent successfully, return last sent offset
+//  GROUPS
+//  timestamp either in milliseconds or seconds at which this metric is occurred.
+// unknown error, just skip
+//  for unit tests
+// must specify column schema when providing custom query.
+//  Queue of records per shard fetched from kinesis and are waiting to be emitted
+//  add new ports to cached supervisor.  We need a modifiable set to allow removing ports later.
+//  VERSION
+//  try locking another file2 at the same time
+// @{link org.apache.storm.trident.planner.Node} and several other trident classes inherit from DefaultResourceDeclarer   These classes are serialized out as part of the bolts and spouts of a topology, often for each bolt/spout in the topology.   The following are marked as transient because they are never used after the topology is created so keeping them around just wastes   space in the serialized topology
+// Special cases for storm...
+// Likely it is because of a bug, so try to get it another way
+// The spout should emit at most one message per call to nextTuple  This is necessary for Storm to be able to throttle the spout according to maxSpoutPending
+// Fail tuple 5 and 3, call nextTuple, then fail tuple 2
+//  valid to delete before what's been committed since    those batches will never be accessed again
+//  batch 3
+//  1) schedule the heartbeat on one thread in pool
+// Remove any expired keys after possibly inserting new ones.
+//  pump more msgs than Q size & verify msg count is as expexted
+//  in java classpath, '*' is expanded to all jar/JAR files in the directory
+/* user NOT authorized */
+//  make sure that the error thread exits
+//  All writes/syncs will fail so this should cause a RuntimeException
+// Verify that all messages are emitted, ack all the messages
+//  actual ret is Map<String, Map<String, Long/Double>>
+//  get close enough
+//  generate a random storm id
+//  Set the shard iterator for last fetched sequence number to start from correct position in shard
+// short
+// We cannot connect if there is no client section in the jaas conf...
+//  parse the output   clear the input stream buffer
+// TODO this can only ever be null if someone is doing something odd with mocking   We should really fix the mocking and remove this
+//  AcceptedBlockTimeRatios obtained by empirical testing (see comment block above)
+// test the happy path, emit batches in sequence
+//  user class supplied...   this also provides a bridge to Trident...
+// Also put a generic resource with 0 value in the resources list, to verify that it doesn't affect the sorting
+// NOOP
+// key is supervisor key ,value is supervisor ports
+//  TIME_STAMP
+//  read 2nd line and ACK
+//  5 min
+//  Cassandra doesn't actually shut down until jvm shutdown so need to wait for that first.
+//  if one group subscribes to the same stream with same partitioning multiple times,   merge those together (otherwise can end up with many output streams created for that partitioning   if need to split into multiple output streams because of same input having different   partitioning to the group)
+// TODO
+//  if a record is returned put the sequence number in the emittedPerShard to tie back with ack or fail
+//  swapping two arrays
+//  has been acked
+//  Initialize spout using the same populated data (i.e same kafkaUnitRule)
+// TODO: do the inner join incrementally, emitting the cross join with this tuple, against all other sides  TODO: only do cross join if at least one tuple in each side
+// if it is is 0 or less it really is 1 per 10 seconds.
+// request from hosts that are not authorized should be rejected
+// There is a race here that we can still lose
+// subprocesses must send their pid first thing
+//  Servers should be rotated **BEFORE** the old client is removed from clientForServer   or a race with getWriteClient() could cause it to be put back in the map.
+//  Removing self so as not to create a deadlock where a nimbus is trying to download a missing blob   from itself
+// Check that only the tuple on the currently assigned partition is retried
+//  We should be done now...
+// check format
+// Original implementation doesn't actually check if delete succeeded or not.
+//  MESSAGE_BLOB
+//  seems this can fail by returning false or throwing exception   convert false ret value to exception
+// nextOffset is the last offset from last batch + 1
+//  config main.methods
+//  write the tuple to a JMS destination...
+// Normally this is a NOOP
+//  topology.getbolt (AKA sys tasks most specifically __acker tasks)
+// with realm e.g. hdfs@WITZEND.COM   /etc/security/keytabs/storm.keytab
+//  continue without idling
+// Parallelism is same
+//  out of order events should be processed upto the lag
+// This is the first time so initialize the resources.
+//  validate search by executor id
+//  we already checked this
+//  EVENTLOG_HOST
+/*  The output field of the spout ("lambda") is provided as the boltMessageField          so that this gets written out as the message in the kafka topic.          The tuples have no key field, so the messages are written to Kafka without a key. */
+//  Creating a blacklist file to read from the disk
+//  service is off now just interrupt it.
+//  To Commit to Solr and Ack according to the commit strategy
+/*          * Include the topology name & worker port in the file name so that         * multiple event loggers can log independently.          */
+// rest of jerry's running topologies
+//  ==================   Evaluator   ==================
+// MemFree:        14367072 kB  Buffers:          536512 kB  Cached:          1192096 kB   MemFree + Buffers + Cached
+//  trigger occurred, create an aggregation and keep them in store
+//  this assumes that inFields and outFields are the same for combineragg   assumption also made above
+// The spout must reemit failed messages waiting for retry even if it is not allowed to poll for new messages due to maxUncommittedOffsets being exceeded
+//  TOPOLOGY_VERSION
+// The time is now twice the message timeout, the second tuple should expire since it was not acked
+// The versions are different so roll back to whatever current is
+// Trigger manually to avoid timing issues
+//  delete
+//  join against diff stream compared to testThreeStreamLeftJoin_1
+//  doing below because its affecting storm metrics most likely   had to make tick tuple a mandatory argument since its positional
+// The frequency of reporting
+// tmpDir will be handled separately
+//  We haven't received the entire object yet, return and wait for more bytes.
+//  Retry forever
+// Congested we contract much more quickly
+//  If future got interrupted exception, we want to interrupt parent thread itself.
+//  ensures... overflowCount <= overflowLimit. if set to 0, disables overflow limiting.
+//  BOOLVAL
+//  pendingPrepare has no entries
+//  test commit second creates properly
+// construct a transport plugin
+// generate another rack of supervisors with less resources
+//  batch 1 is replayed with 50 tuples.
+//  Redis has three chunks which last chunk only has entries
+// Commits offsets during deactivation
+//  empty if no factoryArgs
+//  last partition is not evicted
+// Offset 0 to maxUncommittedOffsets - 2 are pending, maxUncommittedOffsets - 1 is failed but not retriable
+// Kafka throws their own type of exception when interrupted.  Throw a new Java InterruptedException to ensure Storm can recognize the exception as a reaction to an interrupt.
+//  setup default Producer
+//  implementation for converting a Kinesis record to a storm tuple
+//  guarantees a list of unused string Ids exists.  Once the list is empty, creates a new list
+// all sent events are stored in pending
+//  TODO enable if setStateSpout gets implemented      @Test(expected = IllegalArgumentException.class)
+//  Assume the recvQueue is stable, in which the arrival rate is equal to the consumption rate.   If this assumption does not hold, the calculation of sojourn time should also consider   departure rate according to Queuing Theory.
+//  SCHEDULER_META
+// A map of node ids to node objects
+//  the following code is duplicated in the constructor of MqttPublisher   we reproduce it here so we fail on the client side if SSL is misconfigured, rather than when the topology   is deployed to the cluster
+//  schedule 1st topology
+//  REQUESTED_REGULAR_OFF_HEAP_MEMORY
+/*                  * Emitted messages for partitions that are no longer assigned to this spout can't be acked and should not be retried, hence                 * remove them from emitted collection.                  */
+//  If lock file has expired, then own it
+//  Add messages
+//  TODO this class is reserved for supporting messages with different schemas.   current only one schema in the cache
+//  read remaining lines
+//  Regardless of TICKET_RENEW_WINDOW setting above and the ticket expiry time,   thread will not sleep between refresh attempts any less than 1 minute (60*1000 milliseconds = 1 minute).
+//  need to set active false before calling onKill() - current implementation does not return.
+//  Encoders
+//  remove the slot from the existing assignments
+//  PRINCIPAL
+// == 4
+// parts[0] == 0 for CGroup V2, else maps to hierarchy in /proc/cgroups
+// on windows, the host process still holds lock on the logfile
+//  HOST
+//  NAMED_LOGGER_LEVEL
+//  has been emitted and it is pending ack or fail
+// We ensure there is only the default stream when configuring the spout, so it should be safe to ignore the parameter here.
+//  JMS Queue Provider
+// Retry once after a minute
+//  create StateUpdater with the given windowStoreFactory to remove triggered aggregation results form store
+// heartbeats "stats"
+//  ensure the loggers are configured in the worker.xml before   trying to use them here
+//  We got at least one GET_PULSE_RESPONSE message.
+//  returns list of list of slots, reverse sorted by number of slots
+//  set acl so user doesn't have read access
+//  for windowed bolt, windowed output collector will do the anchoring/acking
+// TODO put in some better exception mapping...  TODO move populateContext to a filter...
+//  PREV_STATUS
+//         oneProducer2Consumers();     // -- measurement 4
+//  topo2 has 4 large tasks
+// We want to capture the full time range, so the target size is as   if we had one bucket less, then we do
+//  load from state
+//  validate search by stream id
+//  Store the time at which the query started executing. The SQL   standard says that functions such as CURRENT_TIMESTAMP return the   same value throughout the query.
+//  Metadata information to commit to Kafka. It is unique per spout instance.
+// The key was removed so we should delete it too.
+//  we trust that the file exists
+// use batch size that matches the default credit size
+//  Now that the root is fine we can start to look at the other paths under it.
+//  hearbeat upon it
+//  storm configuration
+// For cgroups no limit is max long.
+//  SHARED_MEMORY
+//  TOPO_HISTORY
+//  group by node
+//  Called by flush-tuple-timer thread
+// Extend the config with defaults and the command line
+// Routine level
+// Now schedule all of the topologies that need to be scheduled
+//  race condition with another thread, and we lost. try again
+//  do not process current timestamp since tuples might arrive while the trigger is executing
+// TODO figure out how we want to deal with overrides. Users may want to add streams even when overriding other   properties. For now we just add them blindly which could lead to a potentially invalid topology.
+/*      * Computes tumbling window average      */
+//  we wait for 3 seconds
+// the default is false.  the default is false.
+// class Offset
+//  (JMOCK-263).  See https://github.com/jmock-developers/jmock-library/issues/22 for more information.
+// nimbus:num-blacklisted-supervisor + non-blacklisted supervisor = nimbus:num-supervisors
+// look for available port
+// Always have a space in between
+//  should remove the third blob, because the first has the reset timestamp
+//  Submit to Storm cluster
+// Just do a few polls to check that nothing more is emitted
+//  since 2 is the largest un-pinned entry before 3 is loaded
+//  ISOLATED_NODE_GUARANTEE
+//  Refresh the Ticket Granting Ticket (TGT) periodically. How often to refresh is determined by the   TGT's existing expiry date and the configured MIN_TIME_BEFORE_RELOGIN. For testing and development,   you can decrease the interval of expiration of tickets (for example, to 3 minutes) by running :
+// The first tuple should be acked, and should not have failed
+//  the supervisors. this also allows you to declare the serializations as a sequence
+//  if overrides are disabled, we won't replace anything that already exists
+//  for local cluster
+//  IS_LEADER
+//  bolt stats
+// ResourceUtils.java is not a available on the classpath to let us parse out the resources we want.
+//  guard NPE
+/*      * Passing a factory rather than the actual object to avoid enforcing the strong     * requirement of having to have ModelRunner to be Serializable      */
+//  create empty file
+//  NOOP no need to create links in local mode
+// NOOP  We could add in configs through the web.xml if we wanted something stand alone here...
+//  Class path entries that are neither directories nor archives (.zip or JAR files)   nor the asterisk (*) wildcard character are ignored.
+//  print lookup result with low probability
+// Only place we fall though to do the loop over again...
+// Link the components together
+//  https://github.com/netty/netty/blob/netty-4.1.24.Final/transport/src/main/java/io/netty/channel/MultithreadEventLoopGroup.java#L40
+//  required   required   required   required   required   required
+// Some mount options (i.e. rw and relatime) in type are not cgroups related
+//  don't update unless there are tuples   this helps out with things like global partition persist, where multiple tasks may still   exist for this processor. Only want the global one to do anything
+/*      * the value of m is as follows:     * <pre>     * #org.apache.storm.stats.CommonStats {     *  :executed {     *      ":all-time" {["split" "default"] 18727460},     *      "600" {["split" "default"] 11554},     *      "10800" {["split" "default"] 207269},     *      "86400" {["split" "default"] 1659614}},     *  :execute-latencies {     *      ":all-time" {["split" "default"] 0.5874528633354443},     *      "600" {["split" "default"] 0.6140350877192983},     *      "10800" {["split" "default"] 0.5864434687156971},     *      "86400" {["split" "default"] 0.5815376460556336}}     * }     * </pre>      */
+// prints the total with low probability.
+//  =====================================================================================   heartbeats related   =====================================================================================
+// 2 on first partition, 0-2 on second partition
+// NO OP
+// More accurate that thread.sleep, but still not great
+//  pass cases
+//  since s2 read last, it should be evicted, s1 and s3 should exist
+//  The following tests are run for both hdfs and local store to test the
+//  environment variable substitution
+//  only host3 should be returned given filter
+// order executors to be scheduled
+//  find primary key from constructor
+//  if it does not exist.
+// need to get the next node iterator
+/*  TODO: need to invoke a hook provided by the topology, giving it a chance to create user resources.         * this would be part of the initialization hook         * need to separate workertopologycontext into WorkerContext and WorkerUserContext.         * actually just do it via interfaces. just need to make sure to hide setResource from tasks          */
+// Emit some more messages
+// Test for a user having read or write or admin access to read replication for a blob
+//  FIXME: it should be moved to storm-client when serialization-test.clj can be removed
+//  Would only happen at 2 PB so we are OK for now
+/*          * if the current processor preserves the key and is         * already partitioned on key, skip the re-partition.          */
+//  Configure for achieving max throughput in single worker mode (empirically found).       -- Expect ~5.3 mill/sec (3.2 mill/sec with batchSz=1)       -- ~1 mill/sec, lat= ~20 microsec  with acker=1 & batchSz=1
+//  Note, we could add support for setting the replication factor
+// Dropping the parallelism of the bolts to 3 instead of 11 so we can find a solution in a reasonable amount of work when backtracking.
+//  this gets called repeatedly for no apparent reason, don't do anything
+//  6) check log file content line count == tuples emitted + 1
+//  since we made sys components hidden, the component map is empty for this worker
+// ignore
+//  read few lines from file1 dont ack
+// TODO move this logic to the model class
+//  Storm tuple to redis key-value mapper
+//  a stream of words
+// null worker id means generate one...
+// ack 2nd tuple
+//  config
+//  Tuple contains String Object in JSON format
+//  Producers. This is just to get some data in Kafka, normally you would be getting this data from elsewhere
+//  assuming sideFields are preserving its order
+//  DATA
+//  add default user ACL when only empty user ACL is not present
+// The subset of earliest retriable offsets that are on pollable partitions
+// For some reasons, we can not get supervisor port info, eg: supervisor shutdown,  Just skip for this scheduling round.
+//  wait for more ACKs before proceeding
+//  convert all strings to numeric Ids for the metric key and add to the metadata cache
+//  shard iterator type based on kinesis api - beginning of time, latest, at timestamp are only supported
+//  no offset commits have ever been done for this consumer group and topic-partition,   so start at the beginning or end depending on FirstPollOffsetStrategy
+//  setting value to any non-null string
+//  global variables only used internally in class
+// the timeout thread handling
+//  for the given processor node, if we received punctuation from all tasks of its parent windowed streams
+//  String metastoreDBLocation = "jdbc:derby:databaseName=/tmp/metastore_db;create=true";   conf.set("javax.jdo.option.ConnectionDriverName","org.apache.derby.jdbc.EmbeddedDriver");   conf.set("javax.jdo.option.ConnectionURL",metastoreDBLocation);
+// STORM-3372: Rotation policy other than TimedRotationPolicy causes NPE on cleanup
+//  run aggregator to compute the result
+// generate some that has alot of cpu but little of memory
+//  The false parameter ensures overwriting the version file, not appending
+//  SHUFFLE
+//  create thread to delete old metrics and metadata
+//  {TopologyId -> {WorkerId -> {Executors}}}
+//  proposedRefresh is too far in the future: it's after ticket expires: simply return now.
+/*         Without fragmentation, the cluster would be able to schedule both topologies on each node. Let's call each node        with both topologies scheduled as 100% scheduled.        We schedule the cluster in 3 blocks of topologies, measuring the time to schedule the blocks. The first, middle        and last blocks attempt to schedule the following 0-10%, 10%-90%, 90%-100%. The last block has a number of        scheduling failures due to cluster fragmentation and its time is dominated by attempting to evict topologies.        Timing results for scheduling are noisy. As a result, we do multiple runs and use median values for FirstBlock        and LastBlock times. (somewhere a statistician is crying). The ratio of LastBlock / FirstBlock remains fairly constant.        TestLargeFragmentedClusterScheduling took 91118 ms        DefaultResourceAwareStrategy, FirstBlock 249.0, LastBlock 1734.0 ratio 6.963855421686747        GenericResourceAwareStrategy, FirstBlock 215.0, LastBlock 1673.0 ratio 7.78139534883721        ConstraintSolverStrategy, FirstBlock 279.0, LastBlock 2200.0 ratio 7.885304659498208        TestLargeFragmentedClusterScheduling took 98455 ms        DefaultResourceAwareStrategy, FirstBlock 266.0, LastBlock 1812.0 ratio 6.81203007518797        GenericResourceAwareStrategy, FirstBlock 235.0, LastBlock 1802.0 ratio 7.6680851063829785        ConstraintSolverStrategy, FirstBlock 304.0, LastBlock 2320.0 ratio 7.631578947368421        TestLargeFragmentedClusterScheduling took 97268 ms        DefaultResourceAwareStrategy, FirstBlock 251.0, LastBlock 1826.0 ratio 7.274900398406374        GenericResourceAwareStrategy, FirstBlock 220.0, LastBlock 1719.0 ratio 7.8136363636363635        ConstraintSolverStrategy, FirstBlock 296.0, LastBlock 2469.0 ratio 8.341216216216216        TestLargeFragmentedClusterScheduling took 97963 ms        DefaultResourceAwareStrategy, FirstBlock 249.0, LastBlock 1788.0 ratio 7.180722891566265        GenericResourceAwareStrategy, FirstBlock 240.0, LastBlock 1796.0 ratio 7.483333333333333        ConstraintSolverStrategy, FirstBlock 328.0, LastBlock 2544.0 ratio 7.7560975609756095        TestLargeFragmentedClusterScheduling took 93106 ms        DefaultResourceAwareStrategy, FirstBlock 258.0, LastBlock 1714.0 ratio 6.6434108527131785        GenericResourceAwareStrategy, FirstBlock 215.0, LastBlock 1692.0 ratio 7.869767441860465        ConstraintSolverStrategy, FirstBlock 309.0, LastBlock 2342.0 ratio 7.5792880258899675        Choose the median value of the values above        DefaultResourceAwareStrategy    6.96        GenericResourceAwareStrategy    7.78        ConstraintSolverStrategy        7.75         */
+//  Now parse it and return the map.
+//  END TOPOLOGY STATE TRANSITIONS
+//  For native protocol V3 or below, all variables must be bound.   With native protocol V4 or above, variables can be left unset,   in which case they will be ignored server side (no tombstones will be generated).
+//  Set principal in RebalanceOptions to nil because users are not suppose to set this
+// Log file permissions
+//  replaces normal aggregation here with a global grouping because it needs to be consistent across batches
+//  STATS
+//  since we made sys components visible, the component map has all system components
+//  Redis has a chunk but no more
+// A map of assignments organized by node with the following format:
+//  Number of times we had to backtrack.
+//  while
+// Make sure that even though nextTuple() doesn't receive valid data,  the offset will be checkpointed after checkpointInterval seconds.
+//  pipeline component.
+//  RECORDS
+//  send flush tuple to all local executors
+// {nodeId -> {topologyId -> {workerId -> {execs}}}}
+//  11 seconds passed by, not timing out
+//  MEM_ON_HEAP
+//  schedule mid block (10% - 90%)
+//  this is to support things like persisting off of drpc stream, which is inherently unreliable   and won't have a tx attempt
+//  maybe it needs a start phase (where it can do a retrieval, an update phase, and then a finish phase...?   shouldn't really be a one-at-a-time interface, since we have all the tuples already?   TOOD: used for the new values stream   the list is needed to be able to get reduceragg and combineragg persistentaggregate   for grouped streams working efficiently
+//  aggregating metric did not exist, don't look for further ones with smaller timestamps
+// cluster forgets about its previous status, so if it is scheduled just leave it.
+//  First make the cache dir
+//  canonically the metrics data exported is time bucketed when doing counts.   convert the absolute values here into time buckets.
+//  FIXME: This class can be moved to webapp once UI porting is done.
+//  add reference to one and then remove reference again so it has newer timestamp
+//  Then get it and return the file as string.
+//  nothing expired yet
+// else we assume it is the same as teh SUPER_ACL which is covered by CREATOR_ALL
+//  always retain resources in use
+//  because in local mode, its not a separate   process. supervisor will register it in this case   if ConfigUtils.isLocalMode(conf) returns false then it is in distributed mode.
+/*  Map  */
+//  determine how long to sleep from looking at ticket's expiry.   We should not allow the ticket to expire, but we should take into consideration   MIN_TIME_BEFORE_RELOGIN. Will not sleep less than MIN_TIME_BEFORE_RELOGIN, unless doing so   would cause ticket expiration.
+// 'groups username' command return is non-consistent across different unixes
+//  first topology should get evicted for higher priority (lower value) second topology to successfully schedule
+//  ensure 5 fields per tuple and no null fields
+//  i being the position in the fields of this seq, the remainder of the seq is the size
+//  not used, placeholder for GUI, etc.
+//  Extract the field from tuple. Field may be nested field (x.y.z)
+//  LONG_ARG
+// and to wait for the message to get through to the spout (acks use the same path as timeout resets)
+// user jerry submits another topology
+//     httpServer.destroy();  }
+//  5 seconds
+//  class
+// the json_conf is populated by TopologyBuilder (e.g. boltDeclarer.setMemoryLoad)
+//  tuple values are mapped with   metric, timestamp, value, Map of tagK/tagV respectively.
+//  Lastly, the default servlet for root content (always needed, to satisfy servlet spec)
+// The producers are shut down first, so keep going until the queue is empty.
+// Make the spout commit any acked tuples
+//  Most of clojure tests currently try to access the blobs using getBlob. Since, updateKeyForBlobStore   checks for updating the correct version of the blob as a part of nimbus ha before performing any   operation on it, there is a necessity to stub several test cases to ignore this method. It is a valid   trade off to return if nimbusDetails which include the details of the current nimbus host port data are   not initialized as a part of the test. Moreover, this applies to only local blobstore when used along with   nimbus ha.
+//  It's possible for target to have multiple tasks if it reads multiple sources
+//  map to track number of failures for each kinesis message that failed
+//  TODO: handle regular rich spout without batches (need lots of updates to support this throughout)
+//  check is a minor optimization
+// At-most-once mode must commit tuples before they are emitted to the topology to ensure that a spout crash won't cause replays.
+//  NOTE: the queue has to be thread safe.
+//  REQUESTED_SHARED_ON_HEAP_MEMORY
+// call updateMetricFromRPC with params
+//  Is this a directory or is it a file?
+// There could be collisions if keyToString returns only part of a result.
+//  TODO: What would be a good test to ensure that RankableObjectWithFields is at least somewhat defensively copied?
+//  SCRIPT
+//  case 4: task Message
+//  JAVA_OBJECT
+//  Read the length field.
+// this will do best effort flushing since the linger period   was set on creation
+//  The start index is positioned to find any possible   occurrence search string that did not quite fit in the   buffer on the previous read.
+//  task Ids experiencing BP. can be null   task Ids no longer experiencing BP. can be null
+//  To work around it we should get it an alternative (working) way.
+// If not call default constructor
+// Lets build a topology.
+//  Download updated blobs from potential nimbodes
+// topo-2 evicted since user bobby don't have any resource guarantees and topo-2 is the next lowest priority for user bobby
+//  add any autocredential expiry metrics from the worker
+//  function to call when timer is killed
+//  MEM_OFF_HEAP
+// Update the size of the objects
+//  reference to key2
+//  If that fails, fall back on the multitenant-scheduler.yaml file
+//  key fields
+//  verify lock file location   verify lock filename
+// merge with existing statuses
+//  Records that have been polled and are queued to be emitted in the nextTuple() call. One record is emitted per nextTuple()
+//  Another KafkaSpout instance (of this topology) already committed, therefore FirstPollOffsetStrategy does not apply.
+// metrics has just been collected, let's also log it
+//  this code here handles a case where a previous commit failed, and the partitions   changed since the last commit. This clears out any state for the removed partitions   for this txid.   we make sure only a single task ever does this. we're also guaranteed that   it's impossible for there to be another writer to the directory for that partition   because only a single commit can be happening at once. this is because in order for   another attempt of the batch to commit, the batch phase must have succeeded in between.   hence, all tasks for the prior commit must have finished committing (whether successfully or not)
+// Resets the last access time for key1
+//  if Batch spout then id contains txId
+//  other classes from config
+//  cleanup
+/*                         This case will arise in case of non-sequential offset being processed.                        So, if the topic doesn't contain offset = nextCommitOffset (possible                        if the topic is compacted or deleted), the consumer should jump to                        the next logical point in the topic. Next logical offset should be the                        first element after nextCommitOffset in the ascending ordered emitted set.                      */
+//  stores.length+1 as 2 users in Bengaluru
+//  Returns either the source component name or the stream name for the tuple
+//  one instance per executor avoids false sharing of CPU cache
+//  required   required
+//  TODO: in the future, want a way to include this logic in the spout itself,   or make it unnecessary by having storm include metadata about which grouping a tuple   came from
+//  compare contents of files
+//  send a watermark event, which should trigger three windows.
+//  Download missing blobs from potential nimbodes
+//  Blostore launch command with topology blobstore map   Here we are giving it a local name so that we can read from the file   bin/storm jar examples/storm-starter/storm-starter-topologies-0.11.0-SNAPSHOT.jar   org.apache.storm.starter.BlobStoreAPIWordCountTopology bl -c
+//  avoid buffering
+//  watermark events are not added to the queue.
+//  need to wait until sasl channel is also ready
+//  node -> topologyId -> double
+//  {metric -> win -> value} ==> {win -> metric -> value}
+//  only enable cleanup of blobstore on nimbus
+//  Put in legacy values
+//  but topo-4 was submitted earlier thus we choose that one to evict (somewhat arbitrary)
+//  executor id is in form [start_task_id end_task_id]
+//  default parallelism to 1 so if it's omitted, the topology will still function.
+//  1 - parse cmd line args
+//  string does not exist, create using an unique string id and add to cache
+// check if exec can be on worker based on user defined component exclusions
+// The writer must be closed before removed from the map.  If it failed, we might lose some data.
+//  the metrics store is not critical to the operation of the cluster, allow Nimbus to come up
+//  bolt that subscribes to the intermediate bolt, and publishes to a JMS Topic
+// Too fast not reported
+// Scheduling Status set to FAIL_OTHER so no eviction policy will be attempted to make space for this topology
+//  informs other workers about back pressure situation. Runs in the NettyWorker thread.
+//  add with current ts
+// TODO I would love to standardize this...
+//  val xor value
+//  it shouldn't be happen
+//  in other case, just set this to 0 to trigger re-sync later
+//  3 - Setup Topology  --------
+//  this class should be combined with RegisteredGlobalState
+//  initialize server-side SASL functionality, if we haven't yet   (in which case we are looking at the first SASL message from the
+// Avoid case of different blob version   when blob is not downloaded (first time download)
+//  It's likely that Bolt is shutting down so no need to die.   just ignore and loop will be terminated eventually
+//  assumption: there're no put and delete for same target in parameter list
+//  please pick small artifact which has small transitive dependency   and let's mark as Ignore if we want to run test even without internet or maven central is often not stable
+//  retrieving is encapsulated in Retrieval interface
+//  2nd topology
+//  bolts
+//  take the batched metric data and write to the database
+//  names
+//  this ensures that list of values is always written the same way, regardless   of whether it's a java collection or one of clojure's persistent collections    (which have different serializers)   Doing this lets us deserialize as ArrayList and avoid writing the class here
+//  JMS options
+// We are not really running anything so make this   simple to check for
+//  if newReader is true and tuple is null then it is an empty reader
+//  set acl to below so that it can be shared by other users as well, but allows only read
+/*                 * Join the squares and the cubes stream within the window.                * The values in the squares stream having the same key as that                * of the cubes stream within the window will be joined together.                 */
+//  should pass now
+//  Don't start new requests if there is an exception
+//  if state found for this shard in zk, then set the sequence number in fetchedSequenceNumber
+// if authorizationId is not set, set it to authenticationId.
+// Should not have flushed to file system yet
+// TODO a better way to do this would be great.
+//  explicit delete for ephemeral node to ensure this session creates the entry.
+//  TODO support more configuration options, for now we're defaulting to the hbase-*.xml files found on the classpath
+// Update worker tokens if needed
+//  (Re-)Cancel if current thread also interrupted
+// The dir is empty, so try to delete it, may fail, but that is OK
+//  map of tag value pairs
+// Scheduling changed after we killed all of the processes
+//  FIXME: stores map (topoConf), topologyContext and expose these to derived classes
+// Create the directory no matter what. This is so we can check if it was downloaded in the future.
+//  at least 4K
+//  no-op for zookeeper implementation
+/*  * To change this template, choose Tools | Templates * and open the template in the editor.  */
+// NOOP no need to create links in local mode
+//  explicit delete for ephmeral node to ensure this session creates the entry.
+//  lock protects against multiple topologies being submitted at once and
+// This is allowed because the committed message brings the numUncommittedOffsets below the cap
+/*              * Delete the current index file and rename the tmp file to atomically             * replace the index file. Orphan .tmp files are handled in getTxnRecord.              */
+//  A stream of random sentences
+//  SPOUTS
+// The key of the map is the worker id and the value is the corresponding workerslot object
+//  spout aggregate
+//  handle Ctrl-C
+//  JMS Queue Spout
+//  2- BP detected (i.e MainQ is full). So try adding to overflow
+//  MASTER_CODE_DIR
+// There is a race on backpressure too...
+//  Thread Polling every 5 seconds to update the wordSet seconds which is   used in FilterWords bolt to filter the words
+// Put in a tuple to cause the first tuple to be acked
+//  all types of files included
+//  BOLTS
+// This method enables the metrics to be accessed from outside of the JCQueue class
+/*  Not implemented  */
+// There is at most one schedule per message id
+//  RESET_LOG_LEVEL_TIMEOUT_SECS
+// The priority of a topology describes the importance of the topology in decreasing importance   starting from 0 (i.e. 0 is the highest priority and the priority importance decreases as the priority number increases).  Recommended range of 0-29 but no hard limit set.   If there are not enough resources in a cluster the priority in combination with how far over a guarantees
+//  submit topology
+// Not available
+//  Testing whether acls are set to WORLD_EVERYTHING
+// Now fail a tuple on partition one and verify that it is allowed to retry, because the failed tuple is below the maxUncommittedOffsets limit
+//  (acc-stats comp-key) ==> bolt2stats/spout2stats
+//  ignore...
+//  this store is used only for storing triggered aggregated results but not tuples as storeTuplesInStore is set   as false int he below call.
+//  TODO: need to be able to replace existing fields with the function fields (like Cascading Fields.REPLACE)
+/*                  * If a worker crashes, the states of all workers are rolled back and an initState message is sent across                 * the topology so that crashed workers can initialize their state.                 * The bolts that have their state already initialized need not be re-initialized.                  */
+/* Keeping it for backward compatibility */
+//  map from batchgroupid to coordspec
+// create an authentication callback handler
+//  Add cassandra cluster contact points
+//  Load PMML Model from File
+//  validate 4 metrics (aggregations) found for m4 for all agglevels when searching by port
+/*      * Methods for validating confs      */
+//  properties file substitution
+// Map the key if needed
+//  DIRECT
+//  Make a key list to download
+// Remove something randomly...
+//  can be null;   nested field "x.y.z"  becomes => String["x","y","z"]   either "stream1:x.y.z" or "x.y.z" depending on whether stream name is present.
+//  Attempt to schedule multiple copies of 2 different topologies (topo-t0 and topo-t1) in 3 blocks.   Without fragmentation it is possible to schedule all topologies, but fragmentation causes topologies to not   schedule for the last block.
+//  string does not exist in database
+// Acking tuples for partitions that are no longer assigned is useless since the spout will not be allowed to commit them
+//  Test1: If RAS spreads executors across multiple workers based on the set limit for a worker used by the topology
+//  inner join of 'age' and 'gender' records on 'id' field
+// When tuple tracking is enabled, the spout must not replay tuples in at-most-once mode
+//  We can use the task index (starting from 0) as the partition ID
+// 1 min.  This really means something is wrong.  Even on a very slow node
+//  persist the window in state
+//  2) deleting open file - should return true
+//  IGroupMappingServiceProvider
+// With uncommitted earliest the spout should pick up where it left off when reactivating.
+// Sleep for 5 mins
+//  SETTABLE
+// Spouts
+//  This should not happen (localhost), but if it does we are still OK
+//  TOPO_OWNER
+// Creates a MongoClient described by a URI.
+//  EXECUTOR_ID
+/*  Counted  */
+//  set really small so will do cleanup
+// not_jump (open in not strict mode)
+//  1 -  Setup StringGen Spout   --------
+// There are free slots that we can take advantage of now.
+//  boolean to indicate whether timer is active
+//  Finally delete any baseName.<VERSION> files that are not pointed to by the current version
+// for reporting errors
+// The spout must respect maxUncommittedOffsets after committing a set of records
+//  Let us add the kerbClientPrinc and kerbTicket   We need to clone the ticket because java.security.auth.kerberos assumes TGT is unique for each subject   So, sharing TGT with multiple subjects can cause expired TGT to never refresh.
+// Test substitution where the target type is List
+// Once every UPDATE_RATE_PERIOD_NS
+//  Send response to client.
+//  to really make this work well.
+// All null tuples should be commited, meaning they were considered by to be emitted and acked
+// free slot
+// Check for : in case someone called their user "User Name"  This line contains the user name for the pid we're looking up  Example line: "User Name:    exampleDomain\exampleUser"
+//  protected using a lock on this counter
+//  Updating file few times every 5 seconds
+//  required   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional
+// just ignore any error/exception.
+//  Find the most recent child and load that.
+// emit second batch
+//  partition ids 0 .. 19
+//  3) read remaining lines in file, then ensure lock is gone
+//  supervisor health check
+//  1) Build phase - Segregate tuples in the Window into streams.      First stream's tuples go into probe, rest into HashMaps in hashedInputs
+// bobby has no guarantee so topo-2 and topo-3 evicted
+//  run()
+//  SUPERVISOR_ID
+// Initial delay for the assignment refresh timer
+// Ensure filename doesn't contain ../ parts
+//  to be called after all Executor objects in the worker are created and before this object is used
+//  Return a SaslTokenMessageRequest object
+// Emit 10 empty batches, simulating no new records being present in Kafka
+// The second tuple should NOT be ack'd because the batch should be cleared and this will be
+// Daemon common main.methods
+/*  TODO: make sure test these two functions in manual tests  */
+//  DEPENDENCY_ARTIFACTS
+//  should remove the blob since cache size set really small
+//  ASSIGNMENT_ID
+//  USER_NAME
+/* ========== Implementations ========== */
+//  The encryption key must be hexadecimal.
+//  EXECUTION_COMMAND
+//  its possible a string is used by multiple types of metadata strings
+// This can happen if the supervisor crashed after launching a   worker that never came up.
+// This shouldn't throw on a Check, because nothing is configured yet
+// Test for Nimbus Admin
+//  scans from key start to the key before end, calling back until callback indicates not to process further
+/*              Below regex uses negative lookahead to not split in the middle of json objects '{}'             or json arrays '[]'. This is needed to parse valid json object/arrays passed as options             via 'storm.cmd' in windows. This is not an issue while using 'storm.py' since it url-encodes             the options and the below regex just does a split on the commas that separates each option.             Note:- This regex handles only valid json strings and could produce invalid results             if the options contain un-encoded invalid json or strings with unmatched '[, ], { or }'. We can             replace below code with split(",") once 'storm.cmd' is fixed to send url-encoded options.               */
+// error
+//  This should always be set to digest.
+// only for test
+// this is the topology page, so we know the user is authorized
+// The user here from the jaas conf is bob.  No impersonation is done, so verify that
+// We don't really care too much about the scheduling of topology-gpu-0, because it was scheduled.
+//  Ranked first since rack-0 has the most balanced set of resources
+//  Report messageSizes metric, if enabled (non-null).
+//  it should be org.apache.storm:flux-core:jar:1.0.0 and commons-cli:commons-cli:jar:1.2
+//  nothing expires until threshold is hit
+//  send expire command for hash only once   it expires key itself entirely, so use it with caution
+//   Submit topology to Storm cluster
+//  {component id -> metric -> value}, note that input may contain both long and double values
+//  roll to next
+//  sorted acked sequence numbers - needed to figure out what sequence number can be committed
+//  validate at least two agg level none metrics exist
+// if a new document should be inserted if there are no matches to the query filter  updateBolt.withUpsert(true);
+// NImbus metrics distribution
+//  only holds msgs from other workers (via WorkerTransfer), when recvQueue is full
+//  there's a race condition with a delete: blobstore   this should be thrown to the caller to indicate that the key is invalid now
+// Downloading of all blobs finished. This is the precondition for all codes below.
+//  storm topology name
+//  Add the event logger details.
+// TODO Handle the case where there may be no schema
+//  REPLICATION_COUNT
+// cleanup internal assignments
+//  -- spout id
+//  protected using the Object Lock
+// Races are okay this is just to avoid extra work for each page load.
+//  configs - topo parallelism
+//  TOPOLOGY_CONF_OVERRIDES
+//  store inprocess triggers of a batch in store for batch retries for any failures
+//  Distributed mode
+// TODO: DRY this code up with what's in ChainedAggregatorImpl
+//  message was acked after being retried. so clear the state for that message
+//  3 - if clocks are not in sync ..
+//  main
+//  (merge-with merge-agg-comp-stats-topo-page-bolt/spout (acc-stats comp-key) cid->statk->num)
+// The spout should now commit all the offsets, since all offsets are either acked or were missing when retrying
+//  consume file 2
+//  good to go, increment # of tasks this component is being executed on
+//  Ensure that the original batch1 is discarded and new one is persisted.
+// May be null if worker tokens are not supported by the thrift transport.
+// element sojourn time in milliseconds
+/*          * atomically decrement the count if its greater than threshold and         * return if the event should be evicted          */
+// DISABLE_LOGIN_CACHE indicates whether or not to use the LoginCache.  So we exclude it from the keyString
+// the first transaction in the new batch
+// Perhaps there is a better way to do this???
+// This is a NOOP
+// Test for subject with no principals
+// Good so far, check if we are in a CGroup
+// re-establish connection to eventhub servers using the right offset  TBD: might be optimized with cache.
+// TODO streams should be uniquely identifiable
+//  Tuples that have been emitted but that are "on the wire", i.e. pending being acked or failed.
+//  batch sync sending
+//  later on, this will be joined back with return-info and all the results
+//  bolt3 should also receive from checkpoint streams of bolt1, bolt2
+//  now ack msg 5 and check
+//  Test3: When a supervisor and a worker on it fails, RAS does not alter existing assignments
+// Looks like usage might not be supported
+//  update the value in state
+//  3) Select a new file if one is not open already
+//  class Configs
+//  Backtracking algorithm does not take into account the ordering of executors in worker to reduce traversal space
+//  acls for the blob are set to DEFAULT (Empty ACL List) only for LocalFsBlobstore
+// Yes we can delete something that is not 0 because of races, but that is OK for metrics
+//  Calcite ensures that the value is structurized to the table definition   hence we can use PK index directly   To elaborate, if table BAR is defined as ID INTEGER PK, NAME VARCHAR, DEPTID INTEGER   and query like INSERT INTO BAR SELECT NAME, ID FROM FOO is executed,   Calcite makes the projection ($1 <- ID, $0 <- NAME, null) to the value before INSERT.
+//  TOPOLOGY_STATUS
+// The spout should have emitted the tuple, and must have committed it before emit
+// Waiting for this also ensures that the first tuple gets failed if reset-timeout doesn't work
+//  CPU_USAGE
+// local node
+//  There is one task inside one executor for each worker of the topology.   TaskID is always -1, therefore you can only send-unanchored tuples to co-located SystemBolt.   This bolt was conceived to export worker stats via metrics api.
+//  => field name does not match static field, test if it matches dynamic field
+// Ack all emitted messages and commit them
+// This needs to be thread safe
+//  Checks for assertion when we turn on security
+// Just quit
+// Timer is discarded after the initial launch of an assignment
+//  emit the averages downstream
+//  REQUESTED_ON_HEAP_MEMORY
+// fileOffset = the index of last scanned file
+// We waited for 1 second loop around and try again....
+//  NODE_INFO
+// NO-OP
+/*                  * This test sends a broadcast to all connected clients from the server, so we need to wait until the server has registered                 * the client as connected before sending load metrics.                 *                 * It's not enough to wait until the client reports that the channel is open, because the server event loop may not have                 * finished running channelActive for the new channel. If we send metrics too early, the server will broadcast to no one.                 *                 * By waiting for the response here, we ensure that the client will be registered at the server before we send load metrics.                  */
+//  1s   no lag
+// Emit maxUncommittedOffsets messages, and fail all of them. Then ensure that the spout will retry them when the retry backoff has passed
+//  INimbusCredentialPlugin
+// 1 create an already existing open file w/o override flag
+//  by using a monotonically increasing attempt id, downstream tasks   can be memory efficient by clearing out state for old attempts   as soon as they see a higher attempt id for a transaction
+//  Todo: optimize this computation... perhaps inner loop can be outside to avoid rescanning tuples
+// get a sorted list of unassigned executors based on number of constraints
+//  found the next offset to commit
+//  add in spouts as groups so we can get parallelisms
+// Returns messageIds in order of emission
+// Only keep important conf keys
+//  SERVER_PORT
+//  iterate the tuples
+// 0 no load to 1 fully loaded  0 no load to 1 fully loaded
+//  This isn't strictly necessary, but it doesn't hurt and ensures that the machine stays up   to date even if callbacks don't all work exactly right
+//  launch heartbeat threads immediately so that slow-loading tasks don't cause the worker to timeout
+// We need to read a new one
+//  Schedule topology history cleaner
+// in case we didn't fill in enough
+//  merge stdout and stderr
+// Parallelism is double
+//  PROCESS_MS_AVG
+//  required   required   required   required   required   optional
+//  HA Nimbus on being newly elected as leader. Change to a recurring pattern addresses these problems.
+//  Partition state path =   "/{prefix}/{topologyName}/{namespace}/{entityPath}/partitions/{partitionId}/state";
+//  ASSIGNED_ON_HEAP_MEMORY
+// No need to extract it, it is not what we are looking for.
+// The scheduler generally will try to pack executors into workers until the max heap size is met, but   this can vary depending on the specific scheduling strategy selected.   The reason for this is to try and balance the maximum pause time GC might take (which is larger for larger heaps)   against better performance because of not needing to serialize/deserialize tuples.
+//  Read once. Since the first file is empty, the spout should continue with file 2
+//  If authentication of client is complete, we will also send a   SASL-Complete message to the client.
+//  check for required fields
+//  ack few
+//  Note that allSlotsAvailableForScheduling   only uses the supervisor-details. The rest of the arguments   are there to satisfy the INimbus interface.
+// JUMP
+/*      * Register a IMetric instance.     *     * Storm will then call `getValueAndReset()` on the metric every `timeBucketSizeInSecs`     * and the returned value is sent to all metrics consumers.     *     * You must call this during `IBolt.prepare()` or `ISpout.open()`.     * @return The IMetric argument unchanged.      */
+// DONE
+//  components
+/*      * Just output the word value with a count of 1.      */
+//  window-state table should already be created with cf:tuples column
+//  time to sleep between retries in milliseconds
+//  TODO: de-duplicate this logic with the code in nimbus
+//  need to set memory.memsw.limit_in_bytes after setting memory.limit_in_bytes or error   might occur
+//  1) read 5 lines in file,
+// start the thread pool
+//  transferred totals
+//  PORT
+// Save the private worker key away so we can test it too.
+/*              * Connection is unavailable. We will drop pending messages and let at-least-once message replay kick in.             *             * Another option would be to buffer the messages in memory.  But this option has the risk of causing OOM errors,             * especially for topologies that disable message acking because we don't know whether the connection recovery will             * succeed  or not, and how long the recovery will take.              */
+// Test if topology is already partially scheduled on one rack
+// avoid system dependent things
+//  validate search by metric id
+/*  IFn  */
+/*  Not thread safe. Have one instance per producer thread or synchronize externally  */
+//  writes multiple metric values into the database as a batch operation.  The tree map keeps the keys sorted
+//  null for __system bolt
+//  Await all results
+// partition info does not change in EventHub
+//  able to delete the blob without checking meta's ACL   skip checking everything and continue deleting local files
+/*      * Check for uncaught exceptions during the execution     * of the trigger and fail fast.     * The uncaught exceptions will be wrapped in     * ExecutionException and thrown when future.get() is invoked.      */
+// The following come from the JVm Specification table 4.4
+//  force triggers building ring
+//  Always empty if processing guarantee is none or at-most-once
+//  ======
+//  Transfers messages destined to other workers
+// Now check for autoCreds that are missing from the command line, but only if the   command line is used.
+//  Catching and logging KeyNotFoundException because, if   there is a subsequent update and delete, the non-leader   nimbodes might throw an exception.
+//  add a null for missing fields (usually in case of outer joins)
+// Ensure the commit timer has expired
+/*                 * update the word counts in the state.                * Here the first argument 0L is the initial value for the state                * and the second argument is a function that adds the count to the current value in the state.                 */
+// register call back for blob-store
+/* include sys (should not matter) */
+//  COMPLETE_LATENCY_MS
+// This partition is new, and should start at the committed offset
+//  wait for lock to expire
+//  no heartbeat for this one, should be 0
+//  will have the correct settings that cannot be overriden by the submitter.
+// TODO check for null grouping args
+//  flush db to disk
+// Storm will try to get metrics from the spout even while deactivated, the spout must be able to handle this
+//  client).
+//  REQUEST_ID
+// null isTimedOut means worker never reported any heartbeat
+// Security off  is admin  is in allowed group  is an allowed user
+// There are a few possible files that we would want to clean up  baseDir + "/" + "_tmp_" + baseName  baseDir + "/" + "_tmp_" + baseName + ".current"  baseDir + "/" + baseName.<VERSION>  baseDir + "/" + baseName.current  baseDir + "/" + baseName.version  In general we always want to delete the _tmp_ files if they are there.
+//  set the default heap memory size for supervisor-test
+// return false if can't increment anymore
+// This is to verify that a low maxPollRecords does not interfere with reemitting failed tuples
+// comma separated offsets
+// each context will have a single client channel worker event loop group
+/*  Naive implementation, but it might be good enough  */
+//  Acquire a slot
+// pending is still empty
+/*                 * Queries the state and emits the                * matching (key, value) as results. The stream state returned                * by the updateStateByKey is passed as the argument to stateQuery.                 */
+//  for kryo
+//  Storm config
+//     private String timestampField;
+// When nid and zid are not equal, nid is attempting to impersonate zid, We
+// Invalidate the cache as something on the node changed
+// Should be allowed to retry 3 times, in addition to original try
+//  join users and stores on city name
+// Test for Nimbus itself as a user
+// expected
+//  STATE_SPOUTS
+//  setup some files/dirs to emulate supervisor restart
+//  messages.
+//  batch 1 is played with 25 tuples initially.
+//  default cache size 10GB, converted to Bytes
+//  consume both files
+//  Test for subject with no principals and acls set to DEFAULT
+//  all column families
+//  amount of data written and rotation policies
+// TODO this is causing issues...
+//  do nothing
+// Ranked last since rack-2 has not cpu resources
+//  sub directories to store either files or uncompressed archives respectively
+//  WINDOW_TO_COMPLETE_LATENCIES_MS
+//  complexity is that of a linear scan on a TreeMap
+//  Construct a message containing the SASL response and send it to the server.
+//  spouts that use them.  Or if only one uses it they can be created inline with the add
+//  for each isolated topology:     compute even distribution of executors -> workers on the number of workers specified for the topology     compute distribution of workers to machines   determine host -> list of [slot, topology id, executors]   iterate through hosts and: a machine is good if:     1. only running workers from one isolated topology     2. all workers running on it match one of the distributions of executors for that topology     3. matches one of the # of workers   blacklist the good hosts and remove those workers from the list of need to be assigned workers   otherwise unassign all other workers for isolated topologies if assigned
+//  Map of records  that were fetched from kinesis as a result of failure and are waiting to be emitted
+//  HOSTNAME
+//  if shard iterator not present for this message, get it
+/*                      * The position is behind the committed offset. This can happen in some cases, e.g. if a message failed, lots of (more                     * than max.poll.records) later messages were acked, and the failed message then gets acked. The consumer may only be                     * part way through "catching up" to where it was when it went back to retry the failed tuple. Skip the consumer forward                     * to the committed offset.                      */
+// race condition with a delete
+//  META
+//  TOPOLOGY_ID
+//  4 try locking again
+// Fall through on purpose
+// this takes care of setting up coord streams for spouts and bolts
+//  since this processor type is a committer, this occurs in the commit phase
+//  Remove it from failedPerShard anyway
+// constraints and spreads
+//  2) wait for all 3 locks to expire then heart beat on 2 locks and verify stale lock
+//  inputFields can be equal to outFields, but multiple aggregators cannot have intersection outFields
+//  Test2: When a supervisor fails, RAS does not alter existing assignments
+//  Finds the metadata string that matches the string Id and type provided.  The string should exist, as it is
+// Cached GlobalStreamId
+//  last evaluated and last expired message ids per task stream (source taskid + stream-id)
+// Ensure Nimbus assigns topologies as quickly as possible
+//  max lag
+// Try to get the topology conf from nimbus, so we can reuse it.
+//  optional   optional   optional   optional   optional   optional   optional
+//  100 events with past ts should expire
+//  'stream' cannot be null,
+//  renewal thread's main loop. if it exits from here, thread will exit.
+//  Advance time and then trigger call to kafka consumer commit
+// In almost all cases these should be the same, but warn the user just in case something goes wrong...
+//  =================  Factory Methods Declaring ModelOutputs to Multiple Streams  ==================
+// wait until all workers, supervisors, and nimbus is waiting
+//  Share some common metadata strings to validate they do not get deleted
+//  zk node under which to commit the sequence number of messages. e.g. /committed_sequence_numbers
+//         producerFwdConsumer();      // -- measurement 5
+//  checkpoint the state every 5 seconds
+// System bolt is not a part of backpressure.
+//  Static State
+//  pause other topic-partitions to only poll from current topic-partition
+// We are going to skip over CPU and Memory, because they are captured elsewhere
+// Should not show files outside log root.
+//  One tuple and one rotation should yield one file with data
+//  DETAILS
+//  Spout implementation
+//  while holding currentLock to avoid deadlocks
+// We are launching it now...
+// From LocalizerTest
+//  Find the task the events from this component route to.
+// Now lets get the creds for the topos so we can verify those as well.
+//  SHARED_MEM_ON_HEAP
+//  first 50 should have expired due to expire events threshold
+//  Tell cassandra where the configuration files are. Use the test configuration file.
+//  calc sid->output-stats
+// play and fail 1 tuple
+//  need to get ACL from meta
+// insure that if keytab is used only one login per process executed
+//  ordered partition keys
+// Unblock downloading by accepting the futures.
+//  spouts
+// find document from mongodb
+//  SIGNATURE
+//  Some times a Bolt or Spout will have some memory that is shared between the instances   These are typically caches, but could be anything like a static database that is memory   mapped into the processes. These can be declared separately and added to the bolts and
+// by default no need to do this as a different user
+//  Tuple contains String Object in JSON format   Tuple contains Java object that must be serialized to JSON by SolrJsonMapper
+//  else use the exponential backoff logic and handle long overflow
+// user derek submits another topology into a full cluster  topo6 should not be able to scheduled initially, but since topo6 has higher priority than topo5  topo5 will be evicted so that topo6 can be scheduled
+//  same set of events part of three windows
+//  set size to cleanup another one
+// if any error/exception thrown, just ignore.
+//  this is the end key for whole scan
+//  sorted failed sequence numbers - needed to figure out what sequence number can be committed
+//  batch 3 replayed with 40 tuples
+//  validate search by topology id
+//  comma separated list of topics   consumer group id for which the offset needs to be calculated   bootstrap brokers   security protocol to connect to kafka   properties file containing additional kafka consumer configs
+//  User defined Callback
+// rotateOutputFile(writer) has closed the writer. It's safe to remove the writer from the map here.
+//  StatefulBoltExecutor does the actual ack when the state is saved.
+//         ackingProducerSimulation(); // -- measurement 6
+// We want to update longest scheduling time in real time in case scheduler get stuck   Get current time before startTime to avoid potential race with scheduler's Timer
+//  left join - core implementation
+//  END Metrics
+// Getting the exact response code is a bit more complex.  TODO should use a better client
+//  if re-partitioning is involved, does a per-partition aggregate by key before emitting the results downstream
+//  required
+//  FIXME: we can filter by listKeys() with local blobstore when STORM-1986 is going to be resolved   as a workaround, we call getBlobMeta() for all keys
+//  Get the list of keys from blobstore
+// This is a hack to allow ZooKeeperMain to be called by this command.
+//  shard iterator corresponding to position in shard for failed messages
+//  configs
+// TODO: this isn't right... it's not in the map anymore
+//  validate search by time
+// Since the last tuple on the partition is more than maxPollRecords ahead of the failed tuple, it shouldn't be emitted here
+// This is a bit ugly, but it works.  In order to maintain the same directory structure that existed before   we need to have storm conf, storm jar, and storm code in a shared directory, and we need to set the   permissions for that entire directory, but the tracking is on a per item basis, so we are going to end   up running the permission modification code once for each blob that is downloaded (3 times in this case).   Because the permission modification code runs in a separate process we are doing a global lock to avoid   any races between multiple versions running at the same time.  Ideally this would be on a per topology   basis, but that is a lot harder and the changes run fairly quickly so it should not be a big deal.
+//  thread safety: assumes Collector.emit*() calls are externally synchronized (if needed).
+//  EXECUTE_LATENCY_MS
+//  last fetched sequence number corresponding to position in shard
+// The last slot fill it up
+// For this part of the test we interleve the differnt rotation types.
+//  we found a spout   spout
+// Now rebalance and add a new partition
+// Offset 0 is committed, 1 to maxUncommittedOffsets-1 are failed, maxUncommittedOffsets to maxUncommittedOffsets + maxPollRecords-1 are emitted  Fail the last tuples so only offset 0 is not failed.  Advance time so the failed tuples become ready for retry, and check that the spout will emit retriable tuples  for all the failed tuples that are within maxUncommittedOffsets tuples of the committed offset
+// This is here to avoid an overridable call in the constructor
+//  in which case it's a noop
+//  can't leave choices to be empty, so initiate it similar as ShuffleGrouping
+//  return null if it's not single emit
+//  TARGET_LOG_LEVEL
+//  TODO: does this work well on windows?
+//  Strategy to determine the fetch offset of the first realized by the spout upon activation
+// We evicted enough topologies to have a hope of scheduling, so try it now, and don't evict more   than is needed
+// race condition with delete
+//  Generate SASL response (but we only actually send the response if
+//  required   optional   optional   optional   optional   optional   optional
+//  drain 1 element and ensure BP is relieved (i.e tryPublish() succeeds)
+//  spawn tar utility to untar archive for full fledged unix behavior such   as resolving symlinks in tar archives
+//  If FlatMapFunction is aware of prepare, let it handle preparation
+//  ID_TO_SPOUT_AGG_STATS
+//  should we fail the tuple or kill the worker?
+// update nextOffset;
+//  TODO: this assumes key is only from the one field   if not we need to have order of fields in PK
+// Now lets create a token and verify that we can connect...
+//  this triggers java.lang.RuntimeException: Cannot convert null to int
+//  test write again
+//  a valid javac XD option, which is another bug
+// Bolts
+//  pendingCommit has no entries
+//  The jitter allows the clients to get the data at different times, and avoids thundering herd
+//  Test with integer value
+//  spout notified that message returned by us for retrying was actually emitted. hence remove it from set and   wait for its ack or fail   but still keep it in counts map to retry again on failure or remove on ack
+//  should pass
+// There is a race on logconfig where they can be leaked in some versions of storm.
+//  TODO: take away knowledge of storm's internals here
+// TODO get this from type instead of hardcoding to Nimbus.  establish client-server transport via plugin
+//  strong supervisor node
+//  0 means delegate batch size = trident batch size.
+// get document
+//  K/sec
+//  emulate the call of withLateTupleStream method
+// This is a bit ugly The JSON we are expecting should be in the form   {"component": {"resource": value, ...}, ...}   But because value is coming from JSON it is going to be a Number, and we want it to be a Double.   So the goal is to go through each entry and update it accordingly
+//  DATA_SIZE
+// TODO need a better way to do this
+//  RocksDB should insert in sorted key order
+// Some tests rely on reading the worker log. If there are too many emits and too much is logged, the log might roll, breaking the test.  Ensure the time based windowing tests can emit for 5 minutes
+//  common stats
+//  you cant define a topologySource and a DSL topology at the same time...
+//  Creating blob again before launching topology
+//  Add to our collection.
+//  Avro strings are stored using a special Avro Utf8 type instead of using Java primitives
+//  window length
+//  tests by subclassing.
+/* ==================================================     * Helper Classes     *================================================== */
+//  query the streamState for each input task stream and compute recoveryStates
+//  found
+//  =====================================================================================   convert thrift stats to java maps   =====================================================================================
+//  COMMON
+// One time scheduling.
+//  STORM_ASSIGNMENT
+//  this is because json doesn't allow numbers as keys...   TODO: replace json with a better form of encoding
+// Always make sure to clean up everything else before worker directory
+//  REBALANCE_OPTIONS
+//  explicit anchoring emits to corresponding input tuples only, as default window anchoring will anchor them to all   tuples in window
+// logger.info("emit for partition " + partition.getId() + ", offset=" + offset);
+//  heartbeat, ensure its no longer stale and read back the heartbeat data
+/*                                                *  Update the count in the state. Here the first argument 0L is the initial value for the                                               *  count and                                               *  the second argument is a function that increments the count for each value received.                                                */
+//  Sets {@link SolrFieldsMapper} to use the default Solr collection if there is one defined
+// Not enough guaranteed use the age of the topology instead.  TODO need a good way to only do this once...
+//  1) Start metastore
+//  failures happen you don't get an explosion in memory usage in the tasks
+//  topology to tracking of topology dir and resources
+//  when
+//  MetricsCollectorConfig
+//  1) read initial lines in file, then check if lock exists
+//  should promote: only fetch storm bases of topologies that need scheduling.
+//  USED_CPU
+//  10th partition should not have been evicted
+// this is to prevent the potential bug that  if the Login Cache is (1) enabled, and then (2) disabled and then (3) enabled again,  and if the LoginCacheKey remains unchanged, (3) will use the Login cache from (1), which could be wrong,  because the TGT cache (as well as the principle) could have been changed during (2)
+/*  LOOK AT HDFS BLOBSTORE AGAIN  */
+//  WINDOW_TO_ACKED
+// Emit and ack some tuples, ensure that some polled tuples remain cached in the spout by emitting less than maxPollRecords
+//  storm blobstore create --file blacklist.txt --acl o::rwa key
+// STORM-3087.
+//  Files/move with non-empty directory doesn't work well on Windows   This is not atomic but it does work
+//  ERROR
+/*  tuple payload serializer is specified via configuration  */
+// verify that Offset 10 was last committed offset, since this is the offset the spout should resume at
+//  if all go down which is unlikely. Hence there might be a need to update the blob if all go down.
+//  for
+// Try to maintain rolling upgrade compatible with 0.10 releases
+//  PROCESS_LATENCY_MS
+// When tuple tracking is enabled, the spout must not replay tuples in no guarantee mode
+//  look  Impt: HDFS timestamp may not reflect recent appends, so we double check the   timestamp in last line of file to see when the last update was made
+//  TASK_START
+//  last offset of this batch
+// the body of the message is "message" + currentOffset, e.g. "message123"
+//  Test2: Launch topo 1, 2 and 4, they together request a little more mem than available, so one of the 3 topos will not be
+//  {metric -> value}
+//  component
+//  this is fine because the only time this is shared is when it's a local context,
+//  should we fail the batch or kill the worker?
+//  optional   optional   optional   optional   optional   optional
+//  release the reference on all blobs associated with this topology.
+//  only log/set when there's been a change to the assignment
+/*      * The maximum number of states that will be searched looking for a solution in the constraint solver strategy      */
+//  targetSize in Bytes
+// The consumer should not be seeking to retry the failed tuple, it should just be continuing from the current position
+//  scans the database to look for a metadata string and returns the metadata info
+//  Offsets emitted are 0,1,2,3,4,<void>,8,9
+//  Todo: Track file offsets instead of line number
+// case 1: plugin is a IContext class
+//  explicitly anchor emits to corresponding input tuples only, as default window anchoring will anchor them to all tuples   in window
+//  Writing random words to be blacklisted
+//  optional   optional   optional   optional   optional
+//  need to add an empty string else it is nto added as query param.
+//  Tests for case when subject != null (security turned on) and   acls for the blob are set to WORLD_EVERYTHING
+//  MEMORY_USAGE
+//  it doesn't seem like you should have to do this, but java serialization is wacky, and doesn't call the default constructor.
+//  enum conversion
+// This means 1 to maxUncommitteddOffsets, but not maxUncommittedOffsets+1...maxUncommittedOffsets+maxPollRecords-1
+//  Get rid of multiple '/' in url
+//  ASSIGNED_MEMOFFHEAP
+//  TODO: Need to be able to set the tick tuple time to the message timeout, ideally without parameterization
+//  only one of the multireducers will receive the tuples
+// If there is an acked tupled after a compaction gap, the spout should commit it immediately
+//  should have created blobDir
+// It seems safer not to follow symlinks, since we don't expect them here
+// private constructor
+// Ignored/expected...
+//  we're making mock, ignoring...
+/*          * When we click a link to the logviewer, we expect the match line to be somewhere near the middle of the page. So we subtract half         * of the default page length from the offset at which we found the match.          */
+// If .current and .version do not match, we roll back the .version file to match   what .current is pointing to.
+//  use the local setting for the login config rather than the topology's
+//  Non Blocking call. If cannot emit to destination immediately, such tuples will be added to `pendingEmits` argument
+//  Define our taskIds - the test expects these to be incrementing by one up from zero
+//  required   required   optional   optional   optional
+//  enable blobstore acl validation
+//  Split up GZIP_MAGIC into readable bytes
+//  WORKER_RESOURCES
+//  put bolt message first, then put task ids
+// We found a good result we are done.
+// storm-core is needed here for backwards compatibility.
+// clear up the kerberos state. But the tokens are not cleared! As per  the Java kerberos login module code, only the kerberos credentials
+//  EXECUTOR_NODE_PORT
+//  We can't move this to outside without breaking backward compatibility.
+//  c.f. HADOOP-6559
+//  We call fireMessageRead since the client is allowed to   perform this request. The client's request will now proceed   to the next pipeline component namely StormClientHandler.
+//  Check to see if there are any existing files already localized.
+//  this is just in case supervisor is down so that disk doesn't fill up.   it shouldn't take supervisor 120 seconds between listing dir and reading it
+//  value fields
+// Both assignments are null, just wait
+//  expiry is before next scheduled refresh).
+//  repartition so that state query fields grouping works correctly. this can be optimized further
+//  Run only once.
+//  get per task components
+//  -- enable/disable ACKing
+//  create root directory if not exist
+//  1) acquire locks on file1,file2,file3
+//  if the acked message was in emittedPerShard that means we need to remove it from the emittedPerShard (which
+//  MS
+//  ACKED
+//  So far it matches.  Keep going...
+// The user from the token is bob, so verify that the name was set correctly...
+//  counter for spout wait strategy   counter for back pressure wait strategy
+// When is this ever null?
+// for each owner, get resources, configs, and aggregate
+//  Or done separately like with setting the
+//  preCommit can be invoked during recovery before the state is initialized
+// Verify that no more tuples are emitted and all tuples are committed
+// When tuple tracking is enabled, the spout must not commit acked tuples in at-most-once mode because they were committed before being emitted
+//  Test whether the integer is a power of 2.
+// Have not moved to a java worker yet
+// This test is in two phases.  The first phase fills up the 10 buckets with 10 tuples each
+//  package level for unit tests
+//  This call returns immediately
+// Sasl transport
+// Stats...
+//  use different blobstore dir so it doesn't conflict with other test
+//     public SimpleTridentHBaseMapper withTimestampField(String timestampField){          this.timestampField = timestampField;          return this;      }
+//  supervisor port should be only presented to worker which supports RPC heartbeat
+//  in partitioned example, in case an emitter task receives a later transaction than it's emitted so far,   when it sees the earlier txid it should know to emit nothing
+// Translating the name (this call) happens in a different callback from validating   the user name and password. This has to be stateless though, so we cannot save   the password provider away to be sure we got the same one that validated the password.   If the password providers are written correctly this should never happen,   because if they cannot read the name they would return a null.   But on the off chance that something goes wrong with the translation because of a mismatch   we try to skip the bad one.
+// TODO: add logging that not all tuples were received
+// Assignment has changed
+// Verify correct unwrapping of partitions and delegation of assignment
+//  if delay or delay + current time are bigger than long max value
+//  disregard first line because it has header, already read
+// Now see if we can create a new token for bob and try again.
+// For some reason on the new code if ackers is null we get 0???
+//  2) check log file contents
+// The window boundaries are )windowStart, windowEnd)
+//  Test for subject with no principals and acls set to WORLD_EVERYTHING
+//  required   optional   optional   optional   optional
+// In distributed mode, send heartbeat directly to master if local supervisor goes down.
+//  add 10 events
+//  This could fail if a blob gets deleted by mistake.  Don't crash nimbus.
+//  required   required   optional
+//  Be careful about adding additional tests as the dfscluster will be shared
+// Verify that the poll started at the earliest retriable tuple offset
+// release earliest blacklist - but release all supervisors on a given blacklisted host.
+//  SERVICE_TYPE
+/*      * Asserts that commitSync has been called once,     * that there are only commits on one topic,     * and that the committed offset covers messageCount messages      */
+//  set to keep 2 blobs (each of size 34)
+// returns void if the event should continue, false if the event should not be done
+//
+//  by generating a list of random numbers and removing the ones that already are in use.
+//  SECRET_VERSION
+//  TOTAL_TOPOLOGIES
+//  do not process events beyond current ts
+//  make sure we support different user reading same blob
+//  avoid allocating SpoutAckInfo obj if not necessary
+//  The match at this candidate offset failed, so start over with the   next candidate byte from the buffer.
+//  Helper static vars for each platform
+// Not symmetric difference. Performing A.entrySet() - B.entrySet()
+//  offset 2   offset 6   offset 14   offset 18   offset 22   offset 26   offset 30   offset 34
+/*          * The KafkaConsumer commitSync API docs: "The committed offset should be the next message your application will consume, i.e.         * lastProcessedMessageOffset + 1. "          */
+//  FRAGMENTED_MEM
+//  key1 shouldn't be in iterator since it's marked as deleted
+// Thread died before we could get the info, skip
+//  REQUESTED_REGULAR_ON_HEAP_MEMORY
+//  check lock file presence
+//  0) config spout to log progress in lock file for each tuple
+// This is here only for testing.
+// map to hold partition level and topic level metrics
+//  Rack id to list of host names in that rack
+// Test3: "Launch topo5 only, both mem and cpu should be exactly used up"
+//  This spout is added to test purpose, so just failing fast doesn't hurt much
+//  check that tryPublish() & tryOverflowPublish() work as expected
+//  todo, ignore the master batch coordinator ?
+// each thread will have its own request context
+//  merge and push unions rules
+//  if maxRetries is 0, dont retry and return false as per interface contract
+//  if value is greater than Long.MAX_VALUE it truncates to Long.MAX_VALUE
+/*                 * The elements having the same key within the window will be grouped                * together and the corresponding values will be merged.                *                * The result is a PairStream<String, Iterable<Double>> with                * 'stock symbol' as the key and 'stock prices' for that symbol within the window as the value.                 */
+//  create metric for memory
+// Prevent fileName from pathing into worker logs, or outside daemon log root
+//  used by Stream#persistentAggregate
+// non impersonating request, should be permitted.
+// find number of constraints per component  Key->Comp Value-># of constraints
+//  for an acked message add it to acked set and remove it from emitted and failed
+// The tick should cause tuple1 to be ack'd
+//  PATH
+// The failed tuples are ready for retry. Make it appear like 0 and 1 were compacted away.
+// don't exit if not running, unless it is an Error
+/*                 * convert the state back to a stream and print the results                 */
+//  if commands contains one or more null value, spout is compiled with lower version of storm-kafka-client
+//  if there are no records do not call flush
+//  package access for unit test
+// With earliest, the spout should also resume where it left off, rather than restart at the earliest offset.
+//  Re-load from cached' file.
+// Scheduling changed while running...
+// If the node does not exist it is fine/expected...
+// We are done, nothing that short is going to work here
+//  METRIC_LIST
+// Something odd happened try again later
+// if this task containing worker will be killed by a assignments sync,  taskToNodePort will be an empty map which is refreshed by WorkerState
+// Once Storm is baselined to Java 11, we can use URLDecoder.decode(String, Charset) instead, which obsoletes this method.
+//  complete access to the blob
+// verify that offset 4 was committed for the given TopicPartition, since processing should resume at 4.
+//  sync the filesystem after every 1k tuples
+// ensure always same order for registrations with TreeMap
+//  2 -  Setup DevNull Bolt   --------
+//  If resource is also present in resources map will overwrite the above
+// Now we need to map them all back again
+// The connection is not sent unless a response is requested
+//  host,port => WorkerSummary
+//  add all fetched records to the set of failed records if they are present in failed set
+/* include sys */
+/*  validate cpu settings  */
+//  ID_TO_BOLT_AGG_STATS
+//  close the state to force flush
+//  if we didn't get the group - just return empty list;
+//  can be UpdateStateByKey or StateQuery processors
+// It already points where we want it to
+//  1 -  Setup Const Spout   --------
+// check that only subscribed to one component/stream for statespout  setsubscribedstate appropriately
+//  should be at 5
+//  Back off
+//  NODES
+//  this code here ensures that only one attempt is ever tracked for a batch, so when
+// metrics rpc
+// Initial Setup
+// Max heap size for a worker used by topology
+//  OUTPUT_FIELDS
+// Consumer. Sets up a topology that reads the given Kafka spouts and logs the received messages
+//  We don't need to sleep here because the IPartitionManager.receive() is   a blocked call so it's fine to call this function in a tight loop.
+// TODO: wrap this to set the stream name
+//  Make sure that we have received at least an integer (length)
+// The supervisor on the node down so add an orphaned slot to hold the unsupervised worker
+//  =========== Consumer Rebalance Listener - On the same thread as the caller ===========
+// No task is under backpressure initially
+//  Use parseWithException instead of parse so we can capture deserialization errors in the log.   They are likely to be bugs in the spout code.
+// are cleared
+// In order to avoid going over _maxNodes I may need to steal from   myself even though other pools have free nodes. so figure out how   much each group should provide
+//  an acked message should not be in failed since if it fails and gets re-emitted it moves to emittedPerShard   from failedPerShard. Defensive coding.
+// put [owner-> StormBase-list] mapping to ownerToBasesMap  if this owner (the input parameter) is null, add all the owners with stormbase and guarantees  else, add only this owner (the input paramter) to the map
+// We may (though unlikely) lose metering here if state transition is too frequent (less than a millisecond)
+// This is a bit ugly, but it shows how this would happen in a worker so we will use the same APIs
+//  Preserve interrupt status
+/*      * Each ControlMessage is encoded as:     *  code (<0) ... short(2)     * Each TaskMessage is encoded as:     *  task (>=0) ... short(2)     *  len ... int(4)     *  payload ... byte[]     *      */
+//  WORKERS
+//  this is for backwards compatibility
+//  offset and messageId are used interchangeably
+//  TODO: can optimize further by only querying backing map for keys not in the cache
+//  contains one Tuple per Stream being joined   refs to fields that will be part of output fields
+//  make sure resources dir is created.
+// TODO perhaps we can adjust the frequency later...
+//  executor resources
+//  use exhibitor servers
+// NOT going to timeout for a while
+//  un-pin the last partition
+// Update the watermark to this timestamp
+//  FIXME: We're using default config since it cannot be serialized   We still needs to provide some options externally
+// This is a bit of a hack.  If it is a list, then it is [component, stream]  we want to format this as component:stream
+//  Update scenario 2 and 3 explain the code logic written here   especially when nimbus crashes and comes up after and before update
+//  A no-op grouper
+//  pregenerate commonly used keys for scans
+//  Try the loader plugin, if configured
+/*      * Bolt-specific configuration for windowed bolts to specify the time interval for generating     * watermark events. Watermark event tracks the progress of time when tuple timestamp is used.     * This config is effective only if {@link org.apache.storm.windowing.TimestampExtractor} is specified.      */
+//  remove reverse lookup from map
+//  Track serialized size of messages.
+//  inject output bolt
+// check component is declared for spreading
+//  this doesn't follow symlinks, which is what we want
+// If the write failed, try to sync anything already written
+//  inner join - core implementation
+//  check to see if any shard has already fetched records waiting to be emitted, in which case dont fetch more
+// supervisor contains bad slots
+//  default is aways "distributed" but here local cluster is being used.
+// if playing from the repl and defining functions, file won't exist
+/*      * Bolt-specific configuration for windowed bolts to specify the window length in time duration.      */
+// A copy of cluster that we can modify, but does not get committed back to cluster unless scheduling succeeds
+// else leader (NOOP)
+// Worker dirs
+//  NUM_EXECUTORS
+//  required   required   required   optional   optional   optional   optional   optional   optional   optional   optional
+//  projection
+//  TOPOLOGIES
+// TODO we should handle '\n'. ref DelimitedRecordFormat
+//  simulate the time trigger by setting the reference time and invoking onTrigger() manually
+//  release lock on file1 and check
+//  note that port1Dir is active worker containing active logs
+// Test for replication with NIMBUS as user
+//  assume filter choices have been made and since no selection was made, all levels are valid
+// TODO support multiple levels of includes
+//  create reader and do some checks
+// Ensure Nimbus has leadership, otherwise topology submission will fail.
+//  release both locks
+//  use this instead of storm's built in one so that we can specify a singleemitbatchtopartition   without knowledge of storm's internals
+// Could not find a "fully" compatible version.  Look to see if there is a possibly compatible version right below it
+//  for tests, reader will not be null
+/*                 * The elements having the same key within the window will be grouped                * together and their values will be reduced using the given reduce function.                *                * Here the result is a PairStream<String, Double> with                * 'stock symbol' as the key and the maximum price for that symbol within the window as the value.                 */
+//  given
+// (Requested + Assigned - Guaranteed)/Available
+//  required   optional
+//  consume file 1
+//  test that the set-logger-level function was not called
+//  only emit if we have declared fields.
+//  10,000,000 records => 80MBs of memory footprint in the worst case
+// user jerry submits topo2
+// TODO: add a method for drpc stream, needs to know how to automatically do return results, etc   is it too expensive to do a batch per drpc request?
+//  Kinesis Spout KinesisConfig object
+// Initialize a worker slot for every port even if there is no assignment to it
+// user with no impersonation acl should be reject
+// task to run
+//  actual value of m is: Map<String, Map<String/GlobalStreamId, Long/Double>> ({win -> stream -> value})
+//  adds addressedTuple to destination Q if it is not full. else adds to pendingEmits (if its not null)
+//  Test1: Launch topo 1-3 together, it should be able to use up either mem or cpu resource due to exact division
+//  validate search by component id
+//  required   required   required   required   required   required   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional
+// The spout must reemit retriable tuples, even if they fail out of order.  The spout should be able to skip tuples it has already emitted when retrying messages, even if those tuples are also retries.
+//  allow blacklist scheduler to cache the supervisor
+/*          * Instead of iterating over all the tuples in the window to compute         * the sum, the values for the new events are added and old events are         * subtracted. Similar optimizations might be possible in other         * windowing computations.          */
+//  then stop running it
+//  RESULT
+//  required   required   required   required   required
+//  class MockCollector
+//  ackers==null when ackerCount not explicitly set on the topology
+//  metric name
+// This also tracks how many times worker transitioning out of a state
+//  TODO more collection content type checking
+// Allow the failed record to retry
+//  -- bad files dir config
+//  length of parts should be greater than 0
+//  Location of the file in the artifactory archive.  Also used to name file in cache.
+//  we do this since to concat a null String will actually concat a "null", which is not the expected: ""
+//  0 means DEFAULT_EVENT_LOOP_THREADS
+//  stream name is specified
+// The spout must respect maxUncommittedOffsets even if some tuples have been acked but not committed
+//  Only need to keep track of failed tuples if commits to Kafka are controlled by   tuple acks, which happens only for at-least-once processing semantics
+//  only if some data has arrived on each input stream
+//  Files/move with non-empty directory doesn't work well on Windows   FileUtils.moveDirectory is not atomic
+// we need to release resources associated with the worker event loop group
+//  add configs from resources like hdfs-site.xml
+// No node for basePath is OK, nothing to remove
+// heck for backward compatibility, we need to pass TOPOLOGY_AUTO_CREDENTIALS to hbase conf  the conf instance is instance of persistentMap so making a copy.
+//  Client API to invoke blob store API functionality
+// If debug logging is turned on we should just log the leader all the time....
+//  We have three mutually disjoint treesets per shard at any given time to keep track of what sequence number   can be committed to zookeeper.   emittedPerShard, ackedPerShard and failedPerShard. Any record starts by entering emittedPerShard. On ack   it moves from emittedPerShard to   ackedPerShard and on fail if retry service tells us to retry then it moves from emittedPerShard to   failedPerShard. The failed records will move from   failedPerShard to emittedPerShard when the failed record is emitted again as a retry.   Logic for deciding what sequence number to commit is find the highest sequence number from ackedPerShard   called X such that there is no sequence   number Y in emittedPerShard or failedPerShard that satisfies X > Y. For e.g. if ackedPerShard is 1,4,5,   emittedPerShard is 2,6 and   failedPerShard is 3,7 then we can only commit 1 and not 4 because 2 is still pending and 3 has failed
+// Create a new session id if the user gave an empty session string.   This is the use case when the user wishes to list blobs   starting from the beginning.
+//  Aggregate matching metrics over bucket timeframes.   We'll process starting with the longest bucket.  If the metric for this does not exist, we don't have to
+// Nimbus itself
+//  validate search by topology id and executor id
+//  read and ack remaining lines
+//  These are mandatory parameters
+//  FileContext supports atomic rename, whereas FileSystem doesn't
+//  then facing backpressure
+//  let's checkpoint so that we can get the last checkpoint when restarting.
+// All messages except the first acked message should have been emitted
+//  With no principals in the subject ACL should always be set to WORLD_EVERYTHING
+//  Configured for achieving max throughput in single worker mode (empirically found).    For reference : numbers taken on MacBook Pro mid 2015      -- ACKer=0:  ~8 mill/sec (batchSz=2k & recvQsize=50k).  6.7 mill/sec (batchSz=1 & recvQsize=1k)      -- ACKer=1:  ~1 mill/sec,   lat= ~1 microsec  (batchSz=1 & bolt.wait.strategy=Park bolt.wait.park.micros=0)      -- ACKer=1:  ~1.3 mill/sec, lat= ~11 micros   (batchSz=1 & receive.buffer.size=1k, bolt.wait & bp.wait =   Progressive[defaults])      -- ACKer=1:  ~1.6 mill/sec, lat= ~300 micros  (batchSz=500 & bolt.wait.strategy=Park bolt.wait.park.micros=0)
+//  Only need to keep track of acked tuples if commits to Kafka are controlled by   tuple acks, which happens only for at-least-once processing semantics
+//  worker slot which was never back to normal in tolerance period will be removed from cache
+//  We need to add the new futures to the existing ones
+//  create spouts
+// check the credential of our principal
+// Execute and process latency...
+//  need one large set of all and then clean via LRU
+// Yes we are putting in a config that is not the same type we pulled out.
+//  watermark interval
+/* DON'T include sys */
+//  TASK_END
+// Don't try to move the JAR file in local mode, it does not exist because it was not uploaded
+//  example. spout1: generate random strings   bolt1: get the first part of a string   bolt2: output the tuple
+//  TOTAL_TASKS
+// case 2: Non-IContext plugin must have a makeContext(topoConf) method that returns IContext object
+// Mapping of key->upstreamBolt->count
+// Passed to workers in local clusters, exposed by thrift server in distributed mode
+//  Wait interfal for retrying after first failure
+//  ERRORS
+//  perf critical loop. dont use iterators
+//  default
+//  remove contiguous elements from the head of the heap
+// Done capturing topology information...
+//  optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional   optional
+// default is ordered.
+//  prevent timer to check heartbeat based on last thing before activate
+//  do nothing except validate heartbeat for now.
+//  zkHostString for Solr gettingstarted example
+// HEAP DUMP
+//  Dependency uploading only makes sense for distributed mode
+//  check lock file contents
+//  object handling interaction with kinesis
+//  wildcard is given in file
+// examine the response message from server
+// Check if the user is allowed to read this
+/*                 * split the sentences to words                 */
+// Topology metrics distribution
+//  It's likely that Bolt is shutting down so no need to throw RuntimeException   just ignore
+//  1st topology
+//  a topology with multiple spouts
+// Emit and ack the rest
+// TODO in the future this might be better in a common webapp location
+//  acls for the blob are set to WORLD_EVERYTHING
+//  do not close this InputStream in method: it will be used from jetty server
+// Verify that bob's token has expired
+//  resend BP status, in case prev notification was missed or reordered
+//  SPOUT_OBJECT
+// Skip special case if `storm kill_workers` is already invoked
+// deprecated in favor of non-threaded RotatingMap
+//  the oldest pq_size files in this directory will be placed in PQ, with the newest at the root
+/* filter supervisor */
+//  indexed by id
+//  zk connection timeout in milliseconds
+/*  ILookup  */
+//  COMPONENT_TO_SHARED_MEMORY
+// Race with delete  If it is not here the replication is 0
+// this is kind of unnecessary for clojure
+// Check that a reemit emits exactly the same tuples as the last batch, even if Kafka returns more messages
+//  Mock failure
+// supervisor assignment id/supervisor id
+//  g1 being null means the source is a spout node
+// iterate of WorkerSummary and find the one with the port
+// add the authNid as the real user in reqContext's subject which will be used during authorization.
+// Stop emitting at a certain point, because log rolling breaks the tests.
+/*  validate memory settings  */
+//  try to find a way to merge this code with what's already done in TridentBoltExecutor
+//  Update the key.current symlink. First create tmp symlink and do
+//  and provides PairStream(KeyedStream) to consumer bolt.
+// First failure is the initial delay, so not interesting
+//  The events should be put in a window when the first watermark is received
+//  We are pretending to be nimbus here.
+//  We don't need to take care of sync, cause we're always updating heartbeat
+//  TODO substitution implementation is not exactly efficient or kind to memory...
+//  periodically calls refreshLoad in 1 sec to simulate worker load update timer
+// ensure that serializations are same for all tasks no matter what's on
+//  namely the two eds on the orphaned worker and the healthy worker
+//  attempt scheduling both topologies.   this triggered negative resource event as the second topology incorrectly scheduled with the first in place
+// Output the sum of all the known counts so for this key
+//  Now create a params map to put it in to our conf
+// Merge the old credentials so creds nimbus created are not lost.   And in case the user forgot to upload something important this time.
+//  expectedOwner being null means that security is disabled (which why are we uploading credentials with security disabled???
+//  when (empty)
+//  REQUESTED_MEMONHEAP
+//  We don't use the classpath part of this, so just an empty list
+// index == null if it is memory or CPU
+// TODO batch updating
+// TreeSet uses compareTo instead of equals() for the Set contract  Ensure that we can save two retry schedules with the same timestamp
+//  no wildcard, directory
+//  does not block
+//  calls this before actually killing the worker locally...   sends a "task finished" update
+//  unknown version should be treated as "current version", which supports RPC heartbeat
+//  read 1st line and ack
+//  USERS
+// Emit a message on each partition and revoke the first partition
+// logger.info("emitted new batches: " + listEvents.size());
+//  Configs for memory enforcement done by the supervisor (not cgroups directly)
+//  the window partition that holds the events
+//  Keep this constructor for backward compatibility
+// Expected
+// Answer when we ask for a private key...
+//  if # of workers requested is more than we currently have
+//  set upper limit to how much cpu can be used by all workers running on supervisor node.   This is done so that some cpu cycles will remain free to run the daemons and other miscellaneous OS   operations.
+//  if we can't find the resources directory in a resources jar or in the classpath just create an empty   resources directory. This way we can check later that the topology jar was fully downloaded.
+// This is possibly lossy in the case where a value is deleted   because it has received no messages over the metrics collection   period and new messages are starting to come in.  This is   because I don't want the overhead of a synchronize just to have   the metric be absolutely perfect.
+// It's more likely to be a file read exception here, so we don't differentiate
+/*              * Last batch meta is null, but this is not the first batch emitted for this partition by this emitter instance. This is             * a replay of the first batch for this partition. Use the offset the consumer started at.              */
+//  executor0 resides one one worker (on one), executor1 and executor2 on another worker (on the other node)
+// This is a special case where the jar was not uploaded so we will not download it (it is already on the classpath)
+// new topology needs to be scheduled.  topo-4 should be evicted. Even though topo-1 from user jerry is older, topo-1 will not be evicted
+//  2) run spout
+// This test is rather ugly, but it is the only way to see if the error messages are working correctly.
+//  current version supports RPC heartbeat
+//  PULSE
+//  Generate SASL response to server using Channel-local SASL client.
+//  number of events per window-partition
+//  ensure 1 instance per producer thd.
+// scan.setCaching(1000);
+//  attempt to find it in the string cache, this will update the LRU
+//  scheduled
+//  2nd cond prevents staying stuck with consuming overflow
+/*                      * propagate it so that task gets canceled and the exception                     * can be retrieved from executorFuture.get()                      */
+//  register most recent relogin attempt
+//  Sleep before cleaning up files
+//  consume file 1 partially
+/*      * Even though normally bolts do not need to care about thread safety, this particular bolt is different.     * It maintains a static field that is prepopulated before the topology starts, is written into by the topology,     * and is then read from after the topology is completed - all of this by potentially different threads.      */
+// Should only happen on a badly configured system
+//  other builder functions not exposed:    * createsObjectNamesWith(ObjectNameFactory onFactory)    * registerWith (MBeanServer)    * specificDurationUnits (Map<String,TimeUnit> specificDurationUnits)    * specificRateUnits(Map<String,TimeUnit> specificRateUnits)
+//  Test4: Scheduling a new topology does not disturb other assignments unnecessarily
+/*          * Load DriverManager first to avoid any race condition between         * DriverManager static initialization block and specific driver class's         * static initialization block. e.g. PhoenixDriver         *         * We should take this workaround since prepare() method is synchronized         * but an worker can initialize multiple AbstractJdbcBolt instances and         * they would make race condition.         *         * We just need to ensure that DriverManager class is always initialized         * earlier than provider so below line should be called first         * than initializing provider.          */
+//  if cb returns false, we are done with this section of rows
+//  Sends the same tuple (list of scored/predicted values) to all the declared streams
+//  one or more column families
+// topology being null is used for tests  We probably should fix that at some point,   but it is not trivial to do...
+//  ################# Subscribe Callback Implementation ######################
+//  spout with 5 parallel instances
+//  do we want to throw an exception if path doesn't exist??
+/*      * TODO: should worker even take the topologyId as input? this should be deducible from cluster state (by searching through assignments)     * what about if there's inconsistency in assignments? -> but nimbus should guarantee this consistency.     *     * @param conf           - Storm configuration     * @param context        -     * @param topologyId     - topology id     * @param assignmentId   - assignment id     * @param supervisorPort - parent supervisor thrift server port     * @param port           - port on which the worker runs     * @param workerId       - worker id      */
+// Fail all emitted messages except the first. Commit the first.
+// Release things that don't need to wait for us
+//  start trigger once the initialization is done.
+//  TOPOLOGY_ACTION_OPTIONS
+// initialize assignment map
+//  clean up the profiler actions that are not being processed
+// Commit
+// parts[1] is empty for CGroups V2 else what is mapped that we are looking for
+// Check that null meta makes the spout seek to LATEST, and that the returned meta is correct
+// Only add topologies that are not sharing nodes with other topologies
+//  Was scheduled for retry and re-emitted, so remove from schedule.
+//     final StormTopology topology;
+//  Therefore the timer in newAssignment won't be invoked
+//  check if processor has specific priority first
+//  should not throw
+//  True if this OffsetManager has made at least one commit to Kafka
+// Save it to try again later...
+// fileOffset = one past last scanned file
+//  this is to distinguish from TransactionAttempt
+//  COMPONENT_DEBUG
+// Verify that the commit logic can handle offset voids due to log compaction
+//  if we had a timeout, but the timeout is no longer active
+//  distribution should be exactly even
+//  if first retry then retry time  = current time  + initial delay
+//  a topology with two unconnected partitions
+//  check negative resource count
+// Groups this user is authorized to impersonate.
+//  512: for most scenes to avoid inner array resizing
+// Now schedule GPU but with the simple topology in place.
+// Topologies that were deemed to be invalid
+// Prevent daemon log reads from pathing into worker logs
+//  METRIC_VALUE
+//  Instead of iterating again, it would be possible to commit and update the state for each TopicPartition   in the prior loop, but the multiple network calls should be more expensive than iterating twice over a small loop
+//  TODO add metrics
+//  MEMORY_GUARANTEE
+// Ignore the future
+// Try again, or go to empty if assignment has been nulled
+//  Now let's update it, but not advance time.  Should get old map again.
+//  In the short term the goal is to not shoot anyone unless we really need to.   The on heap should limit the memory usage in most cases to a reasonable amount   If someone is using way more than they requested this is a bug and we should   not allow it
+// Creates a MongoURI from the given string.
+// Fail all emitted messages except the last one. Try to commit.
+// Stop searching if the message is known to be ready for retry
+// Sleep for 50 mins
+//  distribution should be even for all nodes when loads are even
+//  assume key is the first field
+//  This is updated by the Worker and the topology has shared access to it
+// streaId indicates where tuple came from
+//  Everything should fit in a single slot
+//  This is a hack for non-ras scheduler topology and worker resources
+//  read s1 last....  This should cause s2 to be evicted on next put
+// The old token could not be deserialized.  This is bad, but we are going to replace it anyways so just keep going.
+// children is only ever null if topologyBasicBlobsRootDir does not exist.  This happens during unit tests   And because a non-existant directory is by definition clean we are ignoring it.
+//  Setup a test message
+//  ======== Activate / Deactivate / Close / Declare Outputs =======
+// construct THsHaServer
+// Use a bootstrap tuple to wait for topology to be running
+//  offset was previously committed for this consumer group and topic-partition, either by this or another topology.
+// Schedule the simple topology first
+//  File order of MD5 calculation is significant. Sorting is done on   unix-format names, case-folded, in order to get a platform-independent   sort and calculate the same MD5 on all platforms.
+//  Tuples that were successfully acked/emitted. These tuples will be committed periodically when the commit timer expires,
+//  if fail count is greater than maxRetries, discard or ack. for e.g. for maxRetries 3, 4 failures are allowed at maximum
+//  Factory main.methods
+//  print the values to stdout
+//  returns paused topic-partitions.
+//  INFO
+// Fail only the last tuple
+// update the isLeader field for each nimbus summary
+// We were rescheduled while waiting for the resources to be updated,   but the container is already not running.
+//  max rounds of scanning the dirs
+// this will fail since jerry doesn't have either cpu or memory entries
+//  BOOL_ARG
+// since user jerry has enough resource guarantee
+/*                  * NO-OP: the events are ack-ed in execute                  */
+/*      * Same txid can be prepared again, but the next txid cannot be prepared     * when previous one is not committed yet.      */
+// Blobs are not supported in local mode.  Return nothing
+// JPROFILE DUMP
+//  ALL
+//  QueryPlanner on Streams mode configures the topology with compiled classes,   so we need to add new classes into topology jar   Topology will be serialized and sent to Nimbus, and deserialized and executed in workers.
+/*                          * Update histograms based on the new summary. Most common implementation of Reporter reports Gauges before                         * Histograms. Because DerivativeGauge will trigger cache refresh upon reporter's query, histogram will also be                         * updated before query                          */
+//  so we can track when it was last used for later deletion on database cleanup.
+// Now check that the spout will not emit anything else since nothing has been committed
+// NOOP on purpose
+// TODO once everything is in java this should not be possible any more
+// Demonstrate that the spout doesn't ack pending tuples when skipping compacted tuples. The pending tuples should be allowed to finish normally.
+//  wait strategy when the netty channel is not writable
+// Verify correct wrapping/unwrapping of partition and delegation of partition assignment
+//  1 grab lock
+//  common fields
+// static to ensure eventhough the class is created using reflection we can still get  the topology to actions
+// This spout owns 2 partitions: 6 and 14
+//  1) create couple of input files to read
+//  given (for this iteration)
+//  The whole bytes were not received yet - return null.
+//  benchmark label
+//  1) read 5 lines in file
+// sleep to prevent race conditions
+//  O(Log N)
+//  When all nimbodes go down and one or few of them come up   Unfortunately there might not be an exact way to know which one contains the most updated blob,
+//  IAutoCredentials
+//  this is so we can do things like have simple DRPC that doesn't need to use batch processing
+//  Updating a blacklist file periodically with random words
+// exact variable time, that is added to the current bucket
+//  Ignore.
+//  Kafka
+//  Builds a JSON list
+// read all the topologies
+//  for completeness
+//  check allowedWorkers only if the scheduler is not the Resource Aware Scheduler
+// It is possible to get asked about eviction before we have a context, due to WindowManager.compactWindow.  In this case we should hold on to all the events. When the first watermark is received, the context will be set,  and the events will be reevaluated for eviction
+//  remove uploaded jars blobs, not artifacts since they're shared across the cluster
+//  size matches, check if the streams are expected
+//  WAIT_SECS
+// Worker launched through external commands, hence we count their exceptions toward shell exceptions
+// reserved for future
+//  JMS Topic provider
+// There is a bug in some versions that returns 0 for the uptime.
+//  NOOP
+//  need more data
+//  no reference to key1
+//  reader
+//  JDK_VERSION
+// By default all of the values are 0
+//  If FlatMapFunction is aware of cleanup, let it handle cleaning up
+//  store can be null during testing when mocking utils.
+// check if node is alive
+//  shared off heap node memory
+// We are running so we should recover the blobs.
+// The batch size can be no larger than half the full recvQueue size, to avoid contention issues.
+//  required   required   required
+// Update the current count for this object
+// For others using too much it is really a question of how much memory is free in the system
+//  Normalize state
+//  LAST_ERROR
+// Resources missing from used are using none of that resource
+//  metric, timestamp, value, Map of tagK/tagV respectively.
+// Now we need to free up some resources...
+// Set the size in case we are recovering an already downloaded object
+// DO NOT CHANGE UNLESS WE ADD IN STATE NOT STORED IN THE PARENT CLASS
+//  How many states searched so far.
+//   "modprinc -maxlife 3mins <principal>" in kadmin.
+// First delete everything that no longer exists...
+//  Suppressing exceptions as we don't care for errors on heartbeats

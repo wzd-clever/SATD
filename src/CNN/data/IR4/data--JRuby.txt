@@ -1,0 +1,1915 @@
+// conversion
+// rb_copy_generic_ivar from DUP_SETUP here ...unlikely..
+// How many bytes into the source are we?
+// TODO: newTypeError does not offer enough for ruby error string...
+// Map of constants defined in this scope (not valid for methods!)
+// Ruby's designation for some platforms, minus version numbers in some cases
+// colon3
+// // this test really means, that this is a ruby-defined subclass of a java class //
+// AF_INET
+// string given
+// Expand variables, Indentation of final marker
+// <=> may return nil in many circumstances, e.g. 3 <=> NaN
+"/*            public class Hello {                public static String getMessage() {                    return ""....."";                }            }            */"
+// line 830
+// modules are included with a shim class; we must find that shim to handle super() appropriately
+// line 1433
+// return last value from execution
+// FIXME: Need to detect magic_comment in 1.9 here for encoding
+// line 1828
+// @JRubyMethod(name = "new", meta = true, visibility = Visibility.PRIVATE)
+// write `I' instance var signet if class is NOT a direct subclass of Object
+// line 1587
+// TODO: CLONE_SETUP here
+// initialize these if they haven't been
+// MRI behavior: value given in seconds; converted to Float; less // than or equal to zero returns immediately; returns nil
+// save blocking state
+// We are creating a new IO object that shares the same // IOHandler (and fileno).
+// line 1207
+// no args
+// n.b. we need to recompute the hash in case the key object was modified
+// long first because it's what Fixnum claims to be
+// line 392
+// head must not be null and there must be no "args" (like *arg)
+//System.err.println(" main/len=" + len);
+// FIXME: Translate this call below! // s.unwrapPassedBlock();
+// getFooBar() => fooBar?, foo_bar?(*)
+//        Class<?> script1 = ((DefaultMethod) runtime1.getObject().getMethods().get("foo")).getJITCompilerScript().getClass(); //        Class<?> script2 = ((DefaultMethod) runtime2.getObject().getMethods().get("foo")).getJITCompilerScript().getClass();
+// line 1626
+// This is now needed, since module Java // isn't in by default
+// FIXME: do we really want 'declared' methods?  includes private/protected, and does _not_ // include superclass methods
+// MRI behavior: -0 and +0 are two different things
+// Used for the 'redo' command
+/* FIXME: Consider fixing node_assign itself rather than single case*/
+// can't do it
+// Called before any write to make sure the // header is always written before the first bytes
+//$@ returns nil if $!.backtrace is not an array
+//assert !(value instanceof RubyArray)  : "Not an array";
+//[C,C] //[C, boolean]
+// See if module is in chain...Cannot match against itself so start at superClass.
+// line 513
+// variable args no block, load null block
+// install invokedynamic bootstrapper // TODO need to abstract this setup behind another compiler interface
+// fields used for direct (optimistic) calculation // number of significant digits, updated as parsed // zeroes that may go to significand or exponent // offset of decimal pt from start (-1 -> no decimal) // significand, updated as parsed // exponent, updated as parsed
+// default: don't retain
+// TODO: Store BEGIN and END information into this node
+// We're not setting the provider or anything, but it seems that BouncyCastle does some internal things in its // provider's constructor which require it to be executed in a secure context. // Ideally this hack should be removed. See JRUBY-3919 and this BC bug: //   http://www.bouncycastle.org/jira/browse/BJA-227
+// write out ivar count followed by name/value pairs
+"/** * Represents the the dynamic portion of scoping information.  The variableValues are the * values of assigned local or block variables.  The staticScope identifies which sort of * scope this is (block or local). *  * Properties of Dynamic Scopes: * 1. static and dynamic scopes have the same number of names to values * 2. size of variables (and thus names) is determined during parsing.  So those structured do *    not need to change * * FIXME: When creating dynamic scopes we sometimes accidentally pass in extra parents.  This * is harmless (other than wasting memory), but we should not do that.  We can fix this in two * ways: * 1. Fix all callers * 2. Check parent that is passed in and make if new instance is local, then its parent is not local */"
+// not an expression, only compile the elements
+// String/Buffer to read it into
+// Can't support the rest with Java
+// JRUBY-2380, associate future early so it shows up in Thread.list right away, in case it doesn't run immediately
+// line 1595
+// switch // if
+// for our purposes, Accessibles are also Members, and vice-versa, // so we'll include Member methods here.
+// Create the class with the appropriate class name and source file
+// index of last character in pushback buffer
+// Additionally add ?-postfixed aliases to any boolean methods and properties.
+// line 537
+// line 1014
+// line 818
+// This does the assignment!
+// line 1001
+// any exceptions raised must continue to be raised, skipping $! restoration
+// Next, we define a few private methods that we'll use to manipulate // the Java object contained within this Ruby object
+// quietly try to load the class
+// Note: MRI has a very non-trivial way of calculating the precision, // so we use very simple approximation here:
+// line 1431
+// shift the decimal point just to the right of the digit to be rounded to (divide by 10**(abs(scale))) // -1 -> 10's digit, -2 -> 100's digit, etc.
+// line 826
+// create constructor
+// unknown extension, fall back to search with extensions
+// SSS FIXME: What happens to the add class in this case??
+// it would be nice (and logical!) if exponent form  // behaved like E/e, and decimal form behaved like f, // but no such luck. hence:
+// The method is intentionally not public, since it typically should // not be used outside of the core.
+// JRUBY-3568, inherit threadgroup or use default
+// other java proxy classes added under their superclass' java proxy
+// it doesn't handle special cases
+// switch // while
+/* Only accept an open brace if there is a close */
+// TODO: Ruby unlocks the string here
+// bouncy castle doesn't support algorithm
+// not to be confused with RubyObject's flags
+// MRI behavior: we don't print errno for actual Errno errors
+// Let m be the exact digits precision in an earlier! loop
+// coerce arguments
+// line 1523
+// Include additional path separator // (so that dirname of "C:\file.txt" is  "C:\", not "C:")
+// start off with a neutral parent
+// line 571
+// Struct methods
+// Now attach Java-related extras to core classes
+// finally with no exception
+// line 1254
+/* failed : try next recursion */
+// add Script#run impl, used for running this script with a specified threadcontext and self // root method of a script is always in __file__ method
+"/*     * This method exists for us to break up multiple expression when nodes (e.g. when 1,2,3:)     * into individual whenNodes.  The primary reason for this is to ensure lazy evaluation of     * the arguments (when foo,bar,gar:) to prevent side-effects.  In the old code this was done     * using nested when statements, which was awful for interpreter and compilation.     *     * Notes: This has semantic equivalence but will not be lexically equivalent.  Compiler     * needs to detect same bodies to simplify bytecode generated.     */"
+// build first node only and return false
+/* FIXME: arg_concat missing for opt_call_args*/
+// FIXME: Somehow I'd feel better if this could get the appropriate var index from the ArgumentNode
+// ?=  | boolean | True if the modification times of file1 and file2 are equal
+// // We limit reads to BULK_READ_SIZED chunks to avoid NIO allocating // a huge temporary native buffer, when doing reads into a heap buffer // If the dst buffer is direct, then no need to limit. //
+// For b.foo
+// line 1963
+// Let's only generate methods for those the user may actually  // intend to override.  That includes any defined in the current // class, and any ancestors that are also JavaProxyClasses (but none // from any other ancestor classes). Methods defined in mixins will // be considered intentionally overridden, except those from Kernel, // Java, and JavaProxyMethods, as well as Enumerable.  // TODO: may want to exclude other common mixins?
+// TODO: These were missing, so we're not handling them elsewhere?
+// line 1133
+// upper case name, so most likely a class
+// note: intentionally returning the actual array returned from Java, rather // than wrapping it in a RubyArray. wave of the future, when java_class will // return the actual class, rather than a JavaClass wrapper.
+// let RescuedBlock continue
+// line 466
+// Methods of the Object class (rb_obj_*):
+// This should only be called by this and RubyFile. // It allows this object to be created without a IOHandler.
+// line 595
+/* Include pipes on multiple arg type*/
+// TODO: specifying soft refs, may want to compare memory consumption, // behavior with weak refs (specify WEAK in place of SOFT below)
+// We lazily initialize this in case Readline.readline has been overridden in ruby (s_readline)
+// FIXME: Ruby 1.9 post args code needs to come here
+// no block
+// state[i] &= 0xffffffffL;
+"/*         * Initialize some components.         */"
+// call is ok, punch it!
+// ignore if it's not a global var
+// we only collect methods and interfaces for  // user-defined proxy classes.
+// Create package name, by splitting on / and joining all but the last elements with a ".", and downcasing them.
+// use numbered access method
+//RubyModule module = context.getRubyClass();
+// // A specific version was requested - use as is for search //
+// for zsupers in define_method (blech!) we tell the proc scope to act as the "argument" scope
+// There are two different popular TZ formats: legacy (AST+3:00:00, GMT-3), and // newer one (US/Pacific, America/Los_Angeles). This pattern is to detect // the legacy TZ format in order to convert it to the newer format // understood by Java API.
+// digits arr shifted, update all
+// This is a non-standard method; have we decided to start extending Ruby? //classClass.defineFastMethod("subclasses", callbackFactory.getFastOptMethod("subclasses"));
+// close process output // See JRUBY-3405; hooking up to parent process stdin caused // problems for IRB etc using stdin.
+// We clone dynamic scope because this will be a new instance of a block.  Any previously // captured instances of this block may still be around and we do not want to start // overwriting those values when we create a new one. // ENEBO: Once we make self, lastClass, and lastMethod immutable we can remove duplicate
+// SSS FIXME: Should this be a string literal or a string? // Dummy class for the script
+// clear basename so it's anonymous when raising
+// 5 -> e+nnn / e-nnn
+// The name of the variable
+// self // method name
+// TODO: better algorithm to set precision needed
+// // Complete the request by filling the read buffer first //
+// line 271
+// module is on top of stack
+// minus one more for IRubyObject[]
+// Initialize all the core classes
+// TODO: This isn't an exact port of MRI's pipe behavior, so revisit
+// If reciever is self then we do the call the same way as vcall
+// line 1827 "DefaultRubyParser.y"
+// setup the class
+// see note above re: return type
+// TODO: SafeStringValue here
+// digits array shifted, update all
+// line 720
+// line 1716
+// make sure descriptor is registered
+// line 1190
+// line 1415
+// line 1493
+//yyparse(lexer, new jay.yydebug.yyAnim("JRuby", 9));
+// try loading from classloader resources
+// promise to implement two to three with block
+// static methods only
+// bench straight-up integer fib(30)
+// TODO: reads/writes from frame // TODO: information on scoping // TODO: visibility?
+/* \OOO */
+// need to reexamine this
+// // When reading into a heap buffer, the jvm allocates a temporary // direct ByteBuffer of the requested size.  To avoid allocating // a huge direct buffer when doing ludicrous reads (e.g. 1G or more) // we split the read up into chunks of no more than 1M //
+// line 899
+// if we're already aborting, we can receive no further mail
+// update all hierarchies into which this module has been included
+// TODO: varargs?
+// SSS FIXME: Correct?  Where does closure arg come from?
+// FIXME: How much more obtuse can this be? // Heredoc already parsed this and saved string...Do not parse..just return
+// if we get here, we found a matching method, use it // TODO: choose narrowest method by continuing to search
+// direct invocation of the command
+"/*    @JRubyMethod    public IRubyObject to_proc() {        return RubyProc.newProc(getRuntime(),                                CallBlock.newCallClosure(this, getRuntime().getSymbol(), Arity.noArguments(), new ToProcCallback(this), getRuntime().getCurrentContext()),                                Block.Type.PROC);    }    */"
+// TODO: protected methods.  this is going to require a rework // of some of the mechanism.
+// could not get canonical path, just use given path
+// only fill if there actually will remain trailing storage
+// line 1417
+// This is GROSS, but Java API's aren't ISO 8601 compliant at all
+// "assignment" means the value is already on the stack
+// FIXME: we should also support orgs that use capitalized package // names (including, embarrassingly, the one I work for), but this // should be enabled by a system property, as the expected default // behavior for an upper-case value should be (and is) to treat it // as a class name, and raise an exception if it's not found
+// XXX: Again, screwy evaling under previous frame's scope
+// The operand that this attribute targets //    DEFERRED //    AttributeValue _val;       // Attribute value
+// Don't bother
+// line 372
+// we reached the end
+// FIXME: I use a for block to implement END node because we need a proc which captures // its enclosing scope.   ForBlock now represents these node and should be renamed.
+//private UnsynchronizedStack frameStack;
+// promise to implement three to N
+/* end of script. */
+// No required specified, check actual number of required args
+// use 1.8 impl
+// TODO: Formalize conversion mechanisms between Java and Ruby
+// What handles warnings
+// Dataflow problem with which this node is associated // CFG node for which this node contains info.
+// always need at least a 0
+// string to eval
+// TODO: check for Java reserved names and raise exception if encountered
+// caching constructors, as they're accessed for each new instance
+// line 745
+// FIXME: the code below is a copy of RubyIO.puts, // and we should avoid copy-paste.
+// proxy is complete, return it
+// add (potentially) overridden names to the key. // TODO: see note above re: optimizations
+//        case 4: //            signature = sig(Object.class, Object.class, Object.class, Object.class, Object.class); //            break; //        case 5: //            signature = sig(Object.class, Object.class, Object.class, Object.class, Object.class, Object.class); //            break;
+// this test really means, that this is a ruby-defined subclass of a java class
+"/*        result = eval(""arr = Array::['c', 200]; p arr"");        assertEquals(""[\""c\"", 200]"", result);        result = eval(""arr = Array.['d', 200]; p arr"");        assertEquals(""[\""d\"", 200]"", result);        */"
+// line 912
+// FIXME: This is gross. Don't do this.
+// In the case of two arguments, MRI will discard the portion of // the first argument after a decimal point (i.e., "floor"). // However in the case of a single argument, any portion after // the decimal point is honored.
+// index for the item
+// Support IO modes that this object was opened with
+// line 1210
+// if that succeeds, the others should as well
+// we only need full-on redo exception handling if there's logic that might produce it
+// JRUBY-2380, associate thread early so it shows up in Thread.list right away, in case it doesn't run immediately
+// must be power of 2 // must be power of 2
+// TODO: remove
+// FIXME: If true array is common enough we should pre-allocate and stick somewhere
+//yyDefRed 889
+// store it
+// for zero args case we can stop searching
+// Make the class name look nice, by splitting on _ and capitalize each segment, then joining // the, together without anything separating them, and last put on "Service" at the end.
+// There is something valid in the sun_path component
+// line 1635
+/* \xHH */
+// ignore; job was cancelled // FIXME: is this ok?
+// initial size // state stack // value stack // current input // #tokens to shift
+// attempt to set the permissions, if we have been passed a POSIX instance, // and only if the file was created in this call.
+// try to use POSIX for this first
+// Windows is LLP64
+// form feed
+// line 1562
+// line 1767
+// FIXME: null check is removable once we figure out how to assign to unset named block args
+// all other arities use "n" dispatch path
+// restore position
+// Must be called from main thread (it is currently, but this bothers me)
+// bit risky if someone changes completor, but useful for method calls
+// Experimental class reification support, to create real Java classes // for Ruby classes after the first opening
+// FIXME: after jump is not in here.  Will if ever be? //Label afterJmp = new Label();
+// FIXME: This needs to happen for lambdas //            args.checkArgCount(runtime, parameters.length);
+// line 1825
+// Add forward ref. edges
+// EQ == 0 (i.e. false)
+// FIXME: DSTR,EVSTR,STR: warning "string literal in condition"
+// line 1097
+// TODO: better error handling
+// explode array, it's an internal "args" array
+// EUC-JP
+// def instructions
+// Block and block pass passed in at same time....uh oh
+// TODO: Only used by interface implementation; eliminate it
+// no read requested, hook up read to parents output
+// line 1231
+// rb_cstr_to_dbl case
+//TODO: Should next and return also catch here?
+// long size * bits in byte
+// line 1270
+// Workaround for JRUBY-4149
+// TODO: It would be nice to throw a better error for this
+// line 1069
+// TODO: the rest of this...seeking to same position is unnecessary since we share a channel // but some of this may be needed?
+// line 1911
+// Ignore bad constant named inner classes pending JRUBY-697
+// enum lex_state
+// line 1178
+// copy and splat arguments out of the scope to use for zsuper call
+// FIXME: create AttrReaderMethod, AttrWriterMethod, for faster attr access
+// must not reallocate
+// MRI-compatible basename handling for windows drive letter paths
+// only public methods
+"/*              * Execute a Ruby script (add the menubar to the frame).             */"
+// we do have another slash; omit both / and . (JRUBY-1606)
+// unwrap newline nodes to get their actual type
+// TODO: This filtering is kind of gross...it would be nice to get some parser help here
+// FIXME:  Total hack to get flash in Rails marshalling/unmarshalling in session ok...We need // to totally change marshalling to work with overridden core classes.
+// admittedly inefficient
+// make sure the pipe stream is set to null
+// line 876
+// List of modules, classes, and methods defined in this scope!
+/* constant vector a */
+//System.err.println(" stringToLong/reading c=" + data[s]);
+//sequential
+/* $,: output field separator */
+// not closing from finalize
+// not intended to be called directly by users (private) // OLD TODO from Ruby code: // This should be implemented in JavaClass.java, where we can // check for reserved Ruby names, conflicting methods, etc.
+// Setting the loader needs to reset the class cache
+// invoke callMethodMissing
+// we only add live threads
+//            return len - n;
+// TODO: WRONG - get interfaces from class
+/* may need to handle ENC_CODERANGE_BROKEN */
+// Workaround for a bug in Sun's JDK 1.5.x, see // http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6303753
+// For 'foo'
+// implement all forces implementation of all interfaces we intend // for this class to implement
+// JRUBY-3625: delay setting backref until the MatchData is completely initialized
+// BreakJump, CacheEntry, ThreadContext, IRubyObject, IRubyObject
+// skip this one, probably no 'ls' (windows)
+// we don't have another slash after this, so replace /. with /
+// FIXME: figure out why we get null sometimes
+// Static scoping information for this scope
+// line 1728
+// debugging code, keeping for now
+// CRuby uses sprintf(buf, "%.*g", FLOAT_DIG, d); // This pattern adjusts the output of String.pattern("%g") to mimic // the C version.
+// Must be back on first line on rewind.
+"/* Currently dead code, but useful when we figure out how to actually perform translit.    private static boolean isTranslit(String encoding) {        return encoding.toLowerCase().indexOf(TRANSLIT) != -1 ? true : false;    }*/"
+// we set all Java methods to optional, since many/most have overloads
+// newInstance here
+// line 566
+// Not that is loaded loop around to resolve it next pass
+// end setup method
+// 1. Load the module first (lhs of node) // 2. Then load the constant from the module
+// temporary hack to handle non-Ruby values // will come up with better solution shortly
+// generate call sites initialization code
+// identity equality
+// build each "when"
+"/** * FIXME: This version is faster than the previous, but both suffer from a * crucial flaw: It is impossible to create an ObjectSpace with an iterator * that doesn't either: a. hold on to objects that might otherwise be collected * or b. have no way to guarantee that a call to hasNext() will be correct or * that a subsequent call to next() will produce an object. For our purposes, * for now, this may be acceptable. */"
+// Is there something built into JRuby to do this?
+// don't bother to check if final method, it won't // be there (not generated, can't be!)
+// For 'b.foo()'.  Args are only significant in maintaining backwards compatible AST structure
+/* FIXME: finalizer should be dupped here */
+"/*      * This method takes as input a map of operands to their values, and outputs     * the result of this instruction.     *     * If the value map provides a value for any of the instruction's operands     * the expectation is that the operand will be replaced with the simplified value.     * It is not required that it do so -- code correctness is not compromised by failure     * to simplify.     *     * @param valueMap Mapping from operands to their simplified values     * @returns simplified result / output of this instruction     */"
+// won't hurt fixnums
+// line 666
+// line 1600
+// line 1051
+// line 1164
+// line 515
+// if not sync, we switch to write buffered mode
+// declare the field
+// MRI issuses warning here on (RBIGNUM(x)->len * SIZEOF_BDIGITS * yy > 1024*1024)
+// line 314
+// not overridden, let's go
+// line 1681
+// We generate all constructors and let some fail during invocation later
+/* Workaround for JRUBY-2326 (MRI does not enter this production for some reason)*/
+// rb_enc_reg_raise
+// If no exception is thrown execute else block
+// -1 == don't set permissions
+// set up a field for the CacheEntry // TODO: make this an array so it's not as much class metadata; similar to AbstractScript stuff
+// if not already defined, we add a 'new' that guesses at which signature to use // TODO: just adding first one right now...add in signature-guessing logic
+// line 1733
+// ?c  | boolean | True if file1 is a character device
+// FIXME: This is almost entirely duplicated from Main.java
+// TODO: we can probably release our references to the constantFields // array and static/instance callback hashes at this point.
+// line 1261
+//subList.clear(); // Sublist is supposed to share same backing store as list...TODO in RubyArray. //assertTrue(list.size() == 1);
+// SSS FIXME: This method (at least in the context of multiple assignment) is a little weird. // It calls regular to_ary on the object.  But, if it encounters a method_missing, the value // is inserted into an 1-element array! // try "a,b,c = 1" first; then define Fixnum.to_ary method and try it again. // Ex: http://gist.github.com/163551
+// seek to force read buffer to invalidate
+// Add real top to new top (unless this top is empty [only begin/end nodes or truly empty])
+// TODO: This probably isn't the best hack, but it works until we can have different // root frame setup for 1.9 easily.
+// single string command, pass to sh to expand wildcards
+// We capture the original "new" and make it private
+// else catch oversize below
+// FIXME weakref.rb also does caller(2) here for the backtrace
+/* RubyString aka rb_string_value */
+// clear the redo
+// FIXME: needs to be rethought
+// Is there a supplied proc argument or do we assume a block was // supplied
+// retrieve call site from sites array
+// SSS FIXME: I added this in.  Is this correct?
+// Build a new class and add it to the current scope (could be a script / module / class)
+// attempt to load the found library
+// TODO: make more efficient by not creating IRubyArray[]
+// SSS FIXME: Should I be returning the operand constructed here?
+// prepare labels for opt logic
+// no candidates? Fail.
+// rb_iterate((VALUE(*)_((VALUE)))str_step, (VALUE)args, step_i, (VALUE)iter);
+// line 1538
+// SSS FIXME: Are we guaranteed that we splats dont head to multiple-assignment nodes!  i.e. |*(a,b)|?
+// Value of last token which had a value associated with it.
+/* rb_str_subseq */
+// if there's a non-null superclass, we're including into a normal class hierarchy; // update subclass relationships to avoid stale parent/child relationships
+// finally
+// Get rest of line. lineBuffer filled as side-effect...
+// line 459
+// TODO: Someday, enable.
+// set thread context JRuby classloader here, for Ruby-owned thread
+// TODO: validate port as numeric
+// strip c: away from relative-pathed name
+// line 956
+// PID
+// line 454
+// at end
+// switch // for // no more data, OK for strict to go calc
+// no matching ctor found
+// We're cloning ourselves, so we know the result should be a RubyObject
+// TODO: Determine whether we should perhaps store non-singleton class // in the implementationClass
+// ignore; I don't like doing it, but it seems like we // really just need to make all channels non-blocking by // default and use select when implementing blocking ops, // so if this remains set non-blocking, perhaps it's not // such a big deal...
+// references to the Java object and its proxy will either both be // weak or both be soft, since the proxy contains a strong reference // to the object, so it wouldn't make sense for the reference types // to differ.
+// just push the same empty scope, since we won't use one
+// TODO: This is also defined in the MetaClass too...Consolidate somewhere.
+//yyLen 496
+// ----- Ruby Class Methods ----------------------------------------------------
+// visit a label to start scoping for local vars in this method
+/* retrieve last replacer */
+// Jump to 'l' if this arg is not null.  If null, fall through and build the default value!
+// try to get errno value out of the class
+// // Avoid double-copying for reads that are larger than the buffer size, or // the destination is a direct buffer. //
+// TODO: rescan code range ?
+// line 911
+// normal
+// upper-case package name // TODO: top-level upper-case package was supported in the previous (Ruby-based) // implementation, so leaving as is.  see note at #getProxyOrPackageUnderPackage // re: future approach below the top-level.
+// exception instructions
+// promise to implement three with block
+// TODO: no java stringity
+// Reset value map if this instruction is the start/end of a basic block // // Right now, calls are considered hard boundaries for optimization and // information cannot be propagated across them! // // SSS FIXME: Rather than treat all calls with a broad brush, what we need // is to capture different attributes about a call : //   - uses closures //   - known call target //   - can modify scope, //   - etc. // // This information is probably already present in the AST Inspector
+// generate block bodies initialization code
+// FIXME: don't use RubyIO for this
+// setup constants for public inner classes
+//yySindex 945
+// how far ahead we are when reading
+// line 563
+// do nothing, just exit
+// line 1532
+// Is this thread currently with in a function trace?
+// leave stack alone
+// value equality //result = eval("key = 3; arr = []; arr[key] = 'one'; arr.store(3, 'two'); puts arr[key]"); //assertEquals("two", result);
+// add all name-to-class mappings
+// unsigned char
+// Variables live at entry of this node // Variables live at exit of node // Temporary set of live variables // Size of the "_in" and "_out" bit sets
+// &foo are not getting set from somewhere...I want the following assert to be true though //assert variableValues[offset] != null : "Getting unassigned: " + staticScope.getVariables()[offset];
+"/* note nemes_gamma can return Double.POSITIVE_INFINITY or Double.NEGATIVE_INFINITY         * when value is an integer less than 1.         * We treat 0 as a special case to avoid Domain error.         */"
+// Otherwise the unpack should be here...
+// we're depending on the side effect of the load, which loads the class but does not turn it into a script // I don't like it, but until we restructure the code a bit more, we'll need to quietly let it by here.
+// ENEBO: Perhaps slow but simple for now
+// Bunch of methods still not implemented
+// first, check if the sender has unreceived mail
+// try all extensions
+//yyLhs 542
+// end of variable scope
+// line 486
+// store call information so method_missing impl can use it
+// not using remove(Object) here to avoid the equals() call
+// FIXME: This table will get moved into POSIX library so we can get all actual supported // signals.  This is a quick fix to support basic signals until that happens.
+// for SEEK_CUR, need to adjust for buffered data
+// Frame matches one of our markers for "interpreted" calls
+// // INSTANCE VARIABLE RUBY METHODS //
+// even shift.. // ..floors to 62 or 63 bit BigInteger
+// MRI ignores seek errors, presumably for unseekable files like // serial ports (JRUBY-2979), so we shall too.
+// Zlib behavior: negative win_bits means no header and no checksum.
+// // INTERNAL VARIABLE METHODS //
+// verify it if it's there
+// MRI does similar thing on MacOS X with 'EditLine wrapper'.
+//[IRubyObject] //[IRubyObject, IRubyObject] //[IRubyObject, RubyClass] //[IRubyObject, RubyClass, RubyClass] //[IRubyObject, RubyClass, Visibility] //[IRubyObject, RubyClass, Visibility, Visibility]
+// line 1822
+// SSS FIXME: Should I have a reference to the IR_loop that is being retried?
+/* $~: match-data */
+// FIXME: Determine if a real allocator is needed here. Do people want to extend // JavaClass? Do we want them to do that? Can you Class.new(JavaClass)? Should // you be able to? // TODO: NOT_ALLOCATABLE_ALLOCATOR is probably ok here, since we don't intend for people to monkey with // this type and it can't be marshalled. Confirm. JRUBY-415
+// FIXME: Remove this from grammars.
+// fallback on non-pregenerated logic
+// do nothing, allow loop to redo
+// DEBUGGING HELP
+// TODO: Figure out how this can happen and possibly remove
+// line 1115
+// For 'b.foo'
+// decode from "from" and encode to "to"
+// XXX: 0xffff0000 on BE?
+// scripts
+// can be overridden to be informed when objects are removed
+// For binding purposes on the newly created struct types
+// compile first node as non-expr and then second node
+// Normally we could leave these to fall back on the superclass, but // since it dispatches through the [] version below, which may // dispatch through the []+block version, we can save it a couple hops // by overriding these here.
+// with block pass
+// in method body with no containing loop, issue jump error // load runtime and value, issue jump error
+// line 1806
+// Default objects
+// FIXME: NOT_ALLOCATABLE_ALLOCATOR is probably not right here, since we might // eventually want JavaArray to be marshallable. JRUBY-414
+// TODO: better detection when path is absolute or not. // If the path isn't absolute, then prepend the current working // directory to the path.
+// line 1373
+// The following constants capture pre-known static call sites -- used to implement ruby internals
+// MRI accepts additional wday argument which appears to be ignored.
+// If an IO exception occurs (something odd, but possible) // A directory may return null.
+// ignore // switch
+// assign given optional arguments to their variables
+// we do preand post load outside the "body" versions to pre-prepare // and pre-push the dynamic scope we need for lastline
+// ARRAY and STRUCT are only used internally
+// // Now read unbuffered directly from the file //
+// for visibility checking without requiring frame self // TODO: don't bother passing when fcall or vcall, and adjust callsite appropriately
+// FIXME: Don't allow multiple threads to do this at once
+// array created for rescue args doesn't need to be in ObjectSpace.
+// TODO: opt for 2 and 3 ?
+// Ensure room for terminating zero byte
+// one arg, no block; do nothing
+// TypeMatcher
+"/**      * Nested class whose instances act as thunks reacting to to_str method     * called from (Exception#to_str, Exception#message)     * MRI equivalent: rb_cNameErrorMesg, class name: ""message"", construction method: ""!"",     * to_str implementation: ""name_err_mesg_to_str""     *     * TODO: this class should not be lookupable     */"
+// unframed invokers have no Ruby frames, so pull from class name // but use current frame as file and line
+// line 324
+// Library has already been loaded in some form, bail out
+// first, iterate over all pre args
+// line 348
+// FIXME: Can get optimized for IEqlNode
+// TODO same zero-length checks as file above
+// Done with closure compilation
+// nothing
+/* xxx shouldn't check if valid option variable */
+// TODO: turn off readable? am I reading this right? // This only seems to be used while duping below, since modes gets // reset to actual modes afterward //fptr->mode &= (m & FMODE_READABLE) ? ~FMODE_READABLE : ~FMODE_WRITABLE;
+// get the incoming case value
+// Build the new module
+// line 848
+// add a "self" recv here // TODO: is this right?
+// fill local vars with nil, to avoid checking every access.
+// line 382
+// add a few type-specific special methods
+// just confirm minimum args provided
+// dynamically increase
+// Class.allocate object is not allocatable before it is initialized
+// More constants needed by specs
+// IRubyObject, DynamicMethod, RubyClass, CacheEntry, ThreadContext, IRubyObject, IRubyObject, String, IRubyObject
+// line 1639
+//  Single node on list
+// IRubyObject, RubyClass, CacheEntry, ThreadContext, IRubyObject, IRubyObject, String, args
+// TODO: make threadsafe
+// states
+// 1.8 "include?"
+// Accumulate call arguments
+// there might be more test classes in a single file, so we iterate over them
+// FIXME: missing arity check
+// line 896
+// FIXME: I don't like the null checks here
+"/*     * We use FILE versus IO to match T_FILE in MRI.     */"
+// Explicit reference to these vars as symbols...
+// TODO: // MRI behavior: Call "+" or "add", depending on the call. // But this leads to exceptions when Floats are added. See: // http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/17374 // return callCoerced(context, op, b, true); -- this is MRI behavior. // We'll use ours for now, thus providing an ability to add Floats.
+// ZStream actually *isn't* allocatable
+// PUSH(0).  If you look at original macro: stack |= (n&1) => stack |= 0 => no-change.
+// if it's a ./ baseName, use CWD logic
+// FIXME This whole thing could probably be implemented as a module and // mixed into appropriate classes, especially if it uses either // IOInput/OutputStream or is smart about the kind of IO-like object // it's being used against.
+// This looks wrong, but it's the way MRI does it.
+// Math depends on all numeric types
+//yyDgoto 152
+// We create one extra dynamicScope on a binding so that when we 'eval "b=1", binding' the // 'b' will get put into this new dynamic scope.  The original scope does not see the new // 'b' and successive evals with this binding will.  I take it having the ability to have  // succesive binding evals be able to share same scope makes sense from a programmers  // perspective.   One crappy outcome of this design is it requires Dynamic and Static  // scopes to be mutable for this one case.
+// ////////////////// CLASS VARIABLE RUBY METHODS //////////////// //
+// TODO: factor this chunk as in MRI/YARV GETASTER
+// note all fields are final -- rehash creates new entries when necessary. // as documented in java.util.concurrent.ConcurrentHashMap.java, that will // statistically affect only a small percentage (< 20%) of entries for a given rehash.
+// use array as-is, it's a literal array
+// FIXME: Pass block down?
+// FIXME: Ideally JavaObject instances should be marshallable, which means that // the JavaObject metaclass should have an appropriate allocator. JRUBY-414
+// do nothing, fall back on default compiler below
+// Add 1.8 libs
+/* TODO: MRI is just a when node.  We need this extra logic for IDE consumers (null in casenode statement should be implicit nil)*/
+// nil pad since we provided less values than block parms
+//RedoNode redoNode = (RedoNode)node;
+// line 940
+// TODO: note lack of command.com support for Win 9x...
+// line 448
+// thread is not alive, skip it
+// FIXME: \r logic needed
+// EQ == 0 (i.e. false)   //[C]
+// SSS FIXME: Can this return anything other than nil?
+// Our values holder (name of variables are kept in staticScope)
+// and we were given a specific exception
+// three args, no block; do nothing
+// eval value and save it
+// cleanup, raising errors if any
+// line 1886
+// need to skip IncludedModuleWrappers
+// if body is a rescue node, inspect its pieces separately to avoid it disabling all optz // TODO: this is gross.
+// save package module as ivar in parent, and add method to parent so // we don't have to come back here.
+// OBJ_INFECT
+// XXX This constructor is a hack to implement the __END__ syntax. //     Converting a reader back into an InputStream doesn't generally work.
+//System.err.println(" stringToLong=" + val);
+//tmpPosition is required because getPosition()'s side effects. //if the warning is generated, the getPosition() on line 954 (this line + 18) will create //a wrong position if the "inclusive" flag is not set.
+// for future compatibility as constructors move toward not accepting metaclass?
+// Node
+// end loop
+// InvocationCallback
+// File where current executing unit is being evaluated
+// Zlib::NO_FLUSH
+// line 1652
+// line 886
+// line 649
+// This is a bit convoluted because (1) SocketChannel.bind is only in jdk 7 and // (2) Socket.getChannel() seems to return null in some cases
+// first char must be digit or decimal point
+// do not load the class if not used
+// TODO: we should be able to optimize this quite a bit post-1.0.  JavaClass already // has all the methods organized by method name; the next version (supporting protected // methods/fields) will have them organized even further. So collectMethods here can // just lookup the overridden methods in the JavaClass map, should be much faster.
+// NOTE: MRI's sqrt precision is limited by 100, // but we allow values more than 100.
+// Note: this method produces meaningful results // only for RubyIO objects. For everything else returns 0.
+/* $@: error position */
+// line 616
+// Exclusive locks in Java require the channel to be writable, otherwise // an exception is thrown (terminating JRuby execution). // But flock behavior of MRI is that it allows // exclusive locks even on non-writable file. So we convert exclusive // lock to shared lock if the channel is not writable, to better match // the MRI behavior.
+// No block from a nil proc
+// for zero, one, two, three arities, JavaMethod.JavaMethod*.call(...IRubyObject[] args...) will check
+/* compstmt position includes both parens around it*/
+// Skip any commandline args if /usr/bin/env is in play
+// We don't want a package name beginning with dots, so we remove them
+// possibly should not in object space
+// FIXME: potentially could just use ByteList here?
+// setFoo(Foo) => foo=(Foo)
+// special constructor that accepts stream, not channel
+// FIXME moved this here to get what's obviously a utility method out of IRubyObject. // perhaps security methods should find their own centralized home at some point.
+// 'u' with space or plus flags is same as 'd'
+// TODO: catch exception if constant is already set by other // thread
+// only this case affects backrefs
+// Does this method define code?  // Default is yes -- which basically leads to pessimistic but safe optimizations // But, for library and internal methods, this might be false.
+// IO class methods.
+// arguments compilers always create IRubyObject[], but we want to use RubyArray.concat here; // FIXME: as a result, this is NOT efficient, since it creates and then later unwraps an array
+// line 1758
+/* ----------- Public methods with a default implementation ---------- */
+"/** rb_ary_push_m     * FIXME: Whis is this named ""push_m""?     */"
+// we'll only map conventional class names to modules
+/* $/: input record separator */
+// wrap self and store the wrapper
+// FIXME: ConstDecl could be two seperate classes (or done differently since constNode and name // never exist at the same time.
+// This method is called to build arguments for a block!
+// Count of nested parentheses (1.9 only)
+// Tainting here if we ever want it. (secure 4)
+// use parent's marshal
+// BigDecimalLibrary
+// all threads in ruby thread group plus main thread
+// The template for interface modules
+//        arity.checkArity(runtime, argsLength);
+//[boolean]
+// check for frame field reads or writes
+// Something wrong we don't know the cwd... // TODO: Is this behavior really desirable? /mov
+// line 1657
+// odd...but it is odd in ruby too.
+// line 1571
+// TODO: Add IR instructions for checking method arity! // s.getVariableCompiler().checkMethodArity(required, opt, rest);
+// if we get here, the class and field exist; construct our Unsafe impl // that calls it directly
+//[RubyClass] //[RubyClass, RubyClass] //[RubyClass] //[]
+// one optional, one required args
+// Fixme: Do we need the check or does Main.java not call this...they should consolidate
+// ...round to that digit
+// For JSR 223 support: see http://scripting.java.net/
+// FIXME: this should go somewhere more generic -- maybe IdUtil
+// Some helper functions:
+// line 1168
+// TODO: call config with scope but no frame
+// GMT+00:00 --> Etc/GMT, see "MRI behavior" // comment below.
+// ignore; job was cancelled // FIXME: Is this ok?
+// option_to_str
+// invoke pre method stuff
+// Try to load from classpath without prefix. "A/b.rb" will not load as  // "./A/b.rb" in a jar file.
+// SSS FIXME: Is this correctly placed ... at the end of the loop iteration?
+//        _lexicalNestingLevel = lexicalParent == null ? 0 : ((IR_ScopeImpl)lexicalParent)._lexicalNestingLevel + 1;
+// line 852
+// Run the pass on the passed in scope!
+// Hacky: Advance position to eat newline here....
+// package scheme 2: separate module for each full package name, constructed  // from the camel-cased package segments: Java::JavaLang::Object,
+// already set up append_features, just add the interface if we haven't already
+// ignore; we won't use invokedynamic
+// line 800
+// line 339
+// line 703
+//consume the file name
+// HACK: in order to have stdout/err act like ttys and flush always, // we set anything assigned to stdout/stderr to sync
+// line 960
+// line 445
+// leave as a normal array
+// TODO? I think this ends up propagating from normal Java exceptions // sys_fail(openFile.getPath())
+// TODO: Bleeding runtime into parser.  Arity may be should be in parser (to keep bleeding oneway)
+// normal finally and exit
+// CASE IR instructions are dummy instructions  // -- all when/then clauses have been converted into if-then-else blocks
+// intDigits isn't used here, but if it were, it would be 1
+// generation count for O(1) clears
+//.append("  -x[directory]   strip off text before #!ruby line and perhaps cd to directory\n")
+// Containing class...The parent of Object is null. Object should always be last in chain.
+// line 1279
+// Profile
+//        assert internedSymbol == internedSymbol.intern() : internedSymbol + " is not interned";
+// Java reflection does not allow retrieving constructors like methods
+// TODO: protected methods.  this is going to require a rework of some of the mechanism.
+// IRubyObject, DynamicMethod, ThreadContext, IRubyObject, RubyClass, String, IRubyObject
+// add all public constructors (note: getConstructors only returns public ones)
+// line 1660
+// Test that requiring a normal Java class raises an error (JRUBY-3214
+// construct static scope list of names
+// TODO: turn off the negative? will return -0.0 in lax mode
+// line 655
+// optional args, so we have IRubyObject[] // TODO: confirm
+// line 1489
+// initialize this if it hasn't been
+// just windows
+// SET_P
+// If this is not a closure, the break is equivalent to jumping to the loop end label
+// TODO: put these nil guards into tree (bigger than I want to do right now)
+// The following three methods must be defined fast, since they expect to modify the current frame // (i.e. they expect no frame will be allocated for them). JRUBY-1185.
+// Traverse the instructions in this basic block in reverse order!
+// finally, set JavaSupport.isEnabled to true
+// line 1309
+// try to read grent to fail fast
+// Note: We can't use file.exists() to check whether the symlink // exists or not, because that method returns false for existing // but broken symlink. So, we try without the existence check, // but in the try-catch block. // MRI behavior: symlink? on broken symlink should return true.
+// The loop of "Square Root by Coupled Newton Iteration"
+// provider is not available
+// method has more than 500 lines; we'll need to split it // and therefore need to use a heap-based scope
+// FIXME: We should be getting this from the runtime rather than assume none? //return runtime.getEncodingService().getEncoding(runtime.getDefaultExternalEncoding());
+// using IOOutputStream may not be the most performance way, but it's easy.
+/* len + margin */
+// TODO: Ruby does not seem to care about invalid numeric mode values // I am not sure if ruby overflows here also...
+// local scopes are argument scopes by default
+// int, native
+/* Hack in to replace usual readline with this */
+// Empirical Observations: // null -> Some arity // argsNode == this.argsNode then check for arity changes // newline(splatnode) -> argspushnode
+// super calls from proxies must use reflected method // FIXME: possible to make handles do the superclass call?
+// are we at '**/'
+// Special form of sprintf that returns a RubyString and handles // tainted strings correctly.
+// line 533
+// line 358
+// removes and returns the stored value without processing undefs (autoloads)
+// Where we get our newest char's
+// If variables were added then we may need to grow the dynamic scope to match the static // one. // FIXME: Make this so we only need to check this for blockScope != null.  We cannot // currently since we create the DynamicScope for a LocalStaticScope before parse begins. // Refactoring should make this fixable.
+// if arity 1, just compile the one element to save us the array cost
+//        ByteList buffer = null;
+// line 1598
+// rb_reg_desc
+/* wrapped to \0...\0.  search next valid char. */
+// FIXME: Obvious issue that not all platforms can display all attributes.  Ugly hacks. // Using generic posix library makes pushing inspect behavior into specific system impls // rather painful.
+// All braces pushed..
+// Handle ~user paths.
+// NOTE: The five match methods are arity-split to avoid the cost of boxing arguments // when there's already a cached match. Do not condense them into a single // method.
+"/*             * Declare those components as beans in BSF. Then it will be             * possible to access those components in Ruby as global             * variables ($frame, $menubar, ...)             */"
+// exceptionNext target is for a next that doesn't push a new value, like this one
+// Make sure all arguments are modules before calling the callbacks
+// marsaling dumps usec, not msec
+// fast and safe respond_to? call site logic
+// TODO: public only?
+// We always prepend an org.jruby.proxy package to the beginning // because java and javax packages are protected and signed // jars prevent us generating new classes with those package // names. See JRUBY-2439.
+// // COMMON VARIABLE METHODS //
+// caller
+// single precision, native
+/* $=: ignorecase */
+// FIXME: not very efficient
+// can't read non-standard properties
+// set this class's method names in var @__java_ovrd_methods if this // is the new class; otherwise, get method names from there if this is // a proxy superclass.
+// MRI behavior: always check whether the file is writable // or not, even if we are to write 0 bytes.
+// The problem we trying to solve below: STDIN in Java // is blocked and non-interruptible, so if we invoke read // on it, we might never be able to interrupt such thread. // So, we use in.available() to see if there is any input // ready, and only then read it. But this approach can't // tell whether the end of stream reached or not, so we // might end up looping right at the end of the stream. // Well, at least, we can improve the situation by checking // if some input was ever available, and if so, not // checking for available anymore, and just go to read.
+// This method handles '**/' patterns and delegates to // fnmatch_helper for the main work.
+// line 1582
+// Java requires "w" for creating a file that does not exist
+// TODO: Implement tty? and isatty.  We have no real capability to // determine this from java, but if we could set tty status, then // we could invoke jruby differently to allow stdin to return true // on this.  This would allow things like cgi.rb to work properly.
+// line 335
+//new Exception().printStackTrace();
+// DigestLibrary
+// Object is ready, create top self
+"/*         * TODO: This version is better than the hackish previous one. Windows         *       behavior needs to be defined though. I suppose this version         *       could be improved more too.         * TODO: /etc/passwd is also inadequate for MacOSX since it does not         *       use /etc/passwd for regular user accounts         */"
+// Modelled after c ruby implementation (java /,% not same as ruby)
+// start class
+// line 1960
+// Skip /usr/bin/env if it's first
+// not true, eval value and assign
+// Struct bodies should be public by default, so set block visibility to public. JRUBY-1185.
+// ------- Abstract methods without a default implementation -------
+// TODO: wire into new exception handling mechanism
+// obtain c
+// use specific-arity for as much as possible
+// First, build assignments for specific named arguments
+/* Directories and unavailable resources are not able to open a stream. */
+// (1|intlen)
+// line 879
+//                case FLOAT:
+// FIXME: This worries me a bit, since it could allocate a lot with a large newLength
+/* MSB is 1; assuring non-zero initial array */
+// Binding provided for scope, use it
+// Args
+// Note: In Ruby 1.9 all of this logic can go away since they will require explicit // bindings for evals.
+// line 2010
+// line 1244
+// restrictive security policy; no matter, we only want public // classes anyway
+// standard constructor that accepts Ruby, RubyClass
+// if more than 4 locals, get the locals array too
+// FIXME: Maybe not best place, but move it to a good home
+// MRI 1.8.6 behavior: null byte after '%' // leads to "%" string. Null byte in // other places, like "%5\0", leads to error.
+// TODO: check safe, taint on incoming string
+// line 785
+// line 1610
+// FIXME: move out of this class!
+// TODO: This is probably BAD...
+// retry handling in the rescue blocks
+// check arity in the variable-arity version
+// line 932
+// dump usec, not msec
+// Note that WE CAN'T say the following, because of the on-the-fly conversion of Fixnum to Long // assertTrue(value == valueViaValuesIterator);
+/* $`: string before last match */
+// variable is never read, variable is never live
+// rest in ivar count followed by name/value pairs
+// Short-hand (e.g. %{,%.,%!,... versus %Q{).
+// add all startup load paths to the list first
+// TODO: Make sure all appropriate open flags are added to this check.
+"/** rb_mod_remove_cvar     *     * FIXME: any good reason to have two identical methods? (same as remove_class_variable)     */"
+// RubyBasicSocket
+// populate commandline with NG-provided stuff
+/* DStrNode: :"some text #{some expression}"*/
+// if entry is an empty string, skip it
+// TODO: handle errors in buffered write by retrying until finished or file is closed
+// entry exists, proxy has been gc'ed. replace entry.
+// What linenumber will the source think it starts from?
+// finish class initializer
+// TODO: must override in RubyModule to pick up constants
+// Optimize some core class method calls for constant values
+// must be at least one digit for strict
+// MRI does it!
+// trigger class initialization for the class
+// line 871
+// TODO: This is actually now returning the scope of whoever called Method#to_proc // which is obviously wrong; but there's no scope to provide for many methods. // It fixes JRUBY-2237, but needs a better solution.
+// else leave it null
+// an official rule, clarified: if the exponent // <clarif>after adjusting for exponent form</clarif> // is < -4,  or the exponent <clarif>after adjusting  // for exponent form</clarif> is greater than the // precision, use exponent form
+// FIXME: In order for Thread to play well with the standard 'new' behavior, // it must provide an allocator that can create empty object instances which // initialize then fills with appropriate data.
+// if it's an array, only add methods for aref, aset, and length
+// line 1918
+// line 336
+// This is almost always already interned, since it will be called with a symbol in most cases // but when created from Java code, we might get an argument that needs to be interned. // addAccessor has as a precondition that the string MUST be interned
+// line 303
+// prepare to call class definition method
+// No directory delimeter.  Rest of string is username
+// this is ensured by the callers
+// we basically ignore protocol. let someone report it...
+// ignore...bean doesn't get registered // TODO: Why does that bother me?
+// For Sockets, only write as much as will fit.
+// ------- Default implementation methods below -------
+// line 1702
+/* -------------- Public fields and methods below ---------------- */
+// In certain places, like grep, we don't use real frames for the // call blocks. This has the effect of not setting the backref in // the correct frame - this delta is activated to the place where // the grep is running in so that the backref will be set in an // appropriate place.
+// Build IR for body
+// Fix for JRUBY-1339 - search hierarchy for constant
+// We yield here to hopefully permit the target thread to schedule // MRI immediately schedules it, so this is close but not exact
+// Get the value from the map via the key
+// line 732
+// last conditional case, use defaultCase
+// evaluate and save receiver and args
+// class could not be found nor generated; give up on JIT and bail out
+// line 159 "-" // %token constants
+// SSS FIXME: Does int suffice, or do we need long?
+// These call* assume ThreadContext = receiver.getRuntime().getCurrentContext()
+// unread back
+// line 1972
+// FIXME: Added this because marshal_spec seemed to reconstitute objects without calling dataWrapStruct // this resulted in object being null after unmarshalling...
+// load block from [] version of method
+// single precision, native // single precision, native
+// obtain a
+// deal with case when "other" is not a string
+// FIXME: This doesn't actually support anything but String
+// re-get, re-check method; if not null now, go to dispatch
+// ensure the object is associated with the wrapper we found it in, // so that if it comes back we don't re-wrap it
+// load all arguments straight through
+// array creation should use this variant
+// line 509
+// MRI behavior: in finished mode, we work as pass-through
+// line 1323
+"/* What is \v in C?                    case '\v':                        c2 = 'v';                        break;                        */"
+// XXX: do something?
+/* white spaces */
+// MUST NOT be used across threads
+"/** rb_obj_id     *     * Return the internal id of an object.     *     * FIXME: Should this be renamed to match its ruby name?     */"
+// promise to implement zero to N
+// remain where we are
+// original exception is on stack
+// string doesn't share any resources
+// SSS FIXME: Incomplete!
+// Since we don't have any other error reporting mechanism, we // add the error message as an always-failing test to the test suite.
+// TODO: This should be something else like a tCHAR
+// line 1105
+// Returns the containing parent scope!
+// TODO this is really ineffient, and potentially a problem everytime anyone require's something. // we should try to make LoadPath a special array object.
+// If a line is followed by a blank line put // it back.
+// line 464
+// If the killee thread is the same as the killer thread, just die
+// switch to an allocator based on a default constructor
+// ?w  | boolean | True if file1 exists and is writable by effective uid/gid
+/* FIXME: We may be intern'ing more than once.*/
+// no annotated methods found, skip
+// normal case, create a new label
+// TODO: do something here?
+// line 812
+// // Synchronize and re-check to avoid creating more than one Selector per provider //
+// We could probably also detect if LHS value came out of cache and avoid some of this
+// Version information:
+// TODO: People extending GzipWriter/reader will break.  Find better way here.
+// send it along as arity-specific, we don't need the array
+// FIXME we should probably still be dyncalling 'write' here
+// TODO: Only setAccessible to account for pattern found by // accessing constants included from a non-public interface. // (aka java.util.zip.ZipConstants being implemented by many // classes)
+// for Object, default to natural wrapper type
+// line 1075
+// line 1008
+// done // done // done // done
+/* $>: default output handle */
+// ?l  | boolean | True if file1 exists and is a symbolic link
+// TODO: This is almost RubyModule#instance_methods on the metaClass.  Perhaps refactor.
+// MRI behavior: raise ArgumentError for 'unknown command' before // checking number of args.
+// lame generics issues: making Segment class static and manually // inserting cache reference to work around various problems generically // referencing methods/vars across classes.
+//TODO: implement, won't do this now
+// reopen a java module
+// line 1247
+/*arg0*/
+// line 809
+// update all subclasses
+// Handle ~user paths
+// RubyContinuation
+// line 1204
+"/**     * Process streams get Channel.newChannel()ed into FileChannel but are not actually     * seekable. So instead of just the isSeekable check doing instanceof FileChannel,     * we must also add this boolean to check, which we set to false when it's known     * that the incoming channel is from a process.     *      * FIXME: This is gross, and it's NIO's fault for not providing a nice way to     * tell if a channel is ""really"" seekable.     */"
+// FIXME: No, I don't like it.
+// SSS FIXME: Should this be Operand or CompoundString? // Can it happen that symbols are built out of other than compound strings?   // Or can it happen during optimizations that this becomes a generic operand?
+// This is needed when the enclosing class or module is a singleton. // In that case, we generated a name such as null::Foo, which broke  // Marshalling, among others. The correct thing to do in this situation  // is to insert the generate the name of form #<Class:01xasdfasd> if  // it's a singleton module/class, which this code accomplishes.
+// assume nInit = 16 <= prec
+// if no exception raised, jump to end to leave result on stack for return
+// confirm minimum args provided
+// 64-bit number, native (as fixnum)
+//Octal
+// otherwise fall back on the old way
+/* complete, according to Posix.2 */
+// ////////////////// LOW-LEVEL CONSTANT INTERFACE //////////////// // // fetch/store/list constants for this module //
+// We don't append '+' since Java number parser gets confused
+// TODO: non-strict option
+// Initialize Kernel and include into Object
+// TODO: need to get this back into the method signature...now is too late...
+// string has it's own ByteList, but it's pointing to a shared buffer (byte[])
+// calculate based on a, b, c and d
+// it's an absolute path, use it as-is
+// Just a plain bang
+// class bodies prepare their own dynamic scope, so let it do that
+// integer division
+// int, native // long, native
+// TODO: At least ParserSupport.attrset passes argsNode as null.  ImplicitNil is wrong magic for  // setupArgs since it will IRubyObject[] { nil }.  So we need to figure out a nice fast // null pattern for setupArgs. // assert argsNode != null : "receiverNode is not null";
+// line 512
+// add method with full signature, so it's guaranteed to be directly accessible // TODO: no need for this to be a full, formal JVM signature
+/* least significant r bits */
+// if we expect a return value, unwrap it
+// using IOChannel may not be the most performant way, but it's easy.
+// Live reference to module
+/* Lattice TOP, BOTTOM, ANY values -- these will be used during dataflow analyses */
+// ----- Ruby Instance Methods -------------------------------------------------
+// line 1089
+// MRI behavior: Contrary to what seems to be logical, // when '*' is given, MRI calculates the distance // to the end, in order to go backwards.
+// line 708
+// FIXME: This is probably not very efficient, since it loads all methods for each call
+// line 582
+// A cloned method now belongs to a new class.  Set it. // TODO: Make DynamicMethod immutable
+/* .setPosFrom($2);*/
+// FIXME: what should this really be?       assert x instanceof RubyComplex;
+// long, slow way causes disabling for defined
+// line 589
+// Unicode is can be only 21 bits long, int is enough
+/* ---------- Private fields, methods --------- */
+/* EvStrNode :"#{some expression}"*/
+// FIXME: inefficient; constructing a bignum just for dumping?
+// line 457
+// This is for JRUBY-2988, since after a suspend the terminal seems // to need to be reinitialized. Since we can't easily detect suspension, // initialize after every readline. Probably not fast, but this is for // interactive terminals anyway...so who cares?
+// with args, no block
+// line 661
+// // Force the client socket to be blocking //
+// $blah
+//IRubyObject protocol = args[4];
+// the CASE instruction
+// line 1519
+// FIXME we want to eliminate these type casts when possible
+// methods and closures
+// otherwise, there's a receiver, so we pass that in directly for the sclass logic
+// invalid ranges result in an empty string
+// @JRubyMethod(name = "inexact?")
+// line 1358
+// finally handling for abnormal exit
+// Simplify the variables too -- to keep these variables in sync with what is actually used in the when clauses // This is not required for correctness reasons, but only for performance reasons.
+// SSS FIXME: This should never get called for constant svalues
+// otherwise fall back on system temp location
+// look for mangling markers for bound, framed methods in class name
+// SSS FIXME: Cannot optimize this without assuming that Range.to_ary method has not redefined. // So for now, return null!
+// For all uninitialized specific arities, we defer to the "n" method which // should raise appropriate error in all cases.
+// Dummy top-level method for the class
+// TODO: this is kinda gross
+// Dot is not at beginning and not at end of filename.
+// line 498
+// TODO: Make callCoerced work in block context...then fix downto, step, and upto.
+// Without a flush Ant will miss some of our output
+// IN FACT, we should probably raise an error, yes?
+// new interrupt, to hopefully wake it out of any blocking IO
+//runtime.getWarnings().warn(ID.STRUCT_CONSTANT_REDEFINED, frame.getFile(), frame.getLine(), "redefining constant Struct::" + name, name);
+// just unix
+// try count specific args to determine required
+// line 1137
+// JRUBY-2938 the proxy class might already exist
+// line 1995
+// XXX: Check if it's appropriate type?
+// exact arg list __file__
+// line 821
+// actual required is less than 3, so we use specific arity
+// mask off "once" flag
+// Yow...this is still ugly
+// try to load the specified name; only if that fails, try to define the class
+// TODO: ruby locks the string here
+// only supports simple parallel assignment of up to 10 values to the same number of assignees
+// too big for us
+// FIXME: optimize for cases where we have no false branch
+// look for __file__ method name for compiled roots
+// returns the stored value without processing undefs (autoloads)
+// By default, return instructions cannot be deleted
+// TODO: not sure that we should skip calling join() altogether. // Thread.join() has some implications for Java Memory Model, etc.
+// FIXME: Not sure what the semantics of transfer are //cFiber.defineFastMethod("transfer", cb.getFastOptMethod("transfer"));
+// if a jar or file URL, return load service resource directly without further searching
+// invoke specific arity version
+// TODO: warn "tried to create Proc object without a block"
+// Dir::tmpdir
+//if the index is not a multiple of 8, we are not on a byte boundary
+// TODO: cache?
+"/* Symbol class methods.     *      */"
+// deal with length/width
+// snip off ruby or jruby command from list of arguments // leave alone if the command is the name of a script
+// line 1229
+// switch on the object's *native type*. This allows use-defined // classes that have extended core native types to piggyback on their // marshalling logic.
+// Double.MAX_EXPONENT since Java 1.6
+/* $&: last match */
+//[C, C] //[C, C, String] //[C, null|C]
+// SSS: Looks like we receive the arg in buildBlockArgsAssignment via the IterNode // We won't get here for argument receives!  So, buildDasgn is called for // assignments to block variables within a block.  As far as the IR is concerned, // this is just a simple copy
+// line 329
+// line 1638
+// add us to new superclass's child classes
+//        return new CallOneArgNode(firstNode.getPosition(), firstNode, operator, new ArrayNode(secondNode.getPosition(), secondNode));
+// try both
+// unsigned int, native // unsigned long, native
+// load arity for error
+// TOPLEVEL self and a few others want a top-level scope.  We create this one right // away and then pass it into top-level parse so it ends up being the top level.
+// clear body or next result after each successful loop
+// check current directory; if file exists, retrieve URL and return resource
+//char hexValue = scanHex(2);
+// save entering the try if there's nothing to ensure
+// build first node as non-expr and build second node
+// start setup method
+// three args with block
+// Give a name to a value.  Enebo: This should be used more.
+// if root of method is rescue, compile as light rescue
+// invoke callMethodMissing method directly // TODO: this could be further optimized, since some DSLs hit method_missing pretty hard...
+// set of utility methods for Java-based proxy objects
+// space
+// TODO: callback for value would be more efficient, but unlikely to be a big cost (constants are rarely assigned)
+// if an extension is specified, try more targetted searches
+// TODO: Ruby truncates string to specific size here, but our bytelist should handle this already?
+// line 643
+// Only in ruby 1.9 methods
+// Figure end-char.  '\0' is special to indicate begin=end and that no nesting?
+// Arrays, Ranges, etc. are compound values // Variables, fixnums, floats, etc. are "atomic" values
+// *must* be power of 2!
+// TODO: this isn't handling multibyte yet
+// depends on IO, FileTest
+// add in reverse order
+// start out with a default RubyObject allocator
+// long, slow way causes disabling
+// SSS FIXME: We need to build debug information tracking into the IR in some fashion // So, these methods below would have to have equivalents in IR_Scope implementations.
+// Not sure if this is actually possible, but better safe than sorry
+// File to be loaded by autoload has already been or is being loaded.
+// x += e*v     ~ sqrt()
+// NOTE: Currently this optimization is limited to the following situations: // * All expressions must be int-ranged literal fixnums // It also still emits the code for the "safe" when logic, which is rather // wasteful (since it essentially doubles each code body). As such it is // normally disabled, but it serves as an example of how this optimization // could be done. Ideally, it should be combined with the when processing // to improve code reuse before it's generally available.
+/* File class methods */
+// FIXME: I think we need these pushed somewhere?
+// TODO: It's perhaps just a coincidence that all the channels for // which we should raise are instanceof SelectableChannel, since // stdio is not...so this bothers me slightly. -CON
+// Do we have a dynamic container?
+// no args, do not pass args processor
+// XXX: This check previously used callMethod("==") to check for equality between classes // when scanning the hierarchy. However the == check may be safe; we should only ever have // one instance bound to a given type/constant. If it's found to be unsafe, examine ways // to avoid the == call.
+// Our readback/pushback buffer.
+// FIXME: This isn't right for within ensured/rescued code
+// line 922
+// TODO: pass this in?
+// very restrictive policy (disallows Member.PUBLIC) // we'd never actually get this far in that case
+// ENEBO: Totally weird naming (in MRI is not allocated and is a local var name)
+// MRI behavior: Week values are monotonous. // So, weeks that effectively belong to previous year, // will get the value of 0, not 52 or 53, as in Java.
+// line 1013
+// FIXME:  This determine module is in a strange location and should somehow be in block
+// line 1445
+// line 1264
+// FIXME: what should these really be? Numeric?       assert x instanceof RubyComplex && y instanceof RubyComplex;
+// line 735
+//yyRindex 945
+// this covers the rare case of lower-case class names (and thus will // fail 99.999% of the time). fortunately, we'll only do this once per // package name. (and seriously, folks, look into best practices...)
+// if more than 4 vars, get values array too
+// Indicate that we are done processing the loop
+// For 'foo()'.  Args are only significant in maintaining backwards compatible AST structure
+// FIXME: Why was this using a FullFunctionCallbackMethod before that did callSuper?
+// extract item from array
+// TODO: don't calculate the same value 3 times
+"/*     * Fixme:  This does not have exact same semantics as RubyArray.join, but they     * probably could be consolidated (perhaps as join(args[], sep, doChomp)).     */"
+// regular division with some default precision // TODO: proper algorithm to set the precision
+// root-level logic
+// super uses current block if none given
+// SSS FIXME: Where does this go? // m.setLinePosition(arrayNode.getPosition());
+// line 561
+// If divisor is zero, don't simplify!
+// binary typed calls
+// set to default thread group
+// relatively cheap test for 32-bit values
+// an empirically derived rule: precision applies to // significand length, irrespective of exponent
+//[reg]
+// check visibility // dup method
+// Deprecated String construction routines
+// line 397
+"/*     *  Constructor for internal usage (mainly for Array#|, Array#&, Array#- and Array#uniq)     *  it doesn't initialize ifNone field     */"
+// FIXME: set up a call configuration for this
+// select until read is ready
+// BASE64
+// if we don't have opt args, start after args (they will be assigned later) // this is for crap like def foo(a = (b = true; 1)) which numbers b before a // FIXME: only starting after required args, since opt args may access others // and rest args conflicts with compileRoot using "0" to indicate [] signature.
+// rb_class_boot
+// TODO: what about n arg?
+// // If the task was scheduled, wait for it to finish before polling // for the exception it would have thrown. //
+// Execute rescue block
+// line 1276
+// TODO: for now, we use a faithful // reimplementation of MRI's algorithm, // but should use UTF8Encoding facilities // from Joni, once it starts prefroming // UTF-8 content validation.
+// first digit is always printed
+/* Array of all operands for this instruction */
+// FIXME warning
+// SSS FIXME: Is this correct?
+// TODO: is this the right thing to do?
+// Get the container for this new module
+// SSS FIXME: These should get normally compiled or initialized some other way ...  // SSS FIXME: Parent/super-type info is incorrect! // These are just placeholders for now .. this needs to be updated with *real* class objects later!
+// TODO: add trace call?
+// captures // begin and end are used when not groups defined // source string
+// Define the annotation for the method
+// line 669
+// FIXME: This should probably do some translation from Ruby priority levels to Java priority levels (until we have green threads)
+// we've found a Java type to which we've coerced the Ruby value, wrap it
+// rb_enc_precise_mbclen
+// line 1725
+// CON FIXME: I don't know how to make case be an expression...does that // logic need to go here?
+//////////////////// FRAME MANAGEMENT ////////////////////////
+// If a closure, the next is simply a return from the closure! // If a regular loop, the next is simply a jump to the end of the iteration
+// FIXME: these descriptions should probably be moved out, // to Constantine project which deals with all platform-dependent constants.
+// Store to temp so it does null out on us mid-stream
+// backspace
+// ClassId is the name of the class/module sans where it is located. // If it is null, then it an anonymous class.
+/* most significant w-r bits */
+// FIXME: bit of a kludge here (non-interface classes assigned to both // class and module fields). simplifies proxy extender code, will go away // when JI is overhauled (and proxy extenders are deprecated).
+// adapter, tc, recv, args{0,1}, block{0,1}]
+// b64_xtable for decoding Base 64
+// ignore, no debugger present
+// hash
+// allow proxy to be read without synchronization. if proxy // is under construction, only the building thread can see it.
+// TODO: exec should replace the current process. // This could be possible with JNA.
+// String construction routines by NOT byte[] buffer and NOT making the target String shared
+// if any exceptions were raised, we fail
+// block argument to the method // closure present // class present // method table mutations, def, defs, undef, alias // likely call to eval // makes calls that are aware of the frame // makes calls that are aware of the frame's self // makes calls that are aware of the frame's visibility // makes calls that are aware of the frame's block // makes calls that are aware of the frame's name // makes calls that set or get backref // makes calls that set or get lastline // makes calls that are aware of the frame's class // optional arguments to the method // rest arg to the method // makes calls that are aware of the scope // makes a zero-argument super call // accesses or sets constants // accesses or sets class variables // makes normal super call // contains a retry
+// element set
+// if there's no receiver, evaluate and pass in the superclass, or // pass self if it no superclass
+// create the class
+// promise to implement one to three
+// Note: this field and the following static initializer // must be located be in this order!
+// done // done // done // Nothing to do for 1.8 // done // done // done // done // done // done // done? // done // done // done // done // done // done // done // done // done // done // done //            case DEFINEDNODE: return buildDefined(node, m); // Incomplete // done // done // done // done // done // done // done // done //            case ENSURENODE: return buildEnsureNode(node, m); // DEFERRED // done // done // done // done //            case FLIPNODE: return buildFlip(node, m); // SSS FIXME: What code generates this AST? // done // done // done // done // done // done // done // done // done // done // done // done // done // done // done // done // done // done? // done // done // done // done // done // done -- partially //            case OPELEMENTASGNNODE: return buildOpElementAsgn(node, m); // DEFERRED SSS FIXME: What code generates this AST? // done //            case POSTEXENODE: return buildPostExe(node, m); // DEFERRED //            case PREEXENODE: return buildPreExe(node, m); // DEFERRED // done?? // done
+/* $?: last status */
+// line 530
+// FIXME: add text mode to mode flags
+// CONSTANT
+// get call site and thread context
+// line 1076
+// line 657
+// push false
+// line 983
+// Used by our duck-typification of Proc into interface types, to allow // coercing a simple proc into an interface parameter.
+// TODO: make this do specific-arity calling
+// FIXME: This is temporary since the variable compilers assume we want // args already on stack for assignment. We just pop and continue with // 1.9 args logic.
+// This is perhaps innefficient timewise?  Optimal spacewise
+// the requested precision
+// FIXME: Make bodyNode non-null in parser
+// TODO: eliminate?
+// line 1925
+// handle everything after -- as arguments to the jruby process
+/* FIXME: Resolve what the hell is going on*/
+// line 623
+// we are presumably running a precompiled class; load directly
+// Estimate the square root with the foremost 62 bits of squarD // bi and scale are a tandem
+// hack to get right style for input
+// arg grouping, use slower arg walking logic
+// we have optimized switch cases, build a lookupswitch
+// void return type, so we need to load a nil for returning below
+//def self.getaddrinfo(host, port, family = nil, socktype = nil, protocol = nil, flags = nil)
+// precision for G/g includes integer digits
+// line 1362
+// args array
+// get attr
+// FIXME: There's some code duplication here with RubyObject#inspect
+// SunSignalFacade
+// try/finally block to ensure unlock
+// line 864
+// line 1672
+// We don't support .so, but some stdlib require .so directly // replace it with .jar to look for an extension type we do support
+// depending on size of original args, call appropriate utility method
+// loop until a context is available, to clean up softrefs that might have been collected
+// An atomic long for generating DynamicMethod serial numbers
+/* copy pre-match substr */
+/* NOEX_PRIVATE for toplevel */
+/* $:: load path */
+/* FIXME: lose syntactical elements here (and others like this)*/
+// TODO: missing additional logic for dealing with conflicting protected fields.
+// line 1948
+// line 1905
+// one arg but it's an array, treat it as a proper array
+// Java and MRI definitions of remainder are the same.
+// wait for the go signal
+// line 1329
+// Captured dynamic scopes
+// We use offset here to keep track of extra newlines for windows
+//do some padding, I don't understand the padding strategy
+// FIXME: set up a CallConfiguration for this
+// host and port given
+// A scoped location of this variable (high 16 bits is how many scopes down and low 16 bits // is what index in the right scope to set the value.
+// exit monitor before making call // FIXME: this not being in a finally is a little worrisome
+// line 1269
+// Ruby code frequently uses a platform check to choose "NUL:" on windows // but since that check doesn't work well on JRuby, we help it out
+// no silly ticks!
+// line 811
+// line 552
+// TODO: 3 times calculate the same value below
+// calltype // block
+// leave it null and fall back on our normal invocation logic
+// w_unique
+// line 321
+// line 569
+// quoted-printable
+// root-level classes
+// Our name holder (offsets are assigned as variables are added
+// all precision numebers printed
+// line 1111
+// get "self"
+// any ivars, since we don't have __attached__ ivar now
+// arities
+// FIXME: Make thread pool threads daemons if necessary
+// Numeric.equal
+// line 556
+// generate bytelists initialization code
+// self = args[0] // SSS FIXME: Verify that this is correct
+// FIXME: Get rid of laziness and handle restricted access elsewhere
+// '.' is printed
+// bomb out, it's not a binding or a proc
+// Construct the top-level execution frame and scope for the main thread
+// Make sure the appropriate scope has proper size. See JRUBY-2046.
+// line 596
+// line 558
+// line 1678
+// TODO: why are we duplicating the constants here, and then in // File::Constants below? File::Constants is included in IO.
+// id must always be even
+// s/b true, since intLength > 0
+// TODO: is this correct ?
+// UndefinedMethod should be immutable
+// void methods should work
+// ?A  | Time    | Last access time for file1
+// long, big-endian
+// HACK: force clinit to be created
+// Position within source must reflect the actual offset and column.  Since // we ate an extra character here (this accounting is normally done in read // ), we should update position info.
+// a case/when branch
+// NOT REACHED HERE
+//yyDefRed 945
+// FIXME: JRUBY-3188 ends up with condition returning null...quick fix until I can dig into it
+// TODO: Consider a better way of synchronizing
+// line 948
+// Returns slot of variable
+// line 1641
+// TODO: This and recacheRespondsTo needed to be synchronized for JRUBY-3466, // but this degraded performance nearly 2x. It's still faster than MRI, but // a reanalysis of this code may show a faster way to ensure we're caching // safely.
+// we have read ahead, and need to back up
+// then deliver mail to the target
+// line 1302
+"/*     * x = mantissa * 2 ** exponent     *     * Where mantissa is in the range of [.5, 1)     *     */"
+// Serialization killed our dynamic scope.  We can just create an empty one // since serialization cannot serialize an eval (which is the only thing // which is capable of having a non-empty dynamic scope).
+// // limit each iteration to a max of BULK_READ_SIZE to avoid over-size allocations //
+// // Check file size - special files in /proc have zero size and need to be // handled by the generic read path. //
+// processes seem to have some peculiar locking sequences, so we // need to ensure nobody is trying to close/destroy while we are
+// line 824
+// line 1573
+// Broken symlinks considered by exists() as non-existing, // so we need to check for symlinks explicitly.
+// line 688
+// optArgs and restArgs require more work, so isolate them and ArrayList creation here
+// temp method to verify tableSize value // must be called under lock
+// all other arg cases with block
+// just confirm args length == required
+// otherwise no items left available, use the code for default
+// no extra args for rest
+// We can callsite cache const_missing if we want
+// add to the corresponding positive power of 32 for the result. // meaningful? no. conformant? yes. I just write the code...
+// read
+// line 1492
+// grrr, arghh, want to subclass sun.misc.FloatingDecimal, but can't, // so we must do all this (the next 70 lines of code), which has already // been done by FloatingDecimal.
+"/* Something like cvar_cbase() from eval.c, factored out for the benefit     * of all the classvar-related node evaluations */"
+// set argv from main's args
+// fill up the rest with zeroes
+// TODO: set our metaclass to target's class (i.e. scary!)
+// from DUP_SETUP // rb_copy_generic_ivar from DUP_SETUP here ...unlikely..
+// set the binding's frame's "previous" file and line to current, so // trace will show who called the block
+// MRI error message says Class, even though Module is ok
+/* just ignore */
+// otherwise one key has been selected (ours) so we get the channel and hand it off
+// FIXME this below is temporary, but its much safer for COW (it prevents not shared Strings with begin != 0) // this allows now e.g.: ByteList#set not to be begin aware
+// line 1636
+/* Tempering */
+// line 1464
+// root-level methods
+"/*case CLASSNODE: case COLON2NODE:                handleUselessWarn(node, ""::""); return;*/"
+// No bit math to store level since we know level is zero for this case
+"/*case CONSTNODE:                handleUselessWarn(node, ""a constant""); return;*/"
+// pragmas
+// Satisfy java.util.Set interface (for Java integration)
+// if a source extension is specified, try all source extensions
+// FIXME: This is an ugly hack to resolve JRUBY-1381; I'm not proud of it
+// the 1 is for the stripped sign char
+//        int n = 10;
+// line 1058
+// this is the order in which MRI does these two tests
+// these extra arrays are really unfortunate; split some of these paths out to eliminate?
+// MBCLEN_INVALID_P
+// we might need to perform a DST correction
+// line 598
+// in-frame EvalState should already have receiver set as self, continue to use it
+// line 555
+// otherwise load the library we've found
+//str is frozen
+// TODO: handle writing into original buffer better
+// line 753
+// this is a rather ugly hack, but similar to MRI. See hash.c:ruby_setenv and similar in MRI // we search all keys for a case-insensitive match, and use that
+// line 1213
+// load always uses IRubyObject[], so simple closure offset calculation here
+// TODO: check for ascii string
+// // Copy out any buffered bytes //
+// FIXME: Should we make this work with platform's locale, // or continue hardcoding US?
+// Correct position for read / write buffering (we could invalidate, but expensive)
+// line 1236
+// Control flow graph for this scope
+// check if it's true, ending if so
+// Create global constants and variables
+// obtain b
+// MRI behavior:  for 'Q', do not add trailing nils
+// This should never happen past parse, but just bulletproof this just in case
+// line 872
+// For JRUBY-2759, when MET choose CET timezone to work around Joda
+// keep this variant for kind_of? testing
+// advance to first entry
+/* rb: check_modifiable */
+// first char must be digit
+// If there's no second argument, simply use the working directory  // of the runtime.
+// line 1803
+// line 1942
+// skip '-' in bytes, will add where appropriate
+// Construct local variables based on parameter names passed in
+// line 1078
+// just in case, add a bit of extra precision
+// SSS FIXME: Deprecated!  Going forward, all instructions should come from the CFG
+// On platforms without a c-library accessable through JNA, getpid will return hashCode  // as $$ used to. Using $$ to kill processes could take down many runtimes, but by basing // $$ on getpid() where available, we have the same semantics as MRI.
+// Shift_JIS
+"/*case SELFNODE:                handleUselessWarn(node, ""self""); return;*/"
+// Someone called exit!, so we need to kill the main thread
+// MRI behavior: validate only the unnumbered arguments
+// RubyUNIXServer
+/* substring longer than string */
+// Populate up to shorter of calling arguments or local parameters in the block
+// SSS FIXME: Maybe this is not really a concern after all ... // Nesting level of this scope in the lexical nesting of scopes in the current file -- this is not to be confused // with semantic nesting of scopes across files. // // Consider this code in a file f // class M1::M2::M3::C  //   ... // end // // So, C is at lexical nesting level of 1 (the file script is at 0) in the file 'f' // Semantically it is at level 3 (M1, M2, M3 are at 0,1,2). // // This is primarily used to ensure that variable names don't clash! // i.e. definition of %v_1 in a closure shouldn't override the use of %v_1 from the parent scope! //    private int _lexicalNestingLevel;
+// line 313
+// ...and shift the result back to the left (multiply by 10**(abs(scale)))
+//call post method stuff (exception raised)
+// JRUBY-2435: Aliasing eval and other "special" methods should display a warning // We warn because we treat certain method names as "special" for purposes of // optimization. Hopefully this will be enough to convince people not to alias // them.
+// can't select, just have to do a blocking call
+// end of scoping for closure's vars
+// line 551
+// line 1298
+// FIXME: If NativeException is expected to be used from Ruby code, it should provide // a real allocator to be used. Otherwise Class.new will fail, as will marshalling. JRUBY-415
+// get JavaClass if this is the new proxy class; verify it // matches if this is a superclass proxy.
+// line 833
+// a gotcha
+// we re-set self to the class, but store the old self in a temporary local variable // this is to prevent it GCing in case the singleton is short-lived
+// singleton classes don't get their own visibility domain
+/* ENEBO: Lots of optz in 1.9 parser here*/
+// line 925
+// line 788
+// line 817
+// line 434
+// Look through all mappings to find a match entry for this field
+// from CommandlineParser
+// TODO: pipe handler to be reopened with path and "w" mode
+// // Copy what is in the buffer, if there is some buffered data //
+// and remaining jump exceptions should restore $!
+// shift to yyN
+// method is done, declare all variables
+// OUT = UNION(IN(succs))
+//                    // check arity //                    checkArity(mv, scope);
+// Tries to load at compile-time the constant referred to by 'constRef'. // This might be possible if the constant is defined and is not a forward reference // to a value that will be defined later in the class.
+//            assert internedName == internedName.intern() : internedName + " is not interned";
+//                        RubyModule singletonClass = module.getSingletonClass();
+// if not overloaded, we add a method that guesses at which signature to use // TODO: just adding first one right now...add in signature-guessing logic
+// line 1032
+// next in hierarchy is an included version of the module we're attempting, // so we skip including it
+// Was a goto in original ruby lexer
+// line 467
+// never visited, should be ok
+// By default, call instructions cannot be deleted even if their results aren't used by anyone // unless we know more about what the call is, what it does, etc. // Similarly for evals, stores, returns.
+// Is this thread currently doing an defined? defined should set things like $!
+"/*         * Now we create a new BSFManager.         */"
+// Do not open as 'rw' by default since a file with read-only permissions will fail on 'rw'
+// Record the loop we are beginning to process
+// ////////////////// CONSTANT API METHODS //////////////// //
+/* \\u{H HH HHH HHHH HHHHH HHHHHH ...} */
+// line 559
+// Zero sleeps forever
+// For nodes do not have their own scope so we pass null to indicate this. // 'For's are implemented as blocks in evaluation, but they have no scope so we // just deal with this lack of scope throughout its lifespan.  We should probably // change the way this works to get rid of multiple null checks.
+// small hack to save a cast later on
+//System.err.println("calculateLength()/str=" + str);
+// Should we do anything?
+// line 1655
+// FIXME: When we get JNA3 we need to properly write this to errno.
+// A potentially previously close IO is being 'reopened'.
+/* $": already loaded files */
+// TODO this should entry into error handling somewhere
+// Not sure how well this works, but it works much better than // just currentTimeMillis by itself.
+// Assumption: tail is never a list node
+// FIXME: This is pretty gross; we should have a cleaner initialization // that doesn't depend on package-visible fields and ideally is atomic, // probably using an immutable structure we replace all at once. // lazy, null when no groups defined
+// required and optional only
+// perform the dispatch
+/*self*/
+// Should we run this pass on the current scope before running it on nested scopes?
+// index for the item // this could probably be more efficient, bailing out on assigning args past the end?
+// no such luck...
+// Function not used...but it gets rid of unused warnings in Eclipse (we do call those methods // from Ruby so they are not really unused).
+// line 1872
+// normal file descriptor..try to work with it
+// object is a custom class that extended one of the native types other than Object
+// now, create a method_added that can replace the DynamicMethod fields as they're redefined
+// Uncomment the "puts" lines if you want to see more detail
+// unsigned short, native
+// This code exploits the fact that all .jar files will be found for the JarredScript feature. // This is where the basic extension mechanism gets fixed
+// TODO: Add safety check for taintedness
+// alarm(bell)
+// line 1424
+// run ten separate calls into Ruby, with delay and explicit GC
+// dangling '%' char
+// insert all nodes in sequence, hash them in the final instruction // KEY
+// pop extra attr value
+// Empty paths do not need to be added
+"/* The Java method doesn't care what class it is, but we need to               know what to convert it to, so we use the object's own class.               If that doesn't help, we use String to force a call to the               object's ""to_s"" method. */"
+// Fast path since JNA stat is about 10x slower than this
+// -1 no match; 0 it is dot file not extension
+// line 1011
+// range_each_func(range, step_i, b, e, args);
+// Return a meta object corresponding to the class
+// FIXME: This is currently only here because of some problems with IOOutputStream writing to a "bare" runtime without a proper scope
+// entry exists, proxy doesn't match. replace. // this could happen if old proxy was gc'ed // TODO: raise exception if stored proxy is non-null? (not gc'ed)
+"/*  ================     *  Instance Methods     *  ================     */"
+// line 286
+// FIXME: This is copied code from RubyArray.  Both RE, Struct, and Array should share one impl // This is also hacky since I construct ruby objects to access ruby arrays through aref instead // of something lower.
+//TODO: ary_sort_check should be done here
+// leftToken made us start as nest 1
+// TODO should this be deprecated ? (to be efficient, internals should deal with RubyHash directly)
+// This while loop is for restarting the block call in case a 'redo' fires.
+// If no release method is defined, then memory leaks will result.
+// otherwise, use normal args compiler
+// Check if we can optimize this call based on the receiving method and receiver type // Use the simplified receiver!
+// TODO: Ruby re-checks that the buffer string hasn't been modified
+// Number of newlines read from the reader
+// entry is the first element of this bucket
+// IRubyObject, DynamicMethod, ThreadContext, IRubyObject, RubyModule, String, IRubyObject
+// uber-ThreadKill catcher, since it should always just mean "be dead"
+// read-volatile
+// FIXME: We should not be regenerating this over and over
+// TODO: Ruby reuses this logic for other "write" behavior by checking if it's an IO and calling write again
+// LEXPOP
+// two args, no block; load NULL_BLOCK
+// currBB cannot be null!
+// Next v                                        // g = 1 - 2*x*v
+// raw file URL, just open directly
+// TODO: NOT_ALLOCATABLE_ALLOCATOR is probably ok here, since we don't intend for people to monkey with // this type and it can't be marshalled. Confirm. JRUBY-415
+// TODO: check the return value here
+// adjusts paths started with '/' or '\\', on windows.
+// double precision, big-endian
+// string doesn't have it's own ByteList (values)
+// if root of method is rescue, compile as a light rescue
+// line 797
+// SYNC_FLUSH
+// In case last next was the newline.
+// setup new, etc unless this is a ConcreteJavaProxy subclass
+// check if it's an immediate, and don't outline
+/* \p{Hiragana} */
+// line 1615
+// FIXME: Big fat hack here, because scope names are expected to be interned strings by the parser
+// If we have more than one arg, make sure the array created to contain them is not ObjectSpaced
+// TODO: Only setAccessible to account for pattern found by // accessing constants included from a non-public interface. // (aka java.util.zip.ZipConstants being implemented by many // classes) // TODO: not sure we need this at all, since we only expose // public fields. //field.setAccessible(true);
+// pre-set for the sake of terminating recursive calls
+// There's not a compelling reason to keep JavaClass instances in a weak map // (any proxies created are [were] kept in a non-weak map, so in most cases they will // stick around anyway), and some good reasons not to (JavaClass creation is // expensive, for one; many lookups are performed when passing parameters to/from // methods; etc.). // TODO: faster custom concurrent map
+// If true, returns the rest of the array starting at the index
+// See if we have a converter for the job...
+"/** * * @author headius * FIXME convert to enum ? */"
+// TODO: no need to calculate every time.
+// NOTE: if 's' happens to the a class, this is effectively an assignment of a class instance variable
+// line 1366
+// This represents left most digit in a set of incremented // values?  Therefore leftmost numeric must be '1' and not '0' // 999 -> 1000, not 999 -> 0000.  whereas chars should be // zzz -> aaaa and non-alnum byte values should be "\377" -> "\001\000"
+// optimizations if we know ahead of time it will always be true or false
+// This method is called to build assignments for a multiple-assignment instruction
+// Major // Minor
+// double precision, native // double precision, native
+// end constructor
+// break out if we've dug as deep as we can
+// line 627
+// Atomic integers for symbol and method IDs
+// promise to implement N with block
+// If we don't have a body, check for required or opt args // if opt args, they could have side effects // if required args, need to raise errors if too few args passed // otherwise, method does nothing, make it a nop
+// SSS FIXME: To be done
+// build descriptor string
+/* zero length array */
+// // Remove the Executor task now, to avoid cancelled tasks accumulating // until an Executor thread can schedule and remove them //
+// line 1854
+// SSS FIXME: Pick one of bytelist or string, or add internal conversion methods to convert to the default representation
+// sign
+// line 836
+// TODO: port exact behavior from MRI, and move most locking logic into ChannelDescriptor // TODO: for all LOCK_NB cases, return false if they would block
+// This also handles unsigned int -> negative signed int conversion
+// No point in updating number if last number was same value.
+// TODO: MRI also can hadle Bignum here
+// Note that this object equality check is intentional, to ensure // the string and its interned version are the same object.
+// load static empty array
+// line 601
+// line 1485
+// READ_CHECK from MRI io.c
+// extension extensions
+// MBCLEN_NEEDMORE_P
+// actual type does not exactly match method return type, re-get converter // FIXME: when the only autoconversions are primitives, this won't be needed
+// If there is a jar-file with the required name, we add this to the class path.
+// line 1273
+// FIX replace type() == ... with isInstanceOf(...)
+// Value of the last expression in the block
+// JRUBY-2673: if wrapping a NativeException, use the actual Java exception's trace as our Java trace
+// TODO: confirm expected args are IRubyObject (or similar)
+// Because we implement Java interfaces now, we need a new === that's // aware of those additional "virtual" supertypes
+// SSS FIXME: What is the difference between ClassVarAsgnNode & ClassVarDeclNode
+// ARGF methods
+// we append an index to ensure two identical method names will not conflict
+// This is a dummy scope; we should find a way to make that more explicit
+// TODO: should probably apply the null object pattern for a // non-allowed class, rather than null
+// if it's a singleton class and the real class is proc, we're doing closure conversion // so just use Proc's hashcode
+// line 521
+// TODO: Generalize this type-checking code into IRubyObject helper.
+// TODO: list.subList(from, to).clear() is supposed to clear the sublist from the list. // How can we support this operation?
+// line 1746
+// Reduces overhead in interp by not set position every single line we encounter.
+"/* Compute Meet Over All Paths solution for this dataflow problem on the input CFG.     * This implements a standard worklist algorithm. */"
+// SignalFacade
+//                    actualPath = new File(RubyFile.expandUserPath(runtime.getCurrentContext(), reportedPath));
+// promise to implement two to three
+// Initial v - the reciprocal // v0 = 1/(2*x)
+// line 586
+// SSS FIXME: I could make IR_Loop a scope too ... semantically, it is a scope, but, functionally, not sure if this is required yet ...
+// Note: we change current frames visibility here because the methods which call // this method are all "fast" (e.g. they do not created their own frame).
+// a normal block passed to define_method changes to do arity checking; make it a lambda
+// RubyIPSocket
+// This method is intended only for defining new classes in Ruby code, // so it uses the allocator of the specified superclass or default to // the Object allocator. It should NOT be used to define classes that require a native allocator.
+// JRUBY-3014: make __FILE__ dynamically determined at load time, but // we provide a reasonable default here
+// TODO: number formatting here, MRI uses "%-.10g", 1.4 API is a must?
+// end hack
+// 0x3fff_ffff // -0x4000_0000
+// If the cfg of the method is around, print the CFG!
+// line 952
+// this is a simple rethrow handler
+// TODO: READ_CHECK from MRI
+// TODO: build arg list based on number of args, optionals, etc
+// this needs to be split, since conditional calling #inherited doesn't fit standard ruby semantics
+// Where we started this marker match
+// line 890
+// filter out any Java primitive names // TODO: should check against all Java reserved names here, not just primitives
+// JRUBY-646 // presumably this require should fail
+// Need to initialize
+// not allowed for existing Java interface modules
+// line 1363
+// we know variables cannot be null since localstaticscope will create a 0 length one.
+// 3. MRI ignores the trailing junk
+//io.finish();
+// Atomic ?
+// line 1138
+// Translate "x || y" --> "x = (is_true(x) ? x : y)" --> //  //    x = -- build(x) should return a variable! -- //    f = is_true(x) //    beq(f, true, L) //    x = -- build(y) -- // L: //
+// just save a count of zeroes for now; if no digit // ends up following them, they'll be applied to the // exponent rather than the significand (and our max // length for optimistic calc).
+// line 1705
+/* FIXME: arg_concat logic missing for opt_call_args*/
+// already have some bytes buffered, just return those
+// Sometimes the value can be retrieved at "compile time".  If we succeed, nothing like it!   // We might not .. for the following reasons: // 1. The constant is missing, // 2. The reference is a forward-reference, // 3. The constant's value is only known at run-time on first-access (but, this is runtime, isn't it??) // 4. Our compiler isn't able to right away infer that this is a constant. // // SSS FIXME: // 1. The operand can be a literal array, range, or hash -- hence Operand //    because Array, Range, and Hash derive from Operand and not Constant ... //    Is there a way to fix this impedance mismatch? // 2. It should be possible to handle the forward-reference case by creating a new //    ForwardReference operand and then inform the scope of the forward reference //    which the scope can fix up when the reference gets defined.  At code-gen time, //    if the reference is unresolved, when a value is retrieved for the forward-ref //    and we get a null, we can throw a ConstMissing exception!  Not sure! //
+// line 964
+// number of variables in this scope representing required arguments
+// line 1337
+/* MRI: range_op */
+// No binding scope so we should create one
+// line 7713 "-"
+// no binding given, use 0 for both
+// Remaining arguments are for the script itself
+// line 1442
+// trim extension to try other options
+// check for thread events, in case we've been woken up to die
+//yyLhs 496
+// terminate and advance buffer when we find our char
+// line 574
+// retrieve method // module // name
+// IN is the same!
+// signed short, little-endian
+// line 915
+// context is null, wipe out the SoftReference (this could be done with a reference queue)
+// TODO: Something about pipe buffer length here
+// inline script
+// If 'r' is not a constant, it could actually be a compound value! // Look in our value map to see if we have a simplified value for the receiver.
+// Until we get a little more solid on 1.9 support we will only run interpreted mode
+// Java Doubles are 64 bit long:
+// Equivalent of T_DATA
+// TODO: this code should really check if a Ruby equals method is implemented or not.
+// TODO: adjust length so it won't fall in the middle  // of a multi-byte character. MRI's sprintf.c uses tables // in a modified version of regex.c, which assume some // particular  encoding for a given installation/application. // (See regex.c#re_mbcinit in ruby-1.8.5-p12)  // // This is only an issue if the user specifies a precision // that causes the string to be truncated. The same issue // would arise taking a substring of a ByteList-backed RubyString.
+// FIXME: this really ought to be in clinit, but it doesn't matter much
+// internal usage (Complex/Rational)
+"/** * SSS FIXME: Used anywhere?  I don't see calls to this anywhere    public Operand buildDAsgnAssignment(Node node, IR_Scope s) {        DAsgnNode dasgnNode = (DAsgnNode) node;        s.getVariableCompiler().assignLocalVariable(dasgnNode.getIndex(), dasgnNode.getDepth());    }**/"
+// ENEBO: Can these be fast?
+// if we're not attempting to invoke method_missing and method is not visible, branch to method_missing
+// must be a public method
+// thread context, receiver and original args
+// Here starts the logic for the class definition
+// boot the Object class
+// line 1314
+// Static constants
+// start a new populator
+// line 801
+/* SSS FIXME: Do we need to check if l is same as whatever popped? */
+// The implementations of these are all bonus (see TODO above)  I was going // to throw an error from these, but it appears to be the wrong place to // do it.
+// TODO: decompose getJavaPackageModule so we don't parse fullName
+// SSS FIXME: Token can be final for a method -- implying that the token is only for this particular implementation of the method // But, if the mehod is modified, we create a new method object which in turn gets a new token.  What makes sense??  Intuitively, // it seems the first one ... but let us see ... // Current code version token for this method -- can change during execution as methods get redefined!
+// get implementation
+// carriage return
+// line 1308
+"/*         * Initialize a simple Frame.          */"
+// see note below re: 2-field kludge
+// else [default] reduce (yyN)
+// bench fixnum-boxed fib
+// update superclass reference
+// ignore and try windows version
+// default PidGetter
+// zero args, no block; load NULL_BLOCK
+// FIXME: shouldn't need @__java_ovrd_methods, just query locally defined methods.
+// prepare temp locals
+// end class
+/* was $$ = null;*/
+// Start of string ([, (, {, <, ', ", \n)
+// line 367
+// actual required is greater than 3, raise error (we don't support actual required > 3)
+// We use a highly uncommon string to represent the paragraph delimiter (100% soln not worth it)
+// Because Regexp#=== sets backref, we have to make this backref-aware
+// IRubyObject, DynamicMethod, RubyClass, CacheEntry, ThreadContext, IRubyObject, IRubyObject, String
+// line 1026
+// line 782
+// interned, OK for "fast" methods
+// escape
+// remove leading whitespace (includes _ for lax) // get sign, if any
+// line 1789
+"/*     * If we are setting post arguments we can assume there are no pre or others     */"
+// mutex that controls modifications of internal finalizers
+// line 1234
+//            return warnMultiReturnNil(ruby);
+// line 1081
+// TODO: Should frozen error have its own distinct class?  If not should more share?
+// rest of the argument array!
+// @JRubyMethod(name = "exact?")
+"/*         * If there is exactly _one_ callback argument to the function,         * then a block can be given and automatically subsituted for the callback         * parameter.         */"
+// for interface impls
+//TODO deal with UNC names
+/* no mb || ismbchar(term)*/
+// line 1427
+// line 543
+// line 578
+// TODO: check if too many open files, GC and try again
+// line 757
+// we limit to int because ByteBuffer can only allocate int sizes
+// line 1286
+// fields to hold Ruby and RubyClass references
+// // Ruby-level methods //
+// TODO: NOT_ALLOCATABLE_ALLOCATOR may be ok here, but it's unclear how Structs // work with marshalling. Confirm behavior and ensure we're doing this correctly. JRUBY-415
+// load the encoding
+// line 1722
+// line 972
+// SSS: FIXME: Somewhere here, we need to record information the type of this operand as String
+// MRI extends in order from last to first
+// make getter for handler
+// line 1293
+// i'th argument
+// line 1651
+// init errorInfo to nil
+// The name of this source (e.g. a filename: foo.rb)
+// significant digits and exponent
+// modified only by addMethod; no synchronization required
+// If we have more than one argument, then make sure the array is not ObjectSpaced.
+// We're doing normal framed compilation or the method needs a frame
+// Bootstrap the top of the hierarchy
+// proxy class for concrete classes.  also used for // "concrete" interfaces, which is why we have two fields
+// line 484
+// if we've found the last char of the separator, // and we've found at least as many characters as separator length, // and the last n characters of our buffer match the separator, we're done
+//        assertSame(script1, script2);
+// TODO: make it cross runtime safe by COW or eager copy
+// FIXME: I think this chunk is equivalent to MRI id2name (and not our public method  // id2name).  Make into method if used more than once.
+// if it's method_missing, just invoke it
+// XXX: const lookup can trigger const_missing; is that enough to warrant it always being executed?
+// TODO: this method is not present in MRI!
+// long, little-endian
+//FIXME: When we get JNA3 we need to properly write this to errno.
+// line 1118
+// SSS FIXME: Traverse up the scope hierarchy to find the constant as long as the parent is a static scope
+// line 1107
+// we can't rename a file while it's open in windows
+// No auto cleanup needed
+// 4 -> e+nn / e-nn
+// If it's a single-arg when but contains an array, we know it's a real literal array // FIXME: This is a gross way to figure it out; parser help similar to yield argument passing (expandArguments) would be better
+// finally, post args
+// that's what JDK5 produces on Windows Vista
+// line 1814
+// dup it since we need to return appropriately if it's false
+// FNFException can be thrown in both cases, when the file // is not found, or when permission is denied.
+// MRI doesn't flag it as an error if width is given multiple // times as a number (but it does for *)
+// Assign the closure to the block variable in the parent scope and return it
+// line 969
+// If there's a second argument, it's the path to which the first  // argument is relative.
+// line 1791
+// sic
+// line 1038
+// Pad with a 0
+// line 575
+// Increase precision - next iteration supplies n exact digits
+// FIXME: wtf is this? Why would these use the class?
+"/*     * Process {}'s (example: Dir.glob(""{jruby,jython}/README*"")      */"
+// line 814
+// We only need to pass in current scope if we are evaluating as a block (which // is only done for evals).  We need to pass this in so that we can appropriately scope // down to captured scopes when we are parsing.
+// If we define a class in Ruby, but later want to allow it to be defined in Java, // the allocator needs to be updated
+// TODO: rounding mode should not be hard-coded. See #mode.
+// Force t3 to quit, just in case if it's stuck. // Note: On some platforms, even interrupt might not // have an effect if the thread is IO blocked.
+/* $<: reading filename */
+// MRI behavior: swallow StandardErorrs
+// Label for the start of the closure (used to implement redo) // Label for the end of the closure (used to implement retry)
+// line 1968
+// TODO: do above but not below for additional newline nodes
+// line 1201
+//          context.swapValues(); //context.consumeCurrentValue();
+// compile first node only
+// line 1502
+// line 540
+// no dec digits after '.', error for strict
+// Check the 2 values obtained via different means
+// check args first, since body inspection can depend on args
+// RubyUDPSocket
+// IRubyObject, CacheEntry, ThreadContext, IRubyObject, IRubyObject, String, IRubyObject
+// line 1935
+// Create block for this iter node // FIXME: We shouldn't use the current scope if it's not actually from the same hierarchy of static scopes
+// first try our custom-generated Unsafe
+// drop through for sign
+// try to rename one more time
+// line 965
+// line 868
+// line 1623
+// Iterate over the RubyHash keySet, simultaneously iterating over the values()
+// line 1869
+// if it's not a rescue or ensure, there's a frame associated, so decrement
+// TODO: NOT_ALLOCATABLE_ALLOCATOR is probably ok here. Confirm. JRUBY-415
+// TODO: call ruby method
+// args
+// line 1348
+// be dead
+// silence
+// up to ten, stuff into tmp locals, load in reverse order, and assign // FIXME: There's probably a slightly smarter way, but is it important?
+// line 691
+// SSS FIXME: Move this code to some utils area .. or probably there is already a method for this in some jruby utils class // Holy cow!  Just to append two darned arrays!
+// TODO: other reserved names?
+// this seems unlikely to happen unless it's a totally bogus fileno // ...so do we even need to bother trying to create one?
+// Compute meet over all "sources" and compute "destination" basic blocks that should then be processed.  // sources & targets depends on direction of the data flow problem
+// switch //while
+// successfully got back a jitted method
+// line 1155
+// TODO: This version differs from ioctl by checking whether fcntl exists // and raising notimplemented if it doesn't; perhaps no difference for us?
+// if we get here, no optz cases work; fall back on unoptz.
+// horizontal tab
+// putting a bit back, so we're not at EOF anymore
+// line 970
+// This is a fairly specific hack for empty string, but it does the job
+// SSS FIXME: Receiver -- this is the class meta object basically? // Operand receiver = build(defsNode.getReceiverNode(), s);
+// No timeout in critical section
+/* $.: last read line number */
+// Helper function to give a good view of current dynamic scope with captured scopes
+// MRI behavior: "If digits is 0, the result is the same as the / operator."
+/* ----------- Private Interface ------------ */
+// if given path is absolute, just try it as-is (with extensions) and no load path
+// We need to close the out, since some // processes would just wait for the stream // to be closed before they process its content, // and produce the output. E.g.: "cat".
+// using IOInputStream may not be the most performance way, but it's easy.
+// This is pretty inefficient for building an array, so just raise an error if someone's using it for a lot of elements
+// ruby constants for strings (should this be moved somewhere else?)
+// ?u  | boolean | True if file1 has the setuid bit set
+// line 951
+// dummy bodies for default impls
+/* rb: readable */
+// ?M  | Time    | Last modification time for file1
+// delete implementation
+// We promote our box to being its own box since we're changing // visibilities, and need it to be reflected on this method object // independent of any other sharing the box.
+/* \O, \OO, \OOO or backref */
+// add all static variables
+// if it's a compiled JRuby script, instantiate and run it
+// line 1480
+// ensure zero is devoted to no method name
+// FIXME: We should really not be creating the dynamic scope for the root // of the AST before parsing.  This makes us end up needing to readjust // this dynamic scope coming out of parse (and for local static scopes it // will always happen because of $~ and $_). // FIXME: Because we end up adjusting this after-the-fact, we can't use // any of the specific-size scopes.
+// TODO: Split this into two sub-classes so that name and constNode can be specified seperately.
+// TODO: Make this more intelligible value
+// if we hit EOF or reached limit then we're done
+// TODO: deal with varargs
+// decimal
+// TODO: This is where we would want to do precision checks to see // if it's non-destructive to coerce a given type into the target // integral primitive
+// MRI 1.8.5-p12 doesn't support 1-char strings, but // YARV 0.4.1 does. I don't think it hurts to include // this; sprintf('%c','a') is nicer than sprintf('%c','a'[0])
+// line 1731
+// single precision, little-endian
+// something?
+// store the new local vars in a local variable
+// See [ruby-core:17483]
+// line 884
+// FIXME: I don't like this
+// The reason why we need the stream is to be able to invoke available() on it. // STDIN in Java is non-interruptible, non-selectable, and attempt to read // on such stream might lead to thread being blocked without *any* way to unblock it. // That's where available() comes it, so at least we could check whether // anything is available to be read without blocking.
+// line 342
+// boxed arg list __file__
+// Make sure this is not a directory or unavailable in some way
+// in debug mode we append _DBG to class name to force it to regenerate (or use pre-generated debug version)
+// MRI behavior: Be default, 2 digits // in the exponent. Use 3 digits // only when necessary. // See comment for writeExp method for more details.
+// Windows does not support these functions, so we won't even try // This also matches Ruby behavior for JRUBY-2353.
+// initialize builtin libraries
+// inside a loop, jump to body
+// Lastline
+// Proc implementing an interface, pull in the catch-all code that lets the proc get invoked // no matter what method is called on the interface
+/* string fragment (we optimistically take one off in*/
+// the proxy (wrapper) type hierarchy
+// construct new array proxy (ArrayJavaProxy)
+// end of try block
+// look for mangling markers for compiled Ruby in method name
+// Is this instruction live or dead?  During optimization passes, if this instruction // causes no side-effects and the result of the instruction is not needed by anyone else, // we can remove this instruction altogether without affecting program correctness.
+// use IRubyObject[]
+// we've already done the above priming logic, just add another interface // to the list of intentions unless we're past the point of no return or // already intend to implement the given interface
+/* ENEBO: Removed !compile_for_eval which probably is to reduce warnings*/
+// FIXME: Clearing read buffer here...is this appropriate?
+// Our shell scripts pass in non-canonicalized paths, but even if we didn't // anyone who did would become unhappy because Ruby apps expect no relative // operators in the pathname (rubygems, for example).
+// block (primary)
+// FIXME: do we really want 'declared' methods?  includes private/protected, and does _not_ // include superclass methods.  also, the getDeclared calls may throw SecurityException if // we're running under a restrictive security policy.
+// line 1603
+/*encode.limit() - */
+// try optz version
+// SSS FIXME: 1. Is the ordering correct? (poll before next)
+// basically just forcing a TypeError here to match MRI
+// including interface module so old-style interface "subclasses" will // respond correctly to #kind_of?, etc.
+// too much array creation!
+// Java support
+// add alias to meta
+"/* Ruby arrays default to holding 16 elements, so we create an         * ArrayList of the same size if we're not told otherwise         */"
+// RubyDigest
+// something in here is used to build up ruby stack trace...
+// line 331
+// trim trailing slashes
+// promise to implement zero to three with block
+// hmm...
+// Do not clone cached methods // FIXME: MRI copies all methods here
+// Object#to_a is obsolete.  We match Ruby's hack until to_a goes away.  Then we can  // remove this hack too.
+// end suffix iteration
+// line 772
+// Notify the calling thread that we're about to go to sleep the first time
+// Zero-Argument declaration
+// Note: includes part of fix for JRUBY-1339
+// class and module bodies default to public, so make the block's visibility public. JRUBY-1185.
+// happens with native exceptions, should not filter those out
+// receiver, args, result, value
+// A thread pool to use for executing this runtime's Ruby threads
+// FIXME: legal here? may want UnsupportedOperationException
+// line 1448
+// SSS FIXME: Where is this set up?  How is this diff from ClassVarDeclNode??
+// line 883
+// rb_enc_mbclen
+// Ordering of array traversal not important, just intuitive
+// add 'new' with full signature, so it's guaranteed to be directly accessible // TODO: no need for this to be a full, formal JVM signature
+// search through all declared methods to find a closest match
+// verify the class
+// construct the mirror class and parent classes
+// Java and MRI definitions of divmod are different.
+// A place to store that special hiding space that bindings need to implement things like: // eval("a = 1", binding); eval("p a").  All binding instances must get access to this // hidden shared scope.  We store it here.  This will be null if no binding has yet // been called.
+// FIXME: this probably belongs in a different package.
+// not actually called anywhere (all known uses call the fast version)
+// encoding doesn't have to be copied.
+// Create list of interfaces to proxy (and make sure they really are interfaces)
+// The value of 1 is for Socket::AI_PASSIVE.
+/* rb: writable */
+// Populate values for the parameter names
+// line 803
+// line 1742
+// line 1557
+//  '_' in number just ignored
+// This should only be called by 1.8 (1.9 subclasses this to handle unusedBlock).
+// line 923
+// Increase value to hit lower range.
+// How many strings are nested in the current string term
+// line 1182
+// line 806
+// [adapter, tc]
+// proxy module for interfaces
+// line 414
+// add to the jitted methods set
+// no library or extension found, try to load directly as a class
+// keep a reference to avoid the memory being freed
+// By default, no simplifications!
+// TODO: notify threads waiting on descriptors/IO? probably not...
+// notify thread to proceed
+// no dec digits, end of parseable data, go to calc
+// Peel onion...make subpatterns out of outer layer of glob and recall with each subpattern  // Example: foo{a{c},b}bar -> fooa{c}bar, foobbar
+// print out as a nice Ruby backtrace
+// TODO: get rid of this (lax returns 0.0, strict will throw)
+// Frame is extraneous runtime information, skip it unless debug
+// float number of seconds
+// Sockaddr_un has different structure on different platforms. // See JRUBY-2213 for more details.
+// In the current logic, if we get here we know that module is not an // IncludedModuleWrapper, so there's no need to fish out the delegate. But just // in case the logic should change later, let's do it anyway
+// line 417
+// select appropriate call site // dup receiver // load self
+// Handle Flow exceptions, just propagating them
+// Raise an error if arity does not match requirements
+// refresh call adapter, since it matters if this is iter-based or not
+// suboptimal for large hashes (> 1073741824 + 85 entries) not very likely to happen
+// line 1189
+// no script to run, return success below
+// again, shouldn't happen. TODO: might want to throw exception instead.
+// one optional and no required args
+// line 1588
+/* ----------- Public Interface ------------ */
+// add all names for this annotation
+// static invocation

@@ -1,0 +1,196 @@
+//  Note: The forwarded resource is supposed to determine the content type itself.
+//  Open frame not sent yet?   If in the session initialization thread, then cache, otherwise wait.
+//  If we've gone as far as we can go and haven't found it...
+//  It would be nice to partially match a path and get any bound variables in one step
+/*  * Tests for pooling invoker interceptor. * TODO: need to make these tests stronger: it's hard to * make too many assumptions about a pool. * * @author Rod Johnson * @author Rob Harrop * @author Chris Beams * @author Stephane Nicoll  */
+//  TODO possible optimization - only regex match if rest of pattern matches?   Benefit likely to vary pattern to pattern
+//  TODO: make sure Callback is null
+//  ctx.register(ConfigWithPlaceholderConfigurer.class);
+//  Force this, since we'll never actually connect
+//  Fall back to stream existence: can we open the stream?
+//  TODO correct end position?
+//  TODO: returns just 1 as of AspectJ 1.9 beta 3, not detecting the applicable lambda expression anymore   assertEquals(2, ctx.getBean(CountingAspect.class).count);
+//  wait for the entry to expire
+//  Parse the argument types and compute their size, one at a each loop iteration.
+//  TODO: small memory optimization here (can skip creation for methods with no advice)
+//  Not streaming: write headers without committing response..
+// ---------------------------------------------------------------------   Abstract methods that must be implemented by subclasses  ---------------------------------------------------------------------
+//  No implementation, just an addition of the tag interface StatefulJob   in order to allow stateful method invoking jobs.
+//  HttpMessageEncoder...
+//  TODO need to make this conditionally occur based on a debug flag
+//  Haven't yet been into second branch
+//  TODO support multidimensional arrays   TODO support correct syntax for multidimensional [][][] and not [,,,]
+// bad method (too many args, doesn't obey class contract)
+//  The target does not implement the hashCode() method itself.
+/* 	 * Further TODO for compilation:	 *	 * - OpMinus with a single literal operand could be treated as a negative literal. Will save a	 *   pointless loading of 0 and then a subtract instruction in code gen.	 * - allow other accessors/resolvers to participate in compilation and create their own code	 * - A TypeReference followed by (what ends up as) a static method invocation can really skip	 *   code gen for the TypeReference since once that is used to locate the method it is not	 *   used again.	 * - The opEq implementation is quite basic. It will compare numbers of the same type (allowing	 *   them to be their boxed or unboxed variants) or compare object references. It does not	 *   compile expressions where numbers are of different types or when objects implement	 *   Comparable.     *	 * Compiled nodes:	 *	 * TypeReference	 * OperatorInstanceOf	 * StringLiteral	 * NullLiteral	 * RealLiteral	 * IntLiteral	 * LongLiteral	 * BooleanLiteral	 * FloatLiteral	 * OpOr	 * OpAnd	 * OperatorNot	 * Ternary	 * Elvis	 * VariableReference	 * OpLt	 * OpLe	 * OpGt	 * OpGe	 * OpEq	 * OpNe	 * OpPlus	 * OpMinus	 * OpMultiply	 * OpDivide	 * MethodReference	 * PropertyOrFieldReference	 * Indexer	 * CompoundExpression	 * ConstructorReference	 * FunctionReference	 * InlineList	 * OpModulus	 *	 * Not yet compiled (some may never need to be):	 * Assign	 * BeanReference	 * Identifier	 * OpDec	 * OpBetween	 * OpMatches	 * OpPower	 * OpInc	 * Projection	 * QualifiedId	 * Selection	  */
+//  TODO don't lose generic info for the new map
+//  TODO Is the resolver/executor model too pervasive in this package?
+//  TODO [SPR-13537] Change equalTo(null) to equalTo("").
+// FIXME revisit in case of reentrant sync deadlock
+//  we have work todo...
+//  SPR-2368
+//  Check that toString doesn't cause a problem
+//  TODO Enable TestNG test with timeout once we have a solution.
+//  slight hack for Linux/Unix systems
+//  The stack size delta is 1 for BIPUSH or SIPUSH, and 0 for NEWARRAY.
+//  TODO used to catch UnknownAdviceTypeException, but   with CGLIB some errors are in proxy creation and are wrapped   in aspect exception. Error message is still fine.  assertTrue(ex.getMessage().indexOf("ntroduction") > -1);
+//  (2) Or register an accessor that can understand 'p' and return the right person
+//  We don't trust the JMS provider: It might throw RuntimeException or Error.
+//  TODO: shouldn't the wildcard lower the score?  		assertEquals(-1,  				comparator.compare(parse("/hotels/new"), parse("/hotels/new.*")));
+//  TODO: remove reflection when build requires JDK 9+
+// FIXME inline?
+// generated numbers:
+//  TODO - only handles 2-dimensional arrays
+//  TODO Fails related to conversion service converting a String[] to satisfy Object...  		expression = parser.parseExpression("sixteen(stringArray)");  		assertCantCompile(expression);  		expression.getValue(tc);  		assertEquals("aaabbbccc", tc.s);  		assertCanCompile(expression);  		tc.reset();  		expression.getValue(tc);  		assertEquals("aaabbbccc", tc.s);  		tc.reset();
+//  Workaround  caching issue...
+//  Complete configuring the PrototypeTargetSource.
+//  This is a hack to be able to get the generated key from a database that doesn't support   get generated keys feature. HSQL is one, PostgreSQL is another. Postgres uses a RETURNING   clause while HSQL uses a second query that has to be executed with the same connection.
+// ---------------------------------------------------------------------   Inner classes for internal use  ---------------------------------------------------------------------
+//  relative to the input stack size, which is not known yet).
+//  this test is a bit fragile, but gets the job done, proving that an   attempt was made to look up the AJ aspect. It's due to classpath issues   in .integration-tests that it's not found.
+//  Static factory methods and accessors
+//  testing on Windows
+//  We have been able to determine the arg names.
+//  TODO: Reactor usually times out on Windows ...
+//  TODO May fail on either call: may want to tighten up definition
+// ---------------------------------------------------------------------   Implementation of Spring Validator interface  ---------------------------------------------------------------------
+//  try first time
+//  TODO possible optimization here if we cache the discovered type reference, but can we do that?
+//  Remaining methods
+//  and 08xxx will be data resource failure (non-transient) picked up by the fallback SQLState translator
+//  OK, so we need an EntityManagerFactory...
+//  OpEq
+//  Second pass: Look for parameter index match.
+//  If this check is changed, the generateCode method will need changing too
+//  SPR-11360
+//  Can't clearly figure out exact method due to type converting / autowiring!
+//  simply must not bail; we don't want non-existent resources to result in an Exception
+//  TODO unable to build correct type descriptor
+//  Enforce ASM via class name resolution
+//  chain of statics ending with static method
+//  We couldn't identify it more precisely - let's hand it over to the SQLState fallback translator.
+//  TODO this seems rather bogus, should we eagerly show an error?
+//  Replace the original bean definition with the target one, if necessary
+//  TODO Do we need special handling when patterns contain multiple dots?
+//  TODO could do with more refactoring around argument handling and varargs
+//  stack: <nothing>   load 0 or 1 depending on comparison instruction
+//  -9000
+//  1 will make it throw a RuntimeException - SpEL will let this through
+//  If dstTypes[dstIndex] has never been assigned, merge(srcType, dstType) = srcType.
+//  2xx Success
+//  TODO: change to ByteBufferFeeder when supported by Jackson   See https://github.com/FasterXML/jackson-core/issues/478
+//  TODO Future optimization - if followed by a static method call, skip generating code here
+//  not implemented
+//  Type-based argument resolution
+//  TODO verify remaining output for forms 5, 6, 7, 8, and 14 (fix whitespace)
+//  gh-22703
+//  Wrap executor with an unconfigurable decorator.
+//  TODO replace this check: no longer possible  assertEquals(advised.getTarget(), this);
+//  This method may throw any BeansException, which won't be caught   here, if there is a critical failure such as no matching field.   We can attempt to deal only with less serious exceptions.
+//  Invocation on EntityManager interface coming in...
+//  will probably never happen, doesn't make much sense
+//  need to touch the MBean proxy
+/* 	* SPR_2165 - ClassEditor is inconsistent with multidimensional arrays	 */
+/* 	 * Tomcat: ClientAbortException or EOFException	 * Jetty: EofException	 * WildFly, GlassFish: java.io.IOException "Broken pipe" (already covered)	 * <p>TODO:	 * This definition is currently duplicated between HttpWebHandlerAdapter	 * and AbstractSockJsSession. It is a candidate for a common utility class.	 * @see #indicatesDisconnectedClient(Throwable)	  */
+//  key is foo.bar
+/* 	 * SPR-6038: detect HSQL and stop illegal locks being taken.	 * TODO: Against Quartz 2.2, this test's job doesn't actually execute anymore...	  */
+//  unary expressions
+//  TODO: Make me final when deprecated methods are removed
+//  Reset the ConnectionHolder: It might remain bound to the thread.
+//  TODO Determine why connectWithError() is unused.
+//  Instead of postHandle and afterCompletion
+//  TODO Determine why setExceptionToRaise() is unused.
+//  TODO: It's just an adapter but returning 0 might still have side effects...
+//  Plain PersistenceException wrapper for underlying exception?   Make sure the nested exception message is properly exposed,   along the lines of Spring's NestedRuntimeException.getMessage()
+//  Standard headers (as defined in the spec)
+//  We don't trust the JDBC driver: It might throw RuntimeException or Error.
+//  binding from returning clause
+//  TODO: Why does this test fail? It hasn't been run before, so it maybe never actually passed...
+//  Read-write transaction -> flush the Hibernate Session.   Further check: only flush when not FlushMode.MANUAL.
+//  TODO fails due to conversionservice handling of String[] to Object...  	expression = parser.parseExpression("#append2(#stringArray)");
+//  TODO: maybe try and detect this as a special case in parser?
+//  OperatorMatches
+//  TODO: optimize
+//  We weren't ignoring anything anyway...
+//  TODO: what does this mean? This method is not used in SpEL so probably ignorable?
+//  TODO what is the end position for a method reference? the name or the last arg?
+//  We can optimize this because it's all new:   There is no replacement of existing property values.
+//  varargs string
+//  Regex patterns that matches URIs. See RFC 3986, appendix B
+//  Then skip the num_element_value_pairs and element_value_pairs fields (by reading them
+//  TODO: error?
+//  Direct URL lookup
+//  TODO document this behaviour.
+//  Ensure BeanNameUrlHandlerMapping (SPR-8289) and default HandlerAdapters are not "turned off"
+//  TODO following lines are a workaround for Hibernate bug   If Hibernate throws an exception due to flush(),   it actually HAS flushed, meaning that the database   was updated outside the transaction
+//  TODO this will currently map, would be nice for optimization  assertTrue(ajexp.matches(HasGeneric.class));  assertFalse(ajexp.matches(TestBean.class));
+//  TODO might want to control this behaviour...   Do we really want to call remove after a remote exception?
+//  what happens on (Integer,String) passed to (Integer[]) ?
+//  gh-23358
+//  Now build a new MultipartBodyBuilder, as BodyInserters.fromMultipartData would do...
+//  testing some ????? behavior
+//  JSR-330 API not available - Provider interface simply not supported then.
+//  Delete first and last characters of value: { and }
+//  TODO currently failing as with new ObjectToArray converter closest constructor
+//  -----------------------------------------------------------------------------------------------   Constructors   -----------------------------------------------------------------------------------------------
+//  Resolve plain BeanDefinition, without contained name: use dummy name.
+//  TODO revisit performance if doing a lot of case insensitive matching
+//  Efficient ISO_LOCAL_* variants for printing since they are twice as fast...
+//  look up EJB home and create method
+// 5
+//  TODO -- this fails with NPE due to ArrayToObject converter - discuss with Andy  setValueExpectError("arrayContainer.doubles[1]", new ArrayList<String>());  setValueExpectError("arrayContainer.shorts[1]", new ArrayList<String>());
+//  The above result is likely to be incomplete, i.e. only containing file system references.   We need to have pointers to each of the jar files on the classpath as well...
+//  varargs with conversion required
+//  gh-21670
+//  for now just make a new array; TODO: optimize
+//  TODO is this caching safe - passing the expression around will mean this executor is also being passed around
+//  No client side HttpCookie support yet
+//  should throw, bad (non-Exception-type) serviceLocatorException class supplied
+//  ---- workaround ----
+//  TODO this looks like a serious issue (but not a new one): the context object against which arguments are evaluated seems wrong:  		evaluate("{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10}.?[isEven(value) == 'y']", "[2, 4, 6, 8, 10]", ArrayList.class);
+//  Instantiation failure, maybe too early...
+//  the first constant pool entry, which itself starts at cpInfoOffsets[1] - 1 (by definition).
+//  Quick check for existing entry on ConcurrentHashMap...
+//  SPR-13620
+//  gh-22576
+//  TODO: publisherToMono/CompletableFuture vs Single (ISE on multiple elements)?
+//  some case would not have been really necessary, but we can't know this at this point).
+//  JCA WorkManager resolved lazily - may not be available.
+/*  Do Nothing  */
+//  TODO: Consider optimization by caching the list of the aspect names
+//  We need to create a proxy for this...
+//  request the beans from non-privileged code
+//  Kotlin module
+//  FORWARD/ERROR/ASYNC: minimal message (there should be enough context already)
+//  here: RIGHT==null LEFT==unknown
+//  TODO should be able to make this assertion: need to fix target handling   in AdvisedSupport  assertEquals(target2, ((Advised) proxied).getTarget());
+//  Associate target with ThreadLocal.
+//  Not implemented
+//  It has already caused a field error with a rejected value.
+//  Remove corresponding bean from singleton cache, if any. Shouldn't usually   be necessary, rather just meant for overriding a context's default beans
+//  -----------------------------------------------------------------------------------------------   Frame output methods, to generate StackMapFrame attributes   -----------------------------------------------------------------------------------------------
+//  TODO better exception handling
+//  SPR-8637
+//  TODO currently failing since setValue does a getValue and "Wien" string != PlaceOfBirth - check with andy
+/* 	 * Eat an identifier, possibly qualified (meaning that it is dotted).	 * TODO AndyC Could create complete identifiers (a.b.c) here rather than a sequence of them? (a, b, c)	  */
+//  nothing to really test; it is enough if we don't get error while creating app context
+// ---------------------------------------------------------------------   Lifecycle in bean factory: automatically register/unregister beans  ---------------------------------------------------------------------
+//  start the MBeanExporter
+//  TODO: refactor in AbstractBeanFactory (tests for AbstractBeanFactory)
+//  Pre-bound Session found -> simply proceed.
+//  These test classes simulate a pattern of public/private classes seen in Spring Security
+//  Three strings, optimal bytecode would only use one StringBuilder
+//  one error (should not include delimiter)
+//  Relative path
+//  If they were numbers, were they compatible?
+//  Bean Validation 2.0: currently not implemented here since it would imply   a hard dependency on the new javax.validation.ClockProvider interface.   To be resolved once Spring Framework requires Bean Validation 2.0+.   Obtain the native ValidatorFactory through unwrap(ValidatorFactory.class)   instead which will fully support a getClockProvider() call as well.
+//  Standard collection interfaces
+//  Determine ResourceLoader to use.
+//  TODO: broken comparison since Mockito 2.2 upgrade   verifyIdenticalInvocations(expectedLexicalHandler, actualLexicalHandler);
+// registrar.setMappedObjectNames(new Object[] {objectName, objectName2});
+//  TODO if you change type pattern from org.springframework.beans..*   to org.springframework..* it also matches introduction.   Perhaps generated advisor bean definition could be made to depend   on the introduction, in which case this would not be a problem.
+//  TODO: Optimization: Process only if this() specifies a type and not an identifier.
+//  Create and/or resize the output local variables array if necessary.
+//  Rollback (automatically)
+//  the return value is the new value, not the original value
+//  TODO: fix Reactor support

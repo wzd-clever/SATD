@@ -1,0 +1,680 @@
+//  Ignore all the exceptions and wait for the next retry
+//  We add listeners to make sure our out bound event is correct.   If our out bound event has an error (in most cases the encoder fails),   we need to have the request return directly instead of blocking the invoke process.
+//  directly throw if exception class and interface class are in the same jar file.
+//  biz exception.
+//  @@protoc_insertion_point(interface_extends:Map)
+//  test group
+//  service scope by default.
+// proxieeClass = c;
+//  ~ end of loop map
+//  to verify interfaceClass is an interface
+//  FIXME: now we need to check first, then load
+//  Convert parameters into map
+//  because helloServiceInvoker and demoServiceInvoker use share connect， so client list must be equal
+//  Normalize ticksPerWheel to power of two and initialize the wheel.
+//  if the timeout is the tail modify the tail to be the prev node.
+// fixme, reject exception can not be sent to consumer because thread pool is full, resulting in consumers waiting till timeout.
+//                 .setAttachments(attachments)  // merged from dubbox
+//  write header.   write data.
+//  use CompareAndSet to sum
+//  not a registry url, must be direct invoke.
+//  keep every provider's category.
+// private int port;
+//  fall back to use method getResourceAsStream
+//  store back cached position
+//  NOTE: Hessian2 throws ArrayIndexOutOfBoundsException instead of IOException, let's live with this.
+//  List<String> addresses = tagRouterRule.filter(providerApp);   return all addresses in dynamic tag group.
+//  reput this task when catch exception.
+//  ================ Simple Type ================
+//  trigger delete after unavailable
+//  If override url is not enabled or is invalid, just return.
+//  FIXME RESPONSE_CONTEXT
+//  the scope for referring/exporting a service, if it's local, it means searching in current JVM only.
+//  ignore, there is no need any log here since some class implement the interface: EnvironmentAware,   ApplicationAware, etc. They only have setter method, otherwise will cause the error log during application start up.
+// test multiple unregisters
+//  reset status since connection is shared among invokers
+//  get cache by class loader.
+//  take effect on all providers, so address must be 0.0.0.0, otherwise it won't flow to this if branch
+/*                  *  if we have no interface watcher listener,                 *  find the current listener or create one for the current root, put or get only once.                  */
+//  remove timeout that was either processed or cancelled by updating the linked-list
+//  verify if the first cache item is expired in LRU cache
+/*      * <p>Repeat a String {@code repeat} times to form a     * new String, with a String separator injected each time. </p>     *     * <pre>     * StringUtils.repeat(null, null, 2) = null     * StringUtils.repeat(null, "x", 2)  = null     * StringUtils.repeat("", null, 0)   = ""     * StringUtils.repeat("", "", 2)     = ""     * StringUtils.repeat("", "x", 3)    = "xxx"     * StringUtils.repeat("?", ", ", 3)  = "?, ?, ?"     * </pre>     *     * @param str       the String to repeat, may be null     * @param separator the String to inject, may be null     * @param repeat    number of times to repeat str, negative treated as zero     * @return a new String consisting of the original String repeated,     * {@code null} if null String input     * @since 2.5      */
+// .addParameter(Constants.STUB_KEY, RegistryServiceStub.class.getName())
+//  never return 0 even if n1 equals n2, otherwise, o1 and o2 will override each other in collection like HashSet
+//  from dubbo.properties
+/*  error messages for the codes above  */
+//  IMPORTANT! For async scenario, we must remove context from current thread, so we always create a new RpcContext for the next invoke for the same thread.
+//  ============================A gorgeous line of segmentation================================================
+//  encode request data.
+// TODO generic invoker？
+// The origin invoker
+//  limit input stream.
+/* url = url.addParameter( "echoString." + Constants.TIMEOUT_KEY, Integer.MAX_VALUE );        invoker = protocol.refer( Demo.class, url );        org.junit.jupiter.api.Assertions.assertNotNull( invoker );        RpcInvocation invocation = new RpcInvocation();        invocation.setMethodName( "echoString" );        invocation.setParameterTypes( new Class<?>[]{ String.class } );        String arg = "Hello, World!";        invocation.setArguments( new Object[] { arg } );                invocation.setAttachment(Constants.INTERFACE_KEY, DemoImpl.class.getName());        Result result = invoker.invoke( invocation );        Assertions.assertNull( result.getResult() );        Assertions.assertTrue( result.getException() instanceof RpcException ); */
+//  if invoker is destroyed due to address refresh from registry, let's allow the current invoke to proceed
+// mark the future is sent
+//  just for test
+//  copy reference
+//  local reference
+//  We will update our cache file after each notification.   When our Registry has a subscribe failure due to network jitter, we can return at least the existing cache URL.
+// Header
+//  If it is the first invoker or the active number of the invoker is less than the current least active number
+//  whether to auto resize
+//  setup attachment
+//  message length
+//  column definition
+//  parameter callback rule: method-name.parameter-index(starting from 0).callback
+//  create rpc invoker.
+//  instance will never delete or recreate.
+//  ignore error log
+//  this will not override, use 'key' instead, @Parameter(key="key1", useKeyAsProperty=false)
+//  TODO we should leave this setting to slf4j
+//  FIXME RMI protocol doesn't support casting to EchoService yet.
+//  then unregister
+//  just add new valid channel to NettyChannel's cache
+// sticky: invoker.isAvailable() should always be checked before using when availablecheck is true.
+//  check if the output equals the input urls
+/*  Linux Enter  */
+// must shutdown thread pool ,if not will lead to OOM
+//         Thread.sleep(100000);//for debug
+/*  * TODO for now kryo serialization doesn't deny classes that don't implement the serializable interface * * <pre> *     e.g. &lt;dubbo:protocol serialization="kryo" /&gt; * </pre>  */
+//  If current invoker's active value equals with leaseActive, then accumulating.
+//  indent length
+// 00000010-response/oneway/hearbeat=true |20-stats=ok|id=0|length=0
+//  init notify listener
+//  given that repeat(String, int) is quite optimized, better to rely on it than try and splice this into it
+//  Timer for failure retry, regular check if there is a request for failure, and if there is, an unlimited retry
+//             {"delay", "delay", "int", 0, 5, "", "", "", "", ""}, // not boolean
+//  Impossible
+//  Cache check interval (second)
+//  encode response verson ??          Assertions.assertEquals(response.getProtocolVersion(), obj.getVersion());
+/*  ignore  */
+//  @@protoc_insertion_point(builder_implements:Map)
+//  .addParameter("refer.autodestroy", "true")
+//  set codec.
+// TODO Can the value returned by getChannel() be null? need improvement.
+//  FIXME log error info in Codec and put all error handle logic in IoHanndler?
+// init history
+//  for test
+//  FIXME should put exception in future?
+//  Create clients and build connections
+//  FIXME: when the thread pool is full, SERVER_THREADPOOL_EXHAUSTED_ERROR cannot return properly,   therefore the consumer side has to wait until gets timeout. This is a temporary solution to prevent   this scenario from happening, but a better solution should be considered later.
+//  if it's auto resize, then calculate the possible max width
+/*  * EventFilterTest.java * TODO rely on callback integration test for now  */
+// Enabled by override rule
+//  if the pattern is subnet format, it will not be allowed to config port param in pattern.
+//  TODO exist concurrent gap
+//  name2desc
+// if protocol is only injvm ,not register
+//  check for primitive array types because they   unfortunately cannot be cast to Object[]
+//  TODO figure out the meaning of cancel in DefaultFuture.
+//  #1 ReferenceBean (Method Injection #1)
+//  if not configured, connection is shared, otherwise, one connection for one service
+/*  index in packed string   */
+//  Dynamic param
+//  FIXME There's no place to release connectionExecutor!
+//  to false, which means it will invoke any providers without a tag unless it's explicitly disallowed.
+//  Assertions.assertEquals("{\"code\":\"001\",\"message\":\"AAAAAAAA\"}", json);
+//  Remove configurations from provider, some items should be affected by provider.
+//  all processed
+/*      * If there's no dynamic tag rule being set, use static tag in URL.     * <p>     * A typical scenario is a Consumer using version 2.7.x calls Providers using version 2.6.x or lower,     * the Consumer should always respect the tag in provider URL regardless of whether a dynamic tag rule has been set to it or not.     * <p>     * TODO, to guarantee consistent behavior of interoperability between 2.6- and 2.7+, this method should has the same logic with the TagRouter in 2.6.x.     *     * @param invokers     * @param url     * @param invocation     * @param <T>     * @return      */
+//  @@protoc_insertion_point(message_implements:Map)
+// Assertions.assertEquals(proxy.hashCode(), invoker.hashCode());
+//  FIXME: cannot guarantee the sequence of the merge result, check implementation in   MergeableClusterInvoker#invoke
+//  add method, for verifying against method, automatic fallback (see dubbo protocol)
+//  TODO optimization
+// change by fengting listener   {"listener", "exporter.listener", "string", "", "", "", "", "", "", ""},  {"filter", "service.filter", "string", "", "", "", "", "", "", ""},
+//  If more than 1 page
+//  if the type is not primitive, we choose to believe what the invoker want is a null value
+//  wildcard cases
+//  Double check whether or not it is connected
+//  desc2name
+//  Get the weight of the invoker's configuration. The default value is 100.
+//  ~ end of if
+//  verify if it's idempotent
+//  callback method when async-call is returned
+// client can export a service which's only for server to invoke
+// fix:#4585
+// TODO solve merge problem  = Constants.DEFAULT_STUB_EVENT;
+//  can't shutdown nioEventLoopGroup because the method will be invoked when closing one channel but not a client,   but when and how to close the nioEventLoopGroup ?   nioEventLoopGroup.shutdownGracefully();
+//  don't export when none is configured
+// yyline = yychar = yycolumn = 0;
+// Make sure that the subscribe call has just been called once count.incrementAndGet after the call is completed  Wait for the timer.
+// RegistryController.startRegistryIfAbsence(1);
+//  Test my-registry2 bean presentation
+/* registryDirectory.notify(serviceUrls);        RouterChain routerChain = registryDirectory.getRouterChain();        //default invocation selector        Assertions.assertEquals(1 + 1, routers.size());        Assertions.assertTrue(ScriptRouter.class == routers.get(1).getClass() || ScriptRouter.class == routers.get(0).getClass());        registryDirectory.notify(new ArrayList<URL>());        routers = registryDirectory.getRouters();        Assertions.assertEquals(1 + 1, routers.size());        Assertions.assertTrue(ScriptRouter.class == routers.get(1).getClass() || ScriptRouter.class == routers.get(0).getClass());        serviceUrls.clear();        serviceUrls.add(routerurl.addParameter(Constants.ROUTER_KEY, Constants.ROUTER_TYPE_CLEAR));        registryDirectory.notify(serviceUrls);        routers = registryDirectory.getRouters();        Assertions.assertEquals(0 + 1, routers.size()); */
+//  valid port range is (0, 65535]
+//  connection error causes client to release all resources including current watcher
+//  unlikely but not impossible: read 0 characters, but not at end of stream
+//  message header length placeholder
+//  consumer
+//  if value doesn't change, return immediately   value != null
+// ================================================================================================
+//         this.propertyInjector = factory.getInjectorFactory().createPropertyInjector(getScannableClass(), factory);
+//  The initial value is null and the midway may be assigned to null, please use the local variable reference
+//  encode
+// is it possible to go here ?
+//  create XmlRpcHttpClient
+//  process GET request and POST request separately. Check url for GET, and check body for POST
+//  Cancel the reconnection timer
+//  TODO for now we don't consider the differences of encoding and server limit
+//  Make sure if it is a copied buffer.
+// value calculate
+//  TODO do more sophisticated exception handling and output
+//  TODO protocol
+//  Record the weight the first least active invoker
+//  TODO: refactor it
+//  for test content
+//  can use thrift codec only
+//  directly throw if the exception appears in the signature
+//  you can customize name and type of client thread pool by THREAD_NAME_KEY and THREADPOOL_KEY in CommonConstants.   the handler will be warped: MultiMessageHandler->HeartbeatHandler->handler
+//                 protocol.readI32(); // skip the first message length
+//  get operate will throw a timeout exception, because the future is timeout.
+// TODO we needs use force writing to file so that buffer gets clear and new log can be written.
+//  Dubbo RPC protocol version, for compatibility, it must not be between 2.0.10 ~ 2.6.2
+//  Queue
+//  export to remote if the config is not local (export to local only when config is local)
+// local invoke will return directly
+//  Load configuration from  system properties -> externalConfiguration -> RegistryConfig -> dubbo.properties
+//     private final boolean isCallBack;      private final boolean isFuture;
+//  we want these objects to be as generic as possible
+//  DemoServiceImpl with @Transactional
+//  The argument must be the concrete NacosServiceName
+//  get the class def for obj and type
+//  fire event to all listeners
+//  1 : 9 : 6
+// init queue and executor
+//  FIXME: this exposes the design flaw in RouterChain
+//  Disable new tasks from being submitted
+//  More than one methods, mismatch
+//  cast to EchoService
+//  replace the latest "," to be ")"
+//  never has a retry task. then start a new task for retry.
+/*  error codes  */
+//  impl constructor
+// If the telnet data and request data are in the same data packet, we should guarantee that the receipt of request data won't be affected by the factor that telnet does not have an end characters.
+/*      * FIXME, this instance will always be a type of DynamicConfiguration, ConfigCenterConfig will load the instance at startup and assign it to here.      */
+//  has pad char.
+//  if null, will return the initialize value.  Assertions.assertNull(RpcContext.getContext());
+//  make the grpc call to watch the key
+//  must present 4 segments
+//  begin to construct a NullPointerException with empty stackTrace
+//  protocol
+//  Initialization at the time of injection, the assertion is not null   Initialization at the time of injection, the assertion is not null
+// Merged with this configuration
+//  Read port from property
+//  retry again. If failed again, throw exception.
+/*           RMI needs extra parameter since it uses customized remote invocation object          The customized RemoteInvocation was firstly introduced in v2.6.3; The package was renamed to 'org.apache.*' since v2.7.0          Considering the above two conditions, we need to check before sending customized RemoteInvocation:          1. if the provider version is v2.7.0 or higher, send 'org.apache.dubbo.rpc.protocol.rmi.RmiRemoteInvocation'.          2. if the provider version is v2.6.3 or higher, send 'com.alibaba.dubbo.rpc.protocol.rmi.RmiRemoteInvocation'.          3. if the provider version is lower than v2.6.3, does not use customized RemoteInvocation.          */
+//  for backward compatibility   -Ddubbo.registry.address is now deprecated.
+//  TODO how to assert thread action
+//  clear attachments which is binding to current thread.
+//  if no notify URL, add empty protocol URL
+//  com.alipay.test.TestService:1.0:group@dubbo
+//  TODO
+//  bind ip is used as registry ip by default
+//  File cache timing writing
+//  no need to generate adaptive class since there's no adaptive method found.
+// TODO A temporary solution to the problem that the exception information can not be sent to the opposite end after the thread pool is full. Need a refactoring  fix The thread pool is full, refuses to call, does not return, and causes the consumer to wait for time out
+/* client.request("world\r\n");        Future future = client.request("world", 10000);        String result = (String)future.get();        Assertions.assertEquals("Did you say 'world'?\r\n",result); */
+// Test the matching of protocol and select only the matched protocol for refer
+//  If the server has entered the shutdown process, reject any new connection
+//  not allow to save null, but allow to update with null which means not update the field
+//  guess version fro jar file name if nothing's found from MANIFEST.MF
+//  Config Center should always being started first.
+//  ignore default attribute value
+//  ================ Array Type ================
+//  TODO Wrapper cannot handle this scenario correctly: the classname contains '$'
+//  ExchangeClient client = arrays.get(0);
+//  connection should be lazy
+//  Tag request
+//  Deprecated! Subscribe to override rules in 2.6.x or before.
+//  the number of pages
+//  control char.
+//  column width
+//  Process string to char array for generic invoke   See   - https://github.com/apache/dubbo/issues/2003
+//  TODO Do not want to use spaces? See: DUBBO-502, URL class handles special conventions for special characters.
+/*      * FIXME check @Parameter(required=true) and any conditions that need to match.      */
+//  and Update
+//  mark buffer is used, exit mark status!
+//  no @Adaptive
+//  for thrift codec
+//  currently for test purpose
+//  for CuratorZookeeperClient
+//  ================ Complex Collection Type ================
+//  If (not every invoker has the same weight & at least one invoker's weight>0), select randomly based on    totalWeight.
+//  default or set void.class for purpose.
+// bug: DUBBO-425
+//  default time-to-live in millisecond
+//  Other
+// ClassLoader - ClassPool
+//  Merge the consumer side parameters
+// final int length = PerformanceUtils.getIntProperty("length", 1024);
+//  destroy all the protocols
+// directory will return a list of normal invokers if Constants.INVOCATION_NEED_MOCK is present in invocation, otherwise, a list of mock invokers will return.
+//  Allow to access   local reference
+//  AbstractChannelBuffer
+//  FIXME: not sure why AbstractReferenceConfig has both isGeneric and getGeneric
+//  magic header.
+//  The null value unallowed in the ConcurrentHashMap.
+//  backward compatibility to spring 2.0.1
+//  print inner separation lines
+// SERVER
+//  decode object.
+//  export one service
+// final int concurrent = PerformanceUtils.getIntProperty("concurrent", 100);  int r = PerformanceUtils.getIntProperty("runs", 10000);  final int runs = r > 0 ? r : Integer.MAX_VALUE;
+//  try to modify the key
+//  Reconnection timer, regular check connection is available. If unavailable, unlimited reconnection.
+//  The parameters of the inspection registry need to be cleared
+//  then destroy, the multicast socket will be closed
+// excluded = true
+//  Mark the client into the closure process
+//  help for gc
+//  maxHistory=0 Infinite history
+//  public field
+//  filter general setting method   1. - setUnknownFields( com.google.protobuf.UnknownFieldSet unknownFields)   2. - setField(com.google.protobuf.Descriptors.FieldDescriptor field,java.lang.Object value)
+//  Test username or password contains "@"
+//  Enum property has two setting method.   skip setXXXValue(int value)
+//  DUBBO-147 find all invoker instances which have been tried from RpcContext
+// no mock
+//  TODO: 2017/8/30 to move somewhere else better
+//  mark it's a callback, for troubleshooting
+//  Registers @Service Bean first
+//  Check and connect to the metadata
+//  getDesc
+//  FIXME log error message in Codec and handle in caught() of IoHanndler?
+// cannot write == not Available ?
+//  message body
+//  asert empty
+//  return 404 when fail to construct command context
+//  only for attachments
+//     private PropertyInjector propertyInjector;      private String context = null;
+//  process imported classes
+// private int yycolumn;
+//  process constructors, fields, methods
+//             logger.warn(t.getMessage(), t);          }
+//  If you only have a single redis, you need to take a rest to avoid overtaking a lot of CPU resources
+//  search common-used logging frameworks
+// java.sql.Timestamp
+/*  Windows Enter  */
+// zzAtBOL  = true;
+// test unsubscribe
+//  Reset the active number of the current invoker to the least active number
+//  process implemented interfaces
+//  need separator for others
+// java.sql.Date
+//  Prevent JVM from exiting
+//  Start multiple threads
+//  FIXME: this code looks useless
+//  add invocationid in async operation by default
+//  TODO users can override this mapper, but we just rely on the current priority strategy of resteasy
+//  has one sync callback
+//  check the setter/getter whether match
+//  The index of invokers having the same least active value (leastActive)
+//  directly throw if it's checked exception
+// Avoid add the same invoker several times.
+// Merge the urls of configurators
+// There may be some problem handling chinese (negative number recognition). Ignoring this problem, the backspace key is only meaningfully input in a real telnet program.
+//  FIXME Is there any need of failing back to Constants.ANY_VALUE or the first available method invokers when invokers is null?
+//         url = url.addParameter( Constants.TIMEOUT_KEY, Integer.MAX_VALUE );
+//  Add the timeout to the timeout queue which will be processed on the next tick.   During processing all the queued HashedWheelTimeouts will be added to the correct HashedWheelBucket.
+//  remove suffix ".jar": "path/to/group-module-x.y.z"
+//  all attributes of REFER_KEY
+// All of them are called 4 times. A successful attempt to lose 1. subscribe will not be done
+//  Password to login register center
+//  jcache parameter is the full-qualified class name of SPI implementation
+//  Sending a registration request to the server side
+//  take first one
+//  ---- service statistics ----   invocation cost   current concurrent count
+//  property of custom type or primitive type
+//  continue
+//  proceed invocation chain
+//  reset
+//  Expected
+//  module
+/*  * TODO this may not be a pretty elegant solution, *  */
+//  do not increment in method beforeExecute!
+//  should not happen here
+// excluded = true              {"filter", "service.filter", "string", "default", "-generic", "", "", "", "", ""},  excluded = true              {"listener", "exporter.listener", "string", "default", "-deprecated", "", "", "", "", ""},  {"", "", "", "", "", "", "", "", "", ""},
+//  @@protoc_insertion_point(builder_implements:org.apache.dubbo.common.serialize.protobuf.model.PBResponseType)
+//  ~ end of else
+// ignore
+// sync update cache file
+//  collect timer for collecting statistics data
+//  @@protoc_insertion_point(builder_scope:org.apache.dubbo.common.serialize.protobuf.model.PhoneNumber)
+//  parameter fields
+//  weightTestRpcStatus3 active is 1
+// windows end
+//  say name
+/*  Windows Ctrl+C  */
+//                             activeLimitFilter.listener().onError(expected, invoker, invocation);
+//  init queue and executor
+//  FIXME, should cancel and restart timer tasks if parameters in the new URL are different?
+//  <method desc,method instance>   <constructor desc,constructor instance>
+//  Construct using org.apache.dubbo.common.serialize.protobuf.model.GooglePB.PBResponseType.newBuilder()
+// Initial value 0
+// just for one method
+//  Single Config Bindings
+//     private Map<String, String> extraHttpHeaders	= new HashMap<String, String>();
+//  TODO due to dubbo's current architecture,   it will be called from registry protocol in the shutdown process and won't appear in logs
+//  id MUST be present in AbstractConfig   id MUST NOT be equal to bean name   id MUST NOT be present in AliasRegistry
+//  code.append("   }");   }
+/*  * TODO Extract more code here if necessary  */
+// create a real instance to keep the attribute values;
+//  send error message to Consumer, otherwise, Consumer will wait until timeout.
+//  4. unexport service
+//  we use the loading status of DynamicConfiguration to decide whether ConfigCenter has been initiated.
+//  end of object.
+//  Make sure the buffer content is independent from each other.
+/*      * Decide which target extension to be injected. The name of the target extension is decided by the parameter passed     * in the URL, and the parameter names are given by this method.     * <p>     * If the specified parameters are not found from {@link URL}, then the default extension will be used for     * dependency injection (specified in its interface's {@link SPI}).     * <p>     * For example, given <code>String[] {"key1", "key2"}</code>:     * <ol>     * <li>find parameter 'key1' in URL, use its value as the extension's name</li>     * <li>try 'key2' for extension's name if 'key1' is not found (or its value is empty) in URL</li>     * <li>use default extension if 'key2' doesn't exist either</li>     * <li>otherwise, throw {@link IllegalStateException}</li>     * </ol>     * If the parameter names are empty, then a default parameter name is generated from interface's     * class name with the rule: divide classname from capital char into several parts, and separate the parts with     * dot '.', for example, for {@code org.apache.dubbo.xxx.YyyInvokerWrapper}, the generated name is     * <code>String[] {"yyy.invoker.wrapper"}</code>.     *     * @return parameter names in URL      */
+//  Fill the unprocessedTimeouts so we can return them from stop() method.
+//  Use PBResponseType.newBuilder() to construct.
+//  TODO Notification failure does not restore mechanism guarantee
+//  policy
+//  #4 ReferenceBean (Field Injection #2)
+//  Generated by the protocol buffer compiler.  DO NOT EDIT!   source: GooglePB.proto
+//  should not override
+//  @@protoc_insertion_point(class_scope:org.apache.dubbo.common.serialize.protobuf.model.PBResponseType)
+//  Use PhoneNumber.newBuilder() to construct.
+//  Get properties under specified prefix from PropertySources
+//  register, subscribe, notify, unsubscribe, unregister
+// Assertions.assertEquals("properties", overrideConfig.getUseKeyAsProperty());
+//  On server side, thrift can not handle exceptions not declared in idl
+//  mock protocol
+//  FIXME: a hack to make org.apache.dubbo.remoting.exchange.support.DefaultFuture.closeChannel work
+//  encoder
+//  if path is not the same as interface name then we should keep INTERFACE_KEY,   otherwise, the registry structure of zookeeper would be '/dubbo/path/providers',   but what we expect is '/dubbo/interface/providers'
+//  cache time (second)
+// 00000010-response/oneway/hearbeat=false/noset |20-stats=ok|id=0|length=0
+//  No Category Parameter
+//  wait for timer to finish
+//  client has been replaced with lazy client. lazy client is fetched from referenceclientmap, and since it's
+//  scheduled executor service
+//  Other events are passed down directly
+//             {"version", "version", "string", "0.0.0", "1.2.3", "", "", "", "", ""},              {"group", "group", "string", "", "HaominTest", "", "", "", "", ""},
+// One is the same, one is different
+/*                                                  *  if new interface event arrived, we watch their direct children,                                                 *  eg: /dubbo/interface, /dubbo/interface and so on.                                                  */
+//  Subscribe the override data   FIXME When the provider subscribes, it will affect the scene : a certain JVM exposes the service and call    the same service. Because the subscribed is cached key with the name of the service, it causes the
+//  Object $invoke(String method, String[] parameterTypes, Object[] args) throws GenericException;
+//  Register DubboConfigAliasPostProcessor
+//  create a new List of invokers
+//  add implemented interfaces
+//  Nested collection or map.
+//  short name condition
+//  TODO: 2017/8/31 FIXME The thread pool should be used to refresh the address, otherwise the task may be accumulated.
+/*  * TODO load as SPI will be better?  */
+//  @@protoc_insertion_point(interface_extends:org.apache.dubbo.common.serialize.protobuf.model.PBRequestType)
+// fixme replace this with better method
+//  subscribe
+//  TODO move names to Constants
+//  parse setXXX(com.google.protobuf.Message value)
+/*  is the buffer big enough?  */
+//  The Value in the KV part, if Value have more than one items.   Should be separated by ','
+//  ignore NoNode Exception.
+//  Filter out all the least active invokers
+//  At least one single machine is available.
+//  convert list to array
+//  confirm only 1 register success
+//  double byte char
+//  mock zookeeper://xxx?mock=return null
+//  For providers, this is used to enable custom proxy to generate invoker
+//  <ip:port, channel>
+//  Defensive fault tolerance
+//  TODO carries class info every time.
+//  Register center address
+// private boolean zzEOFDone;
+//  decode response.
+//  magic
+//  remove 'default.' prefix for configs from ConsumerConfig   appendParameters(map, consumer, Constants.DEFAULT_KEY);
+//  use 1st key, protocol
+//  FIXME result is an AsyncRpcResult instance.
+//  export service
+//  Check and connect to the registry
+//  write object.
+//         invoker.destroy();
+//  it can be invoke successfully
+//         kryo.setReferences(false);
+//  check again
+//  jedis gets the result comparison
+//  dubbo's original impl can't support the use of ServletContext          server.addHandler(servletHandler);
+//  TODO jetty will by default enable keepAlive so the xml config has no effect now
+//  for example, object transported on the wire doesn't implement Serializable
+//  ephemeral is expired
+//  The parameters of the test service query need to be with the providermerge.
+// zzEOFDone = false;
+// The parameters are different and must be rereferenced.
+//  load class
+//  Was cancelled in the meantime.
+//  Process return type.
+//  isTypeMatch() is called to avoid duplicate and incorrect update, for example, we have two 'setGeneric' methods in ReferenceConfig.
+//  The last two parameters are reserved for compatibility with the old configuration
+//  Convert tickDuration to nanos.
+// Map interface class change to HashMap implement
+//           ReferenceAnnotationBeanPostProcessor beanPostProcessor = context.getBean(BEAN_NAME,                  ReferenceAnnotationBeanPostProcessor.class);              Map<InjectionMetadata.InjectedElement, ReferenceBean<?>> referenceBeanMap =                  beanPostProcessor.getInjectedMethodReferenceBeanMap();
+//  @@protoc_insertion_point(class_scope:org.apache.dubbo.common.serialize.protobuf.model.PhoneNumber)
+//  isset id assignments
+//  Register CustomEditors for special fields
+//  Trim all whitespace
+//  skip the setting method with Pb entity builder as parameter
+//  path
+// TODO add this to provider config
+//  add the tail string which contains no variables and return   the result.
+//  Fixed router instances: ConfigConditionRouter, TagRouter, e.g., the rule for each instance may change but the
+//  range condition
+//  Requires JDK 7 or higher, Foo<int[]> is no longer GenericArrayType
+//             {"timeout", "registry.timeout", "int", 5000, 9000, "", "", "", "", ""},              {"file", "registry.file", "string", "", "regConfForServiceTable.log", "", "", "", "", ""},              {"wait", "registry.wait", "int", 0, 9000, "", "", "", "", ""},              {"transport", "registry.transporter", "string", "netty", "mina", "", "", "", "", ""},              {"subscribe", "subscribe", "boolean", true, false, "", "", "", "", ""},
+//  loop up before registry
+//  Subscribed services
+//  close once, counter counts down from 2 to 1, no warning occurs
+// release mina resouces.
+//  since the retry task will not be very much. 128 ticks is enough.
+//  clear buffer
+//  no-op
+//  received the cancel response
+//  Customized inject-object if necessary
+//  If no mock was configured, return null directly
+//  BuG: DUBBO-146 Provider doesn't have exception output, and consumer has timeout error when serialization fails
+//  no need to new client again
+//  one channel can have multiple callback instances, no need to re-export for different instance.
+//  check against type and superclasses
+//  @@protoc_insertion_point(builder_scope:org.apache.dubbo.common.serialize.protobuf.model.PBResponseType)
+// .addParameter(Constants.ON_DISCONNECT_KEY, "disconnect")
+//  Can be unset.
+//  array begin.
+//  this is a defensive operation to avoid client is closed by accident, the initial state of the client is false
+// this.listener = null;
+//  TODO in the future maybe we can just use a single rest client and connection manager
+//  parse bind port from environment
+//  data to collect from url
+//  if only one empty
+//  If there is a client in the list that is no longer available, create a new one to replace him.
+// check config conflict
+//  If the Config Center is given the highest priority, it will override all the other configurations
+//  normal case
+//  Accumulate the total weight of the least active invoker
+// test geturl
+//  Try the next server
+//  Use PBRequestType.newBuilder() to construct.
+//           invoker.destroy();          reference.destroy();
+//  ======================================================     test Start   ======================================================
+//  The lock for the acquisition process of the registry
+//  check if methods exist in the remote service interface
+//  Test @Transactional is present or not
+/*  split CIDR to address and prefix part  */
+// force:direct mock
+//         int timeout = ConfigUtils.getServerShutdownTimeout();          Thread.sleep(timeout + 1000);          assertEquals(false, exporter.getInvoker().isAvailable());
+//  message like : XxxService , XxxService 10 , XxxService xxxMethod , XxxService xxxMethod 10
+//   If the server side has synchronized data, just write a single machine
+// Thread.sleep(20000);
+// test multiple urls
+//  Log output
+//  Null point check
+//  TODO can we load successfully for a different classloader?.
+//  notify flag
+//  padding
+// Boundary condition test .
+//  Resolve placeholders
+//  #2 ReferenceBean (Field Injection #1)
+/*  * ScriptRouterFactory * <p> * Example URLS used by Script Router Factory： * <ol> * <li> script://registryAddress?type=js&rule=xxxx * <li> script:///path/to/routerfile.js?type=js&rule=xxxx * <li> script://D:\path\to\routerfile.js?type=js&rule=xxxx * <li> script://C:/path/to/routerfile.js?type=js&rule=xxxx * </ol> * The host value in URL points out the address of the source content of the Script Router，Registry、File etc *  */
+/*  translate stored positions  */
+//  decrease any way
+//  find version info from MANIFEST.MF first
+//  test chinese
+//  Append first page into list
+//  1. fill corresponding config with data
+// echo
+//  merge - configuration
+//  skip multicast registry since we cannot connect to it via Socket
+//  Close all invokers
+//  Save Error
+//  register service3 should not trigger notify
+//  directly throw if it's dubbo exception
+//  Prevent overflow.
+//  cancel refer, directly remove from the map
+//  callback limits
+//  server will close channel when server don't receive any heartbeat from client util timeout.
+//  first elements
+// Check whether the mock value is legal, if it is illegal, throw exception
+//  Every least active invoker has the same weight value?
+//  If a method doesn't have a merger, only invoke one Group
+// Content
+//  Local disk cache file
+//  data rows
+// FIXME: waiting for embedded Nacos suport, then we can open the switch.
+//  still init for the same ReferenceConfig if the cache is different
+//  user customized class
+//  TODO for now just do plain text output
+//  pop name.
+//  Reconnect the timer to check whether the connection is available at a time, and when unavailable, an infinite reconnection
+// export stub service
+//  no match service interface
+/*  If the Config Center product you use have some special parameters that is not covered by this class, you can add it to here.    For example, with XML:      <dubbo:config-center>           <dubbo:parameter key="{your key}" value="{your value}" />      </dubbo:config-center>      */
+/*  List routers = registryDirectory.getRouters();        Assertions.assertEquals(1 + 1, routers.size());        serviceUrls.clear();        serviceUrls.add(routerurl.addParameter(Constants.ROUTER_KEY, Constants.ROUTER_TYPE_CLEAR));        registryDirectory.notify(serviceUrls);        routers = registryDirectory.getRouters();        Assertions.assertEquals(0 + 1, routers.size()); */
+//  <component name or id, <data-name, data-value>>
+//  response received, latch counts down to zero
+//  Rethrow exception
+//             {"generic", "generic", "boolean", false, true, "", "", "", "", ""},
+/*      * This is used to convert a configuration nodePath into a key     * TODO doc     *     * @param path     * @return key (nodePath less the config root path)      */
+//  mark buffer is not empty
+//  ======================================================     data table manipulation utils
+/*  indicate end of file  */
+//  if it's a callback, create proxy on client side, callback interface on client side can be invoked through channel   need get URL from channel and env when decode
+//  Null Point check
+/*      * the resident routers must being initialized before address notification.     * FIXME: this method should not be public      */
+//  URL cannot be transferred automatically from the server side to the client side by using API, instead,   it needs manually specified.
+//  When starting the subscription center,
+//  allow string arg to enum type, @see PojoUtils.realize0()
+//  NOTE: It should be determined on the business level whether the `When condition` can be empty or not.
+//  ======================================================     data column definition
+//  Remove the expired   Defensive fault tolerance
+//  search in caller's classloader
+//  FIXME REQUEST_CONTEXT
+//  DUBBO-571 methods key in provider's URLONE doesn't contain the methods from inherited super interface
+//  monitor
+//  @@protoc_insertion_point(class_scope:org.apache.dubbo.common.serialize.protobuf.model.PBRequestType)
+//  default cache.size is 1000 for LRU, should have cache expired if invoke more than 1001 times
+//  available to test
+/*  * ContextFilterTest.java * TODO need to enhance assertion  */
+// convert error fail fast .  ignore concurrent problem.
+//  to notify configurator/router changes
+// private ChannelListener listener;
+//  release ClassGenerator
+//  init atomic reference
+//  transfer only max. 100000 timeouts per tick to prevent a thread to stale the workerThread when it just   adds new timeouts in a loop.
+//  reach the most times of retry.
+//  mock environment variables
+// rate or interval has changed, rebuild
+// ignore concurrent problem?
+//  BUG: DUBBO-846 in version 2.0.9, config retry="false" on provider's method doesn't work
+// only decode necessary bytes
+//  add fields
+// The parameters can not be rereferenced
+//  registry url is available   use RegistryAwareCluster only when register's CLUSTER is available
+//  add imported packages
+//  multicast ipv6 address,
+//  for previous dubbo version(2.0.10/020010~2.6.2/020602), this version is the jar's version, so they need to   be ignore
+//  ================ final field test ================
+//  message
+//  for sending over wire
+// this will throw a exception
+//  TODO, to support wildcards
+//  receive a new packet   buffer
+//  @@protoc_insertion_point(interface_extends:org.apache.dubbo.common.serialize.protobuf.model.PhoneNumber)
+//  concurrent cache initialization
+//  fix issue#619
+//  Rely on reconnect timer to reconnect when AbstractClient.doConnect fails to init the connection
+// The exception is thrown for the first time to see if the back will be called again to incrementAndGet
+//  1.0.0   Dubbo implementation version, usually is jar version.
+//  Choose an invoker from all the least active invokers
+//  refresh all configs here,
+/*  if not: blow it up  */
+// TODO assert error log
+//  ipv4 multicast address
+//  ~ end of loop method map
+// Check whether the mock class is a implementation of the interfaceClass, and if it has a default constructor
+// TODO fix npe  context.isProviderSide();
+// exist overridden method
+//  "[[Ljava/lang/Object;" ==> "[[Ljava.lang.Object;"
+// onthrow callback not configured
+//  if not auto resize, return preset width
+//  must be executed after unsubscribing
+//  do refer
+// the fist element in `indexedVariables` is a set to keep all the InternalThreadLocal to remove  look at method `addToVariablesToRemove`
+// final String onerror = PerformanceUtils.getProperty("onerror", "continue");
+//  Local disk cache, where the special key value.registries records the list of metadata centers, and the others are the list of notified service providers
+// Check whether the mock value is legal
+//  clear first
+//  visit all methods
+//  return immediately if there's no change
+//  Initialization at construction time, assertion not null   Initialization at construction time, assertion not null   Initialization at construction time, assertion not null   Initialization at construction time, assertion not null, and always assign non null value
+//  check if recover successfully
+/*  * TODO refactor using mockito  */
+// return directly
+//  Process the component type of an array.
+// test subscribe
+/*       This UT is unstable, consider remove it later.      @see https://github.com/apache/dubbo/issues/1787      */
+//  setup
+//  prepare
+//  result field id is 0
+//  workerState can be 0 or 2 at this moment - let it always be 2.
+//  Test multiple binding
+//  The parameter urls are sorted   Repeated url
+//  TODO there may have duplicate refresh
+//  TODO Context.SESSIONS is the best option here? (In jetty 9.x, it becomes ServletContextHandler.SESSIONS)
+//  ~ end of method decode
+//  hack, use reflection to get the shared channel.
+// Reselect before retry to avoid a change of candidate `invokers`.  NOTE: if `invokers` changed, then `invoked` also lose accuracy.
+/*  * FIXME: is this really necessary? PropertiesConfiguration should have already covered this: * @see PropertiesConfiguration * @See ConfigUtils#getProperty(String)  */
+/*      * Should be called after Config was fully initialized.     * // FIXME: this method should be completely replaced by appendParameters     *     * @return     * @see AbstractConfig#appendParameters(Map, Object, String)     * <p>     * Notice! This method should include all properties in the returning map, treat @Parameter differently compared to appendParameters.      */
+// r times [sleep] r 10 or r 10 100
+//  get translated positions and possibly new buffer
+// cancel a future
+//  generally a client can only be closed once, here it is closed twice, counter is incorrect
+//  Put the first least active invoker first in leastIndexes
+//  special treatment of array values was suggested by 'lizongbo'
+//  Compatible version 1.0  fix by tony.chenl DUBBO-44
+//  TEST Pb Service metaData builder
+//  First, try picking a invoker not in `selected`.
+//  decode request.
+//  remove path: "group-module-x.y.z"
+//  TODO more configs to add
+//  The sum of weights
+/*  * This class represents an unfinished RPC call, it will hold some context information for this call, for example RpcContext and Invocation, * so that when the call finishes and the result returns, it can guarantee all the contexts being recovered as the same as when the call was made * before any callback is invoked. * <p> * TODO if it's reasonable or even right to keep a reference to Invocation? * <p> * As {@link Result} implements CompletionStage, {@link AsyncRpcResult} allows you to easily build a async filter chain whose status will be * driven entirely by the state of the underlying RPC call. * <p> * AsyncRpcResult does not contain any concrete value (except the underlying value bring by CompletableFuture), consider it as a status transfer node. * {@link #getValue()} and {@link #getException()} are all inherited from {@link Result} interface, implementing them are mainly * for compatibility consideration. Because many legacy {@link Filter} implementation are most possibly to call getValue directly.  */
+//  export one service first, to test connection sharing
+// dump every 10 minutes
+//  from system property
+//  ======================================================     tests start   ======================================================
+//  set request and serialization flag.
+//  Ignore it.
+//  containing all routers, reconstruct every time 'route://' urls change.
+//  the sumInvoker1 : sumInvoker2 approximately equal to 1: 9
+//  use 'zookeeper' as the default configcenter.
+//  currently, the version value in Response records the version of Request
+// The test call is independent of the path of the registry url
+//  bug: DUBBO-132
+//  if we are requesting for a Provider with a specific tag
+//  timeout after 5 seconds.
+// The status input has a problem, and the read information is wrong when the serialization is serialized.
+//         Thread.sleep(10000000);
+//  create new decode table.
+// override clean
+//  let's rock it!
+/*          * The fill length can not be less than 256, because by default, hessian reads 256 bytes from the stream each time.         * Refer Hessian2Input.readBuffer for more details          */

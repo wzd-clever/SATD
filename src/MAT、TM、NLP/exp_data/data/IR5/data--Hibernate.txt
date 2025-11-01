@@ -1,0 +1,2262 @@
+// starts with a path expression (new style)
+// NOTE : addDuplicateAlias() already performs nullness checks on the alias.
+// This is not strictly true.  We actually just need to make sure that // it is ordered by root-entity PK and that that order-by comes before // any non-root-entity ordering...
+// we could move this inside if we wanted to // tolerate collection initializations during // collection dirty checking:
+// todo: this was added to support initializing an entity's EntityEntry snapshot during reattach; // this should be refactored to instead expose a method to assemble a EntityEntry based on this // state for return.
+// this is the exception returned by ReflectHelper.getConstructor() if it cannot // locate an appropriate constructor
+// for sane JEE/JTA containers, the transaction itself functions as its identifier...
+// NOTE : firstRow is zero-based
+// parameters on the property mapping should // override parameters in the typedef
+// check that entity id = requestedId
+// This is now handled earlier in this method.
+// Validate that an alias name was provided to determine which pool to use
+// object have been loaded with setReadOnly(true); HHH-2236
+// upgrade the lock if necessary: //lock(result, lockMode);
+//it was not embedded, so the argument is just an id
+// This method should be implemented assuming it's valid to  // do start/stop/start -- leave state appropriate for another start
+// This is the root level node. // Generate an explicit from clause at the root.
+// detached collections that get found + reattached // during flush shouldn't be ignored
+"//	private ComponentTuplizerFactory componentTuplizerFactory; todo : HHH-3517 and HHH-1907"
+//swallow it (the transaction _was_ successful or successfully rolled back)
+//saveOrUpdateCopy() is deprecated!
+// peek ahead
+// new
+// A container for collections we load up when the owning entity is not // yet loaded ... for now, this is purely transient!
+//not null ... (start with 1) is implicit
+// DDL support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// not null is implicit
+// Here we render the select column list based on the properties defined as being generated. // For partial component generation, we currently just re-select the whole component // rather than trying to handle the individual generated portions.
+// else no collection element, but also no owner
+// FOREIGN KEY VIOLATION
+// wrap the session in the transaction-protection proxy
+//trim off the length/precision/scale
+//expressionTerminators.add(","); // deliberately excluded
+// The unique property value represented here may or may not be // serializable, so we do an explicit check here in order to generate // a better error message
+// the default...
+//true if this is a query and we are loading multiple instances of the same collection role //otherwise this is a CollectionInitializer and we are loading up a single collection or batch
+//getDefaultProperties().setProperty(Environment.STATEMENT_BATCH_SIZE, NO_BATCH);
+// This will add the new from element to the origin.
+// oracle sql-state code for deadlock
+//if we are inside a new Result(), but not inside a nested function
+// Simple tests that require no synchronization
+// Initial load from JBC
+// invokeinterface // invoke Enabled.getInterceptFieldCallback()
+// check to see if it is in the second-level cache
+//for a dynamic-class
+// SQL strings
+// VERY IMPORTANT!!!! - This class needs to be free of any static references // to any CGLIB or Javassist classes.  Otherwise, users will always need both // on their classpaths no matter which (if either) they use. // // Another option here would be to remove the Hibernate.isPropertyInitialized() // method and have the users go through the SessionFactory to get this information.
+"/*ArrayList list = new ArrayList();			list.addAll( getKey().getConstraintColumns() );			list.addAll( getIndex().getConstraintColumns() );			getCollectionTable().createUniqueKey(list);*/"
+// Parameter handling code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This is really ugly, but necessary:
+// do nothing...
+//update last non-whitespace token, if necessary
+// it is a property reference {foo.bar}
+//not really necessary, I guess...
+//lists, arrays //sets, maps, bags
+//NOTE: this is not updated when properties are fetched lazily!
+// this is the root (versioned) table, and we are using version-based // optimistic locking;  if we are not updating the version, also don't // check it (unless this is a "generated" version column)!
+// todo : look at optimizing these...
+// get the updated snapshot of the entity state by cloning current state; // it is safe to copy in place, since by this time no-one else (should have) // has a reference  to the array
+//with two-deep subqueries, the same alias would get generated for //both using the old method (criteriaQuery.generateSQLAlias()), so //that is now used as a fallback if the main criteria alias isn't set
+// identifier-commalist
+// Don't hold a transactional lock for this
+//throw new IdentifierGenerationException("save associated object first, or disable cascade for inverse association");
+//can't reuse in this case
+// TODO: I don't really like this implementation; it would be better if // this was handled by searchForDirtyCollections()
+// todo : modify the class definition if not already transformed...
+//ATTRIBUTES MAINTAINED BETWEEN FLUSH CYCLES
+// Set of EntityKeys of deleted objects
+// First, save off the pertinent ids, saving the number of pertinent ids for return
+// TODO : not sure this is correct, could not find docs on how to do this.
+// select topic, syntax from information_schema.help // where section like 'Function%' order by section, topic // // see also ->  http://www.h2database.com/html/functions.html
+// for convenience to save some lookups
+// new collections that get found + wrapped // during flush shouldn't be ignored
+// aliases for identifier ( alias.id ); skip if the entity defines a non-id property named 'id'
+"/*public boolean isNonExistant(EntityKey key) {		return nonExistantEntityKeys.contains(key);	}*/"
+// cache region is defined by the root-class in the hierarchy...
+// aload 4 // load the raw bean
+// Make sure the root node for the region exists and  // has a DataVersion that never complains
+// todo : we can actually just determine this from the incoming EntityEntry-s
+//if dotted and not load-collection nor return-join //regular property
+// database type mapping support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// This will call initialize(tok)!
+// A collection of entities...
+/*implied*/
+//postDelete: // After actually deleting a row, record the fact that the instance no longer  // exists on the database (needed for identity-column key generation), and // remove it from the session cache
+//figure out which formulas are needed
+//unwrap it
+// todo : again, how *should* this work for non-pojo entities?
+// continue loop
+// assume we do *not* refer to a property on the given persister
+// table-specific parameters ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// set up second pass
+// we really could refresh the item if it // is not a lock, but it might be slower //return freshTimestamp < txTimestamp
+// check two "adjecent" nodes at the top of the from-clause tree
+//SPACES //TODO: i'm not sure, but perhaps we should exclude //      abstract denormalized tables?
+//because numeric can be anything
+//Make 100% certain that this is called before any subsequent ScheduledUpdate.afterTransactionCompletion()!!
+//TODO: would it be better to do a refresh from db?
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // Post-flushing section // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// for now, just "re-flatten" the metamodel since this is temporary stuff anyway (HHH-1907)
+// State ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//grab its state saved at deletion
+// added this caching as I noticed that getType() is being called multiple times...
+// both are Timestamps
+// this class has no proxies (so do a shortcut)
+//QueryJoinFragment join = q.createJoinFragment(useThetaStyleJoin);
+// first, try to load it from the temp PC associated to this SS
+//it does not refer to an alias of a projection, //look for a property
+// todo : move to StringHelper?
+// yuck!
+/* current stack len = 0 */
+// might happen with a managed connection
+"/**	 * Translates an AST join type (i.e., the token type) into a JoinFragment.XXX join type.	 *	 * @param astJoinType The AST join type (from HqlSqlTokenTypes or SqlTokenTypes)	 * @return a JoinFragment.XXX join type.	 * @see JoinFragment	 * @see SqlTokenTypes	 */"
+//do replacements
+// We could register the session against the transaction even though it is // not started, but we'd have no guarentee of ever getting the map // entries cleaned up (aside from spawning threads).
+// does this need holdlock also? : return tableName + " with (updlock, rowlock, holdlock)";
+//TODO: move into collection type, so we can use polymorphism!
+// if the property mapping consists of all formulas,  // make it insertable
+//TODO: make this handle multiple collection roles!
+// astore 4 // store the raw bean
+"// Take care of any entities that might have // been evicted!	"
+//orphan delete not supported for EntityMode.DOM4J
+// we need to determine the best way to know that two joinables // represent a single many-to-many...
+// JBC put a version in the node when it created as part of // some internal operation. We are always newer, but if // the JBC version is > 1 something odd has happened
+//it is possible that the tree-walking in OuterJoinLoader can get to //an association defined by a subclass, in which case the property-ref //might refer to a property defined on a subclass of the current class //in this case, the table name is not known - this temporary solution  //assumes that the property-ref refers to a property of the subclass //table that the association belongs to (a reasonable guess) //TODO: fix this, add: OuterJoinLoadable.getSubclassPropertyTableName(String propertyName)
+// null is not considered the same type as Integer. //$NON-NLS-1 //$NON-NLS-1
+// -- Package local methods for the QueryLoader delegate --
+// Need to use the identifier type of the collection owner // since the incoming is value is actually the owner's id. // Using the collection's key type causes problems with // property-ref keys...
+//copyValues works by reflection, so explicitly mark the entity instance dirty
+//initialize properties of the event:
+// Class names in the FROM clause result in a JoinSequence (the old FromParser does this).
+// reference type
+// unsorted, natural, comparator.class.name
+// determine the id getter and setter methods from the proxy interface (if any) // determine all interfaces needed by the resulting proxy
+// first, iterate over all elements capable of defining an extends attribute // collecting all found extends references if they cannot be resolved // against the already processed mappings.
+// no-op; CCS did not have such a concept
+//cannot be instantiated
+// starting index
+// registerColumnType(Types.VARBINARY, "CHARACTER($l)"); // registerColumnType(Types.BLOB, "CHARACTER($l)" );  // For use prior to CP 11.0 // registerColumnType(Types.CLOB, "CHARACTER($l)" );
+// we do not know either type //BLIND GUESS!
+// why is all others non final ?
+//NONE, because its the requested lock mode, not the actual!
+// Oracle driver reports to support getGeneratedKeys(), but they only // support the version taking an array of the names of the columns to // be returned (via its RETURNING clause).  No other driver seems to // support this overloaded version.
+"/*public boolean dropTemporaryTableAfterUse() {		//we have to, because postgres sets current tx		//to rollback only after a failed create table		return true;	}*/"
+//no big deal
+// "current" means the reference that was found during flush()
+"//			buf.append( selectFragment( lhsAlias, """" ) )//ignore suffix for collection columns!"
+// See if the user configured a multiplexer stack
+//woops we got an instance of another class hierarchy branch
+// NOT NULL VIOLATION
+//SQL statements
+//nothing to do
+//TODO: if lock.getTimestamp().equals(ts)
+// SELECT BEFORE UPDATE
+// The loop ensures atomicity of the // select + update even for no transaction // or read committed isolation level
+// we found it
+// note that it might be better to iterate the snapshot but this is safe, // assuming the user implements equals() properly, as required by the Set // contract!
+// Needed to bump this up to DotNode, because that is the only thing which currently // knows about the property-ref path in the correct format; it is either this, or // recurse over the DotNodes constructing the property path just like DotNode does // internally
+// TODO : perhaps we should additionally require that the incoming entity // version be equivalent to the defined unsaved-value?
+// The keyword used to insert a row without specifying // any column values
+// UNIQUE VIOLATION
+// DYNAMIC INSERT
+// if the metadata allowed proxy creation and caller did not request forceful eager loading, // generate a proxy
+// ldc // name of the field
+//Generators:
+// the root of the incoming property path matched one // of the embedded composite identifier properties
+// get a connection from the pool (thru DriverManager, cfr. Proxool doc)
+// Otherwise, this is a primitive type.
+// build an array with indices equal to the total number // of actual returns in the result Hibernate will return // for this query (scalars + non-scalars)
+// legacy behavior (with no abstract attribute specified)
+// switch
+// Don't include sub-classes for implied collection joins or subquery joins.
+// If this is an entity and the property is the identifier property, then use getIdentifierType(). //      Note that the propertyName.equals( propertyPath ) checks whether we have a component //      key reference, where the component class property name is the same as the //      entity id property name; if the two are not equal, this is the case and //      we'd need to "fall through" to using the property mapping.
+// register in exception table
+// todo : eventually merge this with TreeCache and just add optional opt-lock support there.
+// Start performing the updates
+// remove any snapshot, not really for memory management purposes, but // rather because it might now be stale, and there is no longer any  // EntityEntry to take precedence // This is now handled by removeEntity() //session.getPersistenceContext().removeDatabaseSnapshot(key);
+//swallow
+//special case ... this is the leaf of the containment graph, even though not immutable
+// check to see if our "propPath" actually // represents a property on the persister
+//TODO: perhaps this should be some other RuntimeException...
+//do this work only at the very highest level of the load //don't let this method be called recursively
+// would need an IdentitySet for this!
+// or bidirectional safety method, setting both sides: aPerson.addToEvent(anEvent);
+//this bit is only *really* absolutely necessary for handling //requestedId, but is also good if we merge multiple object //graphs, since it helps ensure uniqueness
+//TODO: get all properties, not just the fetched ones!
+// unable to locate it using this name
+//TODO: we should throw an exception if we really *know* for sure   //      that this is a detached instance, rather than just assuming //throw new StaleObjectStateException(entityName, id);
+// NativeSQL: collect key column and auto-aliases
+// should not be able to reach last without maxPosition being set // unless there are no results
+//its the given optional object
+// Do nothing; subclasses may override.
+// Ensures that containing deletions happen before sub-deletions
+//there _was_ a select clause
+// try block is a hack around fact that currently tuplizers are not // given the opportunity to resolve a subclass entity name.  this // allows the (we assume custom) interceptor the ability to // influence this decision if we were not able to based on the // given entityName
+// TRIM(end_keyword string-expression-1 FROM string-expression-2) // use Hibernate implementation "From" is one of the parameters they pass in position ?3 //registerFunction( "trim", new SQLFunctionTemplate(Hibernate.STRING, "trim(?1 ?2 from ?3)") );
+//pre H3.2 behavior: super.getReturnType(ct, m);
+// remove initial " and "
+// then handle any user-defined entity modes...
+// Make #@%$^#^&# sure no alias is applied to the table name
+// the mapping of entity names to their latest batch numbers.
+//unquotedIdentifierColumnName = null;
+// finally handle the exception
+// at the very least cleanup the data :)
+"//			boolean put = persister.getCache().insert(ck, cacheEntry);"
+// includes last '.'
+// If the uresolved property path isn't set yet, just use the property name.
+// invokeinterface // enabled.getInterceptFieldCallback()
+// don't create a unique key, 'cos some // databases don't like a UK on nullable // columns
+// List OPERATIONS:
+"//note: it is conceptually possible that a UserType could map null to //	  a non-null value, so the following is arguable:"
+// Create SQL_TOKEN nodes for the columns.
+//TODO: add referencedClass to disambiguate to FKs on the same //      columns, pointing to different tables
+// Multi-param date dialect functions...
+"//			Iterator iterator = extendsQueue.iterator();"
+//TODO: native ids
+// we have the form: trim(trimSource) //      so we trim leading and trailing spaces
+// create the node initially with the param name so that it shows // appropriately in the "original text" attribute
+//pass the column name (a generated id almost always has a single column)
+"//		 You may still have other ResultSets or update counts left to process here //		 but you can't do it now or the ResultSet you just got will be closed"
+// The syntax used to add a column to a table
+// use default behavior
+//stops flush being called multiple times if this method is recursively called
+//TODO: ugly here:
+// If the provider was leeching off an existing pool don't close it
+//We should actually rework this class to not implement Parser //and just process path expressions in the most convenient way.
+//figure out which tables need to be fetched
+// Get all the select expressions (that we just generated) and render the select.
+//optimization //optimization
+// EARLY EXIT!!!!
+//we can inner join to superclass tables (the row MUST be there) //we can never inner join to subclass tables
+// first time we find match!
+//TODO: *two* hashmap lookups here is one too many...
+// just do the regular thing if you can't find the ctor // Your AST must have default ctor to use this.
+//strip leading ", "
+// Create an DotNode AST for the path and resolve it.
+// it is possible for this method to be called during flush processing, // so make certain that we do not accidently initialize an uninitialized proxy
+//the following two lines were added to ensure that this.params is not null, which //can happen with two-deep nested subqueries
+// naked property-refs cannot be used with an aliased from element
+// (EQ NULL b) => (IS_NULL b)
+//DELETED
+// Don't need to lock the cache here, since if someone // else inserted the same pk first, the insert would fail
+// again, CCS did not have such a concept; however a reasonable // proximity is to clear the cache.  For non-transaction aware // caches, we will also do a clear at the end of the transaction
+//TODO: cache the persister, this shows up in yourkit
+//TODO: we should provide some way to get keys of collection of statistics to make it easier to retrieve from a GUI perspective
+// SUBCLASS PROPERTY CLOSURE
+//check if the detached object being merged is the parent
+// start region to handling exception (BulkAccessorException)
+// the map of batch numbers to EntityInsertAction lists
+// Next, try to locate this resource through this class's classloader
+// we need to obtain the lock before any actions are // executed, since this may be an inverse="true" // bidirectional association and it is one of the // earlier entity actions which actually updates // the database (this action is resposible for // second-level cache invalidation only)
+// on the inverse, it makes sense that if a ThreadLocalSessionContext- // bound session then gets deserialized to go ahead and re-bind it to // the ThreadLocalSessionContext session map.
+// this is called from SettingsFactory irregardless; trivial to simply disregard
+/* static methods only - hide constructor */
+// default is POJO
+// a "detached" collection that originally belonged to the same entity
+// properly handle property-ref-based associations
+// Does this dialect support the UNIQUE column syntax?
+//then by fk
+//ugly little workaround for fact that createUniqueKeyLoaders() does not handle component properties
+// Render the SQL query
+// boolean
+// and perform the load
+//were an odd or even number of NOTs encountered //the join string built up by compound paths inside this expression //a flag indicating if the subexpression is known to be boolean
+// if there is no order by, make one
+// column index
+// prefer re-generation of identity!
+// todo : need map? the prob is a proper key, right?
+// index should be last column listed
+// cascade-save to many-to-one BEFORE the parent is saved
+//don't bother trying to update, we know there is no row there yet
+//first look for a reference to a projection alias
+// For many-to-many joins, use the tablename from the queryable collection for the default text.
+//TODO: return new Lock(ts);
+// INDEX AND ROW SELECT
+// remove the current element from insertions. It will be added back later.
+// get the right object from the list ... would it be easier to just call getEntity() ??
+// LIMIT support (ala TOP) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// FIXME hack to work around fact that calling // Node added = root.addChild( fqn ); doesn't  // properly set the version on the node
+// if not a composite key, use "foo in (?, ?, ?)" for batching // if no batch, and not a composite key, use "foo = ?"
+// get meta's from // <joined-subclass>
+// union subclass support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// This check is needed since processing leaves the cursor // after the last physical row for the current logical row; // thus if we are after the last physical row, this might be // caused by either: //      1) scrolling to the last logical row //      2) scrolling past the last logical row // In the latter scenario, the previous logical row // really is the last logical row. // // In all other cases, we should process back two // logical records (the current logic row, plus the // previous logical row).
+// it is a simple table alias {foo}
+// For pessimistic locking, we just want to toss out our ref // to any old invalid root node and get the latest (may be null)
+//return memberPersister.getPropertyType(propertyName);
+// delegate already handles PK columns
+// we just hit the last position
+// orphans should not be deleted during copy??
+"// merges don't cascade to uninitialized collections //			//TODO: perhaps this does need to cascade after all...."
+//source.getPersistenceContext().removeNonExist( new EntityKey( id, persister, source.getEntityMode() ) );
+// otherwise, a trim-specification and/or a trim-character // have been specified;  we need to decide which options // are present and "do the right thing" // should leading trim-characters be trimmed? // should trailing trim-characters be trimmed? // the trim-character (what is to be trimmed off?) // the trim-source (from where should it be trimmed?)
+//handle empty collections
+// would be better to use the element-type to determine // whether the old and the new are equal here; the problem being // we do not necessarily have access to the element type in all // cases
+//If the object is already loaded, return the loaded one
+// NativeSQL: collect index column and auto-aliases
+// allow these to go through the the real session no matter what
+//TODO: include the rowids!!!!
+// char
+//TODO: add a CriteriaImplementor interface //      this class depends directly upon CriteriaImpl in the impl package...
+// Identity map of CollectionEntry instances, by the collection wrapper
+// we are using "all" or "dirty" property-based optimistic locking
+// ROW ID
+// Does the collection referenced by this FromElement // specify an order-by attribute?  If so, attach it to // the query's order-by
+// the name of an SQL function
+// by default we report no support for NOWAIT lock semantics
+// The property is a collection...
+//private final Map propertyTableNumbersByName = new HashMap();
+// we have a Javassist enhanced entity
+//TODO: implement functionality //  this might be painful to do here, as the "join post processing" for //  the subquery has already been performed (meaning that for //  theta-join dialects, the join conditions have already been moved //  over to the where clause).  A "simple" solution here might to //  perform "join post processing" once for the entire query (including //  any subqueries) at one fell swoop
+// basically just an adapted copy of find(CriteriaImpl)
+// nothing to do in a stateful session
+// strip table-owner because Informix always returns constraint names as "<table-owner>.<constraint-name>"
+//use the id passed in
+// RDMS supports the UNION ALL clause.
+// start by looking for HQL keywords...
+//Must occur after resolving identifiers!
+"/**	 * This form used from annotations (?).  Essentially the same as the above using a	 * resultset-mapping reference, but without cacheMode, readOnly, and comment.	 *	 * FIXME: annotations do not use it, so it can be remove from my POV	 * @deprecated	 *	 *	 * @param query The sql query string	 * @param resultSetRef The result-set-mapping name	 * @param querySpaces Any specified query spaces (used for auto-flushing)	 * @param cacheable Whether the query results are cacheable	 * @param cacheRegion If cacheable, the region into which to store the results	 * @param timeout A JDBC-level timeout to be applied	 * @param fetchSize A JDBC-level fetch-size to be applied	 * @param flushMode The flush mode to use for this query	 * @param parameterTypes parameter type map	 * @param callable Does the query string represent a callable object (i.e., proc)	 */"
+//may be final
+// native identifier generatiion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//it refers to an alias of a projection
+//ignore whitespace
+// we have the form: trim(from trimSource). //      This is functionally equivalent to trim(trimSource) // EARLY EXIT!!!!
+"//		this.sessionFactory = sessionFactory;"
+// TODO : still need to make CollectionPersisters EntityMode-aware
+// Identity map of EntityEntry instances, by the entity instance
+// HSQLDB only supports READ_UNCOMMITTED transaction isolation
+// ... and the token could be an identifer and the error is // a mismatched token error ...
+// This should only be possible if the caches are constructor injected
+//null child could occur for no from clause in a filter
+//TODO: need to make the majority of this functionality into a top-level support class for custom impl support
+// See if the entity is already bound to this session, if not look at the // entity identifier and assume that the entity is persistent if the // id is not "unsaved" (that is, we rely on foreign keys to keep // database integrity)
+//the user visible aliases, which are unknown to the superclass, //these are not the actual "physical" SQL aliases
+//TODO: is there a more elegant way than downcasting?
+//if its "id"
+// now update all changed or added rows fks
+//assume true, since we don't really know, and it doesn't matter
+// We need to seed the version value as part of this bulk insert
+// return false here, as most databases do not properly support this construct...
+// use the id assigned to the instance
+//ELEMENT
+//or Types.LONGVARCHAR?
+// ( (Column) ( (SimpleValue) ic.getIndex() ).getColumnIterator().next() // ).setNullable(false);
+// context-entity-identifier returns null explicitly if the entity // is not associated with the persistence context; so make some // deeper checks...
+// loop through all the associated entities and make sure they have been // processed before the latest // batch associated with this entity type.
+// ... and the expected token type was an identifier, then:
+// to be safe...
+// if it is an initialized proxy, let cascade // handle it later on
+// otherwise immediately materialize it
+//TODO: assumes all collections disassemble to an array!
+//TODO: inefficient if that cache is just going to ignore the updated state!
+//disassembled state gets put in a new array (we write to cache by value!)
+//TODO: to handle concurrent writes correctly, the client should pass in a Lock
+//Yuck:
+// Create the SessionFactory from hibernate.cfg.xml
+// Chop off the rest of the tree.
+//TODO: get SQL rendering out of here
+// CUSTOM SQL
+// the old-time stand-by...
+"//	private final List scalarTypes = new ArrayList(); //	private final List scalarColumnAliases = new ArrayList();"
+// The property is another class..
+// This 'dot' expression now refers to the resulting from element.
+// do nothing for persistent instances
+"//explicit = true;	// This is an explict Select. //ArrayList sqlResultTypeList = new ArrayList();"
+// First, try to find a matching constructor accepting a ViolatedConstraintNameExtracter param...
+//its already loaded so don't need to hydrate it
+// toggle autoCommit to false if set
+// Add the condition to the join sequence that qualifies the indexed element.
+// put the "standard" tuplizers into the tuplizer map first
+//TODO: proxies!
+// If true then execute db updates, otherwise just generate and display updates
+// Make sure the owner alias is known...
+//usually useless
+//only needed during compilation phase...
+//ignore subselect keywords
+//isSet = collection.isSet(); //isSorted = collection.isSorted();
+// Use theta style (for regression) // Move the node up, after the origin node.
+// Needed the "clazz_" check to work around union-subclasses // TODO : is there a way to tell whether a persister is truly discrim-column based inheritence?
+// dotcount>=2
+// See if the second lookahed token can be an identifier.
+/////////////////////////////////////////////////////////////////////// // HACK ALERT !!!!!!!!!!!!!!!!!!!!!!!!!!!! // Attempt to work around "ghost" ImpliedFromElements that occasionally // show up between the actual things being joined.  This consistently // occurs from index nodes (at least against many-to-many).  Not sure // if there are other conditions // // Essentially, look-ahead to the next FromElement that actually // writes something to the SQL
+//this.forceCacheRefresh = forceCacheRefresh;
+//always overwrite nonversioned data
+// we need to step through the rows one row at a time (slow)
+//beforeClassTokens.add("new"); DEFINITELY DON'T HAVE THIS!!
+// Tag this node as a JOIN. // Don't include subclasses in the join. // This is a clollection join.
+// the path expression ends at the ]
+// todo : potentially look at optimizing these two arrays
+// Downgrade locks
+// Filter conditions need to be inserted before the HQL where condition and the // theta join node.  This is because org.hibernate.loader.Loader binds the filter parameters first, // then it binds all the HQL query parameters, see org.hibernate.loader.Loader.processFilterParameters().
+// First, try to get the persister using the given name directly.
+// Configured outside of Hibernate (i.e. Servlet container, or Java Bean Container // already has Proxool pools running, and this provider is to just borrow one of these
+//TODO: handle property-ref
+// TODO : YUCK!!!  fix after HHH-1907 is complete
+// Configure the cache to use our TM
+// (NOT (LIKE a b) ) => (NOT_LIKE a b)
+// putfield // new value of the field
+//to stop the class from being unloaded
+// we got here because we assumed that an instance // with an assigned id was detached, when it was // really persistent
+//handle a property-ref
+// properties generated on update can never be updateable...
+// Reattachment of aPerson
+"/* will check current level if some of them are not null		 * or sublevels if they exist		 */"
+// If there is a FROM fragment and the FROM element is an explicit, then add the from part.
+//not absolutely necessary, but helps for some //equals()/hashCode() implementations
+// Remember the parameters for the compilation.
+// custom sql
+//==elementType ??
+// we have the form: trim(from trimSource). //      This is functionally equivalent to trim(trimSource)
+// Build the dynamic-map tuplizer...
+// TABLENAME
+// Set up the cache factory
+// Turn off includeSubclasses on all FromElements.
+//( (Column) model.getTable().getPrimaryKey().getColumnIterator().next() ).getName();
+//TODO: eventually put this back in, once we think all is fixed //Object otherAlias = columnsUnique.put(qualifiedColumn, columnAlias);
+// inserts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ignore this row of results! Note the early exit
+//private List aliases = new ArrayList();
+// for a subquery, the alias to use depends on a few things (we // already know this is not an overall SELECT): //      1) if this FROM_ELEMENT represents a correlation to the //          outer-most query //              A) if the outer query represents a multi-table //                  persister, we need to use the given alias //                  in anticipation of one of the multi-table //                  executors being used (as this subquery will //                  actually be used in the "id select" phase //                  of that multi-table executor) //              B) otherwise, we need to use the persister's //                  table name as the column qualification //      2) otherwise (not correlated), use the given alias
+//Statistics and logging:
+// all AliasToEntityMapResultTransformer are considered equal ~~~~~~~~~~~~~
+//TODO: does this really need to be here? //      does the collection already have //      it's own up-to-date snapshot?
+// The reason for this is SQL doesn't let you sort by an expression you are // not returning in the result set.
+// We use a different delegate than the non-optimistic superclass default
+//TODO!
+// Identity map of array holder ArrayHolder instances, by the array instance
+// register the standard dialect resolver
+// will still be issued when it used to be null
+//private final String rootTableName;
+// Start performing the deletes
+// Fix up the resident flag
+// or its key changed
+// see explanation above...
+// for an any // we will have to use reflection
+// TODO: Figure out a better way to get the FROM elements in a proper tree structure. // If this is not the destination of a many-to-many, add it as a child of the origin.
+// Don't hold the JBC node lock throughout the tx, as that // prevents reads and other updates
+// starts with the name of a mapped class (new style)
+// CHECK
+//TODO: never reached, since getTypeName() actually throws an exception!
+//important!!
+// putfield
+// (NOT (EQ a b) ) => (NE a b)
+// prepare and execute the insert
+// we have a CGLIB enhanced entity
+// interfaces // arguments
+// The CollectionEntry.isReached() stuff is just to detect any silly users   // who set up circular or shared references between/to collections.
+// we need to lock the collection caches before // executing entity inserts/updates in order to // account for bidi associations
+//for backward compatibility, disable this:
+// the column doesnt exist at all.
+// this is a transient object with existing persistent state not loaded by the session
+// apend everything up until the next encountered open brace
+// construct the cache
+// Constructors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Make sure this is a defined parameter and check the incoming value type
+//TODO: use these in methods above
+// add temp entry so that the next step is circular-reference // safe - only needed because some types don't take proper // advantage of two-phase-load (esp. components)
+"//	void setShowSqlEnabled(boolean b) { //		showSql = b; //	} // //	void setFormatSqlEnabled(boolean b) { //		formatSql = b; //	}"
+//faster?
+// Loaded entity instances, by EntityKey
+// some collections are not lazy:
+//the owner of the association is not the owner of the id
+// This could also just be true all the time...
+//Interrogate JDBC metadata
+//note there is a wierd implementation in the client side
+//include the discriminator and class-level where, but not filters
+// Find the WHERE; if there is no WHERE, find the FROM...
+// the class hierarchy structure
+// the MRU cache used to keep hard references to the most recently used query plans; // note : LRU here is a bit of a misnomer, it indicates that LRU entries are removed, the // actual kept entries are the MRU entries
+//following doesn't handle (null, not null) but unnecessary //since this would mean all rows
+// scroll backward
+// TODO : make this the factory for "entity mode related" sessions; // also means making this the target of transaction-synch and the // thing that knows how to cascade things between related sessions // // At that point, perhaps this thing is a "SessionContext", and // ConnectionManager is a "JDBCContext"?  A "SessionContext" should // live in the impl package...
+// features which remain constant across 8i, 9i, and 10g ~~~~~~~~~~~~~~~~~~
+//noncritical, swallow and let the other propagate!
+// collections don't dirty an unversioned parent entity
+// or should it actually throw an exception?
+// Create a new FROM node for the referenced class.
+// the current iterator
+// --- Inner classes (moved here from sql-gen.g) ---
+//  origin, path, implied, columns, classAlias,
+// legacy behavior, apply the bridge...
+//the load() which takes an entity does not pass an entityName
+//String[] fk = StringHelper.qualify( "collection_", cp.getKeyColumnNames() );
+// Verify the state of this new method in Hibernate 3.0 Dialect.java
+// TODO : would be great to have a Mapping#hasNonIdentifierPropertyNamedId method // I don't believe that Mapping#getReferencedPropertyType accounts for the identifier property; so // if it returns for a property named 'id', then we should have a non-id field named id
+// not for internal use:
+"//		scalarColumnAliases.add( typeReturn.getColumnAlias() ); //		scalarTypes.add( typeReturn.getType() );"
+//join = q.createJoinFragment(useThetaStyleJoin);
+// ugly hack for cases like "elements(foo.bar.collection)" // (multi-part path expression ending in elements or indices)
+//safe from concurrent modification because of how entryList() is implemented on IdentityMap
+// nothing to do; even if the operand is a parameter, no way we could // infer an appropriate expected type here
+//the BLOB type requires a size arguement - this defaults to //bytes - no arg defaults to 1 whole byte! //other argument mods include K - kilobyte, M - megabyte, G - gigabyte. //refer to the PBdevelopers guide for more info.
+//TODO: suck into event class
+// NOTE: we need to do the wrap here even if its not "dirty", // because collections need wrapping but changes to _them_ // don't dirty the container. Also, for versioned data, we // need to wrap before calling searchForDirtyCollections
+"//	protected List extendsQueue;"
+// Don't really know all the codes required to adequately decipher returned jdbc exceptions here. // simply allow the failure to be eaten and the subsequent insert-selects/deletes should fail
+// cascade the refresh prior to refreshing this entity
+// The rest only matters for optimistic locking, where we // need to establish the proper data version on the region root
+// FETCH STRATEGY
+// Display the dialect version.
+// For the case of dynamic-update="false", or no snapshot, we use the static SQL
+// subclass accesses ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO: ideally we need the construction of PropertyAccessor to take the following: //      1) EntityMode //      2) EntityMode-specific data (i.e., the classname for pojo entities) //      3) Property-specific data based on the EntityMode (i.e., property-name or dom4j-node-name) // The easiest way, with the introduction of the new runtime-metamodel classes, would be the // the following predicates: //      1) PropertyAccessorFactory.getPropertyAccessor() takes references to both a //          org.hibernate.metadata.EntityModeMetadata and org.hibernate.metadata.Property //      2) What is now termed a "PropertyAccessor" stores any values needed from those two //          pieces of information //      3) Code can then simply call PropertyAccess.getGetter() with no parameters; likewise with //          PropertyAccessor.getSetter()
+// if it was previously unreferenced, we need to flush in order to // get its state into the database in order to execute query
+//now render the joins
+// todo : what else to do here?
+"//		 This assumes you will want to ignore any update counts "
+//init the aliases, after initing the constructornode
+"//	private final List persisters = new ArrayList();"
+// Was there an explicit select expression?
+// conceivable that the dialect ctor could throw HibernateExceptions, so don't re-wrap
+//identifier collections not supported for 1-to-many
+// iload_3 // i
+// see if the entry represents a class file
+// classic parser does not support bulk manipulation statements
+//TODO: terrible implementation!
+//sqlResultTypes = selectClause.getSqlResultTypes();
+"//	private final String[] sqlAliases; //	private final String[] sqlAliasSuffixes;"
+// ldc // field name
+// from the collection of associations, locate OJA for the // ManyToOne corresponding to this persister to fully // define the many-to-many; we need that OJA so that we can // use its alias here // TODO : is there a better way here?
+// We ensure ASYNC semantics (JBCACHE-1175)
+// Collection Types:
+//ie. the entity came in from update()
+// If there is no data type for this node, and we're at the end of the path (top most dot node), then // this might be a Java constant.
+// some messy, complex stuff here, since createCriteria() can take an // aliased path, or a path rooted at the creating criteria instance
+// If the first identifier in the path referrs to the class alias (not the class name), then this // is a correlated subselect.  If it's a correlated sub-select, use the existing table alias.  Otherwise // generate a new one.
+// if // if // Otherwise, handle the error normally.
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // Pre-flushing section // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Do nothing, eplicit from elements are *always* in the projection list.
+//TODO: we could just return all false...
+// PHASE 1 : Parse the HQL into an AST.
+// the entity name
+// Forcefully remove leading ands from where fragments; the grammar will // handle adding them
+// TODO: toLowerCase was not done before. Only used in Template.
+// append the SQL to return the generated identifier //TODO: suck into Insert
+// iterate over the *old* list
+//slice, to get the columns for this component //property
+//decrement the lock
+// this is equivalent to the old behavior...
+// right represents a joins originating from left...
+// Does this dialect support the Oracle-style FOR UPDATE NOWAIT syntax?
+//path expression
+// we will need to remove ye olde entries
+// Now, process the returns
+// the referenced node text is the special 'id'
+// This is an explicit FROM element.
+//starts with 1, implicitly
+//not sure if this would ever be null but wanted to be careful
+// important, to account for newly saved entities in query // todo : some kind of check for new status...
+// If we've been blocking for the mutex, perhaps another // thread has already reestablished the root. // In case the node was reestablised via replication, confirm it's  // marked "resident" (a status which doesn't replicate)
+// iconst_i // continue to aastore // growing stack is 1
+// aload_3 // load the raw bean
+// ORPHAN DELETE (used for programmer error detection)
+//operations which cascade as far as the collection also cascade to collection elements
+// identifier quoting support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// by default we report no support
+// more specifically : "? [op] datetime" //      1) if the operator is MINUS, the param needs to be of //          some datetime type //      2) if the operator is PLUS, the param needs to be of //          some numeric type
+// aload_1 // load the bean
+// not really a many-to-one association *necessarily*
+//TODO: copy/paste from recreate()
+//Cope with [,]
+//different nullability rules for pk/fk
+//This is not very nice (and quite slow):
+// Get the caller principals
+// don't need to check laziness (dirty checking algorithm handles that)
+// Skip 'DISTINCT' and 'ALL', so we return the first expression node.
+// grab its current state
+// trying via forName() first to be as close to DriverManager's semantics
+//private String propertyName;
+// 60 second lock timeout
+// TODO : remove these last two as batcher is no longer managing connections
+//some statistics
+// for deprecated saveOrUpdateCopy()
+// we do not actually propogate ANTLRExceptions as a cause, so // log it here for diagnostic purposes
+// PersistentIdentifierGenerator implementation ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// TODO: this is very suboptimal for some subclasses (namely components), // since it does not take advantage of two-phase-load
+//TODO: is this right??
+// aliases for composite-id's
+// Add the second join, the one that ends in the destination table.
+//sort first by entity name
+// key is an entity involved with the operation performed by the listener; // value can be either a copy of the entity or the entity itself
+// for an any
+// +1 to include the following '.'
+// since this entity will now be processed in the latest possible batch, // we can be assured that it will come after all other associations, // there's not need to continue checking.
+// revert to traditional hibernate behavior of setting initialPoolSize to minPoolSize // unless otherwise specified with a c3p0.*-style parameter.
+//cannot instantiate
+/*&& StringHelper.isNotEmpty( frag )*/
+//return AssociationType.FOREIGN_KEY_TO_PARENT; //this is better but causes a transient object exception...
+//TODO: theoretically non-threadsafe...
+// this property belongs on the table and is to be inserted
+// Should mean that no such property was found
+"// overriding inherited meta attribute. HBX-621 & HBX-793			"
+// cache the actual id of the object, not the value of the // property-ref, which might not be initialized
+// this is only needed (afaict) for ResultTransformer processing...
+/*ArrayList sqlResultTypeList,*/
+//if we only returned one entity, query by key is more efficient
+"// todo : for 4.0 //	private static final Logger log = LoggerFactory.getLogger( SQLStatementLogger.class ); // this is the legacy logging 'category'..."
+// just ignore it for now, it'll get resolved later...
+//TODO:refactor + make this method private
+"/**	 * Build a ResultSetMappingDefinition given a containing element for the ""return-XXX"" elements	 *	 * @param resultSetElem The element containing the return definitions.	 * @param path No clue...	 * @param mappings The current processing state.	 * @return The description of the mappings...	 */"
+// during flush, we navigate the object graph to // collections and decide what to do with them
+// orphans should be deleted during save/update
+// don't even bother trying to read any further
+// we do not have to worry about queued additions to uninitialized // collections, since they can only occur for inverse collections!
+// even here, if only properties mapped to the "base table" are referenced // in the set and where clauses, this could be handled by the BasicDelegate. // TODO : decide if it is better performance-wise to perform that check, or to simply use the MultiTableUpdateDelegate
+// invokespecial
+//override on some subclasses
+// NativeSQL: collect element column and auto-aliases
+// increment the version number (if necessary)
+// athrow
+//sqlResultTypeList.add( type );
+// copied from Session:
+// Remember Isolation level
+// add the fetched entities
+// Search for collections by reachability, updating their role. // We don't want to touch collections reachable from a deleted object
+//Primary key constraint
+//TODO: this class does too many things! we need a different //kind of path expression parser for each of the diffferent //ways in which path expressions can occur
+//INITIALIZATION:
+// transfer an explicitly defined entity name // handle the lazy attribute
+"// Note: For object <-> SQL datatype mappings see: //	 Configuration Manager | Advanced | SQL | System DDL Datatype Mappings // //	TBD	registerColumnType(Types.BINARY,        ""binary($1)""); // changed 08-11-2005, jsl"
+//now render the select clause
+// new // BulkAccessorException
+// If the from element represents a JOIN_FRAGMENT and it is // a theta-style join, convert its type from JOIN_FRAGMENT // to FROM_FRAGMENT
+// First, try to locate this resource through the current // context classloader.
+// ATTRIBUTES USED ONLY DURING FLUSH CYCLE
+// todo : should seriously consider not allowing a txn to begin from a child session //      can always route the request to the root session...
+// essentially, if the real session is closed allow any // method call to pass through since the real session // will complain by throwing an appropriate exception; // NOTE that allowing close() above has the same basic effect, //   but we capture that there simply to perform the unbind...
+//TODO: this bit actually has to be called after all cascades! //      but since identity insert is called *synchronously*, //      instead of asynchronously as other actions, it isn't
+// todo : add support for READ_WRITE ( + NONSTRICT_READ_WRITE ??? )
+//pass this as an argument only to avoid double looking
+// and the qualifier is not the alias of this criteria //      -> check to see if we belong to some criteria other //          than the one that created us
+//re-snapshot
+// we can't cascade to non-embedded elements
+// skip finalize methods
+// Not possible to simply re-use the versionPropertyNode here as it causes // OOM errors due to circularity :(
+// we found some extends attributes referencing entities which were // not already processed.  here we need to locate all entity-names // and class-names contained in this document itself, making sure // that these get removed from the extendz list such that only // extends names which require us to delay processing (i.e. // external to this document and not yet processed) are contained // in the returned result
+// ID UNSAVED-VALUE
+// might need to run a different filter entirely after the flush // because the collection role may have changed
+//addInitializedCollection(collection, persister, id);
+// otherwise, recurse
+//unsupported
+// we are already processing a dot-structure
+// create an index on the key columns??
+// Multi-param dialect functions...
+//public Currency getCurrency(int col) throws HibernateException;
+//TODO: this is a little inefficient, don't need to do a whole //      deep replaceElements() call
+// no-op. We don't own the cache so we shouldn't stop it.
+// we can do the cast since orphan-delete does not apply to: // 1. newly instantiated collections // 2. arrays (we can't track orphans for detached arrays)
+// entities ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Caches
+// Does this dialect support FOR UPDATE OF, allowing particular rows to be locked?
+// short
+//not all classpersisters implement PropertyMapping!
+//Custom SQL (would be better if these were private)
+"//		registerColumnType( Types.CLOB, 16777215, ""mediumtext"" ); //		registerColumnType( Types.CLOB, 65535, ""text"" );"
+// todo : remove this once ComponentMetamodel is complete and merged
+// Always add the collection's query spaces.
+// TODO : we may also want to check that the types here map to exactly one column/JDBC-type //      can't think of a situation where arithmetic expression between multi-column mappings //      makes any sense.
+// todo : throw exception?  maybe warn if not the same?
+// now update the object .. has to be outside the main if block above (because of collections)
+// Begin second unit of work
+/* local variable | this | */
+//use of a stringbuffer to workaround a JDK bug
+// don't allow comments on these insert statements as comments totally // blow up the Oracle getGeneratedKeys "support" :(
+// Generate the inner join -- The elements need to be joined to the collection they are in.
+// TimesTen has no known variation of a "SELECT ... FOR UPDATE" syntax...
+//cannot occur
+//if it is an uninitialized proxy, pointing //with this session, then when it is accessed, //the underlying instance will be "contained"
+// Get the function return value type, based on the type of the first argument.
+// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression
+// check the id unsaved-value
+// Correlated subqueries create 'special' implied from nodes // because correlated subselects can't use an ANSI-style join
+// Currently *not* cachable if autodiscover types is in effect (e.g. "select * ...")
+//abort the save (the object is already saved by a circular cascade)
+"/**	 * Set a custom entity resolver. This entity resolver must be	 * set before addXXX(misc) call.	 * Default value is {@link org.hibernate.util.DTDEntityResolver}	 *	 * @param entityResolver entity resolver to use	 */"
+// register synch; stats.connect()
+// note that for sequential scrolling, we make the assumption that // the first persister element is the "root entity"
+//NOTE SPECIAL CASE: // default to join and non-lazy for the "second join" // of the many-to-many
+//process a token, mapping OO path expressions to SQL expressions
+"/*DataSource unpooled = DataSources.unpooledDataSource(				jdbcUrl, props.getProperty(Environment.USER), props.getProperty(Environment.PASS)			);*/"
+// an "embedded" component (composite ids and unique) // note that this does not handle nested components
+// TODO: should "record" how many properties we have reffered to - and if we  //       don't get'em'all we throw an exception! Way better than trial and error ;)
+//FIXME: get the PersistentClass
+//TODO: the i==entitySpan-1 bit depends upon subclass implementation (very bad)
+// We must return a valid RDMS/RSA command from this method to // prevent RDMS/RSA from issuing *ERROR 400
+// The associated entity is implied, but it must be included in the FROM. // The collection alias is the role.
+// delete does cascade to uninitialized collections
+// if not "get", then try "is"
+"//		extendsQueue = new ArrayList();"
+// if everything went ok, commit the transaction and close the obtained // connection handle...
+// wrapped iterators
+//TODO: for some dialects it would be appropriate to add the renderOrderByPropertiesSelect() to other select strings
+// deletes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO: check this....
+// wrap up any new collections directly referenced by the object // or its components
+// force initialize!
+// Do the corresponding RHS
+// Set the attributes of the property reference expression.
+// returnign null!
+// TODO : better way?!?
+// The 'from element' that represents the elements of the collection.
+// do not do anything
+// handle the (assumed) valid cases: // #1 - the only valid datetime addition synatx is one or the other is a datetime (but not both)
+// TODO : most of below was taken verbatim from DotNode; should either delegate this logic or super-type it
+// serialization ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// check a set of parent/child nodes in the from-clause tree // to determine if a comma is required between them
+// HHH-2300
+//ignore!
+// if no batch, use "foo = ? and bar = ?"
+// standard sql92 functions (can be overridden by subclasses)
+// No batch statements
+// Next, try to locate this resource through the system classloader
+// Write HTML footer
+// an association
+// Get an exclusive right to update JBC for this key from this node.
+// Allows various loaders (ok mainly the QueryLoader :) to check // whether scrolling of their result set should be allowed. // // By default it is allowed.
+// iconst_i
+// subclass closure properties
+//TODO: inefficient
+// if the property mapping consists of all formulas,  // make it non-updateable
+//cfg.setProperty("hibernate.show_sql", "true");
+//no need to check laziness, dirty checking handles that
+// moved up from AbstractEntityPersister ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// The property is a component...
+// cannot handle single quotes
+"/*				 * Property prop = new Property(); prop.setName(""id"");				 * prop.setPropertyAccessorName(""embedded""); prop.setValue(id);				 * entity.setIdentifierProperty(prop);				 */"
+// If there are any scalars (non-entities) selected, render the select column aliases.
+// Method expressions in a SELECT should always be considered scalar.
+// short-circuit(s) // no new elements, the old list contains only Orphans // no old elements, so no Orphans neither
+// Reset the node type, because the rest of the system is expecting FROM_FRAGMENT, all we wanted was // for the factory to create the right sub-class.  This might get reset again later on anyway to make the // SQL generation simpler.
+//TODO: design new lifecycle for ProxyFactory
+// isTransactionCallbackRegistered denotes whether any Hibernate // Transaction has registered as a callback against this // JDBCContext; only one such callback is allowed.  Directly // serializing this value causes problems with JDBCTransaction, // or really any Transaction impl where the callback is local // to the Transaction instance itself, since that Transaction // is not serialized along with the JDBCContext.  Thus we // handle that fact here explicitly...
+// this is called by SessionFactory irregardless; we just disregard here; // could also add a check to SessionFactory to only conditionally call stop
+//tableName = mappings.getNamingStrategy().propertyToTableName( className, path );
+//TODO: Somehow add the newly created foreign keys to the internal collection
+//implicit polymorphism not supported (would need a union)
+// Default to collections sharing entity cache if there is one
+//scan the query string for class names appearing in the from clause and replace //with all persistent implementors of the class/interface, returning multiple //query strings (make sure we don't pick up a class in the select clause!)
+// For property references generate <tablealias>.<columnname> as <projectionalias>
+// Don't resolve the node again.
+// turn hibernate.c3p0.* into c3p0.*, so c3p0 // gets a chance to see all hibernate.c3p0.*
+// Oracle did add support for ANSI CASE statements in 9i
+"//		String provider = properties.getProperty( Environment.BYTECODE_PROVIDER ); //		log.info( ""Bytecode provider name : "" + provider ); //		BytecodeProvider bytecodeProvider = buildBytecodeProvider( provider ); //		settings.setBytecodeProvider( bytecodeProvider );"
+// this assumes schema support, which is present in 1.8.0 and later...
+// no big deal
+// CollectionPropertyMapping processes everything except 'index'.
+// Transform the tree.
+// we only release the connection
+// todo : temporary //      needed because currently persister is the one that //      creates and renders the join fragments for inheritence //      hierarchies...
+//TODO: cache this in an instvar
+// Handle actions
+//TODO: this is too conservative; if all preceding joins were  //      also inner joins, we could use an inner join here
+//for EJB3
+// VERSION UNSAVED-VALUE
+//handle <=, >=, !=, is not, not between, not in
+//propertyTableNumbersByName.put( prop.getName(), join );
+// WARNING: classfile only
+//only necessary for postgre < 7.4 //http://anoncvs.postgresql.org/cvsweb.cgi/pgsql/doc/src/sgml/ref/create_sequence.sgml
+//the first key found after the given key
+// 23000: Check constraint violation: {0} // 23001: Unique index or primary key violation: {0}
+//values is not null and is checkable, we'll look deeper
+// all DistinctRootEntityResultTransformer are considered equal ~~~~~~~~~~~
+// TODO : not sure the best way to handle this. // The non-performant way :
+// don't care...
+// Essentially: // 1) If we have a local (Hibernate) transaction in progress //      and it already has the UserTransaction cached, use that //      UserTransaction to determine the status. // 2) If a transaction manager has been located, use //      that transaction manager to determine the status. // 3) Finally, as the last resort, try to lookup the //      UserTransaction via JNDI and use that to determine the //      status.
+//persistent collections may have components
+// dynamic filters attached to the class-level
+// the Interceptor handled the dirty checking
+//TODO: make EntityPersister *not* depend on SessionFactoryImplementor //interface, if possible
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // stuff that is tuplizer-centric, but is passed a session ~~~~~~~~~~~~~~~~ // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Some JDBC drivers erroneously return an empty array here for a null DB value :/
+// return
+//prevents this session from adding things to cache
+//TODO: get SQL rendering out of this package!
+// intentionally empty
+//cant instantiate
+// boolean, byte, char, int, short
+// This next bit is to allow for both unsaved-value="negative" // and for "older" behavior where version number did not get // seeded if it was already set in the object // TODO: shift it into unsaved-value strategy
+//( (Column) sc.getTable().getPrimaryKey().getColumnIterator().next() ).getName();
+//must add to JNDI _after_ adding to HashMaps, because some JNDI servers use serialization
+// TODO: better error message since we actually support composites if names are explicitly listed.
+// Following methods we don't delegate since they have so little logic // it's clearer to just implement them here
+// this is a property of the table, which we are updating
+//render the SQL
+// child == parent.getFirstChild()
+// refresh() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// grab its state from the ResultSet and keep it in the Session // (but don't yet initialize the object itself) // note that we acquire LockMode.READ even if it was not requested
+//do the failfast put outside the scope of the JTA txn
+//Custom SQL
+// if the condition is not already there...
+//work around a bug in all known connection pools....
+// the user provided resulttransformer, not the one used with "select new". Here to avoid mangling // transformed/non-transformed results.
+// NOTE : this is being used from the process of shutting down a // SessionFactory. Specific things to consider: // (1) this clearing of the region should not propagate to // other nodes on the cluster (if any); this is the // cache-mode-local option bit... // (2) really just trying a best effort to cleanup after // ourselves; lock failures, etc are not critical here; // this is the fail-silently option bit...
+//TODO: this is temporary in that the end result will probably not take a Property reference per-se.
+//check for all components values in the collection
+// all this only really needs to consider properties // of this class, not its subclasses, but since we // are reusing code used for sequential selects, we // use the subclass closure
+// for regression testing against output from the old parser... // found it easiest to simply reorder the FromElements here into ascending order // in terms of injecting them into the resulting sql ast in orders relative to those // expected by the old parser; this is definitely another of those "only needed // for regression purposes".  The SyntheticAndFactory, then, simply injects them as it // encounters them.
+// SORT
+"/*public boolean equals(Object other) {		read();		return bag.equals(other);	}	public int hashCode(Object other) {		read();		return bag.hashCode();	}*/"
+//q.addCollection(collectionName, collectionRole);
+//perhaps not really necessary...
+// initialize this collection
+// don't even bother trying to read further
+// mappings might contain either the "raw" extends name (in the case of // an entity-name mapping) or a FQN (in the case of a POJO mapping).
+// disassemble named parameters
+// (NOT (NOT_BETWEEN a b) ) => (BETWEEN a b)
+// Custom sql
+//we need to check even if it was not initialized, because of delayed adds!
+//registerColumnType data types
+/////////////////////////////////////////////////////////////////////// // Prepare persisters and link them up with their cache // region/access-strategy
+// Convert the string value into the proper type.
+//TODO: if object was an uninitialized proxy, this is inefficient, //      resulting in two SQL selects
+//Close extra brackets we opened
+// determine the type of the first argument...
+// JoinProcessor needs to know if the where clause fragment came from a dynamic filter or not so it // can put the where clause fragment in the right place in the SQL AST.   'hasFilterCondition' keeps track // of that fact.
+// Note : expected in the syntax: //      type=listenerClass //          ({sep}type=listenerClass)* // where {sep} is any whitespace or comma
+// this method is called when a new non-null collection is persisted // or when an existing (non-null) collection is moved to a new owner
+//ick!
+// TODO: get SQL rendering out of here, create an AST for the join expressions. // Use the SQL generator grammar to generate the SQL text for the index expression.
+// cached for efficiency...
+// TODO: lowercasing done here. Was done "at random" before; maybe not needed at all ?
+//full joins are not supported.. yet!
+//TODO: this needn't exclude subclasses...
+//no pointbase BIT
+//shortcut
+//"as" is not in KEYWORDS
+// Completely optional cascading drop clause.
+//it must be a collection fetch
+// Does this dialect support the FOR UPDATE syntax?
+// Begin unit of work
+//use of trim() here is ugly?
+// not necessarily a *unique* property reference
+//element = XMLHelper.generateDom4jElement( persister.getNodeName() );
+// Execution methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// return the connection
+// Make sure JBC doesn't look one up
+//NOTE: we avoid joining to the next table if the named property is just the foreign key value
+// Otherwise, try to use the no-arg constructor
+// Put the THETA_JOINS node before the HQL condition, after the filters.
+// loading collection xrefs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//checking for named queries
+// Register the FromElement with the FROM clause, now that we have the names and aliases.
+// *store_1 // each type
+// TODO: It would be really, really nice to use this to also model components!
+//should this interface extend PropertyMapping?
+"//		TypeFactory.deepCopy( currentState, propTypes, persister.getPropertyUpdateability(), deletedState, session );"
+//unwrap the object
+// should indicate that we are processing an INSERT/UPDATE/DELETE // query with a subquery implied via a collection property // function. Here, we need to use the table name itself as the // qualification alias. // TODO : verify this works for all databases... // TODO : is this also the case in non-"indexed" scenarios?
+// the outerJoinsAfterWhere needs to come before where clause to properly // handle dynamic filters
+// unhappy about this being public ... is there a better way?
+// TODO: iteratively get transient entities and retry merge until one of the following conditions: //       1) transientCopyCache.size() == 0 //       2) transientCopyCache.size() is not decreasing and copyCache.size() is not increasing // TODO: find out if retrying can add entities to copyCache (don't think it can...) // For now, just retry once; throw TransientObjectException if there are still any transient entities
+// set the name of bulk accessor.
+// We should reengineer this class so that, rather than the current ad - // hoc linear approach to processing a stream of tokens, we instead // build up a tree of expressions.
+//TODO: refactor to .sql package
+//put() has nowait semantics, is this really appropriate? //note that it needs to be async replication, never local or sync
+//test out the optimizer:
+//assign the requested id to the proxy, *before* //reassociating the proxy
+// Multi-param string dialect functions...
+//EARLY EXIT
+// So this needs to be safe from concurrent modification problems. // It is safe because of how IdentityMap implements entrySet()
+// why does this matter?
+//use the current version
+// todo : i'd much rather have this done from #endLoadingCollection(CollectionPersister,LoadingCollectionEntry)...
+// warning: can cause a recursive calls! (proxy initialization)
+// substitutes into values by side-effect
+// GUID support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// (NOT (IS_NOT_NULL a b) ) => (IS_NULL a b)
+// collect EntityIdentifier(s) of the *current* elements - add them into a HashSet for fast access
+// Never include subclasses for implied from elements.
+// Generate the property select tokens.
+//skip the driving table
+//TODO: should orphans really be deleted during lock???
+//there is probably a row there, so try to update //if no rows were updated, we will find out
+// The following variables are stacks that keep information about each subexpression // in the list of nested subexpressions we are currently processing.
+//we only check the version when _upgrading_ lock modes
+// collectionPersister should not be null, but we don't want to throw // an exception if it is null
+// todo : should we check the current isolation mode explicitly?
+// amazingly, these two will work because AbstractCollection // uses iterator() to fill the array
+// if no array holder we found an unwrappered array (this can't occur, // because we now always call wrap() before getting to here) // return (ah==null) ? true : searchForDirtyCollections(ah, type);
+// NOTE: this assumes something about how propertySelectFragment is implemented by the subclass! // was toUnqotedAliasStrings( getIdentiferColumnNames() ) before - now tried // to remove that unqoting and missing aliases..
+//allow index() function:
+// Entity proxies, by EntityKey
+// return false;
+// the default is to simply not lazy fetch properties for now...
+// swallow it, and continue to roll back JTA transaction
+// polymorphism not really handled completely correctly, // perhaps...well, actually its ok, assuming that the // entity name used in the lookup is the same as the // the one used here, which it will be
+// we represent a naked (simple) prop-ref
+// return new uninitialized proxy
+// expected type is intrinsic here...
+"//	public ComponentMetamodel(Component component, SessionFactoryImplementor sessionFactory) {"
+//materialize associations (and initialize the object) later
+// putfield // put field "$JAVASSIST_CALLBACK" defined already
+// invokeinterface // callback.write*(..)
+// try "get"
+// work around that crazy issue where the tree contains // "empty" FromElements (no text); afaict, this is caused // by FromElementFactory.createCollectionJoin()
+// automatically makes a column with the default name if none is specifed by XML
+// we have to set up the table later!! yuck
+// Make sure we don't re-release the same cache
+// lock() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Oracle8 and previous define only a "DATE" type which //      is used to represent all aspects of date/time
+// otherwise, perform a "deep equivalence" check...
+// TODO: this is a bit of copy/paste from IndexedCollection.createPrimaryKey()
+// below is for Cache' that don't have str in 2007.1 there is str and we register str directly
+// EARLY EXIT!!!
+// Due to the complexity in initializing the SelectClause, do not generate one here. // If it is not found; simply return null... // // Also, do not cache since it gets generated well after we are created.
+// maybe a concrete SQLpropertyresult type, but Map is exactly what is required at the moment
+// Sets can be just a view of a part of another collection. // do we need to copy it to be sure it won't be changing // underneath us? // ie. this.set.addAll(set);
+// PHASE 3 : Generate the SQL.
+// saveOrUpdateCopy() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//if an exception occurs during flush, user must call rollback()
+// otherwise, the proxy was pruned during the serialization process
+// Frontbase has no known variation of a "SELECT ... FOR UPDATE" syntax...
+// Create a new THETA_JOINS node as a parent of all filters
+// collection of <many-to-any/> mappings... // used to circumvent the component-collection check below...
+// join.getKey().setType( new Type( lazz.getIdentifier() ) );
+//Cope with special cases of AND, NOT, )
+// drop them in reverse order in case db needs it done that way...
+// getfield // old value of the field
+//TODO check there is no actual definition elemnents when a ref is defined
+// find any entities that are still transient after retry
+// otherwise, everything ok.
+// TODO : shouldnt inserts be Expectations.NONE?
+// it might still need to apply a collection ordering based on a // many-to-many defined order-by...
+// initialize the Set of queried identifier spaces (ie. tables)
+//the criteria instance
+// Just add a 'not' parent.
+// ifnonnull
+// we know only the rhs-hand type, so use that
+//write(); -- doesn't
+//swallow, the transaction was finished
+//chop the last union (all)
+//special case
+//null version means the object is in the process of being loaded somewhere else in the ResultSet
+// Start the session to be used for this request
+//public boolean isSubselectLoadable();
+// Use the DOT node to emit the first column name. // Create the column names, folled by the column aliases.
+// could be either an ordinal or JPA-positional parameter
+// Schedule updates to collections:
+// check to see if the connection is in auto-commit  // mode (no connection means aggressive connection // release outside a JTA transaction context, so MUST // be autocommit mode)
+// "pass along" our initial embedded parameter node(s) to the first generated // sql fragment so that it can be handled later for parameter binding...
+// istore_3 // store i
+// update() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// again, CCS did not have such a concept; but a reasonable // proximity is to clear the cache after transaction *as long as* // the underlying cache is not JTA aware.
+// does not handle arrays (thats ok, cos they can't be lazy) // or newly instantiated collections, so we can do the cast
+// Don't hold the JBC node lock throughout the tx, as that // prevents updates // Add a zero (or low) timeout option so we don't block // waiting for tx's that did a put to commit
+// For an explicit many-to-many relationship, add a second join from the intermediate  // (many-to-many) table to the destination table.  Also, make sure that the from element's  // idea of the destination is the destination table.
+// ignore it; the incoming property could not be found so we // cannot be sure what to do here.  At the very least, the // safest is to simply not apply any dereference toggling...
+//TODO: add owner argument!!
+// so the transaction is already rolled back, by JTA spec
+// JOINS
+/* COLUMN and TABLE should be renamed but it would break the public API */
+// visit width-first, then depth
+// todo : throw exception?
+// This inner class implements a case statement....perhaps im being a bit over-clever here
+// IdentifierGenerator implementation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO mappings.getLogicalTableName(ownerTable)
+// select-range is terminated by declaration of "from"
+//actually, this last test is probably unnecessary, since  //beforeCompletion() doesn't get called during rollback
+// adds remove as a sort-of alias for delete...
+// the current join represents the join between a many-to-many association table // and its "target" table.  Here we need to apply any additional filters // defined specifically on the many-to-many
+//TODO: unnecessary for databases with ANSI-style joins
+// entity name will not be available for non-POJO entities // TODO: cache the entity name somewhere so that it is available to this exception
+// the current batch number is the latest batch for this entity type.
+// TODO: RESTRICT VIOLATION
+// process the "new" HQL style where aliases are assigned // _after_ the class name or path expression ie. using // the AS construction
+// If the query is already compiled, skip the compilation.
+// required to exception table // iconst_0 // i
+//don't need filters for the static loaders
+// Add the type to the list of returned sqlResultTypes.
+//TODO handle supportsNotNullUnique=false, but such a case does not exist in the wild so far
+// temporary table support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//GENERATE THE SQL:
+//private final String unquotedIdentifierColumnName;
+// any earlier proxy takes precedence
+// just ignore
+// checkcast (case of primitive type) // invokevirtual (case of primitive type)
+// only one-to-one is lazy fetched
+//TODO: reenable if we also fix the above todo
+// checkcast // cast bean
+//TODO: look at the owning property and check that it  //      isn't lazy (by instrumentation)
+//needed for SOAP libraries, etc
+// propertyName refers to something like collection.size...
+// find the batch number associated with the current association, if any.
+//not really necessary, but good for consistency...
+// hit the database, after checking the session cache for a snapshot
+// See if we had a 2nd invalidation from the same initial // preinvalidation timestamp. If so, only increment // if the new current value is an increase
+//processCollectionProperty(token, q.getCollectionPersister(collectionRole), collectionName);
+"//	private ComponentTuplizerFactory componentTuplizerFactory; todo : HHH-3517 and HHH-1907 //	private BytecodeProvider bytecodeProvider;"
+// Create the join element under the from element.
+// Generate an 2d array of column names, the first dimension is parallel with the // return types array.  The second dimension is the list of column names for each // type.
+// session-start/post-flush persistent state
+//TRANSIENT or DELETED
+//flat recursive algorithm
+// orphans should not be deleted during merge??
+/*(array==null) ? tempList.size() :*/
+// worrying about proxies is perhaps a little bit of overkill here...
+//TODO: code duplication with SingleTableEntityPersister
+//named query parameter
+// If you're closing down the ConnectionProvider chances are an // is not a real big deal, just warn
+// inject the WHERE after the parent
+//we must clone embedded composite identifiers, or  //we will get back the same instance that we pass in
+//sort first by role name
+// break the outer loop !!!
+//TODO: handle the case of a foreign key to something other than the pk
+// while constructor is running
+//if it is a formula index, use the element columns in the PK
+/////////////////////////////////////////////////////////////////////////// // USED ONLY FOR REGRESSION TESTING!!!! // // todo : obviously get rid of all this junk ;) ///////////////////////////////////////////////////////////////////////////
+//TODO: this dependency is kinda Bad
+//the entity is not associated with the session, so //try interceptor and unsaved-value
+//return memberPersister.getType();
+//NOTE EARLY EXIT
+//the class discriminator value
+//memory optimization
+// Origial Dialect.java returns true;
+//Set USE_REFLECTION_OPTIMIZER to false to fix HHH-227
+// persist() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// this is called by SessionFactory irregardless; we just disregard here; // could also add a check to SessionFactory to only conditionally call start
+// A collection of scalar elements...
+// TODO : will need reference to session factory to fully complete HHH-1907
+// evicts don't cascade to uninitialized collections
+// this is the second pass through on a merge op, so here we limit the // replacement to associations types (value types were already replaced // during the first pass)
+// create a new batch for this type. The batch number is the number of current batches.
+// this property belongs to the table, and it is not specifically // excluded from optimistic locking by optimistic-lock="false"
+// here, we work under the following assumptions: //      ------------ valid cases -------------------------------------- //      1) datetime + {something other than datetime} : always results //              in a datetime ( db will catch invalid conversions ) //      2) datetime - datetime : always results in a DOUBLE //      3) datetime - {something other than datetime} : always results //              in a datetime ( db will catch invalid conversions ) //      ------------ invalid cases ------------------------------------ //      4) datetime + datetime //      5) {something other than datetime} - datetime //      6) datetime * {any type} //      7) datetime / {any type} //      8) {any type} / datetime // doing so allows us to properly handle parameters as either the left // or right side here in the majority of cases
+//tolerates nulls
+// If there are no collection fetches, then no further checks are needed
+// this page intentionally left blank :)
+//NOTE: unlike all other Loaders, this one is NOT //      multithreaded, or cacheable!!
+//TODO: assertion only, could be optimized away
+// all clear
+// this is used during SqlGenerator processing
+// do not auto-flush while outside a transaction
+// -- Implementation private methods --
+//sqlResultTypes = ( Type[] ) sqlResultTypeList.toArray( new Type[sqlResultTypeList.size()] );
+// semantic action processing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"//		return getFactory().getSettings().getBytecodeProvider().getProxyFactoryFactory().buildProxyFactory();"
+//Cope with a continued path expression (ie. ].baz)
+// getfield // get each field
+// Handle any filters applied to this collection for many-to-many
+// No additional open braces found in the string, append the // rest of the string in its entirty and quit this loop
+// lock doesn't cascade to uninitialized collections
+// this is an internal error of some sort...
+// ParameterContainer impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"//			collectionOwnerAliases.add( ownerAlias );"
+// aastore // args
+// Double check the distributed cache
+// Always add the type to the return type list.
+//Blobs are ignored by merge()
+// --Commented out by Inspection (12/4/04 9:10 AM): public abstract void addCondition(String alias, String[] columns, String condition);
+//instanceof AssociationType;
+//even process null collections
+// Generate an explicit join for the root dot node.   The implied joins will be collected and passed up // to the root dot node.
+//reset the version
+// refer to comment in StatefulPersistenceContext.addCollection()
+// let this take precedence if defined, since it works for // assigned identifiers
+// Among other things, updateReachables() will recursively load all // collections that are moving roles. This might cause entities to // be loaded.
+//tokens that close a sub expression //tokens that open a sub expression //tokens that would indicate a sub expression is a boolean expression
+"//		registerColumnType( Types.VARCHAR, 16777215, ""mediumtext"" );"
+// SQLFunction implementation
+// a "detached" collection that belonged to a different entity
+// double
+// EARLY EXIT!!!  return so the resolve call explicitly coming from DotNode can // resolve this...
+//index += getPropertyColumnSpan( i ); //TODO:  this is kinda slow...
+//TODO: eventually, rowIdName[j]
+//Open any extra brackets we might need.
+//source.getBatcher().executeBatch(); //found another way to ensure that all batched joined inserts have been executed
+// use COUNT as the default.  This mimics the old behavior, although // NONE might be a better option moving forward in the case of callable
+// handles arrays and newly instantiated collections
+//TODO: Yuck! This is not quite good enough, it's a quick //hack around the problem of having a to-one association //that refers to an embedded component:
+// register hibernate types for default use in scalar sqlquery type auto detection
+// Private constructor - stops checkstyle from complaining.
+//for sets, we should end the collection load after resolving //the entities, since we might call hashCode() on the elements //TODO: or we could do this polymorphically, and have two //      different operations implemented differently for arrays
+// Base Expectation impls ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// we have an embedded composite identifier
+// Make sure that all from elements registered with this FROM clause are actually in the AST.
+//reset the id
+/* trim done to workaround stupid oracle bug that cant handle whitespaces before a { in a sp */
+// The keyword used to specify a nullable column.
+// Dialect function
+// persistOnFlush() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// remove all collections for the entity from the session-level cache
+//TODO: always true for now, but not if we later decide to support elements() in the from clause
+//use a combination of foreign key columns and pk columns, since //the ordering of removal and addition is not guaranteed when //a child moves from one parent to another
+//bad cast
+// PROPERTIES
+// TODO: an alternative is to check if the owner has changed; if it hasn't then // get the ID from collection.getOwner()
+// --- Query translator methods ---
+// Possibly handle :something parameters for the query ?
+// TODO : we really need to be able to deal with component paths here also; // this is difficult because the hql-sql grammar expects all those node types // to be FromReferenceNodes.  One potential fix here would be to convert the // IntoClause to just use a FromClause/FromElement combo (as a child of the // InsertStatement) and move all this logic into the InsertStatement.  That's // probably the easiest approach (read: least amount of changes to the grammar // and code), but just doesn't feel right as then an insert would contain // 2 from-clauses
+//skip the FROM keyword in params
+// stream closed in the finally
+// our column span is the number of columns in the PK
+// add another (inner) nested select // add the main query // close off the inner nested select
+//return classAlias == null ? className : classAlias;
+// from SortedMap
+// Here we don't want to suspend the tx. If we do: // 1) We might be caching query results that reflect uncommitted // changes. No tx == no WL on cache node, so other threads // can prematurely see those query results // 2) No tx == immediate replication. More overhead, plus we // spread issue #1 above around the cluster
+// this is either a <version/> tag with no type attribute, // or a <timestamp/> tag
+// todo : currently expects that the individual with expressions apply to the same sql table join. //      This may not be the case for joined-subclass where the property values //      might be coming from different tables in the joined hierarchy.  At some //      point we should expand this to support that capability.  However, that has //      some difficulties: //          1) the biggest is how to handle ORs when the individual comparisons are //              linked to different sql joins. //          2) here we would need to track each comparison individually, along with //              the join alias to which it applies and then pass that information //              back to the FromElement so it can pass it along to the JoinSequence
+// todo : move this to SF per HHH-3517; also see HHH-1907 and ComponentMetamodel
+// COLUMN(S)
+"/*public final Currency getCurrency(int col) throws HibernateException {		return (Currency) get(col);	}*/"
+//it was a boolean expression
+// the element has been removed from the set
+"//			optimizer = getFactory().getSettings().getBytecodeProvider().getReflectionOptimizer( //					mappedClass, getterNames, setterNames, propTypes //			);"
+// process the "old" HQL style where aliases appear _first_ // ie. using the IN or IN CLASS constructions
+// Does the LIMIT clause come at the start of the SELECT statement, rather than at the end?
+// at least one is a plain old Date
+//TODO: move to .sql package!!
+// checkcast (case of reference type)
+//get em on the second pass!
+//Careful: these methods do not initialize the collection.
+// todo : would love to have this work on a notification basis //    where the successful binding of an entity/subclass would //    emit a notification which the extendsQueue entries could //    react to...
+// look for the instance by uuid
+// aload_2 // args
+// explicitly perform no checking...
+//the database has changed now, so the subselect results need to be invalidated
+// the path expression continues after a ]
+// checkcast
+//We do not look for an existing join on the same path, because //it makes sense to join twice on the same collection role
+//fetch="join" overrides default laziness //fetch="join" overrides default laziness
+// FIXME Hacky workaround to JBCACHE-1202
+//I suppose?
+// the user specifically supplied insert="true", // which constitutes an illegal combo
+// add an entry for this type of entity. // we can be assured that all referenced entities have already // been processed, // so specify that this entity is with the latest batch. // doing the batch number before adding the name to the list is // a faster way to get an accurate number.
+// For Timestamps, we default to a separate config
+"/*public PropertyProjection project() {		return Projections.property(getPropertyName());	}*/"
+// work around the "feature" where tree cache is validating the // inserted node during the next transaction.  no idea...
+// if either its role changed,
+// Render the identifier select fragment using the table alias.
+/*(LockMode) anything*/
+// TODO : what amount of significant digits need to be supported here? //      - from the DecimalFormat docs: //          [significant digits] = [minimum integer digits] + [maximum fraction digits]
+// invokespecial // BulkAccessorException.<init>
+// do this when all the properties are updateable since there is // a certain likelihood that the information will already be // snapshot-cached.
+// Fetch Reader content up to the end - and put characters in a StringBuffer
+// "loaded" means the reference that is consistent  // with the current database state
+//return a proxy if appropriate
+//note: this affects the return value!
+// otherwise a null or brand new collection // this will also (inefficiently) handle arrays, which // have no snapshot, so we can't do any better //processArrayOrNewCollection(collection, type);
+// should probably no-op commit/rollback here, at least in JTA scenarios
+// We have created the pool ourselves, so shut it down
+// meant to handle dynamic instantiation queries...(Copy from QueryLoader)
+// todo : remove this and just have subclasses use Isolater/IsolatedWork directly...
+//note: updates to joined tables can't be batched...
+// (NOT (LT a b) ) => (GE a b)
+//TODO: merge into one method!
+// The path may be a reference to an alias defined in the parent query.
+// if the collection belonged to a different entity, // clean up the existing state of the collection
+//no point doing this if NONE was requested
+// limit the methods available if no transaction is active
+// allow the CollectionSnapshot to be serialized
+//element //index -> id
+// do the work
+// note: performExecutions() clears all collectionXxxxtion  // collections (the collection actions) in the session
+//TODO: currently keeps Getters and Setters (instead of PropertyAccessors) because of the way getGetter() and getSetter() are implemented currently; yuck!
+// strip the " where "
+// Write HTML header
+// *** Sequence methods - end
+//return the id in the event object
+"/*public Type[] getSqlResultTypes() {		return sqlResultTypes;	}*/"
+//important: reuse the same event instances for performance!
+// can happen because of the multiple ways Cache.remove() // can be invoked :(
+// we need to dirty check many-to-ones with not-found="ignore" in order  // to update the cache (not the database), since in this case a null // entity reference can lose information
+// the list of entity names that indicate the batch number
+//JNDI + Serialization:
+// NOTE: this assumes something about how propertySelectFragment is implemented by the subclass! // was toUnqotedAliasStrings( getdiscriminatorColumnName() ) before - now tried // to remove that unqoting and missing aliases..
+// we don't need to worry about existing version being uninitialized // because this block isn't called by a re-entrant load (re-entrant // loads _always_ have lock mode NONE)
+// features which change between 8i, 9i, and 10g ~~~~~~~~~~~~~~~~~~~~~~~~~~
+//needed so that we remove this collection from the second-level cache
+// during deserialization, we need to reconnect all proxies and // collections to this session, as well as the EntityEntry and // CollectionEntry instances; these associations are transient // because serialization is used for different things.
+//    protected RegionRootListener listener;
+// Get the caller
+//no pointbase TINYINT
+// the cache of the actual plans...
+// VersionType impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //      Note : simply returns null for seed() and next() as the only known //      application of binary types for versioning is for use with the //      TIMESTAMP datatype supported by Sybase and SQL Server, which //      are completely db-generated values...
+//a "detached" collection!
+// collections detect changes made via their public interface and mark // themselves as dirty as a performance optimization
+// set the Transaction Isolation if defined
+// found a ctor, but it was not publicly accessible so try to request accessibility
+// The standard comparator types are not Serializable but are singletons
+// Collect the select expressions, skip the first child because it is the class name.
+// can't cache this stuff either (per-invocation) // we are given a map of user-alias -> lock mode // create a new map of sql-alias -> lock mode
+// Eager fetch the collection so we can use it detached
+//polymorphism comment above
+// ignore (probably H2 not in the classpath)
+// select the correct row by either pk or rowid
+// The default SQLExceptionConverter for all dialects is based on SQLState // since SQLErrorCode is extremely vendor-specific.  Specific Dialects // may override to return whatever is most appropriate for that vendor.
+// Write the values of fields onto the prepared statement - we MUST use the state at the time the // insert was issued (cos of foreign key constraints). Not necessarily the object's current state
+// constructors and factory methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// If the join is implied, then don't include sub-classes on the element.
+// iinc 3, 1
+// todo: we should really just collect these from the various SelectExpressions, rather than regenerating here
+// cascade first, so that all unsaved objects get their  // copy created before we actually copy
+// If this dot has already been resolved, stop now.
+// Now, set the text for this node.  It should be the element columns.
+// This uses a PathExpressionParser but notice that compound paths are not valid, // only bare names and simple paths:
+// if the from-clauses are the same, we can be a little more aggressive in terms of what we reuse
+//workaround for WebLogic
+// here we do not bother with the discriminator.
+//return currentId;
+// Handles things like: // a and b or c // a and ( b or c ) // not a and not b // not ( a and b ) // x between y and z            (overloaded "and") // x in ( a, b, c )             (overloaded brackets) // not not a // a is not null                (overloaded "not") // etc...... // and expressions like // foo = bar                    (maps to: foo.id = bar.id) // foo.Bar = 'foo'              (maps to: foo.bar = 'foo') // foo.Bar.Baz = 1.0            (maps to: foo.bar = bar.id and bar.baz = 1.0) // 1.0 = foo.Bar.Baz            (maps to: bar.baz = 1.0 and foo.Bar = bar.id) // foo.Bar.Baz = a.B.C          (maps to: bar.Baz = b.C and foo.Bar = bar.id and a.B = b.id) // foo.Bar.Baz + a.B.C          (maps to: bar.Baz + b.C and foo.Bar = bar.id and a.B = b.id) // ( foo.Bar.Baz + 1.0 ) < 2.0  (maps to: ( bar.Baz + 1.0 ) < 2.0 and foo.Bar = bar.id)
+// we already know current is not null...
+// WHERE
+// Remove all the old entries
+// return existing object or initialized proxy (unless deleted)
+// Invoke setScalarColumnText on each constructor argument.
+// add the main query
+"//	register the type of the out param - an Oracle specific type"
+// ResultSet impl (delegated) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// from javax.naming.Referenceable
+// TODO: here is why we need to make bytecode provider global :( // TODO : again, fix this after HHH-1907 is complete
+// this function has a template -> restore output, apply the template and write the result out // TODO: Downcast to avoid using an interface?  Yuck.
+// Implicit joins use theta style (WHERE pk = fk), explicit joins use JOIN (after from)
+// load()/get() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Put a placeholder in entries, so we don't recurse back and try to save() the // same object again. QUESTION: should this be done before onSave() is called? // likewise, should it be done before onUpdate()?
+// (EQ a NULL) => (IS_NULL a)
+// check if it is already completely loaded, but unowned
+//note that this method could easily be moved up to BasicEntityPersister, //if we ever needed to reuse it from other subclasses
+// entityNames may now include slashes for the representations //classname may be an inner class
+//TODO: improve this hack!
+"/** * Provides query splitting methods, which were originally in QueryTranslator. * <br> * TODO: This will need to be refactored at some point. * * @author josh */"
+// If the expression list has exactly one expression, and the type of the expression is a collection // then this might be a collection function, such as index(c) or size(c).
+"/*public boolean isNonExistant(EntityUniqueKey key) {		return nonExistentEntityUniqueKeys.contains(key);	}*/"
+"// seems to not really... //	public boolean supportsRowValueConstructorSyntax() { //		return true; //	}"
+// let the interceptor inspect the instance to decide
+//sql = query;
+//HashMap columnsUnique = new HashMap();
+// decode row selection...
+// If it's not implied or it is implied and it's a many to many join where the target wasn't found.
+// Configured using the Properties File Configurator
+// use setParameter for null values
+//stats
+// this is done here 'cos we might only know the type here (ugly!) // TODO: improve this a lot:
+//TODO: code duplication with JoinedSubclassEntityPersister
+// HHH-276 : implied joins in a subselect where clause - The destination needs to be added // to the destination's from clause. // Not sure if this is will fix everything, but it works.
+"/*		 * We might want a special case for 19,2. This is very common for money types		 * and here it is converted to 18,1		 */"
+// Use the token as an identifier.
+// The RDMS concat() function only supports 2 parameters
+// Error message constants.
+// if its the root criteria, we are done
+// The path AST should be a DotNode, and it should have been evaluated already.
+//Query parser settings:
+// as soon as we encounter our first letter, return the substring // from that position
+// the closure of all columns used by the entire hierarchy including // subclasses and superclasses of this class
+// Otherwise, this is an ordinary value.
+// Notify the FROM element that it is being referenced by the select.
+// convenience methods relating to operations across arrays of types...
+// right represents a joins originating from left; or // both right and left reprersent joins originating from the same FromElement
+// SQLException support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//an assertion
+//TODO: is this 100% correct?
+//else do nothing (don't even reassociate object!)
+// Inner classes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//select SQL
+// is it necessary to register %exact since it can only appear in a where clause?
+//noop
+// saves / updates don't cascade to uninitialized collections
+// Add to the query spaces.
+// saveOrUpdate() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//needed to satisfy KeyValue
+// MUTABLE
+// Object insertions, updates, and deletions have list semantics because // they must happen in the right order so as to respect referential // integrity
+"//	void setComponentTuplizerFactory(ComponentTuplizerFactory componentTuplizerFactory) { //		this.componentTuplizerFactory = componentTuplizerFactory; //	}"
+//TODO: is there a better way?
+// Read backwards until we read past the first physical sequential // row with the key we are interested in loading
+// No explicit select expression; render the id and properties // projection lists for every persister in the from clause into // a single 'token node'. //TODO: the only reason we need this stuff now is collection filters, //      we should get rid of derived select clause completely!
+//Access cached SQL
+// Generated select expressions are already resolved, nothing to do.
+// we need to utilize dynamic delete statements
+// try to make sure we don't wrap and already wrapped session
+//do two passes, for collection property-ref!
+// in an effort to avoid concurrent-modification-exceptions (from // potential recursive calls back through here as a result of the // eventual call to PersistentCollection#endRead), we scan the // internal loadingCollections map for matches and store those matches // in a temp collection.  the temp collection is then used to "drive" // the #endRead processing.
+// String Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// an unfetched association can only point to // an entity that already exists in the db
+// Does this dialect support the ALTER TABLE syntax?
+//needed by arrays
+// ( (Column) discrim.getColumnIterator().next() ).setType(type);
+// Prepare the left hand side and get the data type.
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // stuff that is Tuplizer-centric ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO: remove use of instanceof!
+// NOTE VERY HACKISH WORKAROUND!! // TODO: Fix this so it will work for non-POJO entity mode
+// if the given name is un-qualified we may neen to qualify it
+// updateable only because the user did not specify  // anything; just override it
+// a collection loaded in the current session // can not possibly be the collection belonging // to the entity passed to update()
+//NOTE EARLY EXIT!
+// Overridden informational metadata ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// inheritance cycle detection (paranoid check)
+//TODO: if we support multiple fetch groups, we would need //      to clone the set of lazy properties!
+//hilo params
+"//		registerColumnType( Types.VARCHAR, 16777215, ""mediumtext"" ); //		registerColumnType( Types.VARCHAR, 65535, ""text"" );"
+// this is ugly here, but needed because its a subquery
+// A shallow query is ok (although technically there should be no fetching here...)
+// Set the existing pool flag to true
+//allow 9,8,7,6,5,4,3,2,1
+// TODO : probably better to calculate these and pass them in, as it'll be more performant
+// add new ordered map
+// Get the persister for the _subclass_
+// collections of values
+//" cascade";
+//TODO: this is one of the ugliest and most fragile pieces of code in Hibernate....
+// perhaps this should be an exception since it is only ever used // in the above method?
+// aload_0
+// todo : is there really any reason to kkeep trying if this fails once?
+// TODO: an alternative is to check if the owner has changed; if it hasn't then // return collection.getOwner()
+// assumes that types are all of span 1
+// grrr... for differentiation of mysql storage engines
+// TODO: I considered validating TS cache config here, // but decided to defer unti getTimestampsCacheInstance() in case the  // cache is never actually used
+// If the token can tell us if it could be an identifier...
+// go ahead and set the lazy here, since pojo.proxy can override it.
+//the entity is associated with the session, so check its status
+//dontSpace.add("'");
+//extra information about the element type
+// both many-to-one and one-to-one are represented as a // Property.  EntityPersister is relying on this value to // determine "lazy fetch groups" in terms of field-level // interception.  So we need to make sure that we return // true here for the case of many-to-one and one-to-one // with lazy="no-proxy" // // * impl note - lazy="no-proxy" currently forces both // lazy and unwrap to be set to true.  The other case we // are extremely interested in here is that of lazy="proxy" // where lazy is set to true, but unwrap is set to false. // thus we use both here under the assumption that this // return is really only ever used during persister // construction to determine the lazy property/field fetch // groupings.  If that assertion changes then this check // needs to change as well.  Partially, this is an issue with // the overloading of the term "lazy" here...
+// Add the token to the AST.
+//figure out which columns are needed
+// todo : remove
+// Create the FROM element for the target (the elements of the collection).
+// xmlforest requires a new kind of function constructor
+// otherwise:
+//cache the hashcode
+// Never evict this node
+// we can't batch joined inserts, *especially* not if it is an identity insert; // nor can we batch statements where the expectation is based on an output param
+// belong to other persister // belong to other persister
+// invokeinterface
+//give the Interceptor a chance to modify property values
+// todo : YUCK!!!
+// allow these (deprecated) methods to pass through
+//notice that we skip the first table; it is the driving table!
+/// HHH-2378
+"//		componentTuplizerFactory = new ComponentTuplizerFactory();"
+//get a snapshot
+// lock acquisition support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//final String queryString,
+//truncate the identifier to the max alias length, less the suffix length
+//a shortcut if its location didn't change!
+//real hacky... // used to count the nesting of parentheses
+// default to element set if no elements() specified
+//decide which ResultSet to get the property value from:
+// the ids are fully resolved, so compare them with isDirty(), not isModified()
+//only collections belonging to deleted entities are allowed to be dereferenced in the case of orphan delete
+//TODO: bad implementation, cos it depends upon ordering of mapping doc //      fixing this requires that Collection/PersistentClass gain access //      to the Mappings reference from Configuration (or the filterDefinitions //      map directly) sometime during Configuration.buildSessionFactory //      (after all the types/filter-defs are known and before building //      persisters).
+//overriden to avoid System.exit
+// give the Interceptor a chance to process property values, if the properties // were modified by the Interceptor, we need to set them back to the object
+//if we could not register a synchronization, //do the before/after completion callbacks //ourself (but we need to let jdbcContext //know that this is what we are going to //do, so it doesn't keep trying to register //synchronizations)
+//use a degenerated strategy for backward compatibility
+// for non-inverse one-to-many, with a not-null fk, add a backref!
+"/*return that.type.equals(type) && 			EqualsHelper.equals(that.value, value);*/"
+// at this point we have (drivingSqlAlias) the SQL alias of the driving table // corresponding to the given user alias.  However, the driving table is not // (necessarily) the table against which we want to apply locks.  Mainly, // the exception case here is joined-subclass hierarchies where we instead // want to apply the lock against the root table (for all other strategies, // it just happens that driving and root are the same).
+// First, save off the pertinent ids, as the return value
+// should be the first, but just to be safe...
+// semantic action handling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// An ident node can represent an index expression if the ident // represents a naked property ref //      *Note: this makes the assumption (which is currently the case //      in the hql-sql grammar) that the ident is first resolved //      itself (addrExpr -> resolve()).  The other option, if that //      changes, is to call resolve from here; but it is //      currently un-needed overhead.
+//ie no select clause in HQL
+/*&& !('_'==character)*/
+// Establish the region root node with a non-locking data version
+// Not elements(x)
+// create a new collection wrapper, to be initialized later
+// again, null != null here
+// aggregate functions shouldn't be registered, right? //registerFunction( "list", new StandardSQLFunction("list",Hibernate.STRING) ); // stopped on $list
+// A list of collection wrappers that were instantiating during result set // processing, that we will need to initialize at the end of the query
+// TODO: copy/paste from ManyToOneType
+//TODO: move to .sql package, and refactor with similar things!
+// otherwise (subquery case) dont reuse the fromElement if we are processing the from-clause of the subquery
+// FieldInterceptor impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Generate implicit joins, only if necessary.
+// some filters affecting the collection are enabled on the session, so do not do the put into the cache.
+// Configurable implementation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"//		Iterator iter = extendsQueue.iterator();"
+//TODO: suck this into initLaziness!
+// If JBC is using INVALIDATION, we don't want to propagate changes. // We use the Timestamps cache to manage invalidation
+//TODO: validate existing of property with the chosen name. (secondpass )
+// do nothing until we hit the rsult set containing the generated id
+// After that, process the JOINs. // Invoke a delegate to do the work, as this is farily complex.
+// Its the listener instance (or better be)
+// ignore this error for now
+// TODO : this constructor form is *only* used from constructor directly below us; can it go away?
+// If we have <tt>not-found="ignore"</tt> association mapped to a // formula, we always need to dirty check it, so we can update the // second-level cache
+// we need to wrtap the param in a cast()
+// First we need to suspend any current JTA transaction and obtain // a JDBC connection
+// passing through anything we do not know : to support jdbc escape sequences HB-898
+// no foreign key element of for a one-to-many
+// ie. we never have to null out a reference to // an uninitialized proxy
+// the element has changed
+"//	private final SessionFactoryImplementor sessionFactory;"
+//TODO:this is only needed during compilation .. can we eliminate the instvar?
+// locate the registered function by the given name
+//TODO: check that entry.getIdentifier().equals(requestedId)
+// add the discriminator
+//many-to-many
+// Resolve to an identity column.
+// TODO Is this a valid operation on a timestamps cache?
+// intializes result by side-effect
+// AbstractSelectingDelegate impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// an uninitialized proxy, noop, don't even need to // return an id, since it is never a save()
+// TODO : this really needs to be delayed unitl after we definitively know all node types // where this is currently a problem is parameters for which where we cannot unequivocally // resolve an expected type
+// We need our tm, so get it now and avoid doing other work // if there is a problem
+// *** Sequence methods - start. The RDMS dialect needs these
+// the case of a foreign key to something other than the pk is handled in createPropertyRefConstraints
+// handle empty collection
+// check if collection is currently being loaded
+// determine if the collection elements are entities...
+// There is already an existing batch for this type of entity. // Check to see if the latest batch is acceptable.
+// Fetch can't be used with scroll() or iterate().
+// TODO Why not use the timestamp in a DataVersion?
+// "finish off" the join
+// these pieces are needed for usage in select clause
+// we have the form: trim(trimSource) //      so we trim leading and trailing spaces // EARLY EXIT!!!!
+//refresh() does not pass an entityName
+// IMPORT
+// Deserialize //-----------------------------------------------------------------------
+// not known!
+// loop through all the associations of the current entity and make sure that they are processed // before the current batch number
+// Use the delegate.
+//not found in inner query , try the outer query
+//TODO: if we are using identity columns, fetch the identifier
+// logic operators by definition resolve to booleans
+// add the comment // nest the main query in an outer select // add the rownnumber bit into the outer query select list
+// TODO: The order in which entities are saved may matter (e.g., a particular transient entity //       may need to be saved before other transient entities can be saved; //       Keep retrying the batch of transient entities until either: //       1) there are no transient entities left in transientCopyCache //       or 2) no transient entities were saved in the last batch // For now, just run through the transient entities and retry the merge
+// dirty check against the usual snapshot of the entity
+// not so sure this is even valid subtree.  but if it was, it'd // represent two unrelated table references...
+// then dom4j tuplizer, if dom4j representation is available
+// don't need subclass tables, because they can't appear in conditions
+// this has been shown to happen occasionally in rare cases // when using a transaction manager + transaction-timeout // where the timeout calls back through Hibernate's // registered transaction synchronization on a separate // "reaping" thread.  In cases where that reaping thread // executes through this block at the same time the main // application thread does we can get into situations where // these CMEs occur.  And though it is not "allowed" per-se, // the end result without handling it specifically is infinite // looping.  So here, we simply break the loop
+// We would probably refactor to have LogicParser (builds a tree of simple // expressions connected by and, or, not), ExpressionParser (translates // from OO terms like foo, foo.Bar, foo.Bar.Baz to SQL terms like // FOOS.ID, FOOS.BAR_ID, etc) and PathExpressionParser (which does much // the same thing it does now)
+// currently only the Hibernate-supplied DbTimestampType is supported here
+//for non null args, check for components and elements containing components
+// table=null -> an association // - fill it in later //TODO fill in the mappings for table == null
+// DISCRIMINATOR
+// the object is transient or detached
+// The basic implementation is to simply use the node's text
+//doable if needed
+//ie. a many-to-many
+// by default just use an unanticipated capacity since we don't // know how to extract the capacity to use from original here...
+// If the data type is not an association type, it could not have been in the FROM clause.
+//TODO: optimize away this lookup for entities w/o unsaved-value="undefined"
+// Make sure that the persister is versioned
+// (NOT (GE a b) ) => (LT a b)
+// or BYTE // or TEXT? // or MONEY
+// astore_3 // store bean
+// TODO : keep seperate notions of QT[] here for shallow/non-shallow queries...
+/* | this | bean | args | i | raw bean | exception | */
+// return the (fully resolved) identifier value, but do not resolve // to the actual referenced entity instance // NOTE: the owner of the association is not really the owner of the id!
+// Detect discriminator values...
+// at some point the generate phase needs to be moved out of here, // because a single object-level DML might spawn multiple SQL DML // command executions. // // Possible to just move the sql generation for dml stuff, but for // consistency-sake probably best to just move responsiblity for // the generation phase completely into the delegates // (QueryLoader/StatementExecutor) themselves.  Also, not sure why // QueryLoader currently even has a dependency on this at all; does // it need it?  Ideally like to see the walker itself given to the delegates directly...
+//let's assume that there is only one lazy fetch group, for now!
+"//			sqlAliasSuffixes[i] = element.getColumnAliasSuffix();"
+// Whether this dialect has an Identity clause added to the data type or a completely seperate identity // data type
+// generated properties can *never* be insertable...
+//TODO: should we use SELECT .. FOR UPDATE?
+// todo : add the notion of enabled filters to the CacheKey to differentiate filtered collections from non-filtered; //      but CacheKey is currently used for both collections and entities; would ideally need to define two seperate ones; //      currently this works in conjuction with the check on //      DefaultInitializeCollectionEventHandler.initializeCollectionFromCache() (which makes sure to not read from //      cache with enabled filters). // EARLY EXIT!!!!!
+//it might be an unwrapped collection reference! //try to find a wrapper (slowish)
+// Custom SQL
+// the name of a class
+// TODO : not so sure this is needed...
+// ConnectionManager.Callback implementation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// validate() instances of Validatable
+//render the where and from parts
+// Otherwise, we have a non-scalar select with defined collection fetch(es). // Make sure that there is only a single root entity in the return (no tuples)
+// todo : should really move this log statement to CollectionType, where this is used from...
+// the CascadingAction implementations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// POLYMORPHISM
+// this is the regression style determination which matches the logic of the classic translator
+//persister.setIdentifier(result, id); //before calling interceptor, for consistency with normal load
+// CHECK VIOLATION
+// add the current fragment to the THETA_JOINS node
+// if we instantiate a collection during the flush() process, // we must ignore it for the rest of the flush()
+// Sometimes use the element table alias, sometimes use the... umm... collection table alias (many to many)
+// the standard SQL function name is current_timestamp...
+// TODO : or should we return 'containsTableAlias'??
+//keep the behavior consistent even for boundary usages
+// Second-level / query cache:
+// remember that ordinal parameters numbers are 1-based!!!
+//maintain correct duplication if loaded in a cartesian product
+//MULTITABLES
+//TODO: simply remove this override //      if we fix the above todos
+// this implementation is supposed to tolerate incorrect unsaved-value // mappings, for the purpose of backward-compatibility
+"//			        ( implied && DotNode.useThetaStyleImplicitJoins ) ) {"
+// persists don't cascade to uninitialized collections
+// return the concrete type, or the underlying type if a concrete type // was not specified
+// null sql means that the only lazy properties // are shared PK one-to-one associations which are // handled differently in the Type#nullSafeGet code...
+// TODO: skip formulas?
+// HHH-2481 make sure the callback gets cleared, otherwise the instance stays in a static thread local.
+// yick!  need this for proper serialization/deserialization handling...
+/*(array==null) ? tempList.get(i) :*/
+// Make sure you log the exception, as it might be swallowed
+// if it was a reference to self, don't need to nullify // unless we are using native id generation, in which // case we definitely need to nullify
+// End of first unit of work
+//sqlResultTypeList.add( type ); // Generate the select expression.
+// create our own copy of the user-supplied tuplizer impl map
+// Bind the where
+// property name is a sub-path of a component...
+// VERSION
+// Need to parse off the column qualifiers; this is assuming (which is true as of now) // that this is only used from update and delete HQL statement parsing
+// TODO : an optimization here would be to consider cascade deletes and not gen those delete statements; //      the difficulty is the ordering of the tables here vs the cascade attributes on the persisters -> //          the table info gotten here should really be self-contained (i.e., a class representation //          defining all the needed attributes), then we could then get an array of those
+//if null, owner will be retrieved from session
+//cascade to current collection elements
+// replicate does cascade to uninitialized collections
+// Original Dialect.java returns " for update";
+// try the parent FromClause...
+//<String, String>
+// todo : we can remove this once the deprecated ctor can be made private...
+// two conditions where we need to transform this to a theta-join syntax: //      1) 'elem' is the "root from-element" in correlated subqueries //      2) The DotNode.useThetaStyleImplicitJoins has been set to true //          and 'elem' represents an implicit join
+// check the version unsaved-value, if appropriate
+"/**	 * @return collection removal	 * FIXME: even if isInverse=""true""?	 */"
+// For implied many-to-many, just add the end join.
+// Generate the select expression.
+// (NOT (GT a b) ) => (LE a b)
+// even though we might find a pre-existing element by join path, we may not be able to reuse it...
+// Create nodes that track line and column number.
+//TODO: we use two visitors here, inefficient!
+// for version properties marked as being generated, make sure they are "always" // generated; aka, "insert" is invalid; this is dis-allowed by the DTD, // but just to make sure...
+//entirely optional!!
+// inner joins can be abbreviated to 'join'
+"/* TODO: joinKeyColumnName & foreignKeyColumnName should be called either here or at a			 * slightly higer level in the stack (to get all the information we need)			 * Right now HbmBinder does not support the			 */"
+// cascade first, so that all unsaved objects get their // copy created before we actually copy //cascadeOnMerge(event, persister, entity, copyCache, Cascades.CASCADE_BEFORE_MERGE);
+// position cursor to the last row
+//if there is no resulting row, return null
+//search for it //note that this code is incorrect for other than one-to-many
+// System Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// mutation depends on the types of nodes invloved...
+// Print page
+// Clone //-----------------------------------------------------------------------
+// if the original is a PersistentCollection, and that original // was not flagged as dirty, then reset the target's dirty flag // here after the copy operation. // </p> // One thing to be careful of here is a "bare" original collection // in which case we should never ever ever reset the dirty flag // on the target because we simply do not know...
+// simple, because we can't have a one-to-one or a collection  // (or even a property-ref) in a composite-element:
+// static helper methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// performance op to avoid the array search
+// null or brand new collection // this will also (inefficiently) handle arrays, which have // no snapshot, so we can't do any better
+// the last used iterator
+// general purpose parameters ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//SQL Generation settings:
+// Append the stem to the proxool pool alias
+// is this really necessary?
+//TODO: We probably should have a StatisticsNotPublishedException, to make it clean
+// SEQUENCE support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO: optimize this better!
+// Informational metadata ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//PostLoad is needed for EJB3 //TODO: reuse the PostLoadEvent...
+// assume this is a newly instantiated transient object // which should be saved rather than updated
+// first, break down the returns into maps keyed by alias // so that role returns can be more easily resolved to their owners
+// meant to handle dynamic instantiation queries...
+//throw new UnsupportedOperationException("Can't write to a readonly object");
+//use suffix for the entity columns
+//null caused some problems
+// TODO : should remove this exposure //  and have all references to the session's batcher use the ConnectionManager.
+//" collection_ where " +
+// if the natural-id is marked as non-mutable, it is not retrieved during a // normal database-snapshot operation...
+//a composite key
+// needed later for many-to-many/filter application
+//TODO!!!!!!!
+//NOTE: EARLY EXIT!
+// todo : this eventually needs to be removed
+// sql-server, at least needed this dropped after use; strange!
+// Compare the two maps for equality
+// get the id from the object
+//TODO: avoid this for non-new instances where mightBeDirty==false
+// Retrieve the value of the designated column in the current row of this // ResultSet object as a java.io.Reader object
+// embedded composite ids ( alias.idname1, alias.idname2 )
+//TODO: should we allow suffixes on these ?
+// only carry on if the method has no parameters
+// Constructors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// parameter bind values...
+// just especially for the trivial collection filter
+// otherwise assume the parent is the the criteria that created us
+// Impl note: takes advantage of the fact that an escpaed single quote // embedded within a quote-block can really be handled as two seperate // quote-blocks for the purposes of this method...
+//ie. 60 seconds
+// continue...; we'll find out if it ends up not getting saved later
+// collection deletions are a special case since update() can add // deletions of collections not loaded by the session.
+// This handles HHH-354, where there is a strange property name in a where clause. // If the lookahead contains a DOT then something that isn't an IDENT...
+// according to both the ANSI-SQL and EJB3 specs, trim can either take // exactly one parameter or a variable number of parameters between 1 and 4. // from the SQL spec: // // <trim function> ::= //      TRIM <left paren> <trim operands> <right paren> // // <trim operands> ::= //      [ [ <trim specification> ] [ <trim character> ] FROM ] <trim source> // // <trim specification> ::= //      LEADING //      | TRAILING //      | BOTH // // If only <trim specification> is omitted, BOTH is assumed; // if <trim character> is omitted, space is assumed
+// (NOT (NE a b) ) => (EQ a b)
+// TODO: not visible to the user!
+// TODO: something much better - look at the type of the other expression! // TODO: Have comparisonExpression and/or arithmeticExpression rules complete the resolution of boolean nodes.
+// table=null -> an association - fill // it in later //TODO fill in the mappings for table == null
+// would be great to move all this below here into another method that could also be used // from the new scrolling stuff. // // Would need to change the way the max-row stuff is handled (i.e. behind an interface) so // that I could do the control breaking at the means to know when to stop
+// get meta's from <class>
+// key is an entity involved with the operation performed by the listener; // value is a flag indicating if the listener explicitly operates on the entity
+//SQL Exception converter:
+//TODO: better to degrade to lazy="false" if uninstrumented
+"//			paramTranslations = new ParameterTranslationsImpl( collectedParameterSpecifications );"
+"//	public static JDBCException newJDBCException(String string, SQLException root, String sql) { //		string = string + "" ["" + sql + ']'; //		log.error(string, root); //		logExceptions(root); //		return new JDBCException(string, root, sql); //	} // //	public static JDBCException newJDBCException(String string, SQLException root) { //		log.error(string, root); //		logExceptions(root); //		return new JDBCException(string, root); //	}"
+// now look up the object we are really interested in! // (this lets us correctly handle proxies and multi-row // or multi-column queries)
+// Actually the semantics of the next three are really "Bag" // Note that, unlike objects, collection insertions, updates, // deletions are not really remembered between flushes. We // just re-use the same Lists for convenience.
+// prepend value and type list with null for any positions before the wanted position.
+//cache this
+//a newly instantiated collection can't have orphans
+// properties
+// we found a collection element in the result set
+// table support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// aload_2 // load the args
+// ifnonnull (label1)
+// (NOT (LE a b) ) => (GT a b)
+// early exit...
+//handle quoted strings
+//we never need to apply locks to the SQL
+// save() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//kinda ugly, but needed for collections with a "." node mapping
+// The user requested a "greater" (i.e. more restrictive) form of // pessimistic lock
+// note that %string is deprecated
+// Informix doesn't have a bit type
+// more specifically : "datetime [op] ?" //      1) if the operator is MINUS, we really cannot determine //          the expected type as either another datetime or //          numeric would be valid //      2) if the operator is PLUS, the param needs to be of //          some numeric type
+// do *not* over-write the column text, as that has already been // "rendered" during resolve
+// Criteria impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//handle HQL2 collection syntax
+//return memberPersister.toColumns(alias, propertyName);
+//JDBC and connection settings:
+// Make sure this is a defined parameter and check the incoming value type // TODO: what should be the actual exception type here?
+// Execute the SQL:
+// TABLE
+// The HQL class alias refers to the class name.
+// Handle collection-fiter compilation. // IMPORTANT NOTE: This is modifying the INPUT (HQL) tree, not the output tree!
+//if the identifier is quoted, remove the quotes
+// one or the other needs to be a datetime for us to get into this method in the first place...
+// function support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Initialize the error handling delegate.
+// for some reason the antlr.CommonAST initialization routines force // this method to get called twice.  The first time with an empty string
+// get meta's from <subclass>
+//pull off the last ", "
+// A session is considered to contain an entity only if the entity has // an entry in the session's persistence context and the entry reports // that the entity has not been removed
+// (NOT (BETWEEN a b) ) => (NOT_BETWEEN a b)
+// Get the names of the columns used to link between the collection // owner and the collection elements.
+// the key is the owning entity itself, so get the ID from the key
+// If we are in the process of releasing, no sense // checking for aggressive-release possibility.
+// this function has a template -> redirect output and catch the arguments
+// float
+// create one
+//expressionOpeners.add(","); // deliberately excluded
+// The optional SQL string defined in the where attribute
+//information about lazy properties of this class
+// the name of an entity class
+// this piece is needed for usage in select clause
+// todo : should this get moved to PersistentContext? // logically, is PersistentContext the "thing" to which an interceptor gets attached?
+//default mode
+// *load_1 // each type
+// otherwise, utilize the static delete statements
+// get the elements back into the target making sure to handle dirty flag
+//otherwise recreate the mapping between the collection and its key
+// IDENT might be the name of a class.
+//TODO: copy/paste from insertRows()
+//for backward compatibility, allow a set with no not-null  //element columns, using all columns in the row locater SQL //TODO: create an implicit not null constraint on all cols?
+//TODO!!!
+// treat it as a classname
+// the owning entity may have been deleted and its identifier unset due to // identifier-rollback; in which case, try to look up its identifier from // the persistence context
+// byte
+//TODO: is this really necessary????
+// WebSphere, however, is not a sane JEE/JTA container...
+// assume we are in an auto-commit state
+// updates ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// this should not happen since the DTD prevents it
+// return a newly loaded object
+// methods to make it possible to use the Native Id generator
+//check if the managed object is the parent
+// Register the type of the out param - PostgreSQL uses Types.OTHER
+// Note : success = false, because we don't know the outcome of the transaction
+// the difficulty here is exactly what do we update in order to // force the version to be incremented in the db...
+// If that didn't work, try using the 'import' name.
+//before add :-)
+// hibernate impelemnts cast in Dialect.java
+//do this bit after setting initialized to true or it will recurse
+// need to extract the component values and check for subtype replacements...
+//take a snapshot
+// Look up class name using the first identifier in the path.
+// Default to sharing the entity cache if there is one
+// deprecated option...
+//map second/minute/hour/day/month/year to ANSI extract(), override on subclasses
+// TODO: I considered validating the presence of the TS cache here, // but decided to defer unti getQueryCacheInstance() in case the  // cache is never actually used
+// properties of this class, including inherited properties
+// treat it as a path expression
+// %upper is deprecated
+// TODO : would be really nice to cache the spec on the query-def so as to not have to re-calc the hash; // currently not doable though because of the resultset-ref stuff...
+"// nothing to do		"
+// todo : need to find a clean way to handle the "event source" role // a seperate classs responsible for generating/dispatching events just duplicates most of the Session methods... // passing around seperate reto interceptor, factory, actionQueue, and persistentContext is not manageable...
+// cascade-delete to collections BEFORE the collection owner is deleted
+//Render the SQL query
+//TODO: formulas ?
+// short cut check...
+//NOTICE: no " or . since they are part of (compound) identifiers
+// not array
+//TODO
+// If the property is a special collection property name, return a CollectionPropertyMapping.
+// empty means no scoping
+// aload 5 // load exception
+// aaload
+// FieldHandler impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// synchronized to avoid multi-thread access issues; defined as method synch to avoid // potential deadlock issues due to nature of code.
+"/* This can never happen because this rule will always eliminate the child NOT.			case NOT:				return x.getFirstChild();			// (NOT (NOT x) ) => (x)*/"
+// state ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//now we might need to recalculate the dirtyProperties array
+// --Commented out by Inspection (12/11/04 10:56 AM): int getWarningCount();
+// if debug level is enabled, then log the password, otherwise mask it
+// Find or create the WHERE clause
+// For the case of dynamic-insert="false", use the static SQL
+//if the collection is dereferenced, remove from the session cache //iter.remove(); //does not work, since the entrySet is not backed by the set
+// Anyway, here we implement <set> semantics for a // <one-to-many> <bag>!
+// object loaded by update()
+// Does this dialect support check constraints?
+"//	public boolean isShowSqlEnabled() { //		return showSql; //	} // //	public boolean isFormatSqlEnabled() { //		return formatSql; //	}"
+// todo : cache this sql...
+// only the identifier property field name can be a reference to the associated entity's PK...
+//yukky! Don't you have subclasses for that! //TODO race conditions can happen here
+// Sub-insertions should occur before containing insertion so // Try to do the callback now
+//Icky workaround for MySQL bug:
+// Tell the destination fromElement to 'includeSubclasses'.
+// the user specifically supplied update="true", // which constitutes an illegal combo
+//just a performance opt!
+// TODO: bindpropertyresults(alias, returnElem)
+// Defensive, convenience methods
+//TODO: need some caching scheme? really comes down to decision  //      regarding amount of state (if any) kept on PropertyAccessors
+// State ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// this is a virtual id property...
+//Mainly for OSCache
+// function templates
+//note that i parameter is now unused (delete it?)
+// Do we need to drop constraints before dropping tables in this dialect?
+// TODO: encapsulate the protected instance variables!
+// Need a better way to define the suffixes here...
+// logic operators by definition resolve to boolean.
+/*sqlResultTypeList,*/
+// we have a placeholder, spin forward till we find the end
+// register a cleanup synch
+// 'outer' is optional and is ignored
+"//		SQLQueryParser parser = new SQLQueryParser( //				sqlQuery, //				processor.getAlias2Persister(), //				processor.getAlias2Return(), //				aliases, //				collAliases, //				collPersisters, //				suffixes, //				collSuffixes //		); // //		sql = parser.process(); // //		namedParameterBindPoints = parser.getNamedParameters();"
+//not null is implicit
+// brand new collection //TODO: or an array!! we can't lock objects with arrays now??
+//information about all columns/formulas in class hierarchy
+//root entity comes *last*
+// Fetch embedded identifiers propertynames from the "virtual" identifier component
+// we know only the lhs-hand type, so use that
+// then the pojo tuplizer, using the dynamic-map tuplizer if no pojo representation is available
+// temporary ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"// IMPL NOTE : due to the delayed population of setters (setters cached // 		for performance), we really cannot pro0perly define equality for // 		this transformer"
+//overwrite old proxy
+//TODO: can we limit stored procedures ?!
+// this only works because collection entries are kept in a sequenced // map by persistence context (maybe we should do like entities and // keep a separate sequences set...) //TODO: calling entrySet on an IdentityMap is SLOW!!
+// hack/workaround as sqlquery impl depend on having a key.
+// classic translator does not support collection of ordinal // param metadata
+// no existing row - do an insert
+// invokevirtual
+//int result = 17; //result = 37 * result + type.hashCode(); //result = 37 * result + ( value==null ? 0 : value.hashCode() ); //return result;
+//lobs cannot be compared
+// TODO : temporary initial step towards HHH-1907
+//for arrays, we should end the collection load before resolving //the entities, since the actual array instances are not instantiated //during loading //TODO: or we could do this polymorphically, and have two //      different operations implemented differently for arrays
+//TODO: maybe call it getRowSelection() ?
+//we can use an inner join for the many-to-many
+// The uber-rule here is that we need to include  subclass joins if // the FromElement is in any way dereferenced by a property from // the subclass table; otherwise we end up with column references // qualified by a non-existent table reference in the resulting SQL...
+// RDMS has no known variation of a "SELECT ... FOR UPDATE" syntax...
+// This is the legacy behaviour for HQL queries...
+// performance opt
+// a many-to-many; // decrement currentDepth here to allow join across the association table // without exceeding MAX_FETCH_DEPTH (i.e. the "currentDepth - 1" bit)
+// now, any collections that are initialized // inside this block do not get updated - they // are ignored until the next flush
+// Moved here from SelectClause [jsd]
+// we can go straight to the first required row
+//do nothing - we only need to notify the cache...
+// Configured using the JAXP Configurator
+// the closure of all properties in the entire hierarchy including // subclasses and superclasses of this class
+// TODO: Fix this so it will work for non-POJO entity mode
+//disable a join back to this same association
+// iterate entries ordered by capacity to find first fit
+//Not called at runtime so doesn't matter if its slow :)
+//just to help out during the load (ugly, i know)
+//update all the modified entries
+// InterSystems Cache' does not current support "SELECT ... FOR UPDATE" syntax... // Set your transaction mode to READ_COMMITTED before using
+// astore 5 // store exception
+//alias may be null //EARLY EXIT
+// Set the unresolved path in this node and the parent. // Set the text for the parent.
+"//			ps.close(); //just close it; do NOT try to return it to the pool! //NOTE: early exit!"
+//first element of array is reserved for the actual instance we are loading!
+// TODO: check if key contains the owner ID
+// Parse the query string into an HQL AST.
+//final boolean forceCacheRefresh,
+// this object was already loaded
+//TODO: arithmetic expressions, multiple new Foo(...)
+// careful with this!
+//strip leading ','
+// in case we were deserialized in a different JVM, look for an instance with the same name // (alternatively we could do an actual JNDI lookup here....)
+//columns
+// really there are two situations where it should be ok to allow the insertion // into properties defined on a superclass: //      1) union-subclass with an abstract root entity //      2) discrim-subclass // // #1 is handled already because of the fact that // UnionSubclassPersister alreay always returns 0 // for this call... // // we may want to disallow it for discrim-subclass just for // consistency-sake (currently does not work anyway)...
+//lazy = !join;
+//information about all properties in class hierarchy
+// the loaded owner will be set to null after the collection is removed, // so capture its value as the affected owner so it is accessible to // both pre- and post- events
+//this is basically a copy/paste of OrderByParser ... might be worth refactoring
+//note early exit here:
+//a proxy cannot be transient and it breaks ForeignKeys.isTransient
+"//		return !isOneToMany();"
+// The keyword used to specify an identity column, if identity column key generation is supported.
+// BATCH SIZE
+// Finally, read ahead one row to position result set cursor // at the first physical row we are interested in loading
+// hibernate type mapping support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// here assume SQLServer2005 using snapshot isolation, which does not have this problem
+// Loaded entity instances, by EntityUniqueKey
+// don't create a unique key, 'cos some // databases don't like a UK on nullable // columns //getCollectionTable().createUniqueKey( getIdentifier().getConstraintColumns() );
+// unfortunately this stuff can't be cached because // it is per-invocation, not constant for the // QueryTranslator instance
+//swaldman 2004-02-07: modify to allow null values to signify fall through to c3p0 PoolConfig defaults
+// note: interface is assumed to already contain HibernateProxy.class
+// is a primitive type // invokespecial
+// aliases named identifier ( alias.idname )
+// jdbc params are 1-based
+//even on inverse="true"
+// if it is a compound path
+// --------------------------------------------------------- Public Methods
+// We should use the _current_ object state (ie. after any updates that occurred during flush)
+// The syntax used to add a foreign key constraint to a table.
+// todo : better to handle dynamic filters through implicit DynamicFilterParameterSpecification // see the discussion there in DynamicFilterParameterSpecification's javadocs as to why // it is currently not done that way.
+// uuid.hex is deprecated
+// metaType is assumed to be single-column type
+// Mckoi has no known variation of a "SELECT ... FOR UPDATE" syntax...
+// (NOT (IS_NULL a b) ) => (IS_NOT_NULL a b)
+// aload_0 // load this
+//Named Queries:
+//TODO: COPY/PASTE FROM SessionImpl, pull up!
+// Use the delegate, resolve identifiers as FROM element aliases.
+//TODO: would be nice to handle proxy classes elegantly!
+"/*rootTableName = persistentClass.getRootTable().getQualifiedName( 				factory.getDialect(), 				factory.getDefaultCatalog(), 				factory.getDefaultSchema() 		);*/"
+// 'hibernate.temp.use_jdbc_metadata_defaults' is a temporary magic value. // The need for it is intended to be alleviated with future developement, thus it is // not defined as an Environment constant... // // it is used to control whether we should consult the JDBC metadata to determine // certain Settings default values; it is useful to *not* do this when the database // may not be available (mainly in tools usage).
+// ALIASES
+// found
+// the contract of EntityTuplizer.determineConcreteSubclassEntityName says that returning null // is an indication that the specified entity-name (this.getEntityName) should be used.
+// release the jdk internal caches everytime to ensure this // plays nicely with destroyable class-loaders
+//inject the data
+//this should be a call to resolve(), not resolveIdentifier(),  //'cos it might be a property-ref, and we did not cache the //referenced value
+// finally use the sqltype if == on Hibernate types did not find a match.
+// Snapshots of current database state for entities // that have *not* been loaded
+// Multi-param numeric dialect functions...
+// Handle any filters applied to this collection
+//checkForEnd = false;
+// it is or was referenced _somewhere_
+//what is the version on the database?
+// note that if we load this collection from a cartesian product // the multiplicity would be broken ... so use an idbag instead
+// does this entity entry pertain to the entity persister in which we are interested (owner)?
+// todo : what is the implication of this?
+// and this is not a forced initialization during flush
+//use the id column alias
+//swaldman 2006-08-28: define c3p0-style configuration parameters for properties with //                     hibernate-specific overrides to detect and warn about conflicting //                     declarations
+// handle trace logging ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Try to find out the name of the primary key to create it as identity if the IdentityGenerator is used
+// Regions can get instantiated in the course of normal work (e.g. // a named query region will be created the first time the query is // executed), so suspend any ongoing tx
+"// if we get here, it is possible that we have a proxy 'in the way' of the merge map resolution... // 		NOTE: decided to put this here rather than in the above loop as I was nervous about the performance //		of the loop-in-loop especially considering this is far more likely the 'edge case'"
+// kept for backward compatibility until after the 3.1beta5 release of HA
+//will result in a SQL UPDATE:
+//recache the updated state
+//Now write the values of fields onto the prepared statement
+// todo : hack!!! // NOTE : here we cleanup the load context when we have no more local // LCE entries.  This "works" for the time being because really // only the collection load contexts are implemented.  Long term, // this cleanup should become part of the "close result set" // processing from the (sandbox/jdbc) jdbc-container code.
+// register resolvers set via Environment property
+//TODO: suck this logic into the collection!
+// Entity was found in second-level cache...
+// miscellaneous support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//if it is a property of an embedded component, invoke on the "identifier"
+//if the hibernate-mapping did not specify a schema/catalog, use the defaults //specified by properties - but note that if the schema/catalog were specified //in hibernate-mapping, or as params, they will already be initialized and //will override the values set here (they are in identifierGeneratorProperties)
+"//		return ""select CURRENT_TIMESTAMP from RDB$DATABASE"";"
+// The 'from element' that the property is in.
+// Delegate to the QueryLoader...
+// if the corresponding SQL value is NULL, the reader we got is NULL as well
+"//note: dirtyFields==null means we had no snapshot, and we couldn't get one using select-before-update //	  oldFields==null just means we had no snapshot to begin with (we might have used select-before-update to get the dirtyFields)"
+// we will need to create new entries
+// IDENT is a class alias in the FROM.
+// Add any joins
+// force the proxy to resolve itself
+//Clobs are ignored by merge() operation
+//TODO possibly relax that
+// otherwise, a trim-specification and/or a trim-character // have been specified;  we need to decide which options // are present and "do the right thing" // should leading trim-characters be trimmed? // should trailing trim-characters be trimmed? // the trim-character // the trim-source
+// Set it!
+// SELECT p FROM p IN CLASS eg.Person GROUP BY p.Name, p.Address, p
+// classes mentioned in extends not available - so put it in queue
+// if a composite key, use "( (foo = ? and bar = ?) or (foo = ? and bar = ?) )" for batching //TODO: unnecessary for databases with ANSI-style joins
+//private Type[] sqlResultTypes;
+// select clauses for insert statements should alwasy be treated as shallow
+//this one needed only for guessEntityMode()
+//Schema export:
+// we need to writeObject() on this since interceptor is user defined
+// This just handles a particular case of component // projection, perhaps get rid of it and throw an exception
+//foo.bars.size (also handles deprecated stuff like foo.bars.maxelement for backwardness)
+// joined subclasses
+// remove initial ", "
+// Alias references and identifiers use the same node class.
+// tree cache in optimistic mode seems to have as very difficult // time with remove calls on non-existent nodes (NPEs)...
+"//	public ComponentTuplizerFactory getComponentTuplizerFactory() { //		return componentTuplizerFactory; //	}"
+// currently allowed...
+//pad with nulls from the current last element up to the new index
+// We don't want to waste effort setting an option if JBC is // already in LOCAL mode. If JBC is REPL_(A)SYNC then check // if they passed an config option to disable query replication
+// The getEmailAddresses() might trigger a lazy load of the collection
+//TODO: reuse the PreLoadEvent
+// this entity defines proeprty generation, so process those generated // values...
+// if template is null we just write the function out as it appears in the hql statement
+/////////////////////////////////////////////////////////////////////// // TODO : look at perhaps caching this...
+// make it circular-reference safe
+//private CacheEntry cacheEntry;
+//TODO: really bad, evil hack to fix!!!
+// End unit of work
+// update removed rows fks to null
+// TODO: is it really neceassry to provide Configuration to CollectionPersisters ? Should it not be enough with associated class ? // or why does EntityPersister's not get access to configuration ? // // The only reason I could see that Configuration gets passed to collection persisters // is so that they can look up the dom4j node name of the entity element in case // no explicit node name was applied at the collection element level.  Are you kidding me? // Trivial to fix then.  Just store and expose the node name on the entity persister // (which the collection persister looks up anyway via other means...).
+//by default, natural-ids are "immutable" (constant)
+// calls executeBatch()
+//TODO: I am not so sure about the exception handling in this bit!
+// Since this is an explicit FROM element, it can't be implied in the FROM clause.
+//by requiring <, we rely on lock timeout in the case of an unsuccessful update!
+//before cascade!
+// This is not actually a constant, but a reference to FROM element.
+// IBID for current_time and current_date
+// Constructors are always considered scalar results.
+//TODO: create uk loaders for component properties
+// long
+// can't just return null here, since that would // cause an owning component to become null
+// Collection load contexts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// need to treat this as if it where optimistic-lock="all" (dirty does *not* make sense); // first we need to locate the "loaded" state // // Note, it potentially could be a proxy, so perform the location the safe way...
+// We have the JBCWriteMutex, so no other *local* thread will  // be trying to write this key.  // It's possible here some remote thread has come in and // changed the values again, but since we are reading the // values to write to JBC right now, we know we are writing // the latest values; i.e. we don't assume that what we cached // in entry.update() above is what we should write to JBC *now*. // Our write could be redundant, i.e. we are writing what // some remote thread just came in an wrote.  There is a chance  // that yet another remote thread will update us, and we'll then // overwrite that later data in JBC.  But, all remote nodes will // ignore that change in their localCache; the only place it  // will live will be in JBC, where it can only effect the  // initial state transfer values on newly joined nodes  // (i.e. populateLocalCache()).
+// insertable simply because that is the user did not specify // anything; just override it
+// refresh doesn't cascade to uninitialized collections
+// PERSISTER
+// If the constant is an IDENT, figure out what it means...
+// aload_1 // load callback
+// The current alias is referencing the collection to be eagerly fetched
+// there were no queued additions // and the role has a cache
+// Update the status of the object and if necessary, schedule an update
+// If close() is called, guarantee unbind()
+// Use the explicitly declared select expression; determine the // return types indicated by each select token
+// Used with DROP TABLE to delete all records in the table.
+// instantiate a new instance
+// We ignore minimalPutOverride. JBossCache putForExternalRead is // already about as minimal as we can get; it will promptly return // if it discovers that the node we want to write to already exists
+// used to set the type of the parent dot node
+//register collection role
+//hum ... should we cascade anyway? throw an exception? fine like it is?
+// dynamic filters for the collection
+//do nothing to avoid a lazy property initialization
+// VERSION / TIMESTAMP
+// If a where clause was specified in the update/delete query, use it to limit the // returned ids here...
+// If this from element is a collection and the path is a collection property (maxIndex, etc.) then // generate a sub-query.
+/*&& !indexIsFormula*/
+// make sure the lhs is "assignable"...
+// need to look it up from the persistence-context
+// if we are still not resolved, we might represent a constant. //      needed to add this here because the allowance of //      naked-prop-refs in the grammar collides with the //      definition of literals/constants ("nondeterminism"). //      TODO: cleanup the grammar so that "processConstants" is always just handled from here
+// TRUE if the pool is borrowed from the outside, FALSE if we used to create it
+// we finish all the "removes" first to take care of possible unique // constraints and so that we can take better advantage of batching
+// sequentially read the result set in reverse until we recognize // a change in the key value.  At that point, we are pointed at // the last physical sequential row for the logical row in which // we are interested in processing
+// Run a subquery loader
+// check nullability but do not perform command execute // we'll use scheduled updates for that.
+// Now, inject the newly built ORDER BY into the tree
+// (AS is always optional, for consistency with SQL/OQL)
+// again, both should be FromElements
+// so we "clock over" on the first invocation
+// If this is an implied join in a from element, then use the impled join type which is part of the // tree parser's state (set by the gramamar actions).
+// Create a parameter specification for the collection filter...
+"//			final List extendsQueue,"
+// TODO : safe to interpret "map.remove(key) == null" as non-dirty?
+// Resolve the LHS fully, generate implicit joins.  Pass in the property name so that the resolver can // discover foreign key (id) properties.
+//allow any identifier quoted with backtick //only recognizes identifiers beginning with a letter
+// for DOM4J "collections" only // TODO: it would be better if this was done at the higher level by Printer
+// getfield // get field "$JAVASSIST_CALLBACK" defined already
+// replace {....} with corresponding column aliases
+//ie. e.status==DELETED
+"/*        Event anEvent = (Event) session                .createCriteria(Event.class).setFetchMode(""participants"", FetchMode.JOIN)                .add( Expression.eq(""id"", eventId) )                .uniqueResult(); // Eager fetch the colleciton so we can use it detached        */"
+// call this before any Iterator method to make sure that the current Iterator // is not exhausted
+//return the id, so we can use it to reset the proxy id //return result;
+// cache these since they are stateless // this one could even be static...
+//fetch the generated id in a separate query
+//assembled state gets put in a new array (we read from cache by value!)
+//where fragment must be empty!
+// otherwise, we only need to flush if there are in-memory changes // to the queried tables
+// should be ok performance-wise to generate new delegate instances for each // request since these are locally stack-scoped.  Besides, it makes the code // much easier to read than the old TransactionHelper stuff...
+// keyword support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// We now have the value of the property-ref we reference.  However, // we need to dig a little deeper, as that property might also be // an entity type, in which case we need to resolve its identitifier
+//aliasRefNode.resolve( false, false, aliasRefNode.getText() ); //TODO: is it kosher to do it here? //TODO: is it kosher to do it here?
+// should *not* need to grow beyond the size of the total number of columns in the rs
+// no transformations took place, so handle it as we would a // non-instrumented class
+// Add these directly to the executions queue
+//TODO: can we *always* use the "null property" approach for everything?
+//get 'em in the right order (not that it really matters)
+//WHERE STRING
+"//	private List collectionOwnerAliases = new ArrayList(); //	private List collectionAliases = new ArrayList(); //	private List collectionPersisters = new ArrayList(); //	private List collectionResults = new ArrayList();"
+//yuck!
+// discriminator column
+// NOTE : evict() operates locally only (i.e., does not propogate // to any other nodes in the potential cluster).  This is // exactly what is needed when we destroy() here; destroy() is used // as part of the process of shutting down a SessionFactory; thus // these removals should not be propogated
+// let the persister inspect the instance to decide
+//scan for next non-whitespace token
+// [jsd] The fix for HHH-558...
+// TODO: Should this really return null?  If not, figure out something better to do here.
+//TODO: move these to a new JoinableType abstract class, //extended by EntityType and PersistentCollectionType:
+// The FROM fragment will probably begin with ', '.  Remove this if it is present.
+//force immediate execution of the insert
+// DB-OBJECTNAME
+// at some point the processing went bad, so we need to: //      1) make sure the connection handle gets released //      2) try to cleanup the JTA context as much as possible
+//TODO: better to pass the id in as an argument?
+// user supplied JDBC connections
+// ----------------------------------------------------------- Constructors
+//private static final Alias DEFAULT_ALIAS = new Alias(10, null);
+// model.getKey().setType( new Type( model.getIdentifier() ) );
+//TODO: not quite sure about the full implications of this!
+// before any callbacks, etc, so subdeletions see that this deletion happened first
+// Bind the order-by
+// have the entity entry perform post-update processing, passing it the // update state and the new version (if one).
+//is this ok?
+// dynamic filters specifically for many-to-many inside the collection
+//Cope with special cases of AND, NOT, ()
+"// Entity load contexts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // 	* currently, not yet used..."
+// a nested composite element
+// CLASS + TABLE
+// callable statement support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Ignore the token class name parameter, and use a specific token class.
+//should never happen, i think
+//return lhsPersister.getSubclassPropertyColumnNames(property);
+// first, lets determine whether to apply cglib or javassist based instrumentation...
+"/*public static Object[] clone(Class elementClass, Object[] array) {		Object[] result = (Object[]) Array.newInstance( elementClass, array.length );		System.arraycopy(array, 0, result, 0, array.length);		return result;	}*/"
+//workaround, for backward compatibility of sets with no //not-null columns, assume all columns are used in the //row locator SQL
+// make sure spinning forward did not put us past the end of the buffer...
+// if the version of a newly instantiated object is not the same // as the version seed value, use that as the unsaved-value
+//do we even really need this? the update will fail anyway....
+// the next one up must also be
+// the database now holds a lock + the object is flushed from the cache, // so release the soft lock
+//postInitialize() will be called after initialization
+"//		 You may still have other ResultSets or update counts left to process here  //		 but you can't do it now or the ResultSet you just got will be closed "
+// TODO : this is a bit dodgy, come up with a better way to check this (plus see above comment)
+// Add a zero (or quite low) timeout option so we don't block. // Ignore any TimeoutException. Basically we forego caching the // query result in order to avoid blocking. // Reads are done with suspended tx, so they should not hold the // lock for long.  Not caching the query result is OK, since // any subsequent read will just see the old result with its // out-of-date timestamp; that result will be discarded and the // db query performed again.
+// we don't need to worry about any condition in the ON clause // here (toFromFragmentString), since anything in the ON condition // is already applied to the whole query
+//before adding to collection!
+// schedule the update // note that we intentionally do _not_ pass in currentPersistentState!
+// Recognition code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//registerFunction( "trim", new StandardSQLFunction( "trim", Hibernate.STRING ) );
+//The class is now way to complex!
+// If there is no WHERE node, make one.
+// index of current iterator in the wrapped iterators array
+// return aliases not supported in classic translator!
+// array of reference type
+//after reset!
+// we need to grab the version value from the entity, otherwise // we have issues with generated-version entities that may have // multiple actions queued during the same flush
+//used also for generation of FK names!
+// You may still have other ResultSets or update counts left to process here  // but you can't do it now or the ResultSet you just got will be closed
+//this is a query and we are loading multiple instances of the same collection role
+// if we reach the end of the string w/o finding the // matching end, that is an exception
+// todo : should we additionally check the current isolation mode explicitly?
+//Enable for HHH-440, which we don't like:
+// TODO : absolutely no usages of this constructor form; can it go away?
+//by default
+// cascade-delete to many-to-one AFTER the parent was deleted
+// Case 1: Multi token keywords GROUP BY and ORDER BY // The next token ( LT(2) ) should be 'by'... otherwise, this is just an ident.
+// current timestamp support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// transactions marked for rollback-only cause some TM impls to throw exceptions
+// get meta's from <hibernate-mapping>
+//cachedState,
+// collections cannot be compared
+// temporary ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// we are the RHS of the DOT representing a naked comp-prop-ref
+// scroll ahead
+//now done in EntityIdentityInsertAction //persister.setIdentifier( entity, id, source.getEntityMode() );
+// If the lhs is a collection, use CollectionPropertyMapping
+// log a message about potential connection leaks
+// this method is a noop if there is a Synchronization!
+"//		 This assumes you will want to ignore any update counts"
+// potentialTrimCharacterArgIndex = 1 assumes that a // trim-specification has been specified.  we handle the // exception to that explicitly
+//if it is initialized, see if the underlying //instance is contained, since we need to  //account for the fact that it might have been //evicted
+// Case 2: The current token is after FROM and before '.'.
+// watch out for a case where old is still referenced // somewhere in the object graph! (which is a user error)
+//TODO: disable batch loading if lockMode > READ?
+// we may be screwed here since the collection action is about to execute // and we do not know the final owner key value
+// skip this check for composite-ids relating to dom4j entity-mode; // alternatively, we could add a check to make sure the incoming id value is // an instance of Element...
+// OptimisticCache impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//create an index on the key columns??
+//Cope with a subselect
+// If this is 'elements' then create a new FROM element.
+// in non-select queries, the only time we should need to join is if we are in a subquery from clause
+// TODO: Replace this with a more elegant solution.
+//keep the existing version number in the case of replicate!
+// do a check
+// look for existing collection as part of the persistence context
+// no auto-flushing to support in stateless session
+// #3 - note that this is also true of "datetime - :param"...
+// for backward-compatability
+//count++;
+// if the current depth is 0, the root thing being loaded is the // many-to-many collection itself.  Here, it is alright to use // an inner join...
+// If the workspace node has null as well, OK; if not we've // been modified in a non-comparable manner, which we have to // treat as us being newer
+// delete() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// detached collection wrappers that get found + reattached // during flush shouldn't be ignored
+// todo: this might really even be moved into the cfg package and used as the basis for all things which are configurable.
+//60 seconds
+// we *always* assume an instance with a null // identifier or no identifier property is unsaved!
+// our parent is another dot node, meaning we are being further dereferenced. // thus we need to generate a join unless the parent refers to the associated // entity's PK (because 'our' table would know the FK).
+// According to both the ANSI-SQL and JPA specs, trim takes a variable number of parameters between 1 and 4. // at least one paramer (trimSource) is required.  From the SQL spec: // // <trim function> ::= //      TRIM <left paren> <trim operands> <right paren> // // <trim operands> ::= //      [ [ <trim specification> ] [ <trim character> ] FROM ] <trim source> // // <trim specification> ::= //      LEADING //      | TRAILING //      | BOTH // // If <trim specification> is omitted, BOTH is assumed. // If <trim character> is omitted, space is assumed
+// This causes the factory to instantiate the desired class.
+//null clientLock is remotely possible but will never happen in practice
+// after *all* persisters and named queries are registered
+// loading ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TODO: implement caching?! proxies?!
+// from Map
+// the object is persistent
+//null owner ok??
+//HSQL has no Blob/Clob support .... but just put these here for now!
+// The where clause was added to eliminate this statement from Brute Force Searches.
+// to support dialects that have their own identity data type
+/* | this | bean | args | raw bean | */
+//TODO: redesign how PropertyAccessors are acquired...
+//its an interface so we can't really tell anything...
+// copy elements into newly empty target collection
+//we *could* regerate this inside each called method!
+// NOTE: Because we're using ASTUtil.createParent(), the tree must be created from the bottom up. // IS EMPTY x => (EXISTS (QUERY (SELECT_FROM (FROM x) ) ) )
+//may be final //may be final //may be final
+// local cache, so we use synchronization
+// now get an existing proxy for each row element (if there is one)
+// override on some subclasses
+// If the node has a first child, recurse into the first child.
+//init the table here instead of earlier, so that we can get a quoted table name //TODO: would it be better to simply pass the qualified table name, instead of //      splitting it up into schema/catalog/table names
+// ignore this row, the collection is in process of // being loaded somewhere further "up" the stack
+//sort the updates by fk
+// moved up from AbstractEntityPersister ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// pre-determine and cache the hashcode
+//use dialect default properties
+//name from a super query (a bit inelegant that it shows up here)
+//take note when this is a boolean expression
+// TODO should we just collect these like with the collections above?
+// merge() operations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"//					int parameterStart = getWalker().getNumberOfParametersInSetClause(); //					List allParams = getIdSelectParameterSpecifications(); //					Iterator whereParams = allParams.subList( parameterStart, allParams.size() ).iterator();"
+// for objects that came in via update()
+// DotNode uses null here...
+// TODO : why aren't these the same?
+//add the restriction to the outer select
+"// TBD should this be varbinary($1)? //		registerColumnType(Types.VARBINARY,     ""binary($1)"");"
+// *load_1
+// cascade first, so that all unsaved objects get their // copy created before we actually copy
+//TODO: Should this be an InitializeEntityEventListener??? (watch out for performance!)
+//+ "_" + referencedColumnName not used for backward compatibility
+//TODO: temporary
+// then bind it
+// KEY
+// Collection 'property function'
+//TODO: this class depends directly upon CriteriaImpl,  //      in the impl package ... add a CriteriaImplementor  //      interface
+//TODO: used to be exprNoParens! was this needed?
+//TODO: should this be Session.instantiate(Persister, ...)?
+//deliberately ignore return value!
+//TODO: to handle concurrent writes correctly, this should return a Lock to the client
+"/** Create an action that will evict collection and entity regions based on queryspaces (table names).	 *  TODO: cache the autodetected information and pass it in instead.	 **/"
+//TODO: this is a bit arbitrary, expose a switch to the user?
+// Cache impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Now update only the tables with dirty properties (and the table with the version number)
+// DYNAMIC UPDATE
+//Arrays.asList doesn't do primitive arrays
+// note: interfaces is assumed to already contain HibernateProxy.class
+// We only build caches if *none* were passed in.  Passing in // caches counts as a clear statement of exactly what is wanted
+//TODO: put this stuff back in to read snapshot from //      the second-level cache (needs some extra work)
+// If we want to handle it bidirectional and detached, we also need to load this // collection with an eager outer-join fetch, this time with Criteria and not HQL:
+//problematic for <key-many-to-one>!
+// Initialize SQL nodes here.
+//TODO: is this a bit ugly?
+// Initialize dirty flags for arrays + collections with composite elements // and reset reached, doupdate, etc.
+// Transaction settings:
+// PHASE 2 : Analyze the HQL AST, and produce an SQL AST.
+"// here, we have two possibilities: // 		1) the property-name matches the explicitly identifier property name //		2) the property-name matches the implicit 'id' property name"
+// for non-arrays, we don't need to know the element class //elementType.returnedClass();
+// now rebuild the insertions list. There is a batch for each entry in the name list.
+//do not use proxiesByKey, since not all //proxies that point to this session's //instances are in that collection!
+// First, collect all of the select expressions. // NOTE: This must be done *before* invoking setScalarColumnText() because setScalarColumnText() // changes the AST!!!
+// we have something like : "lhs [op] ?"
+// for native-sql queries, the param metadata is determined outside // any relation to a query plan, because query plan creation and/or // retreival for a native-sql query depends on all of the return // types having been set, which might not be the case up-front when // param metadata would be most useful
+// the "root from-element" in correlated subqueries do need this piece
+//need to do that here rather than in the save event listener to let //the post insert events to have a id-filled entity when IDENTITY is used (EJB3)
+//test this entity to see if we must query it
+// Put the FILTERS node before the HQL condition and theta joins
+//always do an INSERT, and let it fail by constraint violation
+//only really need new array during semiresolve!
+// use the id value of a newly instantiated instance as the unsaved-value
+// else if it's elements changed
+// we did not find a collection element in the result set, so we // ensure that a collection is created with the owner's identifier, // since what we have is an empty collection
+// work around the "feature" where tree cache is validating the // inserted node during the next transaction. no idea...
+// bad type
+// superclass entity-name
+//we need to upgrade the lock mode to the mode requested
+// use old (HB 2.1) defaults if outer-join is specified
+// we already have a callback registered; either a local // (org.hibernate.Transaction) transaction has accepted // callback responsibilities, or we have previously // registered a transaction synch.
+// If this return's alias has not been processed yet, do so b4 further processing of this return
+// ----------------------------------------------------- Instance Variables
+"/*	 * The types represented in the SQL result set.	 *	 * @return The types represented in the SQL result set.	 */"
+//NOTE: early return
+// Various Expectation instances ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Code to handle subclasses of topClass
+// If this is an implied join in a FROM clause, then use ANSI-style joining, and set the // flag on the FromElement that indicates that it was implied in the FROM clause itself.
+//reset the dotcount (but not the path) //after reset!
+//we ran out of keys to try
+//deduplicate unique constraints sharing the same columns //this is needed by Hibernate Annotations since it creates automagically // unique constraints for the user
+//TODO: switch statements are always evil! We already had bugs because  //      of forgotten token types. Use polymorphism for this!
+//for MySQL
+// TODO: handle TypeDefs
+// already been processed...
+// Tell hibernate to use getBytes instead of getBinaryStream
+//TODO: make this a bit nicer
+// Create an OuterJoinGenerator for this dialect.
+//arbitrary on clause ignored!!
+// Do the key. The key is immutable so we can use the _current_ object state - not necessarily // the state at the time the delete was issued
+// For the case of dynamic-insert="true", we need to generate the INSERT SQL
+// if we know there is exactly 1 row, we can skip. // it would be great if we could _always_ skip this; // it is a problem for <key-many-to-one>
+//delete all the deleted entries
+// Get the function name node.
+// Re-arrange the tree so that the collection function is the root and the lhs is the path.
+//sort the updates by pk
+// Note: this simply constructs a "raw" SQL_TOKEN representing the // where fragment and injects this into the tree.  This "works"; // however it is probably not the best long-term solution. // // At some point we probably want to apply an additional grammar to // properly tokenize this where fragment into constituent parts // focused on the operators embedded within the fragment.
+//ie. the subquery! yuck!
+//if there is a user-specified loader, return that //TODO: filters!?
+// Look through the FromElement's children to find any collections of values that should be fetched...
+// Use the table fromElement and the property name to get the array of column names.
+// Note this!!
+"/**     * FIXME Per the RegionFactory class Javadoc, this constructor version     * should not be necessary.     *      * @param props The configuration properties     */"
+// -- Loader implementation --
+//this is kinda the best we can do...
+// SQL Server (at least up through 2005) does not support defining // cascade delete constraints which can circel back to the mutating // table
+// Dialect method overrides ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// we are the LHS of the DOT representing a naked comp-prop-ref
+//Inside a BETWEEN ... AND ... expression
+// contained elements:
+// false indicates to not generate parens around the assignment
+/* local variables | this | callback | */
+"/*protected void initPropertyPaths(			final String path,			final Type type,			final String[] columns,			final String[] formulaTemplates,			final Mapping factory)	throws MappingException {		//addFormulaPropertyPath(path, type, formulaTemplates);		initPropertyPaths(path, type, columns, formulaTemplates, factory);	}*/"
+// Write any appropriate versioning conditional parameters
+//Force a substitution!
+"//		origin.addDestination( destination ); // This was the cause of HHH-242 //		origin.setType( FROM_FRAGMENT );			// Set the parent node type so that the AST is properly formed. // The destination node will have all the FROM text. // The parent node is a collection join too (voodoo - see JoinProcessor)"
+// implicit joins are always(?) ok to reuse
+"/**	 * TODO: Check if Mimer SQL cannot handle the way DB2 does	 */"
+// (NOT (NOT_LIKE a b) ) => (LIKE a b)
+//otherwise return the "hydrated" state (ie. associations are not resolved)
+// these are just two unrelated table references
+// Need to account for allowable '_' within the variant
+// if it was dirtied by a collection only
+// TODO: what type?
+"//	public BytecodeProvider getBytecodeProvider() { //		return bytecodeProvider; //	} // //	void setBytecodeProvider(BytecodeProvider bytecodeProvider) { //		this.bytecodeProvider = bytecodeProvider; //	}"
+//information about properties of this class, //including inherited properties //(only really needed for updatable/insertable properties)
+//we ran out of ids to try
+// We've been here before
+// this one only really needed for badly-behaved applications! // (if the TransactionManager has a Sychronization registered, // its a noop) // (actually we do need it for downgrading locks)
+// we found it in the temp PC.  Should indicate we are in the midst of processing a result set // containing eager fetches via join fetch
+"//		origin.addDestination(destination); // Add the query spaces."
+// ok in normal Hibernate usage to delete a detached entity; JPA however // forbids it, thus this is a hook for HEM to affect this behavior
+// TODO : add this info to the translator and aggregate it here...
+// using local since the inheritedMetas at this point is not the correct map since it is always the empty map
+// the CascadingAction contract ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Add the new node to the map so that we don't create it twice.
+// Numeric Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Impl Note: allows multiple collection fetches as long as the // entire fecthed graph still "points back" to a single // root entity for return
+// otherwise, just dump it
+// Default implementation: // If this node has a data type, and that data type is not an association, then this is scalar.
+//TODO: deprecated, remove eventually
+// this is a collection initializer, so we must create a collection // for each of the passed-in keys, to account for the possibility // that the collection is empty and has no rows in the result set
+// NOTE: this assumes something about how propertySelectFragment is implemented by the subclass!
+// Not null if the Isolation level has been specified in the configuration file. // Otherwise, it is left to the Driver's default value.
+// short-circuit for performance...
+//value is the entity name
+"//		registerColumnType( Types.BLOB, 16777215, ""mediumblob"" ); //		registerColumnType( Types.BLOB, 65535, ""blob"" );"
+// try to "pretty print" it
+//opening paren in new Foo ( ... )
+//before cascade! //TODO: should this be Session.instantiate(Persister, ...)?
+//hilo config
+// Primary key constraint
+// not absolutely necessary, but does help with aggressive release
+// create the collection holding the Orphans
+//pass the entity-name, if not a collection-id
+//Must be done here because of side-effect! yuck...
+//return the proxied object
+//check basic level one nullablilty
+//then by id
+// This, is used by SessionFactoryImpl to hand to the generated SessionImpl; // was the only reason I could see that we cannot just use null as // Settings.cacheProvider
+// Do we need to qualify index names with the schema name?
+// special case where we need to force incloude all subclass joins
+// the configured transaction-factory says it only supports // local callback mode, so no sense attempting to register a // JTA Synchronization
+// assume this ident's text does *not* refer to a property on the given persister
+// Handle any filters applied to the class level
+// Pointbase has no known variation of a "SELECT ... FOR UPDATE" syntax...
+// finally, what it's all about...
+// Add a space before the display text.
+// Serialize //-----------------------------------------------------------------------
+// don't care about other param types here, just those explicitly user-defined...
+// seems to have spotty LOB suppport
+// Otherwise, it's a literal.

@@ -1,0 +1,603 @@
+//i18n[CreateTableScriptCommand.jdbcOdbcMessage=JDBC-ODBC Bridge doesn't  //provide all of the necessary metadata. The script may be incomplete.]
+// The call here is the result of a desperate fight // to find a place where the components in the split // had not height = 0. If someone knows a better way // please tell me I'll apreciate any advice. // gerdwagner@users.sourceforge.net
+// i18n[favs.nameMustNotBeBlank=Name cannot be blank.]
+// Unfortunately we cannot simply call getColumnTypeAlterSQL since "serial" type is 4 (which is the same // as java.sql.Types.Integer, so we would get back an integer column, not a serial column).  So we piece // it together ourselves: // // ALTER TABLE dbcopydest:"informix".serialtest MODIFY myid integer
+// Since the user only wants to be notified of updates at startup, return here, thereby  // freeing up the thread.
+// On Win 2000 & XP mnemonics are normally hidden. To make them // visible you press the alt key. Under the Windows L&F pressing // alt may not work. This code is a workaround. See bug report // 4736093 for more information.
+"/**	 * TODO: This shouldn't be public. Its only been done for the JComplete	 * plugin. At some stage this method will be returned to package visibility.	 */"
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#supportsSavepoints()	 */"
+// H2 uses Java classes that implement the "Trigger" interface to operate // on database tables rows when an action triggers them. Therefore, there // is currently no way to access the source for a trigger. Hopefully this // will change at some point in the future. // _treeAPI.addDetailTab(DatabaseObjectType.TRIGGER, new TriggerSourceTab("The source of the trigger"));
+//FA_xxx
+// DB delete worked correctly, so now delete from table //IMPORTANT: The user and the creator both work through the // SortableTableModel, not the Actual model.  Thus the row // indexes to delete are given in the SortableTableModel row numbers, // so we must work through that model model to actually do the delete.
+// TODO Need to have a generic hibernate dialect extend this to provide the types.
+"/**	 * TODO: move to IOUtilities	 * 	 * @see net.sourceforge.squirrel_sql.client.update.UpdateUtil#createZipFile(FileWrapper, FileWrapper[])	 */"
+// SS: Modified to auto-compute column widths if <computeWidths> is true
+//i8n[syntax.abrevNewLineNote=Use \n in corrections for line break. Note: Bookmarks are more powerful than abreviations.]
+// We set expected and checksum to -1 here, since we don't have that information for release.xml file // TODO: Can HttpClient be used to get the byte-size of release.xml so we can perform this check?
+"/* TODO: Delete this class * Copyright (C) 2001 Colin Bell * colbell@users.sourceforge.net * * This library is free software; you can redistribute it and/or * modify it under the terms of the GNU Lesser General Public * License as published by the Free Software Foundation; either * version 2.1 of the License, or (at your option) any later version. * * This library is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU * Lesser General Public License for more details. * * You should have received a copy of the GNU Lesser General Public * License along with this library; if not, write to the Free Software * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA */"
+//TODO: ? Dialog Handling on Cancelled ?
+// If no columns are selected, and we're not dropping the PK, then // there is nothing to do.
+// i18n[HibernateConfigController.noCfgNameMsg=Not a valid configuration name\nChanges cannot be applied.]
+// i18n[I18n.WorkdirIsNoDir=The working directory is not a directory.\nNo bundles will be loaded from {0}]
+//i18n[RefactoringPreferencesPanel.borderTitle=Refactoring Preferences]
+// Some dbs (like McKoi) make -1 the default for scale.  Apply the  // same hack as above.
+// Hack to deal with Firebird's RDB meta tables.
+// get the values from the "not use" list and convert to sorted set
+// i18n[oracle.buffer.getsPerRow=Buffer Gets per Row]
+// Get the largest width and height
+//chFields = new JCheckBox[colNames.length];
+// TODO: Why shouldn't we call registerSQLDriver here? RMM 20070401
+// Columns have not yet been loaded
+// alter table TEST ALTER MYCHAR SET DEFAULT 'FOO' // alter table TEST ALTER MYCHAR DROP DEFAULT
+// add external processing command field and button
+// checkbox for using LONG in WHERE clause
+// i18n[OracleAliasPrefsPanel.header=Configure Oracle Schema loading properties]
+"/*	 * Used by editing operations to reset the field to its original value.	 */"
+// i18n[mysql.sureDropping=Are you sure?]
+"/* (non-Javadoc)	 * @see net.sourceforge.squirrel_sql.plugins.dbcopy.SessionInfoProvider#getSelectedDatabaseObjects()	 */"
+// List of the additional colorings
+// update <destinationTable> s  // set destColumn = ( select f.desc_t1 from <fromTable> f where f.myid = s.myid)
+// get WHERE clause // The -1 says to ignore the last arg and use the contents of the values array // for the column that we care about.  However, since the data in // that column has been limited, when getWhereClause calls that // DataType with that value, the DataType will see that the data has // been limited and therefore cannnot be used in the WHERE clause. // In some cases it may be possible for the DataType to use the // partial data, such as "matches <data>*", but that may not be // standard accross all Databases and thus may be risky.
+// i18n[I18n.failedToOpenZip=Failed to open zip/jar {0}]
+// TODO: This won't work when the column has values with quotes in them. // Use PreparedStatements instead. Hmmm... instead of insert statements, could we not // just create a sequence and generate a select statement that: // a) uses the sequence for the pkid // b) selects distinct values // That would be a more efficient approach that would also eliminate this quoting problem
+// i18n[TriggerDetailsTab.hint=Display trigger details]
+// tell scrollpane to use table size with the height adjusted to leave // room for the scrollbar at the bottom if needed
+// fail ??
+//JASON: Remove?? //_session.getSessionSheet().getSQLPanel().executeSQL(sql);
+"//		double pageBottom = pageTop +  clipHeight + headerHeight;"
+// Tooltips and questions
+// Not implemented
+// Precision
+// TODO: Once we're happy that JFCUtilities is no longer required
+// mockConnection
+// "ALTER TABLE $tableName$ " + // "ADD CONSTRAINT $constraintName$ UNIQUE ($columnName; separator=\",\"$)";
+// Object Tree
+// Operators
+// i18n[DatabaseMetaData.searchableTypePredChar=only supports 'WHERE...LIKE']
+// set up array to return for public access to cmd line args
+// TODO Probably want to allow the user to set these sequence properties ?? // Sequence settings.
+// i18n[exportconfig.fileSavedTo={0} saved to {1}]
+"//		String CURRENT_LINE_HIGHLIGHTING = ""currentLineHighlighting""; //		String CURRENT_LINE_HIGHLIGHT_COLOR = ""currentLineHighlightColor"";"
+// i18n[popupeditableIoPanel.cannotOpenFile=Cannot open file {0}.\nError was:{1}]
+// i18n[laf.tabHint=Fonts]
+"//		String LINE_NUMBER_COLOR = ""lineNumberColor""; //		String SELECTION_COLOR = ""selectionColor""; //		String SHOW_LINE_NBRS = ""showLineNumbers"";"
+// This is weird - if I don't set this the column header doesn't line up // with the column contents.
+// i18n[codeCompletion.prefsExplain=When completing functions SQuirreL doesn't know // if a function is a stored procedure or a user defined function. // To make code completion of these two kinds of functions convenient SQuirreL offers to // configure which way completion should work.]
+// registerColumnType(Types.CLOB, 31982, "varchar($l)");
+//TODO: RENAME to DataSetViewerPropertyDestination
+// call the underlying model to get the whole data, if possible
+"/*				 * END-KLUDGE				 */"
+// i18n[DumpApplicationAction.titleSuccess=Dump successful]
+// Clone the test bean and change every bean property
+// Empty body.
+// everything seems to have worked ok
+// If a driver says it supports schemas/catalogs but doesn't // provide schema/catalog nodes, try to get other nodes.
+// Setup one row
+// i18n[DataSetUpdateableTableModelImpl.info.deletecancelled=Delete canceled at user request.]
+/*Color.maroon*/
+// If the user picks auto-increment, auto-fill the "Fixed value" column with 0 for the start  // value if it is currently empty.
+/* these arrays are parallel. */
+// i18n[I18n.TranslationsGenerationCount=Generated {0} templates to {1}]
+// TODO: subclass these hibernate dialects to provide the "canPasteTo"  //       api method in HibernateDialect interface. //private static final DB2390Dialect db2390Dialect = new DB2390Dialect();
+"/**	 * TODO: Clean this mess up!!!! Load plugins. Load all plugin jars into class loader.	 */"
+// Class that displays the various formats available for dates
+// Should the data be first cloned so that the sorting doesn't take place // on the array that is used in getValue() // TODO: This is a must if sorting is done in a thread! ??
+//ResultSet rs = con.getMetaData().getTables("dbcopysrc", null, "BIGINT_TYPE_TABLE", new String[]{ "TABLE" });
+"/**	 * TODO: Move this to IOUtilities Extracts the specified zip file to the specified output directory.	 * 	 * @param zipFile	 * @param outputDirectory	 * @throws IOException	 */"
+/* Verify insert worked only if the dialect supports sub-second timestamp values */
+"//		_tree.addTreeSelectionListener(new ObjectTreeSelectionListener()); //		_objTreeSelLis = new ObjectTreeSelectionListener(); //		_tree.addTreeSelectionListener(_objTreeSelLis);"
+// Nothing to do if object tree is opened.
+// -- restore
+// a subclass of Foo with the same values as the original
+//i18n[syntax.replaceNetbeansOnly=Replace is only available when the Netbeans editor is used.\nSee menu File --> New Session Properties --> Tab Syntax]
+// i18n[popupeditableIoPanel.noFile=No File Selected]
+//?? Extract this out into a class like CascadeInternalFramePositioner.
+// TODO: This should be handled with an Iterator
+"/** * This <CODE>ICommand</CODE> displays a dialog box that allows the user to * enter a 'where' clause or an 'order by' clause used when getting data via * the 'Contents' tab. * * @author <A HREF=""mailto:mjhammel@users.sourceforge.net"">Maury Hammel</A> * * TODO: Change name to ContentsTabFilterCommand */"
+// common expectations
+// Sessions.
+// for entries past the first one, use the default renderer
+// Do the conversion into the object in a safe manner
+// not too many old files
+"/* (non-Javadoc)	 * @see javax.swing.table.AbstractTableModel#isCellEditable(int, int)	 */"
+// BAD - Converting a URL to a file this way is problematic when the file path contains spaces
+"/* map of DBMS-specific registered data handlers.	 * The key is a string of the form:	 *   <SQL type as a string>:<SQL type name>	 * and the value is a factory that can create instances of DBMS-specific	 * DataTypeComponets.	 */"
+// these are all more or less global loop variables // to keep from needing to pass them all into various // methods during parsing
+// reset each time we start a new print
+//??? For now, use the same renderer as everyone else. //?? //?? IN FUTURE: change this to use a new instance of renederer //?? for this data type.
+// sort the list
+// TODO: should I be adding quotes if user wants identifiers quoted??
+/* the number of characters allowed in this field */
+// Save off selections so that selection/focus can be restored  // later.
+// Hack to deal with Ingres IIE* meta tables.
+// check box for whether to read contents during table load or not
+// TODO: Put throws clause back in // Empty method.
+"/**     * Sorts the specified destInfos array based on the order of the sourceInfos     * array.  Not a very efficient algorthim, but it gets the job done.     * TODO: rewrite this using Collections sorting capability.     *      * @param sourceInfos     * @param destInfos     * @param sourceTableName     * @param destTableName     * @return a re-ordered version of the specified destInfos array     * @throws MappingException if the arrays differ in length or column names.     */"
+// TODO: Figure out why the selection of the root node in the object tree // is undone if we don't delay. It seems like some other thread racing  // to set the selected node to none.  When this happens, the detail pane // for the root node disappears when a session is first opened, or when // an ObjectTree frame is created.  This is a really crappy and unreliable // way to fix this problem, but it hides the problem for now.  A better  // understanding of the architecture of session creation is required  // before a proper solution can be attempted. RMM 20051217
+// TODO: Hard coded -. JDBC/ODBC bridge JDK1.4 // brings back -9 for nvarchar columns in // MS SQL Server tables. // -8 is ROWID in Oracle.
+// first look to see if they are identical objects, e.g. both null
+// a light yellow
+// convert file text into a string // Special case: some systems tack a newline at the end of // the text read. Assume that if last char is a newline that // we want everything else in the line.
+// i18n[graph.printGraph=Print graph]
+"//	private String getFileName(File dir, String name) //	{ //		 //		return getFileName(new File(dir, name)); //	} //"
+// i18n[I18n.includeTimestamp=Include timestamp in modified properties file]
+// readdDateAsTimestamp checkbox
+"/** * SQLFilterAction.java * * Created on March 22, 2003, 10:55 AM * * Adapted from SessionPropertiesAction.java by Colin Bell. * * TODO: CHange name to ContentsTabFilterAction */"
+// TODO: verify this
+// tell caller that the underlying data was not updated //?? is this always true, or could the data be updated with a warning?
+// Dump driver information.
+// this is the column on which the constraint to be dropped is defined
+// this is the constraint that is dropped in drop constraint test
+//i18n[SQLScriptPreferencesPanel.deleteRefActionCheckboxLabel=Add delete  //referential action to the FK definition]
+// TODO: This is a nasty quick hack. Needs an API to do this.
+// No point to ordering less than 2 tables
+// extract column names from text area
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#nullsAreSortedAtEnd()	 */"
+// TODO: should also make sure that each of the columns is made "NOT NULL"
+// i18n[TableExportCsvDlg.columnSeparator=Column Separator:]
+"//                    colDefs[i].getSqlTypeName() + ""\n"" + //					((colDefs[i].isNullable()) ? ""nullable"" : ""not nullable"") + ""\n"" + //					""precision=""+ colDefs[i].getPrecision() + ""\n"" + //					""scale="" + colDefs[i].getScale();"
+// hand file input stream to DataType object for import // Also, handle File IO errors here so that DataType objects // do not have to.
+// groups
+// Save options selected for Edit Where Columns
+//????? if desired, get fancy and use icons in buttons instead of text ?????????
+// i18n[userscript.selScriptToDel=Please select the script to delete]
+//Create checkbox for enabling auto refresh // i18n[oracle.auotRefresh2=Enable auto refresh]
+// Tabs to add to the user nodes.
+// i18n[TableExportCsvDlg.useGlobalPrefsFormatingExcel=Use formating as configured in Global Prefs (recommended for MS Excel)]
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.client.util.IOptionPanel#applyChanges()     */"
+// TODO: Should have session listeners instead of these calls.
+// tabs for triggers
+//i18n[DumpApplicationCommand.error.combiningtempfiles=Error combining temp files into dump file]
+// non-null return tells caller there was a problem
+// Don't call super. Packing this frame causes problems.
+// TODO: Tooltips
+// try as an alias
+"/* * TODO: finish i18n */"
+// i18n[DataSetUpdateableTableModelImpl.error.unknownerror=Unknown error during check on DB.  Update is probably not safe.\nDo you wish to proceed?]
+// i18n[ShowDriverWebsiteCommand.comfirm=No WebSite URL for the  // specified driver.  Would you like to add one?]
+// ?? Is there any way to check for invalid input? Valid input includes // ?? at least any printable character, but could it also include unprintable // ?? characters?
+// Facade methods for IMessageHandler.  We don't want to allow code to  // directly access an internal IMessageHandler, now that the IMessageHandler // interface requires an ExceptionFormatter to be injected for methods that // accept Exceptions.
+// i18n[GeneralPreferencesPanel.squirrelHomePath=Home directory: -home {0}]
+// test that the string is valid by converting it into an // object of this data type
+// Track the time in aggregate for the script.
+// i18n[codecompletion.prefs.table.spWithoutParams=SP without params]
+// TODO Maybe we should have a checkbox to allow the user to toggle  // default value on/off.  Some dbs (like DB2) treat empty string "" as // a different default value than null.
+"// Setup preferences to make jGoodies LAF look better. //		UIManager.put(Options.USE_SYSTEM_FONTS_APP_KEY, Boolean.TRUE); //		UIManager.put(Options.USE_NARROW_BUTTONS_KEY, Boolean.TRUE);"
+// i18n[syntax.prefUsePlain=Use plain editor]
+// user entered hour an min. See if they also entered secs
+// TODO: Maybe prompt the user to ask to append the records,  // ignoring errors for constraint violations?
+//?? Best guess: read object? //?? This is probably the wrong thing to do here, but //?? I don't know what else to try.
+//TODO: Rename to IObjectTreeNodeExpander
+// Now, check to be sure we get both schemas.
+// Since we are reading Meta-data about the DB, we should // never see a CLOB. However, if we do we assume that // it is printable text and that the user wants to see it, so // read in the entire thing.
+// catalog // schema // tableName // columnName // dataType // typeName // columnSize // decimalDigits // radix // isNullAllowed // remarks // defaultValue // octet length // ordinal position // isNullable
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#supportsMixedCaseIdentifiers()	 */"
+/** TODO: Spring-inject when this class is a Spring bean */
+// i18n[SequenceDetailsTab.hint=Display sequence details]
+// i18n[FileManager.error.cannotwritefile=File {0} \ncannot be written to.]
+// we could tell user here that export was canceled, // but I don't think its necessary, and that avoids // forcing user to do yet another annoying mouse click.
+// KLUDGE: // We want some info about the columns to be available for validating the // user input during cell editing operations.  Ideally we would get that // info inside the ResultSetDataSet class during the creation of the // columnDefinition objects by using various functions in ResultSetMetaData // such as isNullable(idx).  Unfortunately, in at least some DBMSs (e.g. // Postgres, HSDB) the results of those calls are not the same (and are less accurate // than) the SQLMetaData.getColumns() call used in ColumnsTab to get the column info. // Even more unfortunate is the fact that the set of attributes reported on by the two // calls is not the same, with the ResultSetMetadata listing things not provided by // getColumns.  Most of the data provided by the ResultSetMetaData calls is correct. // However, the nullable/not-nullable property is not set correctly in at least two // DBMSs, while it is correct for those DBMSs in the getColumns() info.  Therefore, // we collect the collumn nullability information from getColumns() and pass that // info to the ResultSet to override what it got from the ResultSetMetaData.
+// i18n[HibernateSQLPanel.code=SQL code]
+// Some databases store a time component in DATE columns (Oracle)  // The user can set a preference for DATEs that allows them // to be read as TIMESTAMP columns instead. This doesn't  // appear to have ill effects for databases that are standards // compliant (such as MySQL or PostgreSQL).  If the user  // prefers it, use the TIMESTAMP data type instead of DATE.
+// i18n[mssql.delay={0}s delay]
+// tables that have at least one child table and have a least one parent table
+/* The total number of decimal digits allowed in the number */
+// keep scanning until we're either EOL or find a different filegroup.
+// use headersHolder.Length here in case headers is null
+//?? Future: may want to create TablePopupMenu to allow cut/copy/paste operations
+// i18n[DataTypesTab.title=Data Types]
+// remove old name list from map
+// Add Help, Licence and Change Log nodes to the tree. // i18n[HelpViewerWindow.help=Help]
+//?? Need to associate a panel with an object type somehow.
+// catalog // schema // tableName // columnName // keySequence // pkName
+// If SQL executing produced warnings then write them out to the session // message handler. TODO: This is a pain. PostgreSQL sends "raise // notice" messages to the connection, not to the statment so they will // be mixed up with warnings from other statements.
+// TODO: Hard coded -. JDBC/ODBC bridge JDK1.4 // brings back -9 for nvarchar columns in // MS SQL Server tables.
+// TODO: Bizarre that I couldn't find a valid SQL to drop an index.
+// Have we already dumped a stack trace for the current event dispatch?
+// i18n[syntax.corExt=correction / extension]
+// TODO: Need to define a better approach to getting dialects. // That is, we don't really want to ever prompt the user in this // case.  It's always Oracle.  Yet, we may have a new OracleDialect // at some point.
+// Checking to make sure the correct files were are listed in the // array.
+// Copied from Java Doc Matcher.replaceAll: // // Note that backslashes (\) and dollar signs ($) in the replacement string // may cause the results to be different than if it // were being treated as a literal replacement string. // Dollar signs may be treated as references to // captured subsequences as described above, and // backslashes are used to escape literal characters in the replacement string.
+// short scale
+// i18n[sqlval.disconnected=Disconnected from the SQL Validation web service]
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.fw.sql.ISQLDatabaseMetaData#supportsSchemasInDataManipulation()     */"
+"/* TODO: what I really want to do here is get the SQL script and replace                     * ""CREATE PROCEDURE"" with ""ALTER PROCEDURE"", then put that in the SQL pane                     * and *NOT* execute it. */"
+/////////////////////////////////////////////////////////// // We use Vectors because a MessageHandler might be called from different threads.
+// We cannot use this data in the WHERE clause if it has been truncated. // Since being truncated is the same as needing to re-read, // only use this in the WHERE clause if we do not need to re-read
+// If a driver says it supports schemas but doesn't // provide schema nodes, try to get other nodes.
+// TODO: Allow the user to specify the sequence name for dialects that don't natively support  // auto-increment columns without using sequence/trigger combo.
+// This is a bit hard coded but if we use _scale here // some number displays go crazy.
+//         new MultiKeyBinding( //            KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_MASK), //            SQLKit.duplicateLineAction),
+/* Test the create statement */
+// Additional Index Creation
+// TODO: pass in a message handler so user gets error msgs.
+// create add sequence sql
+// skip comments
+// Show triggers for tables
+//i18n[ImportTableDataCommand.ioErrorOccured=An error occured while reading import file data.]
+// Now that we have the file, do the import. // // Note: the sequence of operations is divided into two sections // at this point.  The preceeding code ensures that we have // a readable file, and the code in the following method call // does the import.  The reason for splitting at this point is // that the Execute operation needs to do an import, and it will // already have the file to do the import from (which is the same // as the file it exported into).
+// i18n[DataSetUpdateableTableModelImpl.error.staleupdaterow=This row in the Database has been changed since you refreshed the data.\nNo rows will be updated by this operation.\nDo you wish to proceed?]
+// handle mouse events for double-click creation of popup dialog. // This happens only in the JTextField, not the JTextArea, so we can // make this an inner class within this method rather than a separate // inner class as is done with the KeyTextHandler class. //
+"/*    public static final int NO_ACTION = 0;        public static final int CASCADE_DELETE = 1;        public static final int SET_DEFAULT = 2;        public static final int SET_NULL = 3;    */"
+// Discovered that the loginame field can be null - in that case, how to know we have the correct view?
+// i18n[PreferencesPanel.procedureSeparatorToolTip=Multiple statements // within a procedure or function can be terminated with this.]
+// TODO: Temporary until we sort out a better way to do guido's fix // IQueryTokenizer qt2 = sessionUnderTest.getQueryTokenizer();
+// ??Need to tell object to display itself in a panel.
+// TODO: should the constraint name simply be the column name or something more like a constraint // name?
+// check the error stream for a problem // // This is a bit questionable since it is possible // for processes to output something on stderr // but continue processing.  But without this, some // problems are not seen (e.g. "bad argument" type // messages from the process).
+// This is (a logically not sufficent) try to cope with the problem that there are the following // contradictory rules in the JDBC API Doc: // Statement.getResultSet(): // This method should be called only once per result. // Statement.getUpdateCount(): // This method should be called only once per result. // Statement.getMoreResults(): // There are no more results when the following is true: (!getMoreResults() && (getUpdateCount() == -1) // // If getMoreResults() returns false, we don't know if we have more results, we only know that it isn't // a result set. Since we called getUpdateCount() before getMoreResults() because we would like to know // the update count of the first result, we might not be allowed to call getUpdateCount() again. // // The Intersystems Cache Driver for example always returns the same updateCount on simple // INSERT, UPDATE, DELETE statements not matter if getMoreResults() was called. So updateCount never // gets -1 and this will loop forever. When I discussed the issue with the Intersystems people they // just told me not to call getUpdateCount() twice. That simple. My hope is that this will cure // problems with DBs that just don't care for multiple result sets.
+// Don't use "real" type. Axion sets the column size to 12 by default, // yet it can handle more precision. So data being copied from the real // column can potentially be larger than what the column claims to support. // This will be a problem for other databases that pay attention to the // column size. // TODO: Perhaps re-introduce the REAL type, but use the new // getPrecisionDigits to max out the precision.
+// Ok, maybe catalog was really a schema instead.
+// For PointBase, if type maps to Pointbase "BLOB", and the size // isn't valid (PB requires size for BLOBS) then set it to something // reasonably large, like 16MB. 1 is the default size if no size // is specified.  That's practically useless :)
+//i18n[PasteTableAction.error.destdbobj=The destination database  //doesn't support copying tables into '{0}' objects.\n Please  //select a schema to paste into.]
+// i18n[SchemaTableUpdateWhatItem.allObjects=All Objects]
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.fw.sql.ProgressCallBack#currentlyLoading(java.lang.String)     */"
+// create all of the gui objects now
+"//	private boolean _showLineNumbers = false;"
+// Skip the artifact if it is identical to the one that is already installed
+// TODO: Implement this better
+// i18n [MemoryPanel.gcStatus={0}\n\n //Sessions waiting for garbage collection:\n //==================================================\n //{1}\n //Sessions open:\n //==================================================\n //{2}\n //Sessions garbage collected:\n //==================================================\n //{3}\n]
+// i18n[popupeditableIoPanel.createFileError=Failed to create file {0}.\nChange file name or select a differnt file for export.]
+// i18n[DownloadStatusEventHandler.downloadingUpdatesMsg=Downloading Files]
+// TODO: Make Parameter implement SQLItem interface which has a getString // method which can also be implemented by SQLString, or SQLFragment or // some such.  We can then eliminate the use of instanceof below and  // clean up the code a bit, by making itemsInSql look like: // //   ArrayList<SQLItem> itemsInSql = new ArrayList<SQLItem>(); //
+// TODO: Refresh
+// trigger source //        "SELECT text " + //        "FROM dbo.sysobjects " + //        "inner join syscomments on syscomments.id = sysobjects.id " + //        "where loginame = ? " + //        "and name = ? " + //        "and type = 'TR' ";
+// i18n[SupportedRefactoringsTab.title=Supported Refactorings]
+// i18n[dataSetViewerEditableTablePanel.selectionNeeded=You must select something in the table to delete.]
+// URL text field
+// "CREATE SEQUENCE $sequenceName$ " + // "$increment$ $minimum$ $maximum$ $startWith$ $cache$ $cycle$";
+// TODO: just noticed that MySQL 5.0 supports a multi-bit BIT // column by using the getObject/setObject methods with a byte[]. // So it would be valuable at some point to make this code a bit // more dbms-specific
+// i18n[xmlReformatter.malformedXmlAt=Malformed XML.  No ending tag seen for text starting at:\n{0}]
+// cannot edit something that we do not know anything about
+//plugin supports only Session main window
+// Copy core files minus any i18n jars to core downloads directory
+// Drops the original column.
+// Save options selected for DataType-specific properties
+// i18n[ColorPropertiesPanel.toolbarBackgroundColorBtnLabel=Choose Toolbar Color]
+/* Call class under test */
+// Dump aliases.
+// We don't know if this type can be used in where clauses so always exclude it.
+// <rename_view_statement> ::= RENAME VIEW <old_table_name> TO <new_table_name> // <old_table_name> ::= <table_name> // <new_table_name> ::= <table_name
+// _inWidgetSetVisible was introduced to allow moveToFront to be called // from within setVisible. See EditWhereColsSheet or SQLFilterSheet
+// When I tried using a length for LONGVARBINARY that is the max // length of the source records, I get the following exception: // // Exception condition 239. Data exception - string data, right truncation. // I tried bit varying(32767) with data that had max length of 16384. So // it's back to maximum length hard-coded for now. // registerColumnType(Types.LONGVARBINARY, 2147000000, "bit varying($l)");
+// Note: SessionInternalFrame and SQLinternalFrame should never provide // a ToolsPopupAccessor. Their Tools Popup ist configured in the SyntaxPlugin class // with standard Actions from ActionCollection.
+// JASON: Do we need these?
+// Standard expanders.
+// object that called us and that we want to return data to when done
+// TODO: - Col - Add method to Databasemetadata that returns array // of objects for getBestRowIdentifier. For PostgreSQL put this kludge in // the new function. THis way all the kludges are kept in one place. // // KLUDGE!!!!!! // // For some DBs (e.g. PostgreSQL) there is actually a pseudo-column // providing the rowId, but the getBestRowIdentifier function is not // implemented.  This kludge hardcodes the knowledge that specific // DBs use a specific pseudo-column.  Additionally, as of pg 8.1, // you must create the table using "WITH OID" appended to the create // statement.  Otherwise, OID column is not available by default. //
+"/** * TODO: Move all code other than for window creation up to AliasWindowManager * Factory to handle creation of maintenance sheets for SQL Driver objects. * * @author <A HREF=""mailto:colbell@users.sourceforge.net"">Colin Bell</A> */"
+// The Interval is involved even if pos lied one point before // or after the interval. // This way for example we get // -- Select ... // out of comment coloring when the first "-" is removed.
+"/*		 * CSE: moved this code down here to fix repaint problems on first		 * display - bounds should be set before install		 *		 * Uninstall the old popup from root pane		 * and install the new one. Even in case		 * they are the same objects it's necessary		 * to cover the workspace switches etc.		 */"
+// deletes the last ", " // deletes the last ", "
+// 24 chars
+// Only remove the frame if the entire session is not closing
+// Need to somehow call  // SQLResultExecuterPanel.reRunSelectedResultTab(true); //  // Something like : // SQLResultExecuterPanel panel = getPanel();  // panel.reRunSelectedResultTab(true); // // However, that doesn't apply when the user is exporting from the // table contents table.  There needs to be a more generic way to // do this for all tables containing data that is to be exported // where some of the fields contain placeholders. // For now, we just inform the user and let them either continue // or abort and change the configuration manually,  // re-run the query / reload the table data and re-export.
+// We look forward
+// i18n[ResultTab.cannotedit=This SQL can not be edited.]
+// read qualified
+// TODO: Delete ME
+// don't bother changing the delay, but stop it if it's running.
+// i18n[DB2Plugin.showUdfSource=Show UDF source]
+// History file not found for user - first time user ran pgm.
+// Hack!!! hopefully the FK name will always be the last token!
+// i18n[sessionPropertiesPanel.catalogPrefix=Limit Catalog Objects using these comma-delimited prefixes:]
+// The pw. If user name is anonymous this can be anything. But it has to // be supplied anyway.
+// TODO: figure out a more reliable way to handle OTHER type // which indicates a database-specific type.
+// TODO: figure out how to get then name of the table that the trigger  //       is on.  //"and tables.name = ? " +
+// i18n[sqlval.logon=SQL Validation Logon]
+"/*        * Append the new tables to the new array, starting at the end of the        * original        */"
+// Handle list of column names
+//i18n[ProcedureColumnsTab.hint=Show columns for the selected procedure]
+// now match the columns
+// Regression test for HARMONY-382
+// i18n[I18n.loadBundles=Load bundles]
+/* whether nulls are allowed or not */
+// i18n[HibernateConfigPanel.classPathRemove=Remove selected entries]
+// We have a core or translation file that is not already installed - add it
+// TODO: Make properties file Application.properties so we can use class // name to generate properties file name.
+// TODO: use the destination database type to derive a // format that is acceptable.
+"/*	 * 1968807: Unsigned INT problem with IMPORT FILE functionality	 * 	 * If we are working with a signed integer, then it should be ok to store in a Java integer which is 	 * always signed.  However, if we are working with an unsigned integer type, Java doesn't have this so 	 * use a long instead.  	 */"
+// valid bounds
+// / <summary> // / The position of the cursor in the buffer when the // / current column was started or the last time data // / was moved out to the column buffer. // / </summary>
+// we are limiting some things. // if the string we have is less than the limit, then we are ok // and do not need to re-read (because we already have the whole thing).
+"/** * A dialect delegate for the Sun Microsystems HADB (High-Availability) database. * TODO: This dialect is not yet complete.  Need to provide implementations wherever ""Not yet implemented"" * appears. *  * @author manningr */"
+"/*    * Internal class for handling key events during editing of both JTextField    * and JTextArea.    */"
+// Now go through the list in the given order to get the panels
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#supportsTableCorrelationNames()	 */"
+// These files contain images etc. We try to filter out these props.
+"/*	 * The following is used in both cell and popup operations.	 */"
+// must not qualify column name
+// TODO: use the destination database type to derive a format // that is acceptable.
+// Adding 10 000 000 milliseconds from the orgTime of File f1
+"/*		TableModel tm = 		    new DefaultTableModel(new String [] { ""Table"", ""Column"" }, 4) {		        private static final long serialVersionUID = -8826914717673025881L;				        public boolean isCellEditable(int rowIndex, int columnIndex) {		            return false;		        }		};		*/"
+// Empty block.
+// i18n[HtmlViewerPanel.error.displayurl=Error displaying URL]
+// TODO: When JDK1.4 is the earliest JDK supported // by Squirrel then remove the hardcoding of the // boolean data type.
+/* TODO: ON [PRIMARY] */
+// use clone here to prevent the outside code from // setting values on the array directly, which would // throw off the index lookup based on header name
+// Skip formatting for Stored Procedures - They can have // comments embedded in them, and I'm presently not sure // how the formatter handles this.
+//?? Split these 4 functions off into a subclass of BaseFavouriteAction
+// TODO: When message are can have some text in red (error) // and some normal then put out errors in red.
+// TODO: Need to enhance the index dialog to allow specifying storage option. For now just accept the // default for the index access method. // valuesMap.put("indexType", "USING BTREE");
+// i18n[SQLResultExecuterPanel.cancelMsg=Press Cancel to Stop]
+// i18n[I18n.bundles=Bundles]
+// Kick off a thread to go and fetch the files one-by-one and register // callback class - DownloadStatusEventHandler
+// i18n[codecompletion.prefs.table.udfWithParams=UDF with params]
+// JASON: Make menu smarter. When second window for the same // session is added create a hierarchical menu for all windows // for the session.
+// We just copied the last table.  Now it is safe to copy the // constraints.(Well, that is, if all FK dependencies are met // in the group of tables being copied.  // TODO: new feature could be to examine table list for FK's  // in tables not in the list then prompt the user to add  // those missing tables to the list.
+"//   	FileWrapper mockDownloadsDirectory = mockHelper.createMock(""mockDownloadsDirectory"", FileWrapper.class); //   	expect(mockDownloadsDirectory.isDirectory()).andStubReturn(true); //   	expect(mockFileWrapperFactory.create(mockUpdateDirectory, UpdateUtil.DOWNLOADS_DIR_NAME)); //   	expectLastCall().andReturn(mockDownloadsDirectory);"
+// i18n[codecompletion.prefs.table.spWithParams=SP with params]
+// This is a bit hard coded but if we use _scale here // some number displays go crazy. //_numberFormat.setMaximumFractionDigits(_scale);
+// i18n[DBCopyGlobalPreferencesTab.hint=Preferences for DB Copy]
+"// JASON: Do we need this? //		getSQLPanel().selected();"
+// user wants us to create a temp file
+//??? For now, use the same renderer as everyone else. //?? //?? IN FUTURE: change this to use a new instance of renderer //?? for this data type.
+// If there is no sqlPanelAPI (e.g. the Object tree find editor) we assume no parser is necessary and thus provide a dummy impl.
+// No appropriate DataType for this column, so do the best // we can with what we know. // // THIS MAY NOT BE THE BEST BEHAVIOR HERE!!!!!!!
+// Add menu.
+"/*	 * When the table initiates editing and sets this field, remember the value as the	 * original value of the field	 */"
+"/** * A dialect delegate for the TimesTen database. * TODO: This dialect is not yet complete.  Need to provide implementations wherever ""Not yet implemented"" * appears.   */"
+"/* (non-Javadoc)         * @see java.awt.datatransfer.Transferable#getTransferData(java.awt.datatransfer.DataFlavor)         */"
+// if the old preference file exists and is newer than the  // newUserPreference file, then use it for reading preferences
+// It would be nice to tell the user what happened, but if we try to // put up a dialog box at this point, we run into trouble in some // cases where the field continually tries to re-read after the dialog // closes (because it is being re-painted).
+// Oddly enough, progress will let you add pks to existing tables, but not drop them.
+"/* because of the cross-catalog problem, let's not invoke this if the current catalog isn't equal             * to the catalog specified in the URL.             */"
+// Expanders - trigger and index expanders are added inside the table // expander
+// TODO: Perhaps we can tell the user when they click "Copy Table" // if the source session is Axion and they want primary keys that // it's not possible.
+// CREATE VIEW viewName // AS definition;
+// i18n[userscript.scriptAdminErr=Err Msg]
+"/* (non-Javadoc)         * @see net.sourceforge.squirrel_sql.client.session.mainpanel.IMainPanelTab#getTitle()         */"
+// multiple rows - not good
+// TODO: How to let the user customize this??
+//Should probably create my own table model but i am being a bit slack.
+// if the check gets till here we have all the need information
+// Some tables have pseudo column primary keys and others // do not.  JDBC on some DBMSs does not handle pseudo // columns 'correctly'.  Also, getTables returns 'views' as // well as tables, so the thing we are looking at might not // be a table. (JDBC does not give a simple way to // determine what we are looking at since the type of // object is described in a DBMS-specific encoding.)  For // these reasons, rather than testing for all these // conditions, we just try using the pseudo column info to // get the table data, and if that fails, we try to get the // table data without using the pseudo column. // TODO: Should we change the mode from editable to // non-editable?
+// "ignore bad checksums" // "ignore transaction in Limbo"
+//shift the image for pressed buttons
+// Evil hack to split the vacuum output a little.
+// TODO: Rename this to getTableType.
+// Expanders - trigger and index expanders are added inside the table // expander //_treeAPI.addExpander(DatabaseObjectType.SCHEMA, new SchemaExpander());
+// without this the completion panel's size will be weird
+"/*	 * @see BaseDataSetViewerDestination#getRow(row)	 */"
+// user enters something when field is null
+// TODO: is this right???
+// i18n[DualProgressBarDialog.copyingRecordsLabel=Copying records]
+// i18n[ColorPropertiesPanel.objectTreeBackgroundColorButtonLabel=Choose Object Tree Color]
+// i18n[userscript.dlgTabScriptsGenTempl=Generate script template...]
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#nullPlusNonNullIsNull()	 */"
+// GWG XML format check code
+// Drop FK constraints before dropping any tables. Otherwise, we // may drop the child table prior to dropping it's FKs, which would // be an error. // TODO: This should be done in the dialect's getTableDropSQL method for a database specific // handling(or ignoring) of this problem.
+// set up dialog to ask user if it is ok to proceed // IMPORTANT: this dialog is SYNCHRONOUS (ie. we do not proceed until // user gives a response).  This is critical since this function provides // a return value to its caller that depends on the user input. // i18n[baseDataSetViewerDestination.warning2=Warning]
+// global preferences
+// first convert internal data into the string array
+// length
+"/*     *     *     * Implement IDataSetUpdateableModel interface     * and IDataSetUpdateableTableModel interface     *     * TODO: THIS CODE WAS COPIED FROM ContentsTab.  IT SHOULD PROBABLY     * BE PUT INTO A COMMON LOCATION AND SHARED BY BOTH THIS     * CLASS AND ContentsTab.     *     *     */"
+// OK, this is a hack.  Currently, when precision == scale, I have  // no way to determine if this is valid for the actual data.  The // problem comes when the source db's precision/scale are greater -  // or reported to be greater - than the precision/scale of the  // destination db.  In this case, it maximimizes both for the  // destination, causing a definition that allows 0 digits to the  // left of the decimal.  Trouble is, without looking at the actual // data, there is no way to tell if this is valid - in some cases // it will be ok (0.0000000789) in others it will not be ok (100.123). // So for now, make the scale be approx. one-half of the precision // to accomodate the most digits to the left and right of the decimal // and hopefully that covers the majority of cases.
+// i18n[sqlval.connected=Connected to the SQL Validation web service]
+// "CREATE VIEW $viewName$ " + // "AS $selectStatement$ $with$ $checkOptionType$ $checkOption$";
+// TODO: Put in all the property accessors
+"/**	 * Called when app shutdown.	 * TODO: Put throws clause back in	 */"
+// int featureId = DialectUtils.COLUMN_TYPE_ALTER_TYPE; // String msg = DialectUtils.getUnsupportedMessage(this, featureId); // throw new UnsupportedOperationException(msg);
+// Hack to deal with Sybase's sys tables
+// The following ugly conversion from text to Byte is necessary because // the Byte class is inconsistant.  When asked to output as Hex, it does // so as an UNSIGNED byte, but when asked to read back the same thing // using the Hex radix, it insists that the input must be SIGNED. // To get around this, we up-size the conversion to Integer, then  // truncate that to a byte, and finally convert the byte to a Byte.  Yech.
+// Current Alias Schema properties dont want cache. // so we don't cache.
+"/*			 * TODO: When 1.4 is the earliest version supported, add the following line:			*		setSurrendersFocusOnKeystroke(true);			* This should help handle some problems with navigation using tab & return			* to move through cells.			*/"
+// PostgreSQL uses literal values true/false instead of 1/0.
+// No paper edges. We print the Graph as it is to a single image.
+"/*		 * ALTER TABLE <tableName> ADD CONSTRAINT UNIQUE (<columnList>) CONSTRAINT <constraintName>		 */"
+// i18n[sqlbookmark.editBookmark=Edit bookmark]
+// i18n[BaseListInternalFrame.error.execdoubleclick=Error occured executing doubleclick event]
+// Reset the checkbox selected index false when fieldname gains focus
+// i18n[sqlval.loOnAs=Log on as]
+// Using a thread for this gets rid of most of the "white flash".
+"/* work-around for this driver, which must have ""dbo"" for schema.  The       * JConnect family of drivers appears to not be affected and can accept a       * null schema, which is necessary to find tables in other schemas, within       * the same catalog.  Similarly, jTDS 1.2.2 doesn't require this, yet it       * doesn't return non-dbo schema tables, unfortunately.        */"
+// Move any i18n files that are located in the core downloads dir to the i18n downloads dir. The spring // application context will not load properly (for some unknown reason) when there are i18n jars in the // classpath. So as a work-around, we simply ensure that they are where they should be anyway. // Previously we were not as careful about this, so it is possible that i18n jars were copied into the // core downloads directory.
+// user does not want to overwrite the file
+"/*		 * When user leaves a cell after editing it, the contents of		 * that cell need to be converted from a string into an		 * object of the appropriate type before updating the table.		 * However, when the call comes from the Popup window, the data		 * has already been converted and validated.		 * We assume that a String being passed in here is a value from		 * a text field that needs to be converted to an object, and		 * a non-string object has already been validated and converted.		 */"
+// default behavior if no appropriate data type found is to create // a simple JTextArea with no special handling. // // In Theory, this cannot happen because if there is no data type object // for this column's data type, then isEditableInPopup returns false, so // we should not get here.  If there IS a data type object, and isEditableInPopup // returns true, then we would have executed the return statement above. // Assume that the value can be represented as a string.
+// TODO: Need to allow user to specify this
+//Create spinner for update period
+// i18n[graph.addParentTables=Add parent tables]
+/* there can be only one default in truth, but the model allows more than one. */
+"/** * A dialect delegate for the Progress database. TODO: Progress specification says that the sum of all column * lengths of a table row may not exceed 31960. Need to add an interface method to the HibernateDialect * interface that takes an array of lengths and and checks the sum of columns for a row. This maximum number * may be different across databases so this check method needs to be implemented by each dialect. *  * @author manningr */"
+// sheet types
+// Removed for comment
+"/** * TODO: Get rid of this class. * This combobox contains all the columns in an SQL table. * * @author <A HREF=""mailto:colbell@users.sourceforge.net"">Colin Bell</A> */"
+// Ensure that the proper type of Object is selected in the Object // Tree.
+// TODO: create the child index ST
+// i18n[HQLEntryPanelManager.quoteHQLsb=Quote HQL as StingBuffer]
+// db2pkCol is used to create a PK when using DB2. DB2 doesn't allow // you to add a PK to a table after it has been constructed unless the // column(s) that comprise the PK were originally there when created // *and* created not null.
+// corner.validate();
+// the caller does not need to know that nothing happened
+//Make the button looks the same for all Laf's
+// now drop the first
+// Cast is not so nice, but framework doesn't meet new requirements.
+// i18n[SQLResultExecuterPanel.execStatus=Executing SQL...]
+// TODO need to implement or change the message
+// For the serialization test in superclass - cannot use mockHelper because the replay needs to be  // done here.
+// Total Hack! Type OTHER(1111) can be other types as well?
+// create an empty set for the "use" list
+// field is not nullable, so create a reasonable default value
+// save the original value for re-use by CLOB/BLOB types in conversion
+// better safe than sorry!
+// verify that changing the clone didn't affect the original
+// Mode
+// TODO?? ColumnDisplayDefinition should also have the Type (String, Date, // Double,Integer,Boolean)
+// This refactoring depends on the following dialect API methods: // getUpdateSQL
+//i18n[FormatterSourceTab.noSourceAvailable=No object source code is  //available]
+// TODO verify this is correct
+//testBooleanColType(sourceName, destName); //testCharColType(sourceName, destName);
+// Don't try to find it if we have already created it.
+// TODO: if the use checks "export entire table" and doesn't select all,  // then the selected indices are not set, and this check doesn't properly // detect missing data.  If export entire table is selected, we need to  // set the selected indexes below correctly.
+// TODO: set the total for the progress bar.
+// i18n[SQLTab.title=SQL]
+// Here, I don't completely understand how these types are to be used in all databases and I haven't // yet had time to implement support in the dialects for them. So, this exclude list will keep these // less commonly used types from failing the test. Also, since not all of these types appear in Java5 // and we currently support compiling the code base with it, I use the integer values for new types // that were introduces in Java6, rather than the type constant name.
+"/* (non-Javadoc)         * @see java.awt.datatransfer.Transferable#getTransferDataFlavors()         */"
+// TODO: allow the user to specify ignore case or preserve case.
+// TODO: Delete Me
+//i18n[SQLScriptPreferencesPanel.deleteActionLabel=Action to take on delete:]
+// ISessionListener interface methods
+// use just the columns listed in the table, and set the not-used cols to the ones // that are not mentioned in the table
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#supportsSubqueriesInExists()	 */"
+"/* * TODO: Delete this class - unused */"
+/* TODO: FILLFACTOR, ON [PRIMARY], etc. */
+// views will depend on tables, so drop them first
+// i18n[UpdatePreferencesPanel.autoBorderLabel=Automatic Updates]
+// VIEW
+/* Work around some UTC and Daylight saving offsets */
+//i18n[PreferencesPanel.truncateTable=Truncate table before inserting data]
+//Unfortunately we need to remove the exising tree table component and create a //new one due to limitations with replacing models in the existing //sun implementation. Why on earth they couldnt formalise the tree //table example on JFC (which we use) a bit more is anyones guess.
+// Install directories
+// typeName // columnSize // decimalDigits // radix // isNullAllowable
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.client.plugin.IPlugin#getHelpFileName()     */"
+// We are displaying a new dataset, so if there was // a cell editor in operation, tell it to cancel. //???? How does this impact popup display?
+// Sybase 12.5 doesn't support quotation marks for identifiers, yet  // reports " as the identifier quote string - go figure!
+// HACK: some dbs (like Frontbase) don't support boolean // types. I've tried tinyint, bit and boolean as the column // type, and setBoolean fails for all three. It's a mystery // at this point what column the getBoolean/setBoolean methods // actually work on iin FrontBase.
+"/* * TODO: Delete me * Copyright (C) 2002-2003 Johan Compagner * jcompagner@j-com.nl * * This library is free software; you can redistribute it and/or * modify it under the terms of the GNU Lesser General Public * License as published by the Free Software Foundation; either * version 2.1 of the License, or (at your option) any later version. * * This library is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU * Lesser General Public License for more details. * * You should have received a copy of the GNU Lesser General Public * License along with this library; if not, write to the Free Software * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA */"
+"/*			 * TODO: hookup with Interbase spec and adjust these as necessary. 			 */"
+// i18n[OraclePrefsPanel.Description= "Interactions with Schema Alias properties (see 'Schemas' tab):\n //\n //1. 'Load all Schemas, cache none': Oracle Alias properties will take effect immediately.\n //\n //2. 'Load and cache all Schemas': Oracle Alias properties will take effect on next 'Refresh all' inside a Session.\n //\n //3. 'Specify Schema loading and Caching': Oracle Alias properties will take effect when the Schemas table on the 'Schemas' tab is refreshed.\n //\n //Note: If Schema Alias properties are set to load all cache none and Oracle Alias properties is set to 'Allow all Schemas' this may result in very long Session startup time.]
+//Silently ignore, what could we do anyway?
+// throw new IllegalStateException("Wrong constructor");
+// Needed to make the panel set the divider location from preferences
+"/* (non-Javadoc)	 * @see com.mockobjects.sql.MockDatabaseMetaData#storesLowerCaseIdentifiers()	 */"
+// TODO: This should be handled with an Iterator!!!
+// all of the following have been converted to use the DataType objects // So, why not just have case Types.NULL and default??? (this seems pointless) // RMM 20070726
+// Dump System Properties.
+// This may be called either when the table is editable or when it is // read-only.  When it is read-only, there is no command to be saved, // but when it is editable, there may be a command.
+// For some reason, when the Oracle plugin adds details tabs for  // triggers, the _tabPnl's first tab ends up being the trigger details // tab and not the generic database object info tab.  This causes the  // _tabs length to be 1 tab greater than the tabs that are actually in  // the _tabPnl.  This throws off the selection such that the tab  // selected in the tab panel doesn't get rendered until the tab to the // right of the selected tab is selected.  This is a work-around for  // this problem until I can determine why the DatabaseObjectInfoTab  // never makes it into the _tabPnl in the first place.
+// Required otherwise it gets too wide.
+"/*				 * TODO: Work out why				 * KLUDGE: For some reason, I am not able to get the sheet to				 * size correctly. It always displays with a size that causes				 * the sub-panels to have their scrollbars showing. Add a bit				 * of an increase in the size of the panel so the scrollbars				 * are not displayed.				 */"
+// No invalid columns in this TableModel implementation
+"/*         * @see MouseMotionListener#mouseMoved(MouseEvent)         */"
+// i18n[mssql.monitorAsOf=Monitor (as of {0,date,full})]
+////////////////////////////////////////////////////////////////////////////////////////// //Needs to be done at this moment. That's why we can't call updateFromPreferences() here.
+/* work-around for bug which means we must use "dbo" for schema */
+// empty string ('') seems to be represented as null in some drivers. // Not sure if this is the best thing to do here, but it fixes an issue // where SQL returns is set default to '', when it is already null.
+"/*		 * SELECT viewtext FROM informix.systables AS T1, informix.sysviews AS T2 WHERE tabname = 'a_view' AND		 * T2.tabid = T1.tabid		 */"
+// Note. Some DBMSs such as Oracle do not allow: // "select *, rowid from table" // You cannot have any column name in the columns clause // if you have * in there. Aliasing the table name seems to // be the best way to get around the problem.
+// i18n[HibernateConfigController.classpathEntryDesc=Jars, Zips or directories]
+// Regression test for HARMONY-4493
+"/*		 * Can be done as follows in MS SQLServer INSERT INTO mytable(id,name) SELECT 1, 'pizza' UNION SELECT 2,		 * 'donuts' UNION SELECT 3, 'milk';		 */"
+"/* (non-Javadoc)	 * @see net.sourceforge.squirrel_sql.client.plugin.IPlugin#getVersion()	 */"
+// if the check gets till here we have all the needed information
+"/*								We don't support switching the entry control during a session								because serveral things, that are attached to the entry control								from outside this plugin would need to reinitialze too.								For example code completion and edit extras.								synchronized (_session)								{									ISQLEntryPanelFactory factory = _plugin.getSQLEntryAreaFactory();									ISQLEntryPanel pnl = factory.createSQLEntryPanel(_session);									_session.getSQLPanelAPI(_plugin).installSQLEntryPanel(pnl);								}								*/"
+// TODO: Is giving a FK constraint a name universally supported // and done the same way on every database?
+// Copy the app module jar to core downloads directory
+// downloads/core directory
+// remember this DataType object so we can reuse it
+// Hack to deal with Axion AXION_* tables.
+// i18n[OracleAliasPrefsPanel.AccessibleAndSys=Allow accessible Schemas and SYS]
+// The DateFormat object to use for all locale-dependent formatting. // This is reset each time the user changes the previous settings.
+//??GETRIDOFTHIS
+// field is not nullable, so create a reasonable default value // cannot create default value for unknown data type
+// call the function in the app code that checks for unexpected // conditions in the current DB
+// Now, check to be sure we get both catalogs.
+//set the property values // Note: this may have already been done by another instance of // this DataType created to handle a different column.
+// get parameters previously set by user, or set default values // set to the default
+// string used as error indicator and description of problems seen // when checking for 0 or mulitple matches in DB
+"/** * A dialect delegate for the Axion database.   * TODO: This dialect is not yet complete.  Need to provide implementations wherever ""Not yet implemented"" * appears.  */"
+"//	 JASON: Do we need these?"
+// Not yet ready // DataImportGlobalPreferencesTab tab = new DataImportGlobalPreferencesTab(); // return new IGlobalPreferencesPanel[] { tab };
+// read succeeded, so reset the ClobDescriptor to match
+// Add listener to listen for items added/removed from list.
+"//		double headerWidth = tableHeader.getWidth() * scale;"
+// Oracle allows statement separators in PL/SQL blocks. The process // of tokenizing above renders these procedure blocks as separate // statements, which is invalid for Oracle. Since "/" is the way // in SQL-Plus to denote the end of a procedure or function, we // re-assemble any create procedure/function/trigger statements that we // find. This should be done before expanding file includes. Otherwise, // any create sql found in files will already be joined, causing this to // find create SQL without matching "/". The process of // expanding 'file includes' already joins the sql fragments that it // finds.
+// Always add plugins - there is not a good way to compare plugin zips and their extracted contents // at the moment. // TODO: Determine the best way to derive the filesize and checksum of the plugin zip that was last // extracted. Should we keep it around? How about using the current release.xml file ? Come to // think of it, perhaps we shouldn't be computing the checksum of *any* existing files, why don't // we just get it from the current release.xml file?
+/* Helper Methods */
+// short pseudocolumn
+// MySQL disallows quoted column identifiers when adding a primary key.
+// TODO: maybe instead of throwing an exception, we could ask // the user if they would like us to adjust their preference for // them.
+// TODO: Temporary until we sort out a better way to do guido's fix // assertEquals(SECOND_STMT_SEP, qt2.getSQLStatementSeparator());
+// Options: // FULL Checkbox
+// colDefs not in same order as DB, so search for // matching colDef entry // Note: linear search here will NORMALLY be not too bad // because most tables do not have huge numbers of columns.
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.fw.sql.ITableInfo#getExportedKeys()     */"
+// Don't use tinyint for now, even though Mckoi "supports" it. It's // notion of tinyint is 7-bit (not 8-bit) so it is not compatible with // other DBs and leads to overflow (resulting in negative values which // are a corruption of the actual value inserted/updated). This is not // a great work-around. I filed a bug report on the mailing list; // hopefully it will get fixed soon.
+// Test to see if the correct number of files are returned.
+// mocks
+// TODO: ask the user if they want to "undo" the changes that the  // paste made.  Alternatively show them the specific problem and  // let them fix it.  Then allow them to retry the operation, starting // from the point at which the previous operation failed.
+// The following only works if SwingUtilities.getRoot(table) returns // and instanceof BaseMDIParentFrame. // If SwingTUilities.getRoot(table) returns and instance of Dialog or // Frame, then other code must be used.
+"/*					 * END-KLUDGE					 */"
+// Arrays of Strings are a special case. // In XMLBeanWriter method ProcessProperty an array of // Strings is turned into a list of StringWrapper objects // in the XML (presumably so that when reading them back // we have a class that we can call setters on). Thus, // when reading back an array of Strings we actually read // an array of StringWrappers, which gives a type mis-match // in the following arrayCopy. Therefore we need to convert // the data that is currently in the StringWrapper objects // into actual Strings.
+// visible (gui) // ------------------------------------------------------------------------ // -- main
+// Prepare to have a lot of DocumentEvent.EventType.CHANGE
+// This is for brute force detection of columns whose column size is 0
+"/*			GRANT 			    { ALL [ PRIVILEGES ] | permission [ ,...n ] } 			    { 			        [ ( column [ ,...n ] ) ] ON { table | view } 			        | ON { table | view } [ ( column [ ,...n ] ) ] 			        | ON { stored_procedure | extended_procedure } 			        | ON { user_defined_function }			    } 			TO security_account [ ,...n ] 			[ WITH GRANT OPTION ] 			[ AS { group | role } ] 						REVOKE [ GRANT OPTION FOR ] 			    { ALL [ PRIVILEGES ] | permission [ ,...n ] } 			    { 			        [ ( column [ ,...n ] ) ] ON { table | view } 			        | ON { table | view } [ ( column [ ,...n ] ) ] 			        | ON { stored_procedure | extended_procedure } 			        | ON { user_defined_function } 			    } 			{ TO | FROM } 			    security_account [ ,...n ] 			[ CASCADE ] 			[ AS { group | role } ] 			 */"
+// JDK1.5 "@ident" annotation // "@keyword" gets returned as two tokens "@" and "keyword"
+// TODO: SPATIAL and FULLTEXT indexes require a MyISAM engine for the table. Is there a way // to tell what engine is being used for a table? It may not be necessary, since the following // doens't hurt if already a MyISAM engine: // // ALTER TABLE my_table ENGINE = MYISAM; // // Still, this is not the kind of thing we would want to do automatically, since MyISAM engine is // non-transactional. We will probably need to tell the user - somehow - that they need this // otherwise the create index statement will fail. Maybe a comment in the script and if they // happen to read it they could uncomment the conversion of the engine? Maybe a custom dialog?
+//?? remember which column is the rowID (if any) so we can //?? prevent editing on it
+// When we started dispatching the current event, in milliseconds.
+// i18n[ToolsPopupController.toolspopupmsg=Please try out the Tools popup by hitting ctrl+t in the SQL Editor. Do it three times to stop this message.]
+// add combo box for command to execute
+// i18n[ImportDataIntoTableExecutor.wrongFormat=Imported column has not the required format.\nLine is: {0}, column is: {1}]
+//setModel(_model);
+// i18n[mssql.allUserDef=All user-defined data types]
+// SkyBluer
+// This refactoring depends on the following API methods: // getCreateTableSQL
+// i18n[DBUtil.info.bindbloblength=bindBlobVarInFile: writing '{0}' bytes.]
+//?? Is there any way to check for invalid input?  Valid input includes //?? at least any printable character, but could it also include unprintable //?? characters?
+// hear no evil, see no evil
+// i18n[UpdatePreferencesPanel.connectionFailureDialogMsg=Unable to download release.xml from the // specified location]
+// first do special check to see if we should use LONGVARCHAR // in the WHERE clause. // (Oracle does not allow this.)
+// The following is a work-around for the problem on Mac OS X where // the Apple LAF delegates to the Swing Popup factory but then // tries to set a 90% alpha on the underlying Cocoa window, which // will always be null if you're using JGoodies L&F // see http://www.caimito.net/pebble/2005/07/26/1122392314480.html#comment1127522262179 // This has no effect on Linux/Windows
+"// JASON: Mow that multiple object trees exist storing the edit // where by objectInfo within session won't work. It needs to be objectinfo // within something else. //	private final Map _editWhereColsSheets = new HashMap();"
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.plugins.dbcopy.event.CopyTableListener#handleError(net.sourceforge.squirrel_sql.plugins.dbcopy.event.ErrorEvent)     */"
+// i18n[generalSessionPropertiesPanel.generalSettings=General settings for the current session]
+"//TODO: Decide whether this should be a bound property or not. //		getPropertyChangeReporter().firePropertyChange(ISQLDriver.IPropertyNames.NAME, _name, _name);"
+// TODO: Need to add storageOptions to the add index dialog // valuesMap.put(ST_STORAGE_OPTION_KEY, );
+// set column heading // set data in first row
+"/*	 * @see IDataSetViewer#getRowCount()	 */"
+// i18n[ConnectionStatusTab.hint=Connection Status]
+// Open connection to the webservice.
+// i18n[dateTypeTimestamp.stringVersion=Use String version of Timestamp ]
+//return (String)_renderer.renderObject(value);
+// i18n[mysql.openTables=MySQL Open tables]
+// i18n[CancelStatementThread.cancelFailed=Failed to cancel statement. Perhaps the driver/RDDBMS does not support cancelling statements. See logs for further details ({0})]
+// i18n[cellDataPopup.valueofColumn=Value of column {0}]
+"/*				 * If the object representing the actual data (i.e. this object)				 * can be edited by the user, then the fw objects need to have				 * a reference to it.  Updateable objects must implement an				 * interface derived from IDataSetUpdateableComponent in the				 * net.sourceforge.squirrel_sql.fw.datasetviewer package.				 * If the component does not implement that interface,				 * then we just keep going, but if it does implement it,				 * then we need to tell the DataSetScrollingPanel that the				 * object that fw needs to call is this one.				 */"
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.plugins.dbcopy.SessionInfoProvider#getDestSelectedDatabaseObject()     */"
+// JASON: Should be part of status bar?
+// MySQL disallows quoted column identifiers when dropping a column.
+// listen on windowClosing and redirect it to Cancel button
+//i18n[ColumnListDialog.editSQLButtonLabel=Edit SQL]
+//String sql = m_session.getSQLPanelAPI(m_plugin).getSQLScriptToBeExecuted();
+// TODO: What about these // Viewport.font, ColorChooser.font, InternalFrame.font, // OptionPane.font, "Panel.font", // ScrollPane.font, DesktopIcon.font
+// This is a work-around for what looks like a bug to me - it is a syntax error to qualify with the  // schema the new table name, but not the old as in: // // ALTER TABLE "public"."tablerenametest" RENAME TO "public"."tablewasrenamed" // // The second "public". is apparently not (currently) a valid thing to do.
+// i18n[DBUtil.info.bindcloblength=bindClobVarInFile: writing '{0}' bytes.]
+// Assert is flawed because canWrite does not work. // assertTrue("File f2 Is Not Set To ReadOnly." , !f2.canWrite());
+// this DataType does not limit the data read during the initial load of the table, // so there is no need to re-read the complete data later
+// join with the threads
+// TODO I18N
+"/*	 * TODO: This should not be public. Check all usages of it	 * and put appropriate methods in an API object.	 */"
+"/**	 * Set the password for this alias.	 *	 * @param	password	The new password.	 *	 * @throws	ValidationException	 * 			TODO: What conditions?	 */"
+/* TODO: sort the list. */
+"/**	 * the utility class that reads and writes release info from/to the release.xml file TODO: Spring-inject	 * when this class is a Spring bean	 */"
+// i18n[TableExportCsvDlg.exportCsvFile=Export to file:]
+// i18n[ViewLogsSheet.error.setcaret=Error positioning caret in log text component]
+// TODO: Do we need this one. */
+// TODO: figure out why bind variables aren't working
+// ??? For now, use the same renderer as everyone else. // ?? // ?? IN FUTURE: change this to use a new instance of renderer // ?? for this data type.
+// We need this method to satisfy one of the Interfaces we implement, // but since we have moved all operations to the DataType sub-panels // which initialize their own data during creation, // there is nothing for us to do here
+// TODO: Maybe someday we could inform the user that the imported // key can't be created because the list of tables they've // selected, doesn't include the table that this foreign key // depends upon. For now, just log a warning and skip it.
+"/** * TODO: Move all code other than for window creation up to AliasWindowManager * Factory to handle creation of maintenance sheets for SQL Alias objects. * * @author <A HREF=""mailto:colbell@users.sourceforge.net"">Colin Bell</A> */"
+// Sets constraints like NOT NULL for the new column, depending on the constraints for the old // column.
+// TODO: These 2 should be handled with an Iterator.
+//i18n[CopyTablesCommand.loadingPrefix=Analyzing table:]
+// This could (perhaps more elegantly) be done by recursion
+// During assignable checks many classes can't be loaded but don't cause problems // either. So we just issue an info.
+// getter/setter
+// i18n[popupeditableIoPanel.noExportFile=No file name given for export.\nPlease enter a file name  or use Browse before clicking Export.]
+"/* (non-Javadoc)     * @see net.sourceforge.squirrel_sql.client.session.ISession#getSchemaInfo()     */"
+// no object, so do not assume binary editing will work
+// This info is merely a placeholder in the tree that we can use to get index name and // parent name more easily. We probably should create a IndexColumnInfo that has this // extra info in it.
+// Makes sure that the last name is always in top of the list.
+/* this should just bring back one table, i hope. */
+// -- backup
+// TODO: These 2 should be handled with an Iterator!!!
+// int sqlstate = sqlca.getSqlState();
+// Global errors
+// Test for trying to create a file in a directory that does not // exist.
+// needed to prevent an infinite loop
+// TODO: tell the user that the selected destination schema is // the same as the source schema. // monitor.showMessageDialog(...)
+// In Oracle, no action is implied when the ON DELETE clause is omitted
+"/*					 * TODO: Find out why					 * KLUDGE: For some reason, I am not able to get the sheet to					 * size correctly. It always displays with a size that causes					 * the sub-panels to have their scrollbars showing. Add a bit					 * of an increase in the size of the panel so the scrollbars					 * are not displayed.					 */"
+// TODO // Plugin supports only the main session window

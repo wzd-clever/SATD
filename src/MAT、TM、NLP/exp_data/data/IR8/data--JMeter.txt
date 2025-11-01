@@ -1,0 +1,2538 @@
+"/*     * (non-Javadoc)     *     * @see org.apache.jmeter.testelement.TestStateListener#testEnded(java.lang.String)     */"
+// Reset it
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#setFileName(java.lang.String)     */"
+// Methods needed by subclasses to get access to the implementation
+// Add the offset
+// Update the dataEncoding
+// Did we open the file?
+// drop mode == DropMode.ON
+// // Constructors //
+// we do a quick check to see if any // filters are set. If not we just // return false to be efficient.
+// Add standard jar locations to initial classpath
+// computes relative auto-scaled plots to fit in the specified area
+// Check that the query string is empty
+//ignore Setup and Post here.  We could have filtered the searcher. but then //future Thread Group objects wouldn't execute.
+// Set default parameters as needed
+// ensure that setParameters() is called.
+// Succeeds only if Before method - verifyTwo() - is run.
+// Must be the default resource file
+// This is used as an error indicator
+// kill any remaining tasks
+// we clean the line to get // rid of extra stuff
+// I don't think localMatcher can be null here, but check just in case
+// TODO - can this eever happen?
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // jmeter.log // $NON-NLS-1$ // sample result log file // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Cannot be instantiated
+// Assume this thread only // 1 per second // Should delay for 1 second // 1 per milli-second // Should delay for 1 milli-second
+// We only check the length of the result. Comparing the // actual result (out.toByteArray==original) will usually // fail, because the order of the properties within each // test element may change. Comparing the lengths should be // enough to detect most problem cases...
+// Register the handler for focus listening. This handler will // only notify the registered when the text changes from when // the focus is gained to when it is lost.
+// two delimiters in a row; add an empty String
+//$NON-NLS-1$ // $NON-NLS1$
+// only accept jar files // $NON-NLS-1$
+// no luck. Ignore this class
+// This ensures tha HttpClient knows about the protocol
+"/*             * We don't want to store any cookies in the generated test plan             */"
+// stop double-reporting
+// These items are shared between threads in a group by the clone() method // They are initialised by testStarted() so don't need to be serialised
+// expected
+// --------------------------------------------------------------------- // XML RESULT FILE CONSTANTS AND FIELD NAME CONSTANTS // ---------------------------------------------------------------------
+// Ensure not null
+// used when postData is pure xml (eg. an xml-rpc call) or for PUT
+// seek the good interval for t and get the piece of curve on it
+// Construct body
+//A hack to make user-defined variables in the testplan element more dynamic
+// TODO: fetch this once as per vars above?
+// If a user has set parameters in one test, and then // selects a different test which supports the same // parameters, those parameters should have the same // values that they did in the original test.
+// May be called by XStream
+// If we have a file, but no data, then read the file
+//$NON-NLS-1$//$NON-NLS-2$
+// Limit length of log content
+// Execute the script
+// Initialize the GUI:
+// N.B. need to separate protocol from authority otherwise http://server would match https://erver // could use separate fields, but simpler to combine them
+// Now populate the any totalRes fields that need to // come from lastRes:
+//Iterator itr = data.iterator();
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#getFileName()     */"
+"/*     * (non-Javadoc)     *     * @see org.apache.jmeter.util.LocaleChangeListener#localeChanged(org.apache.jmeter.util.LocaleChangeEvent)     */"
+// Store any cookies received in the cookie manager:
+// We always want to override the HTTPS scheme, because we want to trust all certificates and hosts
+// So elements can only be added as children
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ // Previously mis-spelt as theadName //$NON-NLS-1$ //$NON-NLS-1$ (may be null) //$NON-NLS-1$ (may be null) //$NON-NLS-1$
+// leading comment
+// Never return null
+//int mark =
+// Re-parse (now it's the http request over SSL)
+// All rows have this class
+// Datefields are not thread-safe // $NON-NLS-1$
+// The groups have all completed now
+// Check option combinations
+// TODO can this happen?
+// Find the data sent to the mirror server, which the mirror server is sending back to us // We assume the headers are in ISO_8859_1, and the body can be in any content encoding. // Therefore we get the data sent in ISO_8859_1, to be able to determine the end of the // header part, and then we just construct a byte array to hold the body part, not taking // encoding of the body into consideration, because it can contain file data, which is // sent as raw byte data
+// Different from TestHTTPMirrorThread port and standard mirror server
+// Allow Headers to override Host setting //$NON-NLS-1$ //Host
+// Blank line
+//        throw new UnsupportedOperationException("For test purposes only");
+// read-only after class init
+// Only contains LDAPArgument entries
+// Remove the group count
+// wait for Post threads to stop
+// Empty arrays are immutable
+// date or lastModified may be null or in bad format
+// Finish up
+//+ JMX file attributes // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ //- JMX file attributes
+// create parser
+// Allow display/hide toolbar
+// Execute the sample. In this case sleep for the // specified time.
+// Get directory
+// NOTUSED yet private JTextField filename;
+"/*         * Add the header panel         */"
+// Note that sampleStarted() and sampleStopped() is not made to appear // in synch with sampleOccured() when replaying held samples. // For now this is not critical since sampleStarted() and sampleStopped() // is not used, but it may become an issue in the future. Then these // events must also be stored so that replay of all events may occur and // in the right order. Each stored event must then be tagged with something // that lets you distinguish between occured, started and ended.
+// used by TestAnchorModifier // used by TestAnchorModifier // used by TestSaveService
+// default
+"/*     * This is called once for each occurrence in the test plan, before the     * start of the test. The super.clear() method clears the name (and all     * other properties), so it is called last.     */"
+// If we are disabling the Edit-->Remove menu item and the // Edit-->Add menu item is disabled, then we also need to disable // the Edit menu. // The Java Look and Feel Guidelines say to disable a menu if all // menu items are disabled.
+// Check if the entry index corresponds to a tag, if so return the tag // This also works if the tags were not translated
+// $NON-NLS-1$ // default value: false
+"/*     * @see org.apache.jmeter.gui.action.Command#getActionNames()     */"
+// We get the posted bytes using the encoding used to create it
+// Set up the graph with header, footer, Y axis and graph display
+// changed the logic for BEA Weblogic in the case a // user uses Tomcat's status servlet without any // modifications. Weblogic will return nothing for // the connector, therefore we need to check the size // of the list. Peter 12.22.04
+// get the certificate request
+// N.B. this needs to be done before opening the connection
+// We must ask the user if it is ok to close current project // i.e. it is OPEN
+// Some editors may need the descriptor
+// Set the overall status for the transaction sample // TODO: improve, e.g. by adding counts to the SampleResult class
+//MAXINT = 2,147,483,647
+// (is this really the character set?) e.g. // ISO-8895-1, UTF-8
+// Mainly needed for unit test Serialisable tests
+// reset the bsh.Interpreter before each execution
+// Column numbers - must agree with order above
+//String s =
+// define max scale y axis
+// Get the filename
+"/*     * These must be set before reading/writing the XML. Rather a hack, but     * saves changing all the method calls to include an extra variable.     *     * AFAIK the variables should only be accessed from one thread, so no need to synchronize.     */"
+// internal list of all results
+// N.B. JVMs other than Sun may return different instances each time // so we cache the value here (and avoid having to fetch it every time)
+// TODO not used by GUI
+// no implementation at this time, since // we bypass the idea of having a console // tool to generate test plans. Instead // I decided to have a sampler that uses // the generator and parser directly
+// Hide Window on ESC
+// if it is a short option then parse it else ...
+//+ JMX attributes, do not change values // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ //-
+// add a message when no request data (ex. Java request)
+// OK // should treat B as separate // Should have no arg
+// It does not contain a required string
+// Provide Random numbers to whomever wants one
+// MAIN PANEL
+"/** * FIXME Why is searchTF not getting focus correctly after having been setVisible(false) once */"
+// Browsers seem to tolerate Location headers with spaces, // replacing them automatically with %20. We want to emulate // this behaviour.
+// Header may contain ;charset= , regexp extracts it so computed boundary is wrong
+// Inner loop
+// this.READER = new BufferedReader(new // FileReader(this.SOURCE)); // parse(this.READER,el);
+"/*         * Not clear what can cause this ? conflicting versions perhaps         */"
+// Only display the port number if it is meaningfully specified
+//+ JMX attributes - do not change the values // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+//url.replace('+',' ');
+// Can be missing, e.g. on redirect
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ // $NON-NLS-1$
+//there is no harm in trying to clear up
+// May generate IllegalArgumentException
+// There's a few properties which are excluded from this processing:
+// MENU_ADD_xxx - controls which items are in the ADD menu // MENU_PARENT_xxx - controls which items are in the Insert Parent menu
+// Instance variables (guarded by volatile)
+// HACK
+// dimension of the SplineGraph is the same // resized = false;
+// N.B. originally called clear() // @see also JMeterGUIComponent
+// inclusion filter assumes most of // the files are not wanted, therefore // usefile is set to false unless it // matches.
+// removes all entries
+// Gui components
+// Disable the DELETE and SAVE buttons if no rows remaining // after delete.
+// Check for quoted string // $NON-NLS-1$ // remove quotes
+// We have sampled one of our children
+// HELP MENU // $NON-NLS-1$
+// Used to be done in initializeProperties
+//Empty override of superclass method
+//for Httpclient //for Httpclient
+// force reopen on next sample
+// use negative condition so missing (null) value is treated as FALSE
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// replace _xAxisTitle to null (don't display x axis title)
+// new search?
+// No point continuing // Mainly for bsh.EvalError
+// OK, because find only returns correct element types
+// Write boundary end marker
+// Control reuse of cached SSL Context in subsequent iterations
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+//$NON-NLS-1$ //$NON-NLS-1
+// additional ctor for processing tests which use int parameters
+// TODO probably not needed
+// Write the body
+// OK // $NON-NLS-1$
+// All form parameter always have text/plain as mime type //TODO make this a parameter?
+// Check if there are any difference between name and value and their encoded name and value
+// Only decode strings if inVersion = 1.0
+// otherwise there's a vgap too many // Work out the anchor paint
+// Store MD5 hash instead of storing response // $NON-NLS-1$
+//should always fail
+// Set up the table with footer
+// User provided incorrect query type
+// Should we exit at end of the test? (only applies to server, because host is non-null)
+// class attributes
+// $NON-NLS-1$ (do not change) // $NON-NLS-1$ (Firefox and Windows) // $NON-NLS-1$ (Opera)
+//"" is not the same as no realm
+// Don't save this, as not settable via GUI
+// Recursive call
+// Used by ResultCollector.sampleOccurred(SampleEvent event)
+// TODO: do we need to implement any kind of connection pooling? // If so, which connections should be shared? // Should threads share connections to the same destination? // What about cross-thread sharing?
+// will use chunked encoding
+// there is also a javax.swing.text.Document class.
+// Use null for url and contentEncoding, to simulate that HttpRequestHdr do not // know the encoding for the page
+// Search text in response data
+// TODO should errors be thrown back through RMI?
+// can be null - e.g. if URL was invalid
+//+ JMX entries - do not change the string values
+// the host has a key already
+// Always update the end time
+// the child to be removed will always be 0 'cos as the nodes are // removed the nth node will become (n-1)th
+// These are new fields; not saved unless true
+//contentLength > 0 ? contentLength : DEFAULT_INITIAL_BUFFER_SIZE);
+// java.util.Date d = null;
+// no need to change the foreground color
+// TODO: Does this method need to be public? It isn't currently // called outside of this class.
+// Created during class init; not modified thereafter
+// It is a normal post request, with parameter names and values
+//+ JMX property names; do not change
+// No need to check version, just process the attributes if present
+// Find the name of the directory containing the file // and create it - if there is one
+// Now eliminate any classpath entries that do not "match" the search
+// acceptsNull // acceptsExpressions // acceptsOther
+// Generate a test error
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Some headers are set by executeMethod()
+// The known tags are assumed to be valid:
+// Transparent JButton with no border
+//$NON-NLS-1$ default: bottom //$NON-NLS-1$
+// Cached value
+"/*             * Add fix for Deadlocks, see:             *              * See https://issues.apache.org/bugzilla/show_bug.cgi?id=48350            */"
+// TODO is null correct?
+// Original (rather odd) behaviour // start at the end
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-2$
+// Defaults to empty;
+// These are some of the special characters
+// Thread method is potentially expensive
+// ~a tic every 50 px
+// property values are strings
+// Check that calls to getResString use a valid property key name
+// ++ // GUI tests throw the error // testArgumentCreation(org.apache.jmeter.config.gui.ArgumentsPanel$Test)java.lang.NoClassDefFoundError // at java.lang.Class.forName0(Native Method) // at java.lang.Class.forName(Class.java:141) // at // java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:62) // // Try to find out why this is ...
+// Construct a multi-line string with all matches
+// e.g. *.apache.org // $NON-NLS-1$
+// JMeterGUIComponent item = (JMeterGUIComponent) iter.next();
+// Hack to allow external control
+// Should we add the "_" separator?
+// can be specified in jmeter.properties //$NON-NLS-1$
+// checks for entries in use
+// format (HMTL, XHTML, XML)
+// Connect to the http server, and do a simple http post with utf-8 // encoding of the body, which caused problems when reader/writer // classes were used in the HttpMirrorThread
+// ... and where they end
+// If the -t flag is to "LAST", then the last loaded file (if any) is used
+// Does not appear to be used yet
+// TODO support multiple signers
+// can only match once
+// check no charset
+// Prepare the Results tabbed pane
+// Could time this // res.sampleEnd(); // if sampleEnd() is not called, elapsed time will remain zero // TODO distinguish errors better //$NON-NLS-1$
+// TODO should this be indeterminate? // TODO should this be indeterminate? //$NON-NLS-1$ //$NON-NLS-1$
+// default: circle
+"/*             * TODO: Exact ordering is only required for some tests; change the             * comparison to do a set compare where necessary.             */"
+// Fix path to allow the use of UNC URLs
+//$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-1$
+// Only update the stored copy of the tree for a full save // refetch, because convertSubTree affects it
+// Helper method to deal with missing headers - Commons HttpClient
+"/*         * Can be caused by: - failure to read XSD file - xml does not match XSD         */"
+// If a table cell is being edited, we should accept the current value // and stop the editing before adding a new row.
+// i.e. GET
+// starts empty
+// install new path
+// These are not currently updated
+// Used by Request Panel //$NON-NLS-1$
+//NOT USED protected double[][] data = null;
+// NOTE: responseData encoding is server specific //       Therefore we do byte -> unicode -> byte conversion //       to ensure UTF-8 encoding as required by XPathUtil // convert unicode String -> UTF-8 bytes // $NON-NLS-1$
+// Is any node an instance of one of the classes, but not an exception?
+// Wait up to 1 second
+// (Comment 16, Huw)
+// Reset for other users
+// Number of refName_n variable sets to keep
+// Although the spec says UTF-8 should be used for encoding URL parameters, // most browser use ISO-8859-1 for default if encoding is not known. // We use null for contentEncoding, then the url parameters will be added // with the value in the URL, and the "encode?" flag set to false
+// Helper method to simplify alias creation from properties
+// Ensure that there is always a collection available
+// configure the document builder factory
+// Test sending data as UTF-8, with values that will change when urlencoded, and where // we tell the sampler to urlencode the parameter value
+//TODO: validate contentType for reasonable types?
+// TEXTAREA
+// we have to check and make sure the constructor is // accessible. if we didn't it would throw an exception // and cause a NPE.
+// USER_INPUT
+// Check path
+// Function objects to be tested
+// Tell the sampler to do a multipart post
+// NOTUSED String portname = pnode.getAttribute("name"); // used to check binding, but now it doesn't. it was // failing when wsdl did not using binding as expected
+// Cookie //$NON-NLS-1$
+//For calculating throughput across all threads
+// select the node
+// This test should work whether or not all Nulls are equal
+// There were some spaces in the URL
+"/*         * Note: if is == null, the arrays will be empty         */"
+// Not sure we can test anything else here
+// Check that other encoding is not the current encoding // TODO - charset?
+// 10 per second // Should delay for 1 second // 10 per milli-second // Should delay for 1 milli-second
+// Match /../[../] etc. // $NON-NLS-1$
+// Force reload data
+// Action listener will be added later
+// Must first convert to absolute path names to ensure parents are available
+// -1 means not defined
+/* Implements JMeterGUIComponent.modifyTestElement(TestElement) */
+// TODO should this throw an error?
+// Escaped dollar commma and backslash with missing variable reference
+// $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$
+// Can occur at run-time // could be caused by the bsh Exceptions: // EvalError, ParseException or TargetError
+// Disable DELETE if there are no rows in the table to delete.
+// used by TableEditor
+// Check if the user wants to drop any changes
+// Provide our own aliasing using strings rather than classes
+// Get expected results as a List
+// exclusion filter assumes most of // the files are used, therefore // usefile is set to true, unless // it matches.
+// TODO do we need to add a charset for the file contents? // $NON-NLS-1$
+"/*     * Test method for 'org.apache.jmeter.protocol.http.sampler.postWriter.sendPostData(URLConnection, HTTPSampler)'     * This method test sending only a formdata, as a multipart/form-data request.     */"
+//Suppress messages to stdout
+// TODO - is this needed?
+// IMAGE_PARSER now really means EMBEDDED_PARSER // $NON-NLS-1$
+// LRUMap does not support generics (yet)
+/* empty arrays which can be returned instead of null */
+// For In build test case using this counter // create the new entry in the server
+// Don't use default for saving tristates //        element.setProperty(TCPSampler.CLOSE_CONNECTION, closeConnection.isSelected(), TCPSampler.CLOSE_CONNECTION_DEFAULT);
+// do we need to close byte array (or flush it?)
+"/*     * Test TestElements - implement the test case     */"
+//$NON-NLS-1$ // so we can add them again in init
+// MenuBar related methods // TODO: Do we really need to have all these menubar methods duplicated // here? Perhaps we can make the menu bar accessible through GuiPackage?
+// First have to release the cookie we were using so other // threads stuck in wait can move on
+// Don't let the input field shrink too much
+// Use deprecated method, to avoid duplicating code
+// Test sending simple HTTP get // Test sending data with default encoding
+// Most browsers use ISO-8859-1 as default encoding, even if spec says UTF-8
+// Process Commons HttpClient parameters file // $NON-NLS-1$
+// Setup connection
+// we are capturing output // Default charset is probably appropriate here.
+// $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ $NON-NLS-2$
+// text backup
+"/** * Custom TrustManager ignores all certificate errors * * TODO: implement conditional checking and logging * * (Derived from AuthSSLX509TrustManager in HttpClient contrib directory) */"
+// Maintain backward compatibility (bytes was not in the JMX file)
+"/* (non-Javadoc)     * @see org.apache.jmeter.visualizers.request.RequestView#getPanel()     */"
+// e.g. started from IDE with full classpath // Allow override $NON-NLS-1$ $NON-NLS-2$
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+//$NON-NLS-1$ // We have a default
+// Bottom buttons bar
+// If a content encoding is specified, we use that as the // encoding of any parameter values
+// condensed length (without \r) // Add \r for each header // Add \r for initial header // final \r\n before data
+//$NON-NLS-1$ //$NON-NLS-1$ // modal dialog box
+// Sample with no sub results, simulates an image download
+// TODO improve this
+// Used by GUI
+"/*     * Wrapper to convert a JUnit4 class into a TestCase     *     *  TODO - work out how to convert JUnit4 assertions so they are treated as failures rather than errors     */"
+//$NON-NLS-1$ //$NON-NLS-2$
+"/*     * (non-Javadoc)     *     * @see org.apache.jmeter.testelement.TestStateListener#testStarted(java.lang.String)     */"
+// Trailing directory
+// Needed to avoid Class cast error in Clear.java
+// no existing file or not valid // Alphanum to avoid issues with command-line quoting // we use same password for both
+//suite.addTest(new TestLoad("checkGuiPackage"));
+// Create the multiparts
+// LOOP LABEL // $NON-NLS-1$
+// no CA key - probably the wrong store type. // cannot continue
+// Used by ResultCollector#recordStats()
+// revert
+//means no restriction
+// TODO set different status if not enough messages found?
+// Insert the test plan node
+// Cache for file. Only used by sample() in a single thread
+// Calculate intermediate values (if needed)
+// $NON-NLS-1$ // don't set empty to keep cssJquery // cssJqueryField.setText(""); // $NON-NLS-1$ // $NON-NLS-1$ // don't set empty to keep attribute // this.attributeField.setText(""); // $NON-NLS-1$ // don't change impl // this.cssJqueryLabeledChoice.setText(HtmlExtractor.DEFAULT_EXTRACTOR);
+// find index of path start
+// CRLF blank line found
+// store the operator
+// The value is not encoded
+// if no-cache is present, ensure that expiresDate remains null, which forces revalidation
+// Ensure any remaining contexts are closed
+// save the global copy
+// Long optional arg must have = as separator
+//$NON-NLS-1$ //$NON-NLS-1$ // Check if it is form data //$NON-NLS-1$ // Get the form field name //$NON-NLS-1$
+// ensure variables are not null
+// JFileChooser jfc = null;
+// Doesn't even look like a URL? // Maybe it isn't: Ignore the exception.
+// not used
+// Test if can instantiate parser using property name
+// The original name of the property
+// default: sans serif //$NON-NLS-1$
+// Name of the accumulator. Set up by testStarted().
+// No need to check it again
+// Relative start-up time
+// Write to the socket
+// A quick verification, just in case:
+// Add the new file at the start of the list
+// Save hostname for ResultSaver // $NON_NLS-1$
+//should not fail
+// Find the first non-null message
+"/*         * Test:          * Before          * Selection Controller         *  - zero (default)         *  - simple controller 1         *  - - one         *  - - two         *  - simple controller 2         *  - - three         *  - - four         *  - five         *  - six         * After         *          * cond  = Switch condition          * exp[] = expected results         */"
+// Can't add a TestPlan anywhere
+// Handle IPv6 urls
+// for omitted file names //$NON-NLS-1$
+// $NON-NLS-1$ // Create the panels for the other tabs
+// Attributes for TestElement and TestElementProperty // Must all be unique //$NON-NLS-1$ // Also used by PropertyConverter classes // $NON-NLS-1$ // $NON-NLS-1$
+// Check if transaction is done
+// Check if we should send only placeholder text for the // file content, or the real file content
+// Sample number (string) // Start Time // Thread Name // Label // Sample Time // Status // Bytes
+// TODO: make static?
+// Perform the actual sample
+// The headers and body are divided by a blank line
+// not full test plans
+// Surely this is always null in the constructor?
+// TODO needed here because currently done on sample completion in JMeterThread, // but that only catches top-level samples.
+// Get drop location and mode
+// reset
+//+ action names // $NON-NLS-1$
+//+ JMX names - do not change // $NON-NLS-1$
+// Keys for user preferences
+// HC3.1 does not have the method
+//long max was used to represent a non-expiring cookie, but that caused problems
+//TODO provide proper name?
+// insert new value
+// Check quoted charset
+// Throwable wanted
+// Server-only work item
+// will be the 3rd option, which is not checked specifically
+// Make sure the file ends with proper extension
+//Cannot happen
+//Note: match.groups() includes group 0
+// better ISO-8859-1 than UTF-8
+// Remember to change this when the class changes ...
+// limit the changes to client only test elements
+// add result to main sampleResult
+// TODO - does not appear to be called directly
+// element.setProperty(TCPSampler.FILENAME, filename.getText());
+"/*     * Predefined format patterns, selected by the property log_format_type (see     * jmeter.properties) The new-line is added later     */"
+// This is needed in order to set up the cookie policy
+// Cache for bytes-message, only used when parsing from a file
+// Check that calculator gets the correct statistics from the sample
+"/*     * This Map serves two purposes:     * - maps file names to  containers     * - ensures only one container per file across all threads     */"
+// Common output function
+// We use multi-line mask so can prefix the line with ^ // $NON-NLS-1$ $NON-NLS-2$
+// parent classes to check // are inner classes OK?
+// Note there's 3 capturing groups per value
+// Use null for url to simulate that HttpRequestHdr do not // know the encoding for the page. Specify contentEncoding, so the // request is "sent" using that encoding
+// Gives access to parent thread threadGroup
+// TODO replace repeated substr() above and below with more efficient method.
+// NOTE: Source and line arguments are nonsense in a call(). //       Any way to make these arguments *sensible?
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Get the transaction sample result
+// Probably no point in converting this to return a SampleEvent
+// Does not appear to be used
+"/*     * Utility method to set up all the values     */"
+// Prevent entry if nothing to do
+"/**     * Check if a string is a valid JMeter 'expression'.     * <p>     * The current implementation is very basic: it just accepts any string     * containing ""${"" as a valid expression. TODO: improve, but keep returning     * true for ""${}"".     */"
+// There aren't any
+// NOTUSED private Class PARSERCLASS = null;
+//if we found a TestPlan, then we are on our way to the TestFragment
+// Save Location so resulting sample can be disabled
+// Not used, as the <testResult> element is generated by the // ResultCollector class
+// TODO - perhaps this should be a fatal error?
+// Settings panes
+//Strip the response data before writing, but only for a successful request.
+// May be null if called from Unit test
+// TODO correct URL?
+// TODO is this really necessary?
+// Test sending data as UTF-8, with values that have been urlencoded
+// Allow other thread to start
+// TODO - why use space?
+// for use by test code only
+// File was not opened successfully // Are we processing a file sequence?
+// Script file to initialize the Interpreter with
+// This is a daemon thread, which should only reach here if there are other // non-daemon threads still active
+// Only set message if error not yet flagged
+// finish processing samples
+// testLoadAndSave test files
+"/*             * Textfield uses \n (LF) to delimit lines; we need to send CRLF.             * Rather than change the way that arguments are processed by the             * samplers for raw data, it is easier to fix the data.             * On retrival, CRLF is converted back to LF for storage in the text field.             * See             */"
+// Did sample succeed?
+// These are needed for invoking the method
+// the copying thread won't generally detect EOF
+// For access to stop methods.
+// Commons HttpClient only
+//sizeColumns(table);
+// Parameter list
+// Query types (used to communicate with GUI) // N.B. These must not be changed, as they are used in the JMX files // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// FILE MENU //$NON-NLS-1$
+// indicate that an error occured
+// UTF-8 unsupported? You must be joking!
+//++ Action command names //$NON-NLS-1$
+// only try to load the JMX test plan if there is one
+// Force TestFragment to only be pastable under a Test Plan
+// i.e. mailBody is empty
+// in milli-seconds // TODO: properties?
+// If default port for protocol is used, we do not include port in URL
+// we don't want interrupt to try disconnection again // We don't want to continue using this connection, even if KeepAlive is set // May not exist
+// e.g. Long.MIN_VALUE
+//TODO - move to JOrphanUtils?
+// Another subsample for the transaction
+// $NON-NLS-1$ // $NON-NLS-1$ proxy.binary.filetype=binary
+// Remember this was first in its batch
+// //////////////////////////////////////////////////////////// // // Methods used to store and retrieve the MailerVisualizer. // // ////////////////////////////////////////////////////////////
+// we totally failed to stop the test
+// default option
+// Check that the request and response matches
+// chop to "server.name:x/thing"
+// $NON-NLS-1$ // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ $NON-NLS-2$
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-2$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-2$
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Don't save headers - they are already in the raw message
+"/*         * Additional Settings         */"
+// Restore state display
+// now draw the bar chart
+// Set root level
+// Wrap the defaults in our custom trust manager
+"/*     * Test method for 'org.apache.jmeter.protocol.http.sampler.postWriter.sendPostData(URLConnection, HTTPSampler)'     * This method test sending a request which contains both formdata and file content     */"
+// Check "Undefined" does not become a "reserved word":
+// TODO should this implement supportsCustomEditor() ?
+// Create the parts // Add any parameters
+// Wait longer than a clock pulse (generally 10-15ms) // Catch an early clock pulse to reduce slop.
+// Allow for missing optional jars
+// for reading from CSV files // ignored currently
+// Sample with no sub results, simulates an image download
+// Called by XPathAssertionGui
+"/*         * the beginning of the line is a ""delimiter"" so that ,a,b,c returns """"         * ""a"" ""b"" ""c""         */"
+// Assume there's at least one file
+// if the "Title of Graph" is empty, we can assume some default
+// chop to server.name:xx
+// $NON-NLS-1$ // $NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
+// Checkbox // $NON-NLS-1$
+// Do we have some data, or a trailing empty field? // we have some data // we've started a field // Just seen ""
+// Y // Y // Y // Y // sp // M // M // / // D // D // / // H // H // : // M // M // : // S // S // end
+"/*     * called by CSVRead(file,alias)     */"
+// pick up headers if failed to execute the request // httpMethod can be null if method is unexpected
+//$NON-NLS-1$ // Ensure variable has been provided
+// default (e.g. if test plan does not have definition)
+"/*     * The following array must agree with dateFormat     *     * It is used to translate the positions in the buffer to the values used by     * the Calendar class for the field id.     *     * Current format: MM/DD/YYYY HH:MM:SS 01234567890123456789 ^buffer     * positions     */"
+// We clone to avoid enabling existing node
+// DROP-DOWN MENU
+// desactivate or not specials regexp char
+// Save the last valid content length one
+// NAME
+// Calculate response time
+// draw data lines
+// TODO improve the error handling
+//Maybe do nothing at all?
+// out of order
+// call ThreadListener.threadStarted()
+// we can only move a single node
+// does not remove the entry
+// Search MENU //$NON-NLS-1$
+// Get the Matcher for this thread
+// TODO why not use the super class value?
+// Called by ResultCollector#loadExistingFile() if XStream loading fails
+// increment the current count
+"/*         * Does the system support UNC paths? If so, may need to fix them up         * later         */"
+// for request Data
+// API uses raw types
+// Should the TestBean be hidden?
+//+ JMX attributes - do not change
+// Remove following \n if present
+// These methods handle parameters that cannot contain delimiters or // quotes
+// open as *B
+// checks the scheduler to stop the iteration
+// path is between idx='pathStartIndex' (inclusive) and // idx='pathEndIndex' (exclusive)
+// N.B. This needs to divert the log for SampleResult
+// What host am I running on?
+"/** * FIXME BROKEN CODE */"
+// Response fields column renderers
+// set the required variables
+// Check persistence
+// not a valid header
+// Should be true
+// Create a panel containing the combo and the button:
+// write to file
+"/**     * Add logTargets to root logger     * FIXME What's the clean way to add a LogTarget afterwards ?     * @param logTargets LogTarget array     */"
+// Is this a work in progress ? // No, // not // a // work // in // progress // ...
+// We just add placeholder text for file content // $NON-NLS-1$
+//very wrong.
+// Don't try to check the default language
+"/*         * Controller         * + Before         * + Switch (cond)         * + + zero         * + + Controller sub_1         * + + + one         * + + two         * + + Controller sub_2         * + + + three         * + After         */"
+// log.debug("data["+s+"]["+idx+"]: " + data[s][idx]);
+// generate the certificate and store in output file
+// force the events to fire
+// Save the value in the variable if present
+// Dummy
+// messages.properties
+// part is only needed if we // don't send an .eml-file
+//TODO consider using private logs for each derived class
+// no longer needed
+// TODO - should this use setFirst() ?
+// NOTUSED Dimension dim = layoutSize(parent, false);
+// if child and a parent are selected : only keep the parent
+// An additional note on using HashSets to store URLs: I just // discovered that obtaining the hashCode of a java.net.URL implies // a domain-name resolution process. This means significant delays // can occur, even more so if the domain name is not resolvable. // Whether this can be a problem in practical situations I can't tell, // but // thought I'd keep a note just in case... // BTW, note that using a List and removing duplicates via scan // would not help, since URL.equals requires name resolution too. // The above problem has now been addressed with the URLString and // URLCollection classes.
+"/* (non-Javadoc)     * @see org.apache.jmeter.gui.JMeterGUIComponent#createPopupMenu()     */"
+// The name of the sampler
+// Allow listeners to close files
+// $NON-NLS-1$;
+// Join the two multiparts
+// first lets draw the grid
+//$NON-NLS-1$ // Set default SAVE menu item to disabled since the default node that // is selected is ROOT, which does not allow items to be inserted.
+// assume it's string
+// Most subclasses will need these:
+// timeout to retrieve wsdl when server not response
+// What are we testing against?
+// Slight hack - we need to ensure the TestClass is not reset by the previous call
+// Find all jars in the search path
+// Table still contains one or more rows, so highlight (select) // the appropriate one.
+// Running values, updated for each sample
+// Set up HTTP scheme override if necessary
+// Test sending UTF-8 data with ISO-8859-1 content encoding
+// Forget about all GUIs we've created so far: we'll need to re-created // them all!
+// TODO should this also clear isDynamic, rawParameters, permanentResults?
+// draw an orange line for 50% point
+// Add any assertion that failed as children of the sample node
+// OK, we have an old-style file definition // save it // Now deal with any additional file arguments
+// Allow enough time for JVM to exit
+// set the window visible immediately
+// Using onMessage Listener
+"/*     * Helper method for use by scripts     *     */"
+// Request headers column renderers
+// assume text output - script can override if necessary
+// this is our first sample, set the start time to current timestamp
+// set the start time for the Thread // Duration is in seconds
+// Add current time to total for later use (exclude pause time)
+// This is written to JMX files by ScriptWrapperConverter // read from properties file; written to JMX files
+// The maximum index of the tags in the combo box
+// open the stream
+// Duration
+// HTTP URLs must be absolute, allow file to be relative // $NON-NLS-1$ // $NON-NLS-1$
+// Allow test code to check for spurious class references
+// are inner classes OK?
+// first we see if the class declares a string // constructor. if it is doesn't we look for // empty constructor.
+// Prevent instantiation
+// TODO Should this method be synchronized ? all other function execute are
+// This happens if the default log-target id-ref specifies a non-existent target
+// wrong
+// Read the header part, we will be looking for a content-length // header, so we know how much we should read. // We assume headers are in ISO_8859_1 // If we do not find such a header, we will just have to read until // we have to block to read more, until we support chunked transfer
+// Check old values don't hang around: // fewer matches
+// hack to reduce the need to load every class in non-GUI mode, which only needs functions // TODO perhaps use BCEL to scan class files instead? // class name should contain this string // class name should not contain this string
+// TODO needs to be synch? Probably not changed after threads have started // JMeter Home directory (excludes trailing separator) // JMeter bin directory (excludes trailing separator)
+// If we are enabling the Edit-->Remove menu item, then we also need to // enable the Edit menu. The Edit menu may already be enabled, but // there's no harm it trying to enable it again.
+// Search field
+//for each setup thread group
+// For all the file multiparts, we must revert the hiding of // the actual file content
+// List of types that are known to be binary
+// Helper method to get 1 ms resolution timing.
+// In case of BSF and JSR elements i want to add textAreaEditor as a listener to scriptLanguage ComboBox.
+// If there is one file with no parameter name, the file will // be sent as post body.
+// prepare highlighter to show text find with search command
+// Set the multipart for the post
+// Tell server that we are done
+"/*     * This is needed for OnceOnly to work like other Loop Controllers     */"
+//@GuardedBy("this"")
+// Check method, path and query sent
+// Active threads in this group
+// Don't get tripped up by RE chars in the arg name
+// Always remove cookies // Always remove authorization // Remove additional headers
+"/* (non-Javadoc)     * @see org.apache.http.conn.ssl.SSLSocketFactory#createSocket()     */"
+// This test tries to emulate a http sample, with two // subsamples, representing images that are downloaded for the // page representing the first sample.
+"/*     * Finds all classes that extend the classes in the listSuperClasses     * ArrayList, searching in the listAllClasses ArrayList.     *     * @param superClasses     *            the base classes to find subclasses for     * @param listAllClasses     *            the collection of classes to search in     * @param innerClasses     *            indicate whether to include inner classes in the search     * @return ArrayList of the subclasses     */"
+"/*     * Class to be used to create the Method.     * Will be non-null if either Class or Object was provided during construction.     *     *  Can be used instead of invokee, e.g. when using interfaces.    */"
+// otherwise proxy String fields may be null
+// This is applied to fields that should cause a restart when changed // $NON-NLS-1$
+// Obtain a value of the appropriate type for this property.
+// TODO - charset?
+// No samples collected ...
+// TODO is this correct? // If this is not the first file we can't write its header now // for simplicity we always save it, even if there is only one file
+// TODO Why empty block ?
+//log.debug("domain property = " + element.getProperty("domain"));
+// Can't do it as a static initialisation, because SaveService // is being constructed when this is called
+// Used for per-thread/user numbers
+//++ These are JMX names, and must not be changed // $NON-NLS-1$
+// silent error, consider the curve is constant outside its range
+// Only show classpath once
+// Thread pool Executor to get resources  // use a LinkedBlockingQueue, note: max pool size doesn't effect
+// Settings; readResolve sets these from the server/client values as appropriate // TODO would be nice to make these final; not 100% sure volatile is needed as not changed after creation
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// Verify for a ".." component at next iteration
+"/*         * Perform the sampling         */"
+// TODO Is this silent exception intended
+// TODO: This class looks a lot like ArgumentsPanel. What exactly is the // difference? Could they be combined? // Note: it seems that this class is not actually used ...
+// In case parse fails // $NON-NLS-1$ // In case parse fails // $NON-NLS-1$
+// includes \n
+// create tables // The object used for each row
+// set the endtime for the Thread
+// most current subclasses can process text
+//$NON-NLS-1$//$NON-NLS-2$//$NON-NLS-3$ //$NON-NLS-1$
+// empty init // $NON-NLS-1$
+"/*     * @return     */"
+// super-class does not use generics
+// Start the server
+// Store the resource bundle as an attribute of the BeanDescriptor:
+// add the proxy elements
+// Test with empty output variable name
+// Add all the child nodes of the node we are adding
+//Set default single model
+// TODO should this be JTLSAVER? Only seems to be called by MonitorHealthVisualzer
+// If there are no arguments, we can send a file as the body of the request
+// JPanel loopPanel = new JPanel(new BorderLayout(5, 0));
+// Add the parameter, httpclient will urlencode it
+// Can't use for loop here because we remove elements
+// will be host:port for CONNECT
+// Allow test code to change the default useNanoTime setting
+"/*     * The following variables are set by StandardJMeterEngine.     * This is done before start() is called, so the values will be published to the thread safely     * TODO - consider passing them to the constructor, so that they can be made final     * (to avoid adding lots of parameters, perhaps have a parameter wrapper object.     */"
+//$NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// drop empty trailing content
+// These static variables are only used to convert existing files
+// TODO - should check that error has been logged...
+// Did a test fail?
+//This can lead to code smell, meh! Do we care
+// If we know the content length, we can allow the reading of // the request to block until more data arrives. // If it is chunked transfer, we cannot allow the reading to // block, because we do not know when to stop reading, because // the chunked transfer is not properly supported yet
+//    /** A button for adding new arguments to the table. */ //    private JButton add; // //    /** A button for removing arguments from the table. */ //    private JButton delete;
+// Shared with TestElementSaver // $NON-NLS-1$ // $NON-NLS-1$
+// close file
+// may be null during startup
+"/*     * Argument types used to create the method.     * May be provided explicitly, or derived from the constructor argument list.     */"
+// configure(element); // super.clear(); // set name, enabled. // put the default values back into the // new element
+"/* * This is not currently used by JMeter code. * As it uses Sun-specific code (the only such in JMeter), it has been commented out for now. */"
+//log.warn("DEBUG",ex); // e.g. javax.naming.SizeLimitExceededException: [LDAP: error code 4 - Sizelimit Exceeded]; remaining name '' //                                                123456789012345678901 // TODO: tidy this up
+//$NON-NLS-1$ //-- JMX tag values
+// For all the file multiparts, we must tell it to not include // the actual file content
+// ----------- get/set methods ------------------- //
+// Set the form data
+// Set details from the actual response // Needs to be done before response can be stored
+// setAsText succeeded: valid
+// will be null for HEAD
+"/*     * Called by:     * - ClientJMeterEngine.exe() which is called on remoteStop      */"
+// Should Tidy be quiet?
+// read first line and forget
+// replace all backslash with double backslash
+// ci (degree 1)
+// TODO: I believe the following code (to the end of the method) is // obsolete, // since NamePanel no longer seems to be the GUI for any component:
+// Add local system properties, if the file is found //$NON-NLS-1$
+// A HTTP POST request, with content-type text/plain
+// need to clear because the
+// did not want to spoof the IP address
+// should never happen...
+// Called by Save function
+//$NON-NLS-1$ //-- End of names used in JMX files
+// Use special field ip source address (for pseudo 'ip spoofing')
+// TODO: remove this useless Entry parameter
+// return all the associated counts together
+// Use for ComboBox Source Address Type. Preserve order (specially with localization)
+// Allow RMI to complete
+// Added to support external testing
+// Let the GUI show that it will not be encoded
+// acceptsNull // acceptsExpressions // acceptsOther // default
+// These are handled specially by addToTree
+// Note: originally the code did use the ClientPool to "share" subscribers, however since the // key was "this" and each sampler is unique - nothing was actually shared.
+// As a connection is held by only one thread, we cannot already have a  // preparedStatementMap put by another thread
+// Special mode for debugging resource handling
+// NOTUSED: long[] longSample = getSamples(); // load each node
+// Both these are needed in the list even though they set the same // variable
+// If the pre-emptive parameter is undefined, then we can set it as needed // otherwise we should do what the user requested.
+// Called from multiple threads
+// Samplers and Controllers need not apply ... // but AbstractThreadGroup (Controller) is OK
+// State variables
+// Does the order matter?
+// API not yet generic // throws ME
+// Deliberate use of deprecated ctor // Create non-GUI version to avoid headless problems
+// $NON-NLS1$ // $NON-NLS1$
+// do not check hashcodes; unequal objects may have equal hashcodes
+// Proxy can take some while to start up; show a wating cursor
+// might throw an exception, assume this is ignorable
+// should never happen
+//-- End of JMX file attribute names
+"/*     * Split line into name/value pairs and store in headers if relevant     * If name = ""content-length"", then return value as int, else return 0     */"
+// Just append all the parameter values, and use that as the entity body
+// check default
+// Get the content length, it tells us how much data to read // TODO : Maybe support chunked encoding, then we cannot rely on content length
+// Save the count
+// Store context from Root Thread to pass it to created threads
+//TODO replace with proper Exception // return with an error
+// Only for use by test code
+// $NON-NLS-1$ // may be null
+//    /** //     * Resize the table columns to appropriate widths. //     * //     * @param _table //     *            the table to resize columns for //     */ //    private void sizeColumns(JTable _table) { //    }
+// when Enter is pressed, search start
+// Try to ensure that more javascript code is processed OK ...
+// Initialize the editor with the provided default value or null:
+// Done -- we're working with an editable property.
+// Do not use TestCase.run(TestResult) method, since it will // call setUp and tearDown. Doing that will result in calling // the setUp and tearDown method twice and the elapsed time // will include setup and teardown.
+// $NON_NLS-1$ // $NON_NLS-1$ // $NON_NLS-1$ // $NON_NLS-1$ // $NON_NLS-1$ // $NON_NLS-1$ // $NON_NLS-1$
+// should never fail // See if we can actually find the object // Should never happen
+// for next time
+"/*             * Parent elapsed total should be no smaller than the sum of the individual samples.             * It may be greater by the timer granularity.             */"
+// Transaction is done, we do not have a sampler to sample
+// We use multipart if we have been told so, or files are present // and the files should not be send as the post body
+//$NON-NLS-1$ TODO should this be variable?
+// Close the connection
+// based on this scheduler is enabled or disabled
+// return the current value (don't forget the prefix!)
+"/*             * N.B. Stop reading the file if we get a blank line: This allows             * for trailing comments in the file             */"
+// Can have multiple aliases for same target classname
+// Ensure the dialog is only created when it is first needed // In turn this avoids scanning the templates until first needed
+// endWindow = window;
+// Now put the current GUI in place. [This code was copied from the // EditCommand action -- we can't just trigger the action because that // would populate the current node with the contents of the new GUI -- // which is empty.] // Fetch once // Probably caused by unit testing on headless system
+// @see TestJorphanUtils for unit tests
+// create and add a new right side
+// No text
+// Pass request to new proxy thread
+// Set the content encoding
+// drop-down list for renderer
+// enable drag&drop, install a custom transfer handler
+// Also used by org.apache.jmeter.resources.PackageTest
+// Get the sampler ready to sample
+// Needs to be run in a separate thread to allow RMI call to return OK
+// document or context-relative URL like: // '/path/to' // OR '../path/to' // OR '/path/to/../path/'
+// tweak.
+// Handle the various methods
+// Cannot find the file locally, so try the bin directory
+// Initial config from properties
+// instance attributes
+// Check method
+// not compatible // must follow the checkbox setting
+// Non-instantiable
+"/*             * All done now ,so return the empty string - this allows the caller             * to append __CSVRead(file,next) to the last instance of             * __CSVRead(file,col)             *             * N.B. It is important not to read any further lines at this point,             * otherwise the wrong line can be retrieved when using multiple             * threads.             */"
+// set stop flag // interrupt sampler if possible
+// Add also the length of the file content
+// will be null if function is used on TestPlan
+// TODO - how to handle thread stopped here
+// One-time init for this client
+"/*     * Determine if content-type is known to be binary, i.e. not displayable as text.     *     * @param ct content type     * @return true if content-type is of type binary.     */"
+// TODO fetch list of languages from a file? // N.B. Changes to language list need to be reflected in // resources/PackageTest.java
+"/*             * GenericController controller = new GenericController();             * GenericController sub_1 = new GenericController();             * sub_1.addTestElement(new IfController(""10<100""));             * sub_1.addTestElement(new IfController(""true==false""));             * controller.addTestElement(sub_1); controller.addTestElement(new             * IfController(""false==false""));             *              * IfController sub_2 = new IfController(); sub_2.setCondition( ""10<10000"");             * GenericController sub_3 = new GenericController();             *              * sub_2.addTestElement(new IfController( "" \""a\"".equals(\""a\"")"" ) );             * sub_3.addTestElement(new IfController(""2>100""));             * sub_3.addTestElement(new IfController(""false==true""));             * sub_2.addTestElement(sub_3); sub_2.addTestElement(new             * IfController(""2==3"")); controller.addTestElement(sub_2);             */"
+// Don't return null if not set
+// Allow testcode access to the settings
+// Do not allow a drop on the drag source selections.
+// Embedded URL match regex
+// TODO - should this be done for embedded usage? // Note: the element is a ConfigTestElement when used standalone, so we cannot use FTPSampler access methods
+// else if might have been created by another process so not a problem
+// all the others could be private too?
+// The encoding used for http headers and control information
+// Now add the subsamples to the sample
+// Hack to get full modifier value
+// TODO - belongs elsewhere
+// Ignore TestElement properties which don't have an explicit // editor:
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-2$ // $NON-NLS-1$ // $NON-NLS-2$
+// equation for calculating the weight // w = (int)(33 * (used/max))
+// check the proxy
+// Should be OK
+//For holding the ThrougputInfo objects for all ThreadGroups. Keyed by AbstractThreadGroup objects
+// should not be stored
+// Disable the DELETE and SAVE buttons if no rows remaining // after delete
+// This is what JOrphanUtils.split() does
+// if the string constructor is not null, we use it. // if the string constructor is null, we use the empty // constructor to get a new instance
+// i starts at 1
+//$NON-NLS-1$ key for HashMap
+// superclass does not use types
+// TODO - could be converted to generic class?
+// renamed from clear
+// TODO: not used - make private?
+// Tidy options
+// Not synchronised, so can't be shared
+// optional processing instruction for line 2; e.g. // <?xml-stylesheet type="text/xsl" href="../extras/jmeter-results-detail-report_21.xsl"?> // $NON_NLS-1$
+// Use default encoding
+// needs to be accessible from test code // Only contains LDAPArgument entries
+// Get the OutputWriter to use
+// $NON-NLS-1$ // SOAP request (generally) //blank name // $NON-NLS-1$
+// desc.add("Use fully qualified host name: TRUE/FALSE (Default FALSE)"); //$NON-NLS-1$
+// cnd may be null if next() called us // $NON-NLS-1$
+// Create a new list containing numElements null elements.
+// store is faulty, we need to recreate it // if cert is not valid, flag up to recreate it
+// Requires Java 7 // $NON-NLS-1$
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#pageStarted()     */"
+// must follow the checkbox setting
+// method called by add is synchronized //this is a different model from the one used by the result collector
+// Allow shorthand names
+// Check if the header manager had a content type header // This allows the user to specify his own content-type for a PUT request
+// trailing space
+// NOTUSED org.apache.jmeter.monitor.model.Status st = // TODO - charset?
+// find path endIndex
+// Set the values retrieved for the file upload
+// in the case the test uses a file, we set it locally and // prevent loading the file repeatedly
+// Java on Mac OS can add a second entry to the initial classpath // $NON-NLS-1$
+// get data from child
+// The method name to be invoked
+// e.g. www.apache.org
+// need to handle four cases: // - string contains name=value // - string contains name= // - string contains name // - empty string
+// preset to "Text" option
+// Display with same order HTTP protocol
+// Should we run a beanshell script on startup? // $NON-NLS-1$
+// Check request headers
+// Same ViewResultsTree
+// fractional seconds // This will round
+// This can't happen (how should utf8 not be supported!?!), // so just throw an Error:
+// Save the actual socket
+// already reported by IconToolbarBean
+// Do something here ...
+// Used to separate attachment file names in JMX fields - do not change!
+// If icon has not been defined, then use GUI_CLASS property //
+// includes JavaScriptException, rethrows Errors
+// We should not have a query string part
+// deliverSampler allows sampler to be null, but result must not be null
+// Get the Main Frame.
+// Add Sample Counter
+// Check init file functioning
+// Set up the table itself
+"/*     * -----------------------------------------------------------------------     * Methods     * -----------------------------------------------------------------------     */"
+// TODO handle filenames
+// empty chars, return to null
+// end method
+// set start and end time
+// A temporary cache for the focus listener
+// Override wrapMapper in order to insert the Wrapper in the chain
+// TODO Should this be OK ? //assertEquals(contentEncoding, s.getContentEncoding()); // Check arguments // We should have one argument, with the value equal to the post body
+// TODO specify collection type without breaking callers
+// file panel //$NON-NLS-1$ //$NON-NLS-2$
+//load additionnal name conversion rules from plugins
+// if the first child is soap:operation // we add it to the array
+// Generate result (if nec.) and populate it
+// This string is used to identify local test runs, so must not be a valid host name // $NON-NLS-1$
+// set this false to suppress some items for use in HTTP Request defaults
+// Scheme used for slow HTTP sockets. Cannot be set as a default, because must be set on an HttpClient instance.
+// Check for Quoted variable names
+// TODO - yet another ambiguous name - does it need changing? // See also: Clearable, JMeterGUIComponent
+// initialize system structures (just to be safe)
+// is the Sample the correct size?
+// This will be null if initialization succeeds.
+// Re-read 1st line
+// Localize the bean name // $NON-NLS-1$ // $NON-NLS-1$
+// TODO ought to be a FileChooser ...
+// varName keeps its value and sum has not taken  // into account non numeric or overflowing number
+// should we return original value?
+// second, if the tag was a composite tag, // recursively parse its children.
+// string is not empty
+// Don't process invalid numbers
+// Fetch once; needs to stay constant
+// import the signed CA cert into the store (root already there) - both are needed to sign the domain certificates
+// Give access to the method for test code
+// Might be NullProperty
+// < 0 means we save all the matches
+// ditto // $NON-NLS-1$
+// Read resource into ResourceBundle and store in List
+// Does not appear to be used; called by MainFrame#setEditAddMenu() but that is not called
+//avoid error in ant task tests (good way?)
+// So we can detect extra entries
+// No proxy, so don't check proxy fields
+// canvas size
+// default charset is deliberate here
+// Relative filenames
+// Non-Tidy options
+// Not instantiable
+// if the title graph is empty, we can assume some default
+// Samplers and Controllers need not apply ...
+// keep track of classes created
+// Weed out the empty files
+// The following getters may appear not to be used - however they are invoked via the Functor class
+// Check that bsh has read the file
+// needs to be initialised
+// the other object has a new value to be added to the merged
+// InterleaveController in inner loop
+// Check post body which was sent to the mirror server, and // sent back by the mirror server
+// Take note of when buttong are changed so can change panel
+//$NON-NLS-1$ // Concatenate query post if exists
+// Encode according to the HTTP spec, i.e. UTF-8
+// For use by Unit Tests
+// String sampleLog = "C:/eclipse3/workspace/jmeter-21/bin/testfiles/sample_log1.jtl";
+// Resolve any aliases
+// More general attributes not supported
+// Translate alias to classname and then delegate to wrapped class
+// Not used
+// Unrecognised files are ignored
+// Buffer to hold the post body, except file content
+// Is Destination setup static? else dynamic // $NON-NLS-1$ // default to maintain compatibility
+"/*     * @see org.apache.jmeter.report.gui.action.Command#getActionNames()     */"
+// e.g. not yet started
+// Manage legend placement
+// TODO only called by UserParameterXMLParser.getXMLParameters which is a deprecated class
+// There was a NPE being thrown without the null check here.. JKB
+// Compute the expected sample names
+// Do search on Enter
+// Connect to the http server, and do a simple http get
+// It contains a banned string
+"/* (non-Javadoc)     * @see org.apache.jmeter.gui.action.AbstractAction#doAction(java.awt.event.ActionEvent)     */"
+// SECONDS LABEL // $NON-NLS-1$
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Now rerun with match fail
+// This would be done by the run // command
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.engine.ReportEngine#reset()     */"
+// End Method
+// Are we processing the first sample?
+// default to name of element
+// Add parameterised tests. For simplicity we assune each has cases 0-10
+// We use the encoding which should be used according to the HTTP spec, which is UTF-8
+// Created by XStream reading templates.xml
+// Compute bytes before stripping
+// Cache for object-message, only used when parsing from a file because in text-area // property replacement might have been used
+// Args will be provided later
+// Parsed request headers
+// add the remaining parts
+// Scan for any matching cookies
+// must be the start of the subtree
+// Find parent controllers of current sampler
+// Record end time and populate the results.
+"/*     * run the function test     */"
+// Use same XPath for both threads
+// Skip the leading bytes (if any)
+// the keystore for use by the Proxy
+// Test non-empty parameters
+"/*     *     * A Dom tree panel for to display response as tree view author <a     * href=""mailto:d.maung@mdl.com"">Dave Maung</a>      * TODO implement to find any nodes in the tree using TreePath.     *     */"
+// Used for the RuntimeException to short-circuit the traversal // $NON-NLS-1$
+// A TestBean is a Java Bean. Just define some properties and they will // automagically show up in the GUI. // A String property:
+// Pass request to new thread
+// Internal information only // read from saveservice.properties file// $NON-NLS-1$ // Must match Revision id value in saveservice.properties,  // used to ensure saveservice.properties and SaveService are updated simultaneously // Expected value $NON-NLS-1$ // read from properties file// $NON-NLS-1$
+// empty encoding, return to platorm default
+// delay between checks
+// ai (degree 3)
+// May be replaced by RandomOrderController
+// Methods used in creating the GUI
+// Decent value for timers
+// already at EOF
+// The property name to be used to look up the display string
+// Nimbus works - after a fashion - with this
+// How long between checks of nanotime; default 5000ms; set to <=0 to disable the thread
+"/*     * The password can be defined as a property; this dialogue is provided to allow it     * to be entered at run-time.     *     * However, this does not gain much, as the dialogue does not (yet) support hidden input ...     *    */"
+// then we need to download the binary
+// Read the response
+// The test object, i.e. the instance of the class containing the test method // This is the same as testCase for JUnit3 tests // but different for JUnit4 tests which use a wrapper
+// Set the content type
+// Check response headers
+// Could we drop the Sync here?
+// most recent
+// Check if the user wants to create from template
+// Normal test failure
+// flag - if all machines within a given domain can access the variable. //(from http://www.cookiecentral.com/faq/ 3.5)
+// Next line
+// Note: the resource string won't respond to locale-changes, // however this does not matter as it is only used when pasting to the clipboard
+// username / password incorrect
+// Make a internal list of all results to allow reload data with filter or interval
+// Find the action / form url
+// The object used for each row
+// Further configuration
+// The name of the class containing the method
+// If we are using a single session // Otherwise
+// Has chances to be a var
+// The headers are written using ISO_8859_1 encoding //$NON-NLS-1$
+"/*     * Private versions of what might eventually be part of Commons-CSV or     * Commons-Lang/Io...     */"
+// so we break the loops in SampleWithListener and SampleWithReceive
+// Resource keys cannot contain spaces, and are forced to lower case // $NON-NLS-1$ // $NON-NLS-2$
+// Get data from both
+// this probably cannot happen
+"/* (non-Javadoc)     * @see org.apache.jmeter.gui.JMeterGUIComponent#modifyTestElement(org.apache.jmeter.testelement.TestElement)     */"
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#pageEnded()     */"
+// TODO should really return most specific (i.e. longest) match.
+// volatile needed to ensure safe publication
+"/*     * Handles groupingMode. actionPerfomed is not suitable, as that seems to be     * activated whenever the Proxy is selected in the Test Plan     * Also handles samplerTypeName     */"
+// Remove initial empty entry
+// Do stuff we cannot do as part of threadStarted()
+// If it was a HTTP GET request, then all parameters in the URL // has been handled by the sampler.setPath above, so we just need // to do parse the rest of the request if it is not a GET request
+// returns false if directory already exists, so need to check again
+// We know the column names all exist, so create the config
+// TODO could these be done earlier (or just once?)
+// TODO: Make the running indicator its own class instead of a JButton
+// may be updated
+// TODO: add and delete not currently supported // $NON-NLS-1$
+// Make sure all the data is flushed out
+// instance fields are copied from the client instance
+// allow use of relative file URLs
+// Not a ReplaceableController
+// Set the file uploads
+// We are displaying a SampleResult
+// value to return at EOF //$NON-NLS-1$ //$NON-NLS-2$
+// A String property:
+// ensure output is flushed
+"/*     * This map allows summarisers with the same name to contribute to the same totals.     */"
+// If icon has not been defined, then use GUI_CLASS property
+//$NON-NLS-1$ // Set params as a single line // $NON-NLS-1$ // and set as an array //$NON-NLS-1$ //$NON-NLS-1$
+// see https://developer.mozilla.org/en/HTTP_Caching_FAQ // see http://www.ietf.org/rfc/rfc2616.txt#13.2.4
+// 300 codes tell client to do actions
+// TODO: Should the method signature of this method be changed to // match the super-implementation (using a TestElement parameter // instead of AbstractListenerElement)? This would require an // instanceof check before adding the listener (below), but would // also make the behavior a bit more obvious for sub-classes -- the // Java rules dealing with this situation aren't always intuitive, // and a subclass may think it is calling this version of the method // when it is really calling the superclass version instead.
+// determine location on screen
+// FILE MENU // $NON-NLS-1$
+// getParentFile() may not work on relative paths
+// Set the content length
+//$NON-NLS-1$ //$NON-NLS-1$ // These are the names of the get/set methods
+// could be <HTML lang=""> // $NON-NLS-1$
+//or if you have assertions enabled
+// $NON-NLS-1$
+// not currently used
+// not needed for HttpClient
+//-JMX file attribute names
+// Identify subtests
+// TODO should level be more than debug ?
+// treats last line specially // Last line // Allow for missing terminator
+// Use actual class name for log
+// A HTTP POST request, with encoding not known
+// can't be null - this is checked by canAddTo
+// package protected so can be accessed by test class
+// set from field and subject
+// Translate to alias and then delegate to wrapped class
+// Maybe move to vector if MT problems occur
+// Keep existing settings
+// TODO - should LF-only EOL be allowed?
+// Ensure that directory URLs end in "/" // $NON-NLS-1$ // $NON-NLS-1$
+// This could perhaps be a variable name
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.engine.ReportEngine#stopReport()     */"
+// Get the standard toolbar properties
+// Store the key
+// Table still contains one or more rows, so highlight // (select) the appropriate one.
+"/*         * Setting SamplingStarted before the contollers are initialised allows         * them to access the running values of functions and variables (however         * it does not seem to help with the listeners)         */"
+// Number of parameters expected - used to reject invalid calls
+// Has child, but child is empty
+// TODO - should the encoding be configurable? // $NON-NLS-1$
+// Bug can generate RTE
+// Embedded
+// Assume result is OK // because we add the sample count in later
+// we provide the MIME type here
+// TODO: find a way to avoid the cost of creating a String here -- // probably a new PatternMatcherInput working on a byte[] would do // better.
+// TODO merge put and post methods as far as possible. // e.g. post checks for multipart form/files, and if not, invokes sendData(HttpEntityEnclosingRequestBase)
+// TODO is this possible?
+// should perhaps be log.warn, but this causes the client-server test to fail
+// No point instantiating class
+"/*     * Create a set of default parameters from the ones initially created.     * This allows the defaults to be overridden if necessary from the properties file.     */"
+// Check the request
+// Needs to be accessible by HTTPSampler2
+//$NON-NLS-1$ (Flash Media Manifest)
+// The list of current thread groups; may be setUp, main, or tearDown.
+"/*     * Class to handle generating the delimited string. - adds the delimiter     * if not the first call - quotes any strings that require it     */"
+// Use for x-axis scale
+// $NON-NLS-1$ // $NON-NLS-1$  // $NON-NLS-2$
+// was type, but that caused FindBugs warning
+// N.B. Needs to implement Visualizer so that TestBeanGUI can find the correct GUI class
+// N.B. Needs to implement Visualizer so that TestBeanGUI can find the correct GUI class // TODO - remove UnsharedComponent ? Probably does not make sense for a TestBean.
+// did we find BeanShell?
+// Forward all the SSLSocket methods to the input socket
+// default: 10 //$NON-NLS-1$
+//+ JMX implementation attribute values (also displayed in GUI) - do not change // $NON-NLS-1$
+// can't have an output parameter type null
+// We create the post body content now, so we know the size
+// TODO appears to duplicate the threadName field in SampleResult
+// Button
+// HACK: force the controller to load its tree
+// Truncate the file
+"/* (non-Javadoc)     * @see org.apache.jmeter.gui.action.AbstractAction#getActionNames()     */"
+// Have we used myCurrent yet? // Set to 1 if start number is missing (to allow for end without start)
+// for ssl connection
+//$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$ $NON-NLS-2$
+// its a long option
+// \u00e7 = LATIN SMALL LETTER C WITH CEDILLA // \u00e9 = LATIN SMALL LETTER E WITH ACUTE
+// If we're not storing subsequent samplers, we'll need the // first sampler to do all the work...:
+// open file
+//    private static Configuration getConfiguration(AssertionResult assResult) { //        DefaultConfiguration config = new DefaultConfiguration(ASSERTION_RESULT_TAG_NAME, "JMeter Save Service"); // //        config.setAttribute(FAILURE_MESSAGE, assResult.getFailureMessage()); //        config.setAttribute(ERROR, "" + assResult.isError()); //        config.setAttribute(FAILURE, "" + assResult.isFailure()); //        return config; //    }
+// evaluate result
+// A HTTP POST request, multipart/form-data, simple values, // with \r\n as end of line, which is according to spec, // and with more headers in each multipart
+// Save raw message
+// Keep the raw post data
+// Enable DELETE (which may already be enabled, but it won't hurt)
+// Result column renderers
+"/*     * Wrapper class to allow getConnection() to be implemented for both shared     * and per-thread pools.     *     */"
+// Iterate state
+// This assumes that the JMV treats a class file as a resource (not all do).
+// TODO
+// Only replace default if it is provided
+//++ JMX file constants - do not change //$NON-NLS-1$
+// can share these
+// Test sending data as UTF-8
+// HTTP protocol violation, but avoids NPE
+// Show that maxlong now saved as 0
+// Can't have two matching cookies
+//$NON-NLS-1$ //$NON-NLS-1$ // reduce font
+// FOREVER CHECKBOX // $NON-NLS-1$
+// While LAST, previous sample failed - should not run
+// EOF
+// Check how Class definition behaves
+// Used by itemListener // $NON-NLS-1$
+// Sample in inner loop
+// This can overflow
+// WEB REQUEST PANEL
+// get the soap:operation
+"/* (non-Javadoc)     * @see org.apache.jmeter.visualizers.request.RequestView#init()     */"
+// vars can be null if run from TestPlan
+// content-type
+// TODO: find out how to retrieve these from the script // At present the script has to use SampleResult methods to set them. // $NON-NLS-1$ // $NON-NLS-1$
+// Always create hash because we will always need it
+// Note: this is only used to implement TestIterationListener#testIterationStart // Since this is a frequent event, it makes sense to create the list once rather than scanning each time // The memory used will be released when the thread finishes
+// in the case when the filter is not set, we // parse all the lines
+"/*     * Test method for 'org.apache.jmeter.protocol.http.sampler.postWriter.sendPostData(URLConnection, HTTPSampler)'     * This method test sending a HTTPSampler with form parameters, and only     * the filename of a file.     */"
+// Moved from JMeter class
+// the other object has an empty value, so remove this value from the merged object
+// List of value by sampler
+// TODO: does it matter that an empty line will terminate the loop? // CSV output files should never contain empty lines, so probably // not // If so, then need to check whether the reader is at EOF
+// Check sample increments OK
+"/*     * Mask values for TEST_TYPE TODO: remove either MATCH or CONTAINS - they     * are mutually exckusive     */"
+// no entries in all users, therefore create an empty Map object
+// TEXT FIELD // This means exit if last sample failed // $NON-NLS-1$
+// Set false for AJP
+// Does not appear to be used (yet)
+// Look for arguments elements in the target controller or higher up:
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ // $NON-NLS-1$
+// End of code to allow engine to be controlled remotely
+// Helper method to simplify code
+// 2nd argument
+// If so, we need to start collection here
+// enable embedded html resources
+// We must ask the user if it is ok to close current project
+// TODO fix up for Nimbus LAF
+// TODO - is this used? (apart from test code)
+// Give access to initial configuration
+// log.warn("ThreadContext was not set up - should only happen in // JUnit testing..." // ,new Throwable("Debug"));
+// @GuardedBy("this") // Buffered reader
+// Set if we were successful or not
+// Default value // $NON-NLS-1$
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ //$NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Note: the file panel already includes the error logging checkbox, // so we don't have to add it explicitly.
+// TODO - not sure this is the best method
+"/* (non-Javadoc)     * @see org.apache.log.LogTarget#processEvent(org.apache.log.LogEvent)     */"
+// treat the same as EOF
+"/* (non-Javadoc)     * @see org.apache.http.conn.ssl.SSLSocketFactory#createLayeredSocket(java.net.Socket, java.lang.String, int, boolean)     */"
+// ;sessionid=value // $NON-NLS-1$
+// we've tried ...
+// TODO - could this be return?
+// Document doc = null;
+// TODO - charset? // TODO this should really be request data, but there is none
+// $NON-NSL-1$
+// TODO temporary hack to avoid unnecessary bug reports for subclasses
+// default: serial download embedded resources
+// Title multipart
+// TODO - needs more work ...
+// $NON-NLS-1$ this is the default used by HttpClient
+// create some properties and get the default Session
+// flush
+// do search
+// reversed compare allows for null
+// intermediate arrays
+// TODO turn into parameter?
+// This is used to keep track of local (non-remote) tests // The name is chosen to be an unlikely host-name // $NON-NLS-1$
+// Map header names to set() methods
+//this.setDaemon(true);
+// Calculate the test duration. Needs to xAxis Labels and getData.
+// Reached end of input arguments - perform final processing
+// Make sure same hierarchy is used
+// Only if we have updated them
+// Temporary fix to allow default protocol to be changed
+// No header provided
+// WEB SERVER PANEL
+// Instantiate the sampler
+// inport the certificate
+// Should we use java.naming.security.[principal|credentials] to create the QueueConnection?
+// case we are measuring real time of spedition
+// Fetch some variables
+// Connect to the http server, and do a simple http get, with // a pause in the middle of transmitting the header
+// Copy in ThreadStarter thread context from calling Thread
+// TODO - perhaps save other items such as headers?
+// TODO should the engine be static?
+// Close the current project
+// client log file
+// script file name (if present)
+// The response includes the headers from the mirror server, // we want to skip those, to only keep the content mirrored. // Look for the first CRLFCRLF section
+// This was the old value that was checked for // $NON-NLS-1$
+// We get the AuthManager and pass it to the WSDLHelper // once the sampler is updated to Axis, all of this stuff // should not be necessary. Now I just need to find the // time and motivation to do it.
+// Node node = tidy.parseDOM(new // ByteArrayInputStream(response.getResponseData()), null);
+// one builder for all requests in a thread
+// Ensure properties files don't use special characters
+// Does not need to be synch. because it is only accessed from the sampler thread // The ClientPool does access it in a different thread, but ClientPool is fully synch.
+// we don't; use the default parser
+// Tests for split(String,String,boolean)
+// Allow headless testing
+// use null for no expiry
+// Used by old Save service
+// first time
+// remove the g0,g1...gn vars
+// ------------------------------------------- // Constructors // -------------------------------------------
+// we call parse with 1 to get only one. // this also means if we change the implementation // to use 2, it would use every other entry and // so on. Not that it is really useful, but a // person could use it that way if they have a // huge gigabyte log file and they only want to // use a quarter of the entries.
+// only for use from test code
+// Enable the DELETE and SAVE buttons if they are currently // disabled.
+// PROTOCOL
+// TODO strings should be resources
+// re-use node association logic
+// Calculate the delay based on the mode
+// TODO Charset ? // $NON-NLS-1$
+// verify t belongs to the curve (range [0, _m-1])
+// Set up the test plan
+/* Overrides AbstractJMeterGuiComponent.configure(TestElement) */
+// Check if we know the encoding of the form
+// Add the query string if it is a HTTP GET or DELETE request
+// Button Panel
+// cache the value
+// Exception in progress
+// Random match
+// Programming error. Don't // continue.
+// TODO - should this be done when the client is created? // If so, then the details need to be added as part of HttpClientKey
+//+JMX file attributes - do not change values! // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ //-JMX file attributes
+// Save URL // $NON_NLS-1$
+// Parent folder (or single message file)
+// Force a sensible start time
+// Maybe we should consider creating a global cache for the // random files to make JMeter more efficient.
+// Lines in the file, split into columns
+"/*     * Allow functions etc to register for testStopped notification.     * Only used by the function parser so far.     * The list is merged with the testListeners and then cleared.     */"
+// now that we have stripped the file, we can parse the parameters
+//TODO do this more efficiently
+// $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$
+// col2, line 1, *B
+// remove unneeded nodes
+// Extract charset and store as DataEncoding // N.B. The meta tag: // <META http-equiv="content-type" content="text/html; charset=foobar"> // is now processed by HTTPSampleResult#getDataEncodingWithDefault // $NON-NLS-1$
+// Find and set the file for this recent file command
+"/*         * Server Settings         */"
+//subClassList);
+// get to 'path' part of the URL, preserving schema, auth, host if // present
+// DATA = model;
+// as per 2.0 branch
+// check that there aren't any extra entries
+// add a listener to activate or not concurrent dwn.
+// initalise pointer to first user
+// N.B. must be done after opening connection
+// i.e. bypass the Functors
+// Allow test code to change the default useNanoTime and nanoThreadSleep settings
+// Must be final to create instance
+// clone will produce correct type
+// throws IOE, ME
+// Set any default request headers
+"/*     * Use a suite to ensure that the default is done first    */"
+// Write the rest of the headers
+// boolean autoScale = true;
+// should the samples be aggregated on thread name or thread group (default) ?
+// Fails to generate expected Exception
+// return label
+// At least one recent file menu item is visible
+// Selection controller with two sub-controllers, but each has only 1 // child
+// TODO - improve this check
+// Have we yet tried to load the truststore?
+"/*     * Implementation notes:     *     * All of the methods in this class are currently read-only. If update     * methods are included in the future, they should be defined so that a     * single instance of JavaSamplerContext can be associated with each thread.     * Therefore, no synchronization should be needed. The same instance should     * be used for the call to setupTest, all calls to runTest, and the call to     * teardownTest.     */"
+"/*     * Method to get files list to be uploaded.     */"
+/*================= internal business =================*/
+// we have a pattern and the URL does not match, so skip it
+// ensure data is set up OK initially
+// may be the empty string
+// Match by name
+// BSF/JSR223 language to use //-- For TestBean implementations only
+// failed to initialise the class
+// Parse the arguments in querystring, assuming specified encoding for values
+// N.B. These must agree with the new member names in SampleSaveConfiguration // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// Access needed from CSVDataSet
+// not sure if null is passed in but no harm in setting it
+// initialize B
+// Write the EOL separately so we generate LF line ends on Unix and Windows // $NON-NLS-1$
+// For identifying log messages
+// put the gui object back // to the way it was.
+// Allow reversion to original shared session context
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// the host matches a domain; use its key
+// Execute the sample. In this case sleep for the // specified time, if any
+// OnlyOnce inside inner loop
+//$NON-NLS-1$
+// We always want to override the HTTPS scheme
+// Lock used to guard static mutable variables
+// This will only work with an Applet .class file. // Ideally, this should be upgraded to work with Objects (IE) // and archives (.jar and .zip) files as well.
+// Make sure we start with a reasonable value
+// Currently only used by JMeterThread
+// Check if the property exists
+//- JMX property names
+// JMX property name: do not change
+// Remove the disabled items // For GUI runs this is done in Start.java
+// No need to close this // No need to close this
+// No point checking an empty keystore
+// default to plain version
+// Update menu items to reflect recent files
+// Find the data sent to the mirror server, which the mirror server is sending back to us // We assume the headers are in ISO_8859_1, and the body can be in any content encoding.
+"/*         * TODO improve string version to better match browser behaviour? e.g.         * do browsers regard http://host/ and http://Host:80/ as the same? If         * so, it would be better to reflect this in the string         */"
+// N.B. Commons IO IOUtils has equivalent methods; these were added before IO was included // TODO - perhaps deprecate these in favour of Commons IO?
+// set the endtime for the Thread // Duration is in seconds
+// If we could not find the method, store the exception here
+//++ For TestBean implementations only // passed to file or script
+//Set internal state
+// If we are enabling the Edit-->Add menu item, then we also need to // enable the Edit menu. The Edit menu may already be enabled, but // there's no harm it trying to enable it again.
+// reload after adding alias
+// Changing color for column
+// N.B. These values are used in jmeter.properties (jmeter.httpsampler) - do not change // They can alse be used as the implementation name
+// $NON-NLS-1$ // Must be same as Header.HNAME - but that is built // later
+// *B next
+// Constructor for Serializable tests
+// Test sending data as ISO-8859-1, with values that need to be urlencoded
+// go to first line
+// ensure that clones share the same lock object
+// hack to skip processing
+// get the platform beans
+// Obtain another URL with an explicit port:
+// Catch errors and rethrow as ConversionException so we get location details
+// Because CollectionProperty.mergeIn will not prevent adding two // properties of the same name, we need to select the first value so // that this element's values prevail over defaults provided by // configuration // elements:
+// TODO should this be called if basedir == null?
+// TODO - use or remove
+// deal with the jmx files
+// It is the sub sampler of the transaction that will be sampled
+// String used to indicate a null value
+// Write the headers, and then sleep
+// ensure policy is picked up
+// 5 columns size
+// May be replaced later
+// WARNING - could be large
+// ensure only values are used
+"/*     * Create a data input text field     *     * @return the panel for entering the data     */"
+// Should we return fragment as text, rather than text of fragment?
+// $NON-NLS-1$
+// Generate Error Body
+// Convert between eclipse jar name and build.properties name
+// Hack: save the package for any transaction controllers
+// Use binary mode file transfer? // $NON-NLS-1$
+// create the certificate //rem ku:c=dig,keyE means KeyUsage:criticial=digitalSignature,keyEncipherment
+// not multipart // Check if the header manager had a content type header // This allows the user to specify his own content-type for a POST request
+// Put request does not use multipart, so no need for boundary
+"/*         * Ensure that the sample variables are correctly initialised for each run.         * TODO is this the best way to do this? should it be done elsewhere ?         */"
+// Create the self-signed keypairs (requires Java 7 for -ext flag)
+// We do not know the content encoding of the query string
+// Create a button to trigger the file chooser:
+// remap the class name
+// Cannot check the query string of the result, because the mirror server // replies without including query string in URL
+// the tree accepts a jmx file
+// (TestElement) // el.getProperty(JMSSampler.JMS_PROPERTIES).getObjectValue());
+// this is only possible for 3rd party controllers by default
+// add a message when no http sample //$NON-NLS-1$ //$NON-NLS-1$
+///////////////// Transaction Controller - parent ////////////////
+// We don't know how many entries will be skipped
+// doubled quote => quote
+// If types not provided, default to argument types, else null
+// Create the BeanShell function and set its parameters.
+// remove docs-only jars
+// now create the aliases
+// Jacobi convergence test
+// This 'other value' regex is deliberately weak, even accepting an empty string, to be useful when reporting malformed data. // $NON-NLS-1$
+// Updated the property lists
+// Can be null if init fails
+// Add the recent files, which will also add a separator that is // visible when needed
+// check there is a GUI
+// lifecycle methods
+// TODO field always true, what for ?
+// iterate thru each of the other headers
+// Test sending data as UTF-8, with values similar to __VIEWSTATE parameter that .net uses
+// this.DATA = null; // this.DATA = stat;
+// Can be null (not sure why)
+// Simple inclusion and exclusion filter
+// Process escaped characters // Store the \
+// NOT USED transient protected ThreadGroup THREADGROUP = null; // Anyway, was this supposed to be the class from java.lang, or // jmeter.threads?
+// Assume no recent files
+// $NON-NLS-1$ // Button group resources
+// verify if regex groups exists
+// Show Tidy warnings ?
+// i.e. if we want per thread pooling // pool will be created later
+//        p.add(makeMainPanel(), BorderLayout.CENTER); // Force a minimum table height of 70 pixels
+// Note: this is an instance field (and is not transient), so is created by the JMeter client // and propagated to the server instance by RMI. // [a static field would be recreated on the server, and would pick up the server properties] // $NON-NLS-1$
+// $NON-NLS-1$ // for intermediate use // output line buffer
+// TODO - should this be restored?
+"/*     * Helper method     */"
+// make sure setting the new isolation mode is done in an auto committed transaction
+// Target server panel
+// clone will produce correct type // TODO but why do we need to clone the list?
+// Default concurrent pool size for download embedded resources
+// surl can be null if read from a file
+// the Method objects for setUp (@Before) and tearDown (@After) methods // Will be null if not provided or not required
+// Temporary copies, so can set the final ones
+// perform the sample
+// Add sample
+"/*     * Test GUI elements - create the suite of tests     */"
+// convert the Parameters
+// strip the -
+// Programming error: // bail out.
+//GuardedBy("this")
+// Find the first empty line of the multipart, it signals end of headers for multipart // Agents are supposed to terminate lines in CRLF:
+//  Normal output //  ---- Debugging information ---- //  required-type       : org.apache.jorphan.collections.ListedHashTree //  cause-message       : WebServiceSampler : WebServiceSampler //  class               : org.apache.jmeter.save.ScriptWrapper //  message             : WebServiceSampler : WebServiceSampler //  line number         : 929 //  path                : /jmeterTestPlan/hashTree/hashTree/hashTree[4]/hashTree[5]/WebServiceSampler //  cause-exception     : com.thoughtworks.xstream.alias.CannotResolveClassException //  -------------------------------
+// parameters to pass to script file (or script)
+// default : get first connector
+// LOOP COUNT
+// N.B. Backslashes are removed before dollar, comma and backslash
+// i is used below
+// Don't display Request headers label if rh is null or empty
+// Two null values -- return equal
+// Arguments args = sampler.getArguments();
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// the DEFAULT class // Convert int to Integer etc:
+// Test plan with OnlyOnceController inside inner loop // Set up the test plan
+// OK, because used in synchronised method
+// Hack: bsh-2.0b5.jar BshScriptEngine implements Compilable but throws "java.lang.Error: unimplemented"
+// TODO is this the right thing to do?
+// For each directory in the search path, add all the jars found there
+// so we don't generate chunked encoding
+// Find the package for the transaction
+// Update follow redirects setting just for this connection
+// a well-bahaved browser is supposed to send 'Connection: close' // with the last request to an HTTP server. Instead, most browsers // leave it to the server to close the connection after their // timeout period. Leave it to the JMeter user to decide.
+// calculate the height
+"/* (non-Javadoc)     * @see org.apache.jmeter.visualizers.request.RequestView#clearData()     */"
+// Holds the reverse mappings // Key: full class name Entry: primary alias
+// Allow for non-sample time
+// The Locale used to instantiate the GUI objects
+// we have a variable name
+"/** * <p> * Super-class for TestElements that can be applied to main sample, sub-samples or both. * [Assertions use a different class because they use a different value for the {@link #getScopeName()} constant] * </p> * * <p> * Their corresponding GUI classes need to add the ScopePanel to the GUI * using the AbstractXXXGui methods: * <ul> * <li>createScopePanel()</li> * <li>saveScopeSettings()</li> * <li>showScopeSettings()</li> * </ul> * </p> */"
+// ensure counts are updated correctly
+// Enough to read the header column names // Get the first line, and see if it is the header
+// Button group resources when Bytes Message is selected
+// Specific setup
+// RUN MENU // $NON-NLS-1$
+// general exception
+// Y Axis ruler
+// If a table cell is being edited, we must cancel the editing // before deleting the row.
+// if the directory already exists and is a directory, // we just renamed to "archive.date"
+// If invokee was provided, then clazz has been set up
+// JMenu reportMenu; // JMenuItem analyze;
+// We did not replace the entry // so use the existing one
+// Default file name // $NON-NLS-1$
+// if either a file or path location is given, // get the file object. // we have a file
+// cannot be first line either
+//@GuardedBy("sampleStore") TODO perhaps use ConcurrentHashMap ?
+// Check some initial variables
+// Not 'else if' because forceReloadData
+// create instances needed for parsing
+// $NON-NLS-1$ //default: IP/Hostname
+"/*     * Checks for LAST or LASTsuffix.     * Returns the LAST name with .JMX replaced by suffix.     */"
+// For completeness
+// script can also use setResponseData() so long as it returns null
+// TODO should this set the thread names for all the subsamples? // might be more efficient than fetching the name elsewehere
+// Start with 0 so tries at least once, and retries at most MAX_CONN_RETRIES times
+// add listener to intercept texttofind changes and reset search
+// Use MD5 // $NON-NLS-1$
+// Don't use nanoThread
+"/*                     * Now check for invalid message format: if string contains {0}                     * and ' there may be a problem, so do a format with dummy                     * parameters and check if there is a { in the output. A bit                     * crude, but should be enough for now.                     */"
+// Process command line property definitions // These can potentially occur multiple times
+// capture the intermediate output
+// Called by SaveService.loadTree(InputStream reader) if XStream loading fails
+// Don't allow override of Content-Length // This helps with SoapSampler hack too // TODO - what other headers are not allowed?
+// Not an expression (isn't or can't be), not null.
+// Are we about to start a new option?
+// capture the output
+// We don't want this passed on to browser
+// boolean toReturn = true;
+// Maps to contain page and form encodings // TODO - do these really need to be shared between all Proxy instances?
+// N.B. setParameters is called before the test proper is started, // and thus variables are not interpreted at this point // So defer the file open until later to allow variable file names to be // used.
+// houston we have a problem !!
+// $NON-NLS-1$ // Temporary copies, so can set the final ones
+// List for recent files menu items
+// Retrieve the formatted data using the same encoding used to create it
+// Don't allow override of Content-Length // TODO - what other headers are not allowed?
+// Highlight (select) the appropriate row.
+// create transient item
+// If we are merging in another test plan, we know the test plan is dirty now
+// not yet handled
+"/*     * TODO - convert to work more like upgrade.properties/NameUpdater.java     *     * Special processing is carried out for the Header Class The String     * property TestElement.name is converted to Header.name for example:     * <elementProp name=""User-Agent""     * elementType=""org.apache.jmeter.protocol.http.control.Header""> <stringProp     * name=""Header.value"">Mozilla%2F4.0+%28compatible%3B+MSIE+5.5%3B+Windows+98%29</stringProp>     * <stringProp name=""TestElement.name"">User-Agent</stringProp>     * </elementProp> becomes <elementProp name=""User-Agent""     * elementType=""org.apache.jmeter.protocol.http.control.Header""> <stringProp     * name=""Header.value"">Mozilla%2F4.0+%28compatible%3B+MSIE+5.5%3B+Windows+98%29</stringProp>     * <stringProp name=""Header.name"">User-Agent</stringProp> </elementProp>     */"
+// Get all the request properties, which are the headers set on the connection
+// superclass is not typed
+// REMIND: convert arg list Vectors here?
+// Needs to be volatile as may be referenced from multiple threads // TODO see if this can be made final somehow
+// pick up headers if failed to execute the request
+// Add local JMeter properties, if the file is found //$NON-NLS-1$ //$NON-NLS-1$
+//NOOP
+// May be null if function is used on TestPlan
+// reponse code doesn't really apply, since // the soap driver doesn't provide a // response code
+// API expects null not empty array, see http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/X509KeyManager.html
+"/*             * Set up the sample result details             */"
+// [sebb] assertEquals(item2, // clonedItem.getProperty(item2.getName()));
+"/*     * Method to set files list to be uploaded.     *     * @param value     *   HTTPFileArgs object that stores file list to be uploaded.     */"
+"/* (non-Javadoc)         * @see org.xml.sax.helpers.DefaultHandler#fatalError(org.xml.sax.SAXParseException)         */"
+"/*     * TODO should these fields be public?     * They don't appear to be used externally.     *      * Also, are they any different from HTTPConstants.GET etc. ?     * In some cases they seem to be used as the method name from the Tomcat log.     * However the RMETHOD field is used as the value for HTTPSamplerBase.METHOD,     * for which HTTPConstants is most approriate.     */"
+// Allow for null strings
+// NOOP
+// N.B. this will be a config element, so we cannot use the setXXX() methods
+// generate the request
+// Helper method to simplify marshall routine
+// Hack to allow entire URL to be provided in host field
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // Look and Feel prefix // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ enable/disable // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// trailing string is not empty
+// if a blank HeaderManager exists, try to // get the SOAPHTTPConnection. After the first // request, there should be a connection object // stored with the cookie header info.
+// Why does this not call guiInstance.clearTestPlan() ? // Is there a reason for not clearing everything?
+// handle body and attachments
+// Obtain the propertyEditors:
+// Hack to allow automated tests to find when test has ended //transient boolean testEnded = false;
+// Support original property name // $NON-NLS-1$
+// must be a "here" document
+// HELP MENU //$NON-NLS-1$
+// Done with the sampling proper.
+// Only for use by CSVSaveService
+// for reading CSV files
+// strip the - // -- sequence .. it can either mean a change of state // to STATE_NO_OPTIONS or else a long option
+// Methondname must always be provided.
+// value is of type Collection<JMeterProperty>
+// optional connector name prefix
+// probably does not need to be synch (always accessed through ThreadLocal?) // give access to Test code
+// Check if we found an accept-charset attribute on the form
+// Send different event wether we are merging a test plan into another test plan, // or loading a testplan from scratch
+// name cannot be null
+// most likely this is because of a certificate error
+// grab the nodes
+// TODO is sync really needed?
+// checkboxes
+// center position and 50% of screen size
+// Set up the local address if one exists
+// NOTUSED Font plainText = new Font("plain", Font.PLAIN, 9); // These must not be static, otherwise Language change does not work //$NON-NLS-1$
+// $NON-NLS-1$ // so it agrees with above // TODO perhaps should share code with __time() function for this... // $NON-NLS-1$ $NON-NLS-2$ // $NON-NLS-1$ $NON-NLS-2$
+// special handling
+// TODO should equals and hashCode depend on field other than count?
+"/*     * ------------------------------------------------------------------------     * Methods     * ------------------------------------------------------------------------     */"
+// no point continuing
+// Try to get data from subresult // Needed for addSubResult()
+// Add separator as the last item
+"/*     * Required to satisfy HTTPSamplerBase Should not be called, as we override     * sample()     */"
+// Check URL
+// Expensive, so // do // once
+// Extract transfer data.
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// TODO: should this just call super()?
+// a and b should be equal
+// tidy up any unused entries
+// init newX and oldX arrays to 0
+"/*     * Listen to test and handle tidyup after non-GUI test completes.     * If running a remote test, then after waiting a few seconds for listeners to finish files,     * it calls ClientJMeterEngine.tidyRMI() to deal with the Naming Timer Thread.     */"
+// Not enabled
+// Are we the default language?
+// Skip report packages as implementation is incomplete // Skip report GUI as implementation is incomplete // No, not a work in progress ...
+// Redisplay.
+// or a treenode from the same tree
+// IF for download concurrent embedded resources
+// Save in case needed later
+// // Member variables //
+// TODO should we allow null for non-primitive types?
+// if ! isPathExtension()
+// will always be within range of an int: as must be < width
+// Function does not exist, so treat as per missing variable
+// get the start of the file
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+//$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$ //$NON-NLS-1$ $NON-NLS-2$ //$NON-NLS-1$
+// Delete any properties whose name converts to the empty string
+//final int _ignored = 1;
+// The outer sample and the inner loop samples
+// Must wrap non-scriptable objects before presenting to Rhino
+// records the existance of an equal sign
+// Do something ...
+// for labels
+// N.B. default charset is used deliberately here
+// local vars
+// getAllHeaders() is not yet genericised // throws ME
+// The transaction fails if any sub sample fails
+// TODO perhaps make more specific than this? // no point parsing anything else, e.g. GIF ...
+// log is required to ensure errors are available
+// sort the selected tree path by row
+// Read resource file saving the keys
+// Compare if the value has changed, since we received focus.
+//TODO add some real tests now that split() has been removed
+// There's only 1 test plan, so can cache the mode here
+// TODO this bit of code needs to be tidied up // Unfortunately ModuleController is in components, not core // Bug 47165
+"/** * Generates Configure pop-up dialogue for Listeners from all methods in SampleSaveConfiguration * with the signature ""boolean saveXXX()"". * There must be a corresponding ""void setXXX(boolean)"" method, and a property save_XXX which is * used to name the field on the dialogue. * */"
+// default not visible
+"/*     *   Write out search results in a stable order (including order of all subelements which might     * be reordered like attributes and their values) so that simple textual comparison can be done,     * unless the number of results exceeds {@link #MAX_SORTED_RESULTS} in which case just stream     * the results out without sorting.     */"
+// this.updateUI();
+// track where tags start ...
+// restore last selected tab
+// int spare = cntr.getThreadInfo().getMaxSpareThreads();
+// Total number of threads
+// shouldn't draw negative values
+// "-Dstupid=","-c"
+// computes auto-scaling and absolute plots
+// Called by JMeter#startGui()
+"/*         *  Simple test with single Selection controller         *  Generic Controller         *  + Sampler ""before""         *  + Switch Controller         *  + + Sampler ""zero""         *  + + Sampler ""one""         *  + + Sampler ""two""         *  + + Sampler ""three""         *  + Sampler ""after""         */"
+// work out the total size
+"/*     * The method will check to see if JMeter was started in NonGui mode. If it     * was, it will try to pick up the proxy host and port values if they were     * passed to JMeter.java.     */"
+// $NON-NLS-1$  // $NON-NLS-1$
+"/*     * See below for reason for this change. Just in case this causes problems,     * allow the change to be backed out     */"
+// ensure that the initial cookies are copied to the per-thread instances
+// listen on sample
+// NOTUSED private String chosenFile;
+// msgId not available until after send() is called // Note: there is only one admin object which is shared between all threads // interlock with Receiver
+"/*     * Remove all the cookies.     */"
+// Number of active threads in this group
+// add match as Integer
+// samplerData attributes. Must be unique. Keep sorted by string value. // Ensure the Listener documentation is updated when new attributes are added //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// file to source (overrides script)
+// reset for reuse
+// For use by AJP
+// This should be enough to allow server to exit. // default is false
+// TODO: the above works in the current situation, but it's // just a hack. How to get each editor to report whether it // wants to grow bigger? Whether the property label should // be at the left or at the top of the editor? ...?
+// Defaults
+// If the Parameter data can be converted (i.e. no names), we  // warn the user that the Parameter data will be lost.
+// $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$ // $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$ // $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$
+"/*         * Reset Locale if necessary so other locales are properly handled         */"
+// log.warn("Only for use in unit testing");
+// Commented as per sebb  // http://mail-archives.apache.org/mod_mbox/jmeter-dev/201307.mbox/%3CCAOGo0VZ0z3GMbfsq_gSB%2Bp7nTUqLng6Gy2ecvYbD8_AKb-Dt5w%40mail.gmail.com%3E
+"/*             * Create a Header Manager to ensure that the browsers headers are             * captured and sent to the server             */"
+// Jacobi system resolving // results are stored in _rS // computes the coefficients (di, ci, bi, ai) from the results
+"/** * Aggregates sample results for use by the Statistical remote batch mode. * Samples are aggregated by the key defined by getKey(). * TODO: merge error count into parent class? */"
+// Skip the blank line with crlf dividing headers and body
+"/* (non-Javadoc)     * @see org.apache.jmeter.gui.JMeterGUIComponent#getMenuCategories()     */"
+// temp test case for exploring settings
+// Default to overall format, and then to version 2.2
+// $NON-NLS-1$ // $NON-NLS-1$ // Don't try to instantiate these
+// $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$ // $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$ // $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$ // $NON-NLS-1$ // $NON-NLS-2$ $NON-NLS-3$
+// This stores the state of the TestElement
+// Needed by Visualizer interface
+// test cases for making Url, and exercise method // parseArguments(String queryString)
+// Get the query string encoded in specified encoding // If no encoding is specified by user, we will get it // encoded in UTF-8, which is what the HTTP spec says
+// Check when match fails
+// Unfortunately AbstractTestElement does not call super.clone()
+// now we create the compiled pattern and // add it to the arraylist
+// we sort the objects
+// To display current sampler result before change
+// Display not found message and reset search
+//rem generate cert for DOMAIN using CA (requires Java7 for gencert) and import it
+// Better error than NPE
+// already include the \r\n
+// draw the X axis
+// Localize the property names and descriptions:
+// No need to synch/ - only used by sampler and ClientPool (which does its own synch)
+// Add regexp tester pane // $NON-NLS-1$ // $NON-NLS-1$
+// Prevent useless dump attempts
+// See catch clause below
+// boolean resized = true;
+// The default is false, so we can remove the property to simplify JMX files // This also allows HTTPDefaults to work for this checkbox
+// TODO - is this the correct default?
+// Don't try to instantiate these
+// haven't got to reset paramname & paramvalue // but did it to keep the code looking correct
+// may also happen if long value > int.max
+// template // match number // ALL separator
+"/*     * Only needed locally     */"
+//    Remaining implementations delegate to the wrapped key manager
+// the upper limit of the curve range belongs by definition // to the last interval
+// Holds the mappings from the saveservice properties file // Key: alias Entry: full class name // There may be multiple aliases which map to the same class
+//@GuardedGy("this")
+// sends the result to the visualiser // updates the model used for sending e-mails
+// Needed for all but Nimbus // Nimbus works - after a fashion - with this // Nimbus works - after a fashion - with this // reset
+// While (blank), previous sample failed - should run once
+// If the request entity is repeatable, we can send it first to // our own stream, so we can return it
+"/*     * ------------------------------------------------------------------------     * Constructors     * ------------------------------------------------------------------------     */"
+// Request validation // $NON-NLS-1$
+"/*     * Use regexes to match the source data     */"
+// use Math.round () instead of simple (long) to provide correct value rounding
+// We get the posted bytes using the charset that was used to create them
+// TODO is this sensible?
+// Add the sub components
+// Avoid NPE in resetPage()
+// Does not need to be synchronised, as all access is from same thread
+// dimension changed // resized = true;
+// The name of the property used to hold our data //$NON-NLS-1$
+// parse other header lines, looking for Content-Length
+// Check for file lists specifically
+// Needs to be done after execute to pick up all the headers
+// go to 1st line
+// String domain = "localhost";
+// Must be done before setContentType
+// e.g. text/html; charset=utf-8
+// Allow engine and threads to be stopped from outside a thread // e.g. from beanshell server // Assumes that there is only one instance of the engine // at any one time so it is not guaranteed to work ...
+// JAVA Impl accepts URLs with unsafe characters so don't do anything
+// Empty string
+// Empty strings at EOF
+// Engine may be null if it has not correctly started
+// TODO : This is a bit fragile
+// Forward to sampler
+// Not found
+// first we check to see if body tag has a // background set
+//                ScriptRuntime.call(cx, fun, global, args, global);
+// invalid dates must be treated as expired
+// Test with SimpleController as first item
+// not thrown, so need to check here
+// empty collection ok to cast, local var is here to allow SuppressWarnings
+// There was an object in map, destroy the temporary and return one in map (oldCtx)
+// All implementations extend TestElement
+// Needs to be public for tests
+// Allows HTTPSamplerProxy to call notifyFirstSampleAfterLoopRestart; subclasses can override if necessary
+// We just add placeholder text for file content // $NON-NLS-1$ // Write the end of multipart file
+// Check if the transaction is done
+// Remote exit // Called by RemoteJMeterEngineImpl.rexit() // and by notifyTestListenersOfEnd() iff exitAfterTest is true; // in turn that is called by the run() method and the StopTest class // also called
+// Should we allow directories?
+// This is needed to stop XStream keeping copies of each class
+/* Implements JavaSamplerClient.setupTest(JavaSamplerContext) */
+// Provide an initial edit value if necessary -- this is an // heuristic that tries to provide the most convenient // initial edit value:
+//private static ReportPlan plan;
+// Drop the last character:
+//@GuardedBy("accumulators") - needed to ensure consistency between this and instanceCount
+// headerManager was set, so let's set the connection // to use it.
+// This is not a requirement
+// If this is defined, it is assumed to be the alias of a user-supplied certificate; overrides dynamic mode // $NON-NLS-1$
+// Static fields are resolved on the server
+// TODO is this a sensible number? //$NON-NLS-1$
+// Content-length
+// Need both sample and error count to be any use
+// Version information for test plan header // This is written to JMX files by ScriptWrapperConverter // Also to JTL files by ResultCollector // $NON-NLS-1$
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// We've finished with the request, so we can add the LocalAddress to it for display
+// Get the string given from the choose and check // the file extension.
+// may be null for PUT // In an application/x-www-form-urlencoded request, we only support // parameters, no file upload is allowed
+// Not should always succeed against an empty result
+// get the node
+// won't work: writeErrorToClient(HttpReplyHdr.formInternalError()); // Generate result (if nec.) and populate it // hack to skip processing
+// Package protected to allow test case access
+// @GuardedBy("this")
+// Record in log as well
+// Also initialises JMeter logging
+// ignored. May happen occasionally, but no harm done if so.
+// Add the standard title
+// return new Dimension(width, 400);
+// Hack to resolve ModuleControllers in non GUI mode
+// Noop
+// $NON-NLS-1$ // No point trying these
+"/*     * A dummy class to pass the pointer of URL.     */"
+// The following are used to set the Result details on return from // the script: //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$
+// This is used to emulate @before class and @after class
+/* Implements JavaSamplerClient.teardownTest(JavaSamplerContext) */
+// take copy so cannot get NPE
+// we add the entry
+// can this happen?
+//OK //OK //OK //OK // files is created automatically, and applies per instance //OK
+// This should be ignored, as there is no value
+// If we got any results, then perform processing on the result
+// Test can't have a duration more than 2^31 secs (cast from long to int)
+// Change the original back again
+// It might be useful also to make this available in the 'Request' tab, for // when posting JSON.
+// Creation of the customizer and GUI initialization is delayed until // the // first // configure call. We don't need all that just to find out the static // label, menu // categories, etc!
+// Labels - don't make these static, else language change will not work
+// Otherwise, the response is scanned for these strings //$NON-NLS-1$
+"/*     * Wraps the socket in a slow SSL socket if necessary     */"
+// Accumulate waiting time for later
+// information display Panel
+// Mostly delegates to model
+"/*     * Constructor is initially called once for each occurrence in the test plan     * For GUI, several more instances are created Then clear is called at start     * of test Called several times during test startup The name will not     * necessarily have been set at this point.     */"
+// do nothing, wait for the next pile to complete
+// $NON-NLS-1$ // reader = xmlFactory.newSAXParser().getXMLReader();
+// Check illegal array lengths
+// TODO - should we call start() and stop()?
+// Get folder
+// Is it an exception wrapped in a JavaScriptException?
+// throws ME
+// en // fr // de // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // ja // zh_CN // zh_TW
+// NOTREAD // $NON-NLS-1$
+// Create the property:
+// Make sure decoding // follows input file
+//$NON-NLS-1$ // change the classname drop down
+// TODO do contentType and/or dataEncoding belong in HTTPSampleResult instead?
+// Notify listeners with the transaction sample result
+// Set up list of potential targets and // enable listener
+// Otherwise don't save anything - no point
+// Java 1.6.0_22+ no longer allows Content-Length to be set, so don't check it. // See: http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6996110 // TODO any point in checking the other headers?
+// $NON-NLS-1$
+// Sample that will get two sub results, simulates a web page load
+// listeners = controller.getListeners();
+// Dropped out, i.e. did not find closing ')'
+//   Used by both StandardJMeterEngine and ClientJMeterEngine. //   In the latter case, only ResultCollectors are updated, //   as only these are relevant to the client, and updating //   other elements causes all sorts of problems. // skip certain processing for remote tests
+//        private void drawCross(Graphics g, int x, int y) { //            g.drawLine(x + (iconWidth - 4), y + 2, x + 3, y + (iconHeight - 5)); //            g.drawLine(x + (iconWidth - 4), y + 3, x + 3, y + (iconHeight - 4)); //            g.drawLine(x + 3, y + 2, x + (iconWidth - 4), y + (iconHeight - 5)); //            g.drawLine(x + 3, y + 3, x + (iconWidth - 4), y + (iconHeight - 4)); //        }
+// we're sure that there is at least one file because of // getSendFileAsPostBody method's return value.
+// Only print final delta if there were some samples in the delta // and there has been at least one sample reported previously
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // For use in debugging: // $NON-NLS-1$
+// assume default charset is OK here //      <apache-bsf.version>2.4.0</apache-bsf.version>
+// The headers and body are divided by a blank line (the \r is to allow for the CR before LF) // $NON-NLS-1$
+// Processes Assertions // display a SampleResult
+// start/end index default value for string getters and setters
+// $NON-NLS-1$ // file_merge.setAccelerator( // KeyStroke.getKeyStroke(KeyEvent.VK_O, KeyEvent.CTRL_MASK));
+// $NON-NLS-1$ // $NON-NLS-1$  $NON-NLS-2$
+// should remote engines be stopped at end of non-GUI test?
+// should not happen
+// else No object in Map, ctx is the one
+// For unit tests, @see TestCSVSaveService
+// Record sample start time.
+// TODO - why lower case? OK to use the default Locale?
+// This class is not serialised // The interpreter instance for this class
+// $NON-NLS-1$ // Get the previous count
+//$NON-NLS-1$;
+// Do not send subsamples to listeners which receive the transaction sample
+// Helper method to maintain timestamp relationships
+// we have a single character; could be a token // it is a token
+// we check to see if the lastSelectedPath is null // after we clear, it would return null
+// Always decode
+// run threadStarted only if Destination setup on each sample
+// finally, merge the names so it's clear they've been merged
+// double click
+// initialize the diagonal of the system matrix (A) to 4
+// Insert the subControllersAndSamplers into random list positions.
+/* Implements JavaSamplerClient.getDefaultParameters() */
+//    public final static String CONNECTION = "MongoSourceElement.connection"; //$NON-NLS-1$ //    public final static String SOURCE = "MongoSourceElement.source"; //$NON-NLS-1$ // //    public final static String AUTO_CONNECT_RETRY = "MongoSourceElement.autoConnectRetry"; //$NON-NLS-1$ //    public final static String CONNECTIONS_PER_HOST = "MongoSourceElement.connectionsPerHost"; //$NON-NLS-1$ //    public final static String CONNECT_TIMEOUT = "MongoSourceElement.connectTimeout"; //$NON-NLS-1$ //    public final static String CONTINUE_ON_INSERT_ERROR = "MongoSourceElement.continueOnInsertError"; //$NON-NLS-1$ //    public final static String MAX_AUTO_CONNECT_RETRY_TIME = "MongoSourceElement.maxAutoConnectRetryTime"; //$NON-NLS-1$ //    public final static String MAX_WAIT_TIME = "MongoSourceElement.maxWaitTime"; //$NON-NLS-1$ //    public final static String SOCKET_TIMEOUT = "MongoSourceElement.socketTimeout"; //$NON-NLS-1$ //    public final static String SOCKET_KEEP_ALIVE = "MongoSourceElement.socketKeepAlive"; //$NON-NLS-1$ //    public final static String THREADS_ALLOWED_TO_BLOCK_MULTIPLIER = "MongoSourceElement.threadsAllowedToBlockForConnectionMultiplier"; //$NON-NLS-1$ // //    public final static String FSYNC = "MongoSourceElement.fsync"; //$NON-NLS-1$ //    public final static String SAFE = "MongoSourceElement.safe"; //$NON-NLS-1$ //    public final static String WAIT_FOR_JOURNALING = "MongoSourceElement.waitForJournaling"; //$NON-NLS-1$ //    public final static String WRITE_OPERATION_NUMBER_OF_SERVERS = "MongoSourceElement.writeOperationNumberOfServers"; //$NON-NLS-1$ //    public final static String WRITE_OPERATION_TIMEOUT = "MongoSourceElement.writeOperationTimeout"; //$NON-NLS-1$
+// If we redirected automatically, the URL may have changed
+// handle: ContentType: text/plain; charset=ISO-8859-1; format=flowed
+// number of previous matches
+// may well happen
+// *A next
+// If file encoding is specified, write using that encoding, otherwise use default platform encoding
+// Allow for some margin of error // Check that the throughput uses the time elapsed for the sub results
+// keystore for SSL keys; fixed at config except for dynamic host key generation
+// N.B. The keys can be either JMeterTreeNode or TestElement
+// only http and https are supported
+// Check if this instance is present in transaction listener list
+// If child of TransactionController is a ThroughputController and TPC does // not sample its children, then we will have this // TODO Should this be at warn level ?
+// Remove the workbench and testplan nodes
+// Ensure that these are set, even if no paramters are provided //$NON-NLS-1$ //$NON-NLS-1$
+// Expected results established using the DDA // algorithm (see // http://www.siggraph.org/education/materials/HyperGraph/scanline/outprims/drawline.htm): // 0/1 vs. 1/1 -> 0 is // closer to 33.33 // 0/2 vs. 1/2 -> 50.0 is closer to // 33.33 // 1/3 vs. 2/3 -> 33.33 is // closer to 33.33 // 1/4 vs. 2/4 -> 25.0 is closer to // 33.33 // 1/5 vs. 2/5 -> 40.0 is closer to // 33.33 // 2/6 vs. 3/6 -> 33.33 is // closer to 33.33
+"/*     * Utility routine to get the connection from the pool.     * Purpose:     * - allows JDBCSampler to be entirely independent of the pooling classes     * - allows the pool storage mechanism to be changed if necessary     */"
+// Needs to be done before any GUI classes are instantiated
+// assume it's senstive data
+//+ JMX field names - do not change values //$NON-NLS-1$
+// First the multipart start divider
+// add duplicates
+// Create empty properties
+// Shutdown the http server
+// We must set res to null now, before sending the event for the transaction, // so that we can ignore that event in our sampleOccured method
+// If set, this is the regex that is used to extract the status from the // response // NOT implemented yet private static final String STATUS_REGEX = // JMeterUtils.getPropDefault("tcp.status.regex","");
+// Yes, so the second argument is missing
+"/*                     * TestSuite only finds testXXX() methods, and does not look                     * for suite() methods.                     *                      * To provide more compatibilty with stand-alone tests,                     * where JUnit does look for a suite() method, check for it                     * first here.                     *                      */"
+// Outer only once + ("three" + "only once five and six" + "eight in interleave only once" + ("four" + "interleave" + "eleven") * innerLoopCount) * outerLoopCount;
+// ignored, already processed
+// private static StringProperty defaultProperty = new StringProperty();
+// Not an expression (isn't or can't be), not null. // may throw IllegalArgumentExc.
+//$NON-NLS-1$ // TODO - probably wrong
+// Button for browsing webservice wsdl
+// Test that only loops twice
+// $NON-NLS-1$ // $NON-NLS-1$
+// I guess this can happen as a result of a bad // file read? In this case, it would be better to replace the // incorrect value with anything valid, e.g. the default value // for the property. // But for the time being, I just prefer to be aware of any // problems occuring here, most likely programming errors, // so I'll bail out. // (MS Note) Can't bail out - newly create elements have blank // values and must get the defaults. // Also, when loading previous versions of jmeter test scripts, // some values // may not be right, and should get default values - MS // TODO: review this and possibly change to:
+// Allow for property not yet being set (probably only applies to Test cases)
+// This must be done last, as must not be overridden
+// TODO Method with 0 reference, really useful ?
+// Check if the line is a header
+// private method to allow AsyncSample to reset the value without performing checks
+// for editors
+"/*     * Private iterator used to unwrap the URL from the URLString class     *     */"
+// Exclude the COOKIE header, since cookie is reported separately in the sample
+// TODO: process warnings? Set Code and Message to success?
+// Take length from file
+// must be defined
+"/*     * <p> Returns a <code>String</code> value for a character-delimited column     * value enclosed in the quote character, if required. </p>     *      * <p> If the value contains a special character, then the String value is     * returned enclosed in the quote character. </p>     *      * <p> Any quote characters in the value are doubled up. </p>     *      * <p> If the value does not contain any special characters, then the String     * value is returned unchanged. </p>     *      * <p> N.B. The list of special characters includes the quote character.     * </p>     *      * @param input the input column String, may be null (without enclosing     * delimiters)     *      * @param specialChars special characters; second one must be the quote     * character     *      * @return the input String, enclosed in quote characters if the value     * contains a special character, <code>null</code> for null string input     */"
+// How many classes can we assign from? // TODO: there must be a nicer way...
+"/*     * If non-null, then any argument list passed to invoke() will be ignored.     */"
+// Check unquoted charset
+// TODO save hostname; save sample type (plain or http)
+// Save cache information
+// $NON-NLS-1$ // $NON-NLS-1$ //$NON-NLS-1$ // $NON-NLS-1$
+// call normal shutdown (wait ending all tasks)
+// Generate test error
+// create the JTable that holds header per row
+// // Override the implementations of the superclass, forwarding all methods // from the CellEditor interface to our delegate. //
+// If true, start/stop subscriber for each sample
+// Test CSV file with a header line
+// i.e. EOF
+// 0-based
+// $NON-NLS-1$ // Detect if user has pressed a new link
+// Convert both to Sets
+// Don't save this - only needed for processing CSV headers currently
+// TODO does not appear to be used
+// Allow HttpClient to handle the redirects:
+// Perform a sum and check the results
+// It is chunked transfer encoding, which we do not really support yet. // So we just read without blocking, because we do not know when to // stop reading, so we cannot block // TODO propery implement support for chunked transfer, i.e. to // know when we have read the whole request, and therefore allow // the reading to block
+// Match all
+//flag - if all machines within a given domain can access the variable. //(from http://www.cookiecentral.com/faq/ 3.5)
+// Set up the sample result details
+"/* (non-Javadoc)     * @see org.apache.http.conn.ssl.SSLSocketFactory#createSocket(org.apache.http.params.HttpParams)     */"
+// Handle escapes
+// N.B. It seems that Opera needs a chain in order to accept server keys signed by the intermediate CA // Opera does not seem to like server keys signed by the root (self-signed) cert.
+// TODO not used?
+//$NON-NLS-1$ // We only support chunked transfer encoding
+// works OK even if ContentEncoding is null
+// preset to default impl
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#setSuccessful(boolean)     */"
+// file New operation may set to null, so just return app name
+// Will use default isolation
+// In a post request which is not multipart, we only support // parameters, no file upload is allowed
+// Don't wrap this error - display it as is
+//p.add(makeButtonPanel(), BorderLayout.SOUTH);
+// Needed by AbstractTestElement. // Also TestElementConverter and TestElementPropertyConverter for handling empty comments //$NON-NLS-1$ // N.B. Comments originally only applied to Test Plans, hence the name - which can now not be easily changed
+// The DNAME which is used if none is provided // $NON-NLS-1$
+// $NON-NLS-1$ //$NON-NLS-1$
+// start in new state
+// It is not possible to access the actual HTTP response code, so we assume no data means failure
+// di (degree 0)
+// Shutdown mirror server
+// Add the parameters
+// reuse documentation //$NON-NLS-1$ //$NON-NLS-2$
+// etc...
+// If none of the arguments have a name specified, we // just send all the values as the post body
+// Method is broken anyway
+// Don't change locale from en_GB to en
+// Should only be called with classes that extend annotations
+// thrown by Derby JDBC (at least) if there are no "?" markers in statement
+//wait for all Test Threads To Exit
+// Write the form section
+// e.printStackTrace();
+// 3 columns size
+// Encode the parameter value in the specified content encoding
+// for Thread Pool for resources but no need to use a special value?
+// TODO this is not populated currently
+// Empty delimiter
+// convertTree(tree);
+// reload to pick up new aliases // reloading is very quick compared with creating an entry currently
+// assume the sample will run as soon as the delay has expired
+// Prepare the Request tabbed pane
+// Note UserParameterXML accesses this variable // to obtain the Set data via method getParsedParameters()
+// alias // subject
+// override action behaviour
+// Reset the status code if the message contains one
+// non-null Comparators don't appear to be used at present
+// Check for local contentEncoding (charset) override; fall back to default for content body // we do this here rather so we can use the same charset to retrieve the data
+// chop to server.name
+// Must not convert TestElement.gui_class etc
+// SampleEvent is not passed JMeterVariables, because they don't make sense for Proxy Recording // TODO - is this the correct threadgroup name?
+"/*         * To disable downloading and rendering of images and frames, enable the         * editor-kit. The Stream property can then be         */"
+// created by server in readResolve method
+// Must not ignore this one // Make sure errors are output to the log file
+// i.e. does keytool support -gencert and -ext ?
+// Assume we will be successful
+// For use in debugging:
+"/*     * Converts a class file from the text stored in a Jar file to a version     * that can be used in Class.forName().     *     * @param strClassName     *            the class name from a Jar file     * @return String the Java-style dotted version of the name     */"
+// All needed to ensure re-usablility
+// We need to call the super.next, instead of this.next, which is done in GenericController, // because if we call this.next(), it will return the TransactionSampler, and we do not want that. // We need to get the next real sampler or controller
+// $NON-NLS-1$ // $NON-NLS-1$ // default is not in range of a byte
+// and as a string
+"/*         * Note: the item name is used by ChangeLanguage to create a Locale for         * that language, so need to ensure that the language strings are valid         * If they exist, use the Locale language constants.         * Also, need to ensure that the names are valid resource entries too.         */"
+// TODO can this ever happen?
+// Add any parameters
+// empty collection, local var is here to allow SuppressWarnings
+// Don't get editors for hidden or non-read-write properties:
+// $NON-NLS-1$ // Make it easier to enter a Tab // $NON-NLS-1$
+// TODO is this ever used?
+// pick up any recent changes from other threads
+//$NON_NLS-1$
+// set the auth. thanks to KiYun Roe for contributing the patch // I cleaned up the patch slightly. 5-26-05
+"/*         * Have we reached the reporting boundary?         * Need to allow for a margin of error, otherwise can miss the slot.         * Also need to check we've not hit the window already         */"
+// The Loop Controller panel can be displayed standalone or inside // another panel. For standalone, we want to display the TITLE, NAME, // etc. (everything). However, if we want to display it within another // panel, we just display the Loop Count fields (not the TITLE and // NAME).
+// N.B. some engines (e.g. Javascript) cannot handle certain declareBean() calls // after the engine has been initialised, so create the engine last
+//      super(new JMeterTreeNode(new WorkBench(), null)); //      TestElement tp = new TestPlan(); //      initTree(tp, new WorkBench());
+// Save the new fields - but only if they are not the default
+//All threads in this group - alternate calculation
+// Button group resources
+// if the labels are too long, they'll be "squeezed" to make the chart viewable.
+// Already failed
+// Check that all keys in the bundle are also in the default bundle:
+/* Implements TestStateListener.testStarted() */
+// Get the encoding to use for the request
+// This column actually consists of a row with two sub-columns // The first column contains the labels, and the second // column contains the fields.
+// TODO: should this be clearData()?
+"/*    * Helper    */"
+// Copy our name into that of the controller // otherwise name reverts
+// for getIterCount
+"/*         * To avoid re-opening the file repeatedly after an error, only try to         * open it in the first execute() call (It may be re=opened at EOF, but         * that will cause at most one failure.)         */"
+// should be quicker to find the editors if they are registered.
+// Preload the output so that can be read back as HTTP
+// These entries must be in the same order as columns are saved/restored.
+// While (blank), previous sample OK - should loop until false
+// Allow serializable test to work // TODO: is the serializable test necessary now that JMeterTreeNode is // no longer a GUI component?
+// default is 1 // default is 0
+// we check to see if the proxy host and port are set
+// probably not possible, but check anyway
+// Check if alias is suitable here, rather than waiting for connection to fail
+// This is effectively the same as saver.toXML(Object, Writer) except we get to provide the DataHolder // Don't know why there is no method for this in the XStream class
+// TODO - should this be a failure?
+// Embedded URL match regex // $NON-NLS-1$
+"/*     * Ensure that the required class variables are cloned,     * as this is not currently done by the super-implementation.     */"
+"/*     * N.B. These entry indexes MUST agree with the SearchControls SCOPE_LEVELS, i.e.     *      * javax.naming.directory.SearchControls.OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE     *      * These have the values 0,1,2 so can be used as indexes in the array     * as well as the value for the search itself.     *      * N.B. Although the strings are used to set and get the options, language change     * does not currently cause a problem, because that always saves the current settings first,     * and then recreates all the GUI classes.     */"
+"/*     * (non-Javadoc) A new instance is created for each thread group, and the     * clone() method is then called to create copies for each thread in a     * thread group. This means that the lock object is common to a thread     * group; separate thread groups have separate locks. If this is not     * intended, the lock object could be made static.     *     * @see java.lang.Object#clone()     */"
+// we failed to add the element first time
+// set to start of string
+// Duration is in seconds, starting from when the threads start
+// view only
+// TODO - should this return something else?
+// opened tags
+// Check using default encoding
+// TODO should this use setDone()? // TODO should this use setFirst()?
+//private static final Logger log = LoggingManager.getLoggerForClass();
+// Includes thread group; anything goes
+// TODO should we allow mimetype only?
+// needs to be same time for all threads in the group
+// ClassFinder needs the classpath
+// Does not appear to be used externally; called by #loadProjectFile()
+// the url matches the last redirect
+"/*                 * JMeterTreeNode and TestBeanGUI are special GUI classes, and                 * aren't intended to be added to menus                 *                 * TODO: find a better way of checking this                 */"
+// Was there an error?
+// reset previous result
+// Showing large strings can be VERY costly, so we will avoid // doing so if the response // data is larger than 200K. TODO: instead, we could delay doing // the result.setText // call until the user chooses the "Response data" tab. Plus we // could warn the user // if this happens and revert the choice if he doesn't confirm // he's ready to wait.
+// draw a red line for 90% point
+// Use different XPath for both threads
+// results.setResponseCode("???"); TODO what code should be set here?
+// Just in case // Clear any other remaining variables
+// Additional member names which are currently not written out // $NON-NLS-1$ // $NON-NLS-1$
+// Actions
+// variables used while parsing options.
+// Allow for the old JMX file which used the local language string
+// Skip parameters with a blank name (allows use of optional variables in parameter lists)
+"/*     * N.B. NoThreadClone is used to ensure that the testStarted() methods will share the same     * instance as the sampleOccured() methods, so the testStarted() method can fetch the     * Totals accumulator object for the samples to be stored in.     */"
+// invalid
+// TODO somehow show progress
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.engine.ReportEngine#configure(org.apache.jorphan.collections.HashTree)     */"
+// tmp inputstream needs to have a good counting
+// Extract version digits from String of the form #Revision: n.mm # // (where # is actually $ above)
+// Reset search
+// If file encoding is specified, read using that encoding, otherwise use default platform encoding
+// throws HeadlessException
+// Deliberate use of deprecated method
+// Store the resource keys
+// should header be saved with the data? //$NON-NLS-1$
+// For concurrent get resources
+// Assume URL
+// Accessed from multiple threads
+// 1k - the previous 100k made no sense (there's tons of buffers // elsewhere in the chain) and it caused OOM when many concurrent // uploads were being done. Could be fixed by increasing the evacuation // ratio in bin/jmeter[.bat], but this is better.
+// no wrap-round check
+// Can't add a Workbench anywhere
+//+ JMX attributes - do not change // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ //- JMX
+// add a system property so samplers can check to see if JMeter // is running in NonGui mode // $NON-NLS-1$ // TODO - why does it create a new instance?
+// if beyond the end // then set to the end
+// Count the retries as well in the time
+// A HTTP GET request, with UTF-8 encoding
+// Cookies are ignored
+// TODO should class implement SampleListener?
+// We use 80% of height
+// NOT USED
+// Create the menu item
+// Add Error Counter
+// Find all the classes which implement the JavaSamplerClient // interface.
+// reads to end of line OR end of file
+// Save most things
+// MapNames are Strings
+// Detect functionName() so this does not generate empty string as the parameter
+///////////////// End of standard field accessors /////////////////////
+// mainPanel.add(threadPropsPanel, BorderLayout.NORTH); // add(mainPanel, BorderLayout.CENTER);
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$  //$NON-NLS-1$ //$NON-NLS-1$
+// by default, name/value are encoded on fetch
+// we set the classpath
+"/*     * Test serializable elements - test the object     */"
+// File content is sent as binary, so the content encoding should not change the file data
+// Check post body from the result query string
+// For testing only at present
+// returns false if the file did not contain the terminator
+// Check all the keys are in the default props file
+// no space after :
+// No filters
+// TODO downcase UPPER case non-final variables
+"/*             * N.B. Revision 323346 introduced the ClassCast check, but then used iter.next()             * to fetch the item to be cast, thus skipping the element that did not cast.             * Reverted to work more like the original code, but with the check in place.             * Added a warning message so can track whether it is necessary             */"
+// Override all the super-class Socket methods.
+// reset the value
+// (for instructional purposes only!)
+// Only dump it once
+// Used by Test code
+// value was not provided, and this is allowed
+"/*         * Can be caused by: - premature end of file - non-whitespace content         * after trailer         */"
+// create a message
+// Ignore non-HTTP samplers
+// Set response data
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// there is no variable name
+// filter the tree for a TestFragment.
+"/* (non-Javadoc)     * @see java.lang.Runnable#run()     */"
+// Escaped dollar commma and backslash with missing function reference
+// TODO work out how to search the XML pane
+// N.B. Cannot change value, as that is used in JMX files // $NON-NLS-1$
+// TODO: move this to components -- the only reason why it's in core is because // it's used as a guinea pig by a couple of tests.
+// has been seen in a redirect // use header (if possible) if no message found
+// i.e. is == null
+// Based on query return value, get results
+"/**     * Provide a description of this timer class.     *     * TODO: Is this ever used? I can't remember where. Remove if it isn't --     * TODO: or obtain text from bean's displayName or shortDescription.     *     * @return the description of this timer class.     */"
+// Write the form data post body, which we have constructed // in the setHeaders. This contains the multipart start divider // and any form data, i.e. arguments
+// Code also allows for LF only (not sure why - perhaps because the test code uses it?)
+// means counting from end
+// current default language properties file
+// TODO: what is this for?
+// TODO should setBaseForScript be called here rather than above?
+//add(makeTitlePanel(), BorderLayout.NORTH);
+// String in the panel // Do not make these static, otherwise language changes don't work // $NON-NLS-1$
+"/*     * Update the current field. The addend is only expected to be +1/-1, but     * other values will work. N.B. the roll() method only supports changes by a     * single unit - up or down     */"
+"/*             * Also set up HttpClient defaults             */"
+// create the JTable that holds one cookie per row
+// Label // count // Mean // Min // Max // Std Dev. // Error %age // Throughput // kB/sec // avg. pageSize
+// Programming error: bail out.
+// OPTIONAL TASKS
+// If the Add menu already exists, remove it.
+// Load the file for this recent file command
+// End the previous multipart
+// Split string provided
+// Hint to background color on bottom tabs (grey, not blue)
+// Don't make these static, otherwise language change does not work //$NON-NLS-1$
+//$NON-NLS-1$ // See TestElementPropertyConverter
+// We do not use getEncoding method of Writer, since that returns // the historical name
+// the createTest() method creates an extra context which needs to be closed
+// Non-expiring
+// // Implementing the CellEditor Interface //
+// listener cannot be null here
+// Replace subControllersAndSamplers with reordered copy.
+// remove the package prefix
+// TODO only clear the relevant entry - if possible...
+// ------------- get/set properties ----------------------//
+// for each thread group, generate threads // hand each thread the sampler controller // and the listeners, and the timer
+// return JMeterContextService.getContext().getCurrentSampler().getName();
+// Also Check key is in default
+// $NON-NLS-1$ // end of TEST values
+// Needs to be visible to test cases //$NON-NLS-1$
+// cached character == Integer.MAX_VALUE when invalid
+"/* (non-Javadoc)     * @see org.apache.jmeter.protocol.http.parser.HTMLParser#isReusable()     */"
+// Uninitialized -- set it to the defaults:
+// Write the start of the headers, and then sleep, so that the mirror // thread will have to block to wait for more data to appear
+// Already logged
+// Create the test file content
+// handles hex as well
+// Also forward all the Socket methods.
+// Educated guess
+// The application name // $NON-NLS-1$
+// Look for special Sleep request //$NON-NLS-1$
+// Mongo is Thread Safe
+// Can occur running headless on Jenkins
+// this.startDoc = false; // this.endDoc = true;
+// for panels
+// return with an error
+// i.e. no filter
+// Dummy as the file has no entries
+// Add variables for access to context and variables
+// Routine to perform the output (also used by __logn() function)
+// While (LAST), previous sample OK - should loop until false
+"/*     * Test GUI elements - run the test     */"
+// Create this object using the specified port (0 means anonymous)
+// Mask should contain all types (but not NOT)
+// Now get its text
+// DirContext dc = //TODO perhaps return this?
+// Names of JUnit3 methods //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// Sampler error action buttons
+// Send ItemEvent
+// This class is not cloned per thread, so this is shared
+// If no expressions are specified, we let the sample pass
+// super.mergeIn(element);
+//OK //OK // Don't copy this; it is per instance resultFileName = res.resultFileName;
+// Disable DELETE and BROWSE buttons if there are no rows in // the table to delete.
+//_parent = unused;
+// TODO: is this the correct default?
+// Also handles read(byte[])
+// Convert JUnit4 failure to Junit3 style
+// Mutable int to keep track of sample count
+// LOOP LABEL // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// double check this logic make sure it // makes sense
+// = elapsed
+// Ignore empty file specs
+// Check if the user has loaded any file
+// Action targets
+"/*     * Returns the classpath entries that match the search list of jars and paths     */"
+// Fetch data from screen fields
+// if everything went fine then xml schema validation is valid
+// Do this before starting the script
+// required for unit tests
+// could be null if it has been deleted via NameUpdater
+// register content handler
+// Empty filters
+// Yuck: TIFFImageEncoder uses Error to report runtime problems
+// //////////////////////////////////////////////////////////// // // setter/getter - JavaDoc-Comments not needed... // // ////////////////////////////////////////////////////////////
+// TODO needs cleaning up
+// variable, or function with no parameter list
+"/*     * Test TestElements - create the suite     */"
+// Add styles to use for different types of status messages
+// $NON-NLS-1$ add zero padding
+// Names of properties that are handled specially
+// Authorization
+//    private static final Logger log = LoggingManager.getLoggerForClass();
+//$NON-NLS-1$$NON-NLS-2$
+"/*     * Low level invocation routine.     *     * Should only be called after any defaults have been applied.     *     */"
+// 1000 = millisecs/sec
+// we have a file, read and process it
+// use latency to measure connection time
+// Keep a record of the pre-thread pools so that they can be disposed of at the end of a test
+// should throw exception back to caller
+// key is the type to collect (usually long), value = count of entries
+// client
+// Add the sub result to the transaction result
+// Let others know that the tree content has changed. // This should not be necessary, but without it, nodes are not shown when the user // uses the Close menu item
+// $NON-NLS-1$ // default: normal
+// one space for blank header // $NON-NLS-1$  // one space for blank header  // $NON-NLS-1$
+//++ These are JMX file names and must not be changed //$NON-NLS-1$
+"/*     * The following strings are used in the test plan, and the values must not be changed     * if test plans are to be upwardly compatible.     */"
+// Update classloader if necessary
+"/*-------------------------------------------------------------------------     * Methods implemented from org.xml.sax.ContentHandler     *----------------------------------------------------------------------- */"
+//TODO clazz is probably always the same as testclass
+// in main table (evt mousePressed because cell is editable)
+// ensure Proxy threads cannot interfere with each other
+// Allow all but images
+// Better behaviour when howLong=0 or lastTime=0
+// Although the default is not the same as for the string value, it is only used internally
+// Allow Sampler access // to test element name
+//"<?xml "
+// Not intended to be instantiated
+// Find JMeter home dir from the initial classpath
+"/*             * Provide dummy implementations to suppress download and display of             * related resources: - FRAMEs - IMAGEs TODO create better dummy             * displays TODO suppress LINK somehow             */"
+// Check that we have a content type
+// wrap-round check
+// static only
+// The content sent
+// $NON-NLS-1$ TODO should this be a variable?
+"/*                 * Fix bug: -D arg1=arg2 was causing parse error; however                 * --define arg1=arg2 is OK This seems to be because the parser                 * skips the terminator for the long options, but was not doing                 * so for the short options.                 */"
+// This check the state of the TestElement and if returns false it // disable the loaded node
+// These names must agree case-wise with the variable and property names //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// if get to an arg barrier then return to normal mode // else continue accumulating options
+"/* * N.B. to add a new field, remember the following * - static _xyz * - instance xyz=_xyz * - clone s.xyz = xyz (perhaps) * - setXyz(boolean) * - saveXyz() * - update SampleSaveConfigurationConverter to add new fields to marshall() and shouldSerialiseMember() * - update SampleResultConverter and/or HTTPSampleConverter * - update CSVSaveService: CSV_XXXX, makeResultFromDelimitedString, printableFieldNamesToString, static{} * - update messages.properties to add save_xyz entry * - update jmeter.properties to add new property * - update listeners.xml to add new property, CSV and XML names etc. * - take screenshot sample_result_config.png * - update listeners.xml and component_reference.xml with new dimensions (might not change) * */"
+"/* * Find all beans out there and check their resource property files: - Check * that non-default property files don't have any extra keys. - Check all * necessary properties are defined at least in the default property file, * except for beans whose name contains ""Experimental"" or ""Alpha"".  *  * TODO: - Check property files don't have duplicate keys (is this important) *  */"
+// @see TestRegexFunction for unit tests
+// TODO: replace all this url2 mess with a proper method // "areEquivalent(url1, url2)" that // would also ignore case in protocol and host names, etc. -- use that // method in the CookieManager too.
+// use the other object's value
+// TODO - should we skip processing here?
+// Allow the mimetype of the file to control the content type // This is not obvious in GUI if you are not uploading any files, // but just sending the content of nameless parameters // TODO: needs a multiple file upload scenerio
+// Add search text extension
+// See modifyTestElement
+// Should not enter the loop
+"/*     * Contains the items needed to collect stats for a summariser     *     */"
+// Only check if we have not found any differences so far
+// Not yet open
+// number of samples taken
+// Now, parse initial request (in case it is a CONNECT request)
+// Parse the arguments that are not options
+// If none of the arguments have a name specified, we // just send all the values as the entity body
+"/*     * Random class for generating random numbers.     */"
+// TODO: should this be restored?
+// initialize GUI.
+// value is the correct class
+// Test sending data as UTF-8, where user defined variables are used // to set the value for form data
+// we check the input tag type for image
+// rounds!
+// Check reflexive
+// not instantiable
+// Found splitChar at end of line
+// TODO should this be getMin()?
+// move to the parent
+// A HTTP POST request, multipart/form-data, with value that will change // if they are url encoded // Values are similar to __VIEWSTATE parameter that .net uses
+"/*     * Called by CSVRead(x,next) - sets the row to nil so the next row will be     * picked up the next time round     *     */"
+// NT Includes other types of Credentials
+//means platform default
+// N.B. we fetch the throughput each time, as it may vary during a test
+// TODO ? perhaps note connection so it can be disconnected at end of test?
+"/*     * Test method for 'org.apache.jmeter.protocol.http.sampler.postWriter.setHeaders(URLConnection, HTTPSampler)'     */"
+// Clear all data before display a new
+// Check if we have read all the headers
+//$NON-NLS-1$ $NON-NLS-2$
+// For example: // jar:file:/JMeter/lib/ext/ApacheJMeter_core.jar!/org/apache/jmeter/util/JMeterVersion.class // or if using an IDE         // file:/workspaces/JMeter/build/core/org/apache/jmeter/util/JMeterVersion.class
+// Get session
+// State of the parser
+// assertEquals("Expected 4 lines",4,f.size());
+// Only relevant for messages
+// Helper class used to implement co-routine between two threads
+// API expects null, not empty array
+// For n values in an aggregate sample the average value = (val/n) // So need to add n * (val/n) * (val/n) = val * val / n
+// safer to start afresh
+// the test plan has to have more than 200 samples // for it to generate half way decent distribution // graph. the larger the sample, the better the // results.
+// Column renderers
+// Calculate each time, as likely to be called for each add
+// Host always
+// server log file
+//TODO replace with proper Exception
+// Reload data form internal list of results
+//$NON-NLS-1
+//TODO: move to utils class (JMeterUtils?)
+// clear results table before filling
+// threadContext is not thread-safe, so keep within thread
+// Helper method to construct resource name
+//            // Set the content type TODO - needed? //            String multiPartContentType = multiPart.getContentType().getValue(); //            post.setHeader(HEADER_CONTENT_TYPE, multiPartContentType);
+// 1024=bytes per kb
+// Now evaluate the script, getting the result
+// Defaults to caller URL
+// What to match against. N.B. do not change the string value or test plans will break! // $NON-NLS-1$
+// Hide Window on ESC //$NON-NLS-1$
+// Only create this if we are overriding whatever default there may be // If there are no arguments, we can send a file as the body of the request
+//Do what would be done earlier
+// Allow JMeter to render frames (and relative images) // Must be done after setContentType [Why?]
+// Used by: MonitorHealthVisualizer.add(SampleResult res)
+// NOTUSED: GuiPackage guiPack =
+// We don't have a local copy
+"/*     * If non-null, then any object provided to invoke() is ignored.     */"
+"/*     * Only for Unit tests     */"
+// need to check if we are at EOF already
+// show the grid lines, to turn it off, set it to zero
+// Normal InputStream is not available
+// Set up proxy details
+// Pick up Actual path (after redirects)
+// If we do not know the encoding, we just use the encoded value // The browser has already done the encoding, so save the values as is
+// Used by findTestFile
+// Putting the string first means it works even if the attribute is null
+"/*     * Helper method to ensure that format is initialised if initializeLogging()     * has not yet been called.     */"
+// Init the tree // Assumes this is only called from GUI mode
+// Convert the old numeric types - just in case someone wants to reload the workbench
+"/*     * In spite of the name, this is actually used to determine if the loop controller is repeatable.     *     * The value is only used in nextIsNull() when the loop end condition has been detected:     * If forever==true, then it calls resetLoopCount(), otherwise it calls setDone(true).     *     * Loop Controllers always set forever=true, so that they will be executed next time     * the parent invokes them.     *     * Thread Group sets the value false, so nextIsNull() sets done, and the Thread Group will not be repeated.     * However, it's not clear that a Thread Group could ever be repeated.     */"
+// For use by FunctionHelper
+// $NON-NLS-1$ // TODO - change to use URL version? Will this affect test plans?
+// a check, just in case:
+// Backward compatibility
+// Make it easier to enter a tab (can use \<tab> but that is awkward)
+// For access from test code
+// not been set by any child samples
+// N.B. Since the tags are extracted from an HTML Form, any values must already have been encoded
+// Keep the unexpanded path // TODO - allow directories to end with .jar by removing this check?
+// will only contain Argument or HTTPArgument
+// Don't instantiate class
+// now set the individual categories (if any)
+// main iteration
+// draw the Y axis
+// This class is not cloned per thread, so this is shared //@GuardedBy("this")
+// Helper class so we can generate request data without dumping entire file contents
+// Number of capturing groups possibly containing Base HREFs:
+// A HTTP POST request
+// Get the beanInfo:
+// Disable DELETE and BROWSE if there are no rows in the table to delete.
+"/* (non-Javadoc)     * @see org.apache.jmeter.visualizers.request.RequestView#getLabel()     */"
+// Original match behaviour
+"/*     * Test method for 'org.apache.jmeter.protocol.http.sampler.postWriter.sendPostData(URLConnection, HTTPSampler)'     * This method test sending only a file multipart.     */"
+// Nothing to do
+// Special flag for use in debugging resources
+// There's little point saving the manager between invocations // as we need to reset most of the beans anyway
+// succeeded
+// If we have both file as body, and form data, then only form data will be sent
+// It is the JMeterThread which knows how to sample a real sampler
+// result.setResponseData - not set
+// Get the URL matcher
+// same as Parent
+// Enable file revert action if a file is used
+// Defaults from properties:
+"/*     * TODO this assumes that the redirected response will always immediately follow the original response.     * This may not always be true.     * Is there a better way to do this?     */"
+// Appears not to be used - however it is invoked via the Functor class
+// TYPE FIELD
+// ensure old value is not left defined
+// We don't want to use CacheManager clone but the parent one, and CacheManager is Thread Safe
+// can't call invoke using super class
+// Do not allow a non-leaf node to be moved into one of its children
+// don't add the timer
+// .equals caused // NPE
+// sample all resources with threadpool
+// TODO turn into method?
+"/*             * GenericController sub_1 = new GenericController();             * sub_1.addTestElement(new IfController(""3==3""));             * controller.addTestElement(sub_1); controller.addTestElement(new             * IfController(""false==true""));             */"
+// Associate sample with file name
+// Skip non-editable properties, that is: // Ignore hidden, read-only, and write-only properties
+// The groups have all completed now
+// End timimg
+// TODO is this the best way to do this?
+// Default wait (ms) for a message if timeouts are not enabled // This is the maximum time the sampler can be blocked.
+// Allow the mimetype of the file to control the content type
+// TODO cpercent is the same as cmedian here - why? and why pass it to "distributionLine"?
+// So we know which button is selected
+"/*     * TODO consider removing this method, and providing method wrappers instead.     * This would allow the Gui package to do any additional clearups if required,     * as has been done with clearTestPlan()    */"
+"/*     * Holder for storing cache details.     * Perhaps add original response later?     */"
+// add a new wrapper samplevent
+"/*         * Security Settings         */"
+// get ../ or ../../ etc.
+//transient private static final Logger log = LoggingManager.getLoggerForClass();
+// TODO does not work yet; need to determine the sample type
+// Dynamic proxy overrules static proxy
+// The value is in the first group, group 0 is the whole match
+// must always agree
+// RUN MENU //$NON-NLS-1$
+// Dummy methods needed by Function interface
+// These are not useful yet, as have not found how to get updated values back //mgr.declareBean("ResponseCode", "200", String.class); // $NON-NLS-1$ //mgr.declareBean("ResponseMessage", "OK", String.class); // $NON-NLS-1$ //mgr.declareBean("IsSuccess", Boolean.TRUE, Boolean.class); // $NON-NLS-1$
+// copy the data to minimise the synch time
+// If we know the encoding, we can decode the argument value, // to make it easier to read for the user
+// This used to be request.wait(timeout_ms), where 0 means forever // However 0 means return immediately for the latch
+// Don't add delimiter first time round
+// Marker for query string attribute
+// create a temporary file to make sure we always have a file to give to the PostWriter  // Whereever we are or Whatever the current path is.
+// saved copy of first line for error reports
+// prevent any further interrupts
+// No need to log normally, as we set the status // $NON-NLS-1$ // $NON-NLS-1$
+// Ensure transient object is created by the server
+// $NON-NLS-1$ // TODO - use a different format here?
+// synchronize with FixedQueueExecutor
+// If there is no difference, we mark it as not needing encoding
+// If getSendFileAsPostBody returned true, it's sure that file is not null
+// Should the file data be saved in the response? // $NON-NLS-1$
+// default charset
+// based on e291. Getting the Name of a JDBC Type from javaalmanac.com // http://javaalmanac.com/egs/java.sql/JdbcInt2Str.html
+"/*     * NOTUSED private void initButtonMap() { }     */"
+// Show that can bypass encoding:
+// e.g. some kinds of invalid URL
+// Get appropriate sender class governed by the behaviour set in the JMeter property
+// Strip off the trailing delimiter
+// result.setError(true); // TODO is this the correct strategy? // throw exception; // allow assertion to pass
+// TODO is it the best way ? https://issues.apache.org/bugzilla/show_bug.cgi?id=55634
+// Reload the project
+// computes interpolation coefficients
+// We have a default
+"/*     * Helper methods N.B. setStartTime must be called before setEndTime     *     * setStartTime is used by HTTPSampleResult to clone the parent sampler and     * allow the original start time to be kept     */"
+// This transaction is done
+// Only do the calculation if it is needed
+// Draw the graph
+// Ensure terminated properly
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// elements have empty nodeValue, but we are usually interested in their content
+// Can be returned by headless hosts
+// calling disconnect doesn't close the connection immediately, // but indicates we're through with it. The JVM should close // it when necessary. // we don't want interrupt to try disconnection again // Disconnect unless using KeepAlive
+// Don't clear the plan
+"/*     * Test serializable elements - create the suite of tests     */"
+// This assumes the header names are all single words with no spaces // word followed by 0 or more repeats of (non-word char + word) // where the non-word char (\2) is the same // e.g. abc|def|ghi but not abd|def~ghi // $NON-NLS-1$ // last entries may be quoted strings
+// most recent // $NON-NLS-1$
+// we tokenize using double quotes. this means // for tomcat we should have 3 tokens if there // isn't any additional information in the logs
+// Used by ResultCollector when creating output files
+// double the quote char
+// Leave header as is // headerBuf.append(conn.getHeaderField(0).substring(0, 8)); // headerBuf.append(" "); // headerBuf.append(conn.getResponseCode()); // headerBuf.append(" "); // headerBuf.append(conn.getResponseMessage()); //$NON-NLS-1$
+// replace (update) attribute //$NON-NLS-1$ //$NON-NLS-2$ // add mobile phone number attribute //$NON-NLS-1$ //$NON-NLS-2$
+// Should we create our own copy of the RMI registry?
+// do it once outside loop
+// We won't test restricted-access classes.
+// All keys in messages.properties are lowercase (historical reasons?)
+// first copy the children as the call to copy.add will modify the collection we're iterating on
+"/*         * A HTTP RESPONSE HEADER LOOKS ALOT LIKE:         *         * HTTP/1.0 200 OK Date: Wednesday, 02-Feb-94 23:04:12 GMT Server:         * NCSA/1.1 MIME-version: 1.0 Last-modified: Monday, 15-Nov-93 23:33:16         * GMT Content-Type: text/html Content-Length: 2345 \r\n         */"
+// account for multiple samples // not yet intialised
+// FIrst make sure we save the content of the current GUI (since we // will flush it away):
+// NOTE: the handling of simple- vs. double-quotes could be formally // more accurate, but I can't imagine a session id containing // either, so we should be OK. The whole set of expressions is a // quick hack anyway, so who cares.
+// e.g. Long.MAX_VALUE
+// Create the SplitFile function and set its parameters.
+// TODO: This method doesn't appear to be used.
+// implicit return empty toolbar if icons == null
+// Find the data sent to the mirror server, which the mirror server is sending back to us
+// Attempt the connection:
+// Index is also used for accessing editors array
+// Reinstate action notifications:
+// A HTTP POST request, with unknown encoding
+// These fields are not currently saved or restored
+// Needs to be accessible from Test code
+// Get the boundary string for the multiparts from the content type
+// probably should not happen
+// TODO fix this when there is a real implementation
+// field TemplateManager#templates  // $NON-NLS-1$
+// In other GUI component, clearGUI resets the value to defaults one as there is one GUI per Element // With TestBeanGUI as it's shared, its default values are only known here, we must call setValues with  // element (as it holds default values) // otherwise we will get values as computed by customizer reset and not default ones
+// Should behave the same for blank and LAST because success on input
+// Allow access to context and variables directly //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// Merge in any additional test listeners // currently only used by the function parser
+// look for Objects
+// TODO is this correct?
+// If the Parameter data cannot be converted to Raw, then the user should be // prevented from doing so raise an error dialog
+// response message label
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.writers.PageSummary#setPageTitle(java.lang.String)     */"
+"/*         * A little hack - add each listener to the start of the list - this         * ensures that the thread running the show is the first listener and         * can modify certain values before other listeners are called.         */"
+// Cannot use getThreadContext() as we are not cloned per thread
+// Parameters are stored here
+// annotation classes to check
+// used by AbstractReportGui
+// Tabbed pane that contains parameters and raw body
+// This is also used by LookAndFeelCommand
+// we filter the line first, before we try // to separate the URL into file and // parameters.
+// Check cache for an entry with an Expires header in the future
+// $NON-NLS-1$ // TODO can this be obtained from the file somehow?
+// N.B. Must be in this class for the TestBean code to work
+// Not a true GUI component
+// Process address lists
+// no point in checking if we don't have anything to compare against
+// Note: the element is a ConfigTestElement, so cannot use FTPSampler access methods
+// Test Old cookie is not returned
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// Use round robin allocation of user details
+// Routines for TestSaveService
+// TEXT FIELD
+// script area
+// increment the value
+// write a OK reponse to browser, to engage SSL exchange // $NON-NLS-1$
+//TODO implement other non-text types
+// Sample the children of the transaction
+// Do nothing; the current time will be returned
+// Lock object must exist
+// These must not be static, otherwise Language change does not work // $NON-NLS-1$
+// Test session cookie is returned
+/* The cache of file packs - used to improve thread access */
+// save search position
+// All threads - alternate calculation
+"/* (non-Javadoc)     * @see org.apache.jmeter.report.engine.ReportEngine#exit()     */"
+// calculate message size
+// we're sure that there is one file because of // getSendFileAsPostBody method's return value.
+//++ These are JMX file attribute names and must not be changed // $NON-NLS-1$
+// JMSMessageID cannot be null
+// empty collection
+// Add any files
+// Replacement only needs to occur when starting the engine // @see StandardJMeterEngine.run()
+// the number of nodes is defined by the length of r
+// private void setSuccessCount(long count) // { // this.successCount = count; // }
+//+ JMX file attribut names - do not change! //$NON-NLS-1$
+// get the text response and image icon // to determine which is NOT null
+// AbstractThreadGroup is only allowed under a TestPlan
+// TODO hack, to be removed later
+// they are always last
+// We use a TreeMap because we need the entries to be sorted
+// server
+// Check if the new file is already in the recent list
+// Don't save empty comments - except for the TestPlan (to maintain compatibility)
+// Called by StandardJMeterEngine, TestAction and AccessLogSampler
+// superclass does not use types
+// Tabbed results: fill table //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$
+// Don't change the string, as it is used in JMX files // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$
+// A HTTP POST request, multipart/form-data, simple values, // with \n as end of line, which should also be handled, // and with more headers in each multipart
+// log.info(getLabel()+" "+getFilename());

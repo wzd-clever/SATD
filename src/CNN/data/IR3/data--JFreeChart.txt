@@ -1,0 +1,404 @@
+// try the parent plot
+// can't zoom domain axis
+// axisIndices can be: // 1.  null; // 2.  non-empty, containing only Integer objects that are unique.
+// start from Y = rangeBase
+// ITEM LABELS VISIBLE
+// no plot, no data
+// TODO:  the subplot areas needs to be moved out of the plot into the plot //        state
+// set a theme using the new shadow generator feature available in // 1.0.14 - for backwards compatibility it is not enabled by default
+// set up some objects...
+// check if previously colinear
+// draw the plot background...
+//get log10 version of upper bound and round to integer:
+// here's a quirk - the API has been defined in terms of a plain // TimePeriod, which cannot make use of the timezone and locale // specified in the constructor...so we only do the time zone // pegging if the period is an instanceof RegularTimePeriod
+// TODO: it might be a good idea to keep a reference to the color // specified in setPaint() or setColor(), rather than creating a // new object every time getPaint() is called.
+// we are at the first hour in the day...
+// a list to store the series index and bar region, so we can draw // all the labels at the end...
+// not strictly necessary, since the // renderer set for the // parent plot is not used
+// draw the left axes
+//TODO: shift block over to right
+// a null argument should throw an exception
+// create the bounds for the inner arc
+//FIXME we should really assert a value here
+// draw vertical crosshair if required...
+// advance the minuend if needed
+////////////////////////////////////////////////////////////////////////// // main include and excluded segments //////////////////////////////////////////////////////////////////////////
+// return straight away if the item is not visible
+"/** * An annotation that allows an image to be placed at some location on * an {@link XYPlot}. * * TODO:  implement serialization properly (image is not serializable). */"
+// TODO: use a generator here
+// we're doing this for testing only, and make sure that we // only add data in descending order by x-value
+// add range axes to lists...
+// FIXME better ask the renderer instead of DatasetUtilities
+// check that super class fields are being looked at...
+// initialize the members of "seriesNames" array so they won't be null:
+// DEPRECATED METHODS
+// needs to be improved !!!
+// nothing to clear
+// TODO: need to fetch this from localised resources
+// figure out if we need to iterate through all the y-values // to find the revised minY / maxY
+// check sorted rows
+// draw the standard deviation lines *before* the shapes (if they're // visible) - it looks better if the shape fill colour is different to // the line colour
+// TO DO:  these annotations only work with XYPlot, see if it is possible to // make ContourPlot a subclass of XYPlot (DG);
+// find optimum height
+// we don't know anything about the ordering of the x-values, // so we iterate until we find the first crossing of x (if any) // we know there are at least 2 items in the series at this point
+// 'dateTickUnit' is immutable : no need to clone
+// for mouseReleased event, (horizontalZoom || verticalZoom) // will be true, so we can just test for either being false; // otherwise both are true
+// fast-forward through leading tails
+// if the event was caused by a change to series visibility, then // the axis ranges might need updating...
+// shapeAnchor
+// domain description - null
+// TODO: by coding the event with some information about what changed // in the dataset, we could make the recalculation of the interval // more efficient in some cases (for instance, if the change is // just an update to a y-value, then the x-interval doesn't need // updating)...
+// retrieve the swt font description in an os indept way
+// are we using the chart buffer?
+// tickLength
+// date format
+// defer argument checking...
+// FIXME: the renderer interface doesn't have the drawDomainLine() // method, so we have to rely on the renderer being a subclass of // AbstractXYItemRenderer (which is lame)
+//TODO: shift block right by half
+// draw optional guide lines
+//thermometerPaint;
+// check that a legend item needs to be displayed...
+// TODO: For JFreeChart 1.2.0, this method should go in the //       ShapeUtilities class
+// borderStroke
+// height is OK, but width must be constrained
+//dmo added //dmo added
+// pre-fetch the colors for each key...this is because the subplots // may not display every key, but we need the coloring to be // consistent...
+// try a dataset with a single value
+// row 4
+// don't zoom unless the mouse pointer is in the plot's data area
+// the CategoryDataset interface expects a list of categories, but // we've stored them in an array...
+// TODO: I think we need to make sure the keys are actually cloned, // whereas the paint instances are always immutable so they're OK
+// Note: It would be nice to pre-calculate this per series
+// rangeAxisLocations...
+// TODO: I think we need to make sure the keys are actually cloned, // whereas the stroke instances are always immutable so they're OK
+// erase the previous zoom rectangle (if any).  We only need to do // this is we are using XOR mode, which we do when we're not using // the buffer (if there is a buffer, then at the end of this method we // just trigger a repaint)
+// the method we want isn't in the CategoryItemRenderer // interface...
+// AXIS 3
+// align this rectangle to the frameAnchor
+// FIXME: show a dialog with the error
+// coordinate pairs // current minuend point // next minuend point // current subtrahend point // next subtrahend point
+// TODO: fix output when this flag is set to true
+// reset points vector
+// draw the axis...
+// try deleting a time period that doesn't exist...
+// pass mouse down event if some ChartMouseListener are listening
+//if autorange still below minimum then adjust by 1% // (can be needed when minRange is very small):
+// foreground range markers...
+// shape sequence
+// separatorStroke
+// autoRange
+// draw farout
+// TODO: add serialization support for images
+// does nothing unless overridden
+// set the anchor value for the horizontal axis...
+//  Get height adjustment based on stack and translate to Java2D values
+// can't get anything yet...just an exception
+//legendItemPaint;
+//if less than 1.0 then make it 1.0 //add in margin and get exponential value:
+// is the category valid?
+// value
+/* lineVisible= */
+// check if starting new column
+// FIXME:  implement this...
+// FIXME: use other fields too
+// domainAxisLocation...
+// check that the series visible flag is observed
+// Segment fromSegment = getSegment(from); // fromSegment.inc(); // Segment toSegment = getSegment(to); // toSegment.dec();
+/*Comparable k =*/
+// then the axis properties...
+// end of workaround
+//invert adjustLog10
+// not used by plot
+//TODO: implement this method properly
+// TODO: draw the interval marker with a 3D effect
+// first determine the size of the chart rendering area... // TODO workout insets for SWT
+// place in this column (truncated) anyway
+"/*                 * Lots can go wrong while fiddling with Images, Color Models                 * & such!  If anything at all goes awry, just return the original                 * TexturePaint.  (TexturePaint's are immutable anyway, so no harm                 * done)                 */"
+//empty cell // row 2
+// set the line style to solid by default
+// TODO: rotate the image when drawn with horizontal orientation?
+// ratio represents pixels
+// tick label paint...
+// TODO Revert to SVN revision 2469 in JFreeChart 1.0.16 //      (MultipleGradientPaint's / JDK issues) // TODO THEN: change visibility of ALL darker(...) Methods EXCEPT //      darker(Paint) to private!
+// if there is no specific paint, use the general one...
+// redrawing the chart every time...
+//get the coordinates of the original GradientPaint
+// try key index == itemCount
+// TODO: to be implemented
+// seriesVisible
+// TODO: In JFreeChart 1.2.0, put this method in the // CategoryItemRenderer interface
+// FIXME:  need a locale as well as a timezone
+// actual value set below
+// try null calendar
+// TODO: this must be wrong...
+/* Rectangle2D hotspot = */
+// when the dataset contains no series, we expect the value range to  // be null
+// no event is generated if the dataset is already empty
+"/* =========================================================== * JFreeChart : a free chart library for the Java(tm) platform * =========================================================== * * (C) Copyright 2000-2013, by Object Refinery Limited and Contributors. * * Project Info:  http://www.jfree.org/jfreechart/index.html * * This library is free software; you can redistribute it and/or modify it * under the terms of the GNU Lesser General Public License as published by * the Free Software Foundation; either version 2.1 of the License, or * (at your option) any later version. * * This library is distributed in the hope that it will be useful, but * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public * License for more details. * * You should have received a copy of the GNU Lesser General Public * License along with this library; if not, write to the Free Software * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, * USA. * * [Oracle and Java are registered trademarks of Oracle and/or its affiliates.  * Other names may be trademarks of their respective owners.] * * ------------------------- * CategoryItemRenderer.java * ------------------------- * * (C) Copyright 2001-2011, by Object Refinery Limited and Contributors. * * Original Author:  David Gilbert (for Object Refinery Limited); * Contributor(s):   Mark Watson (www.markwatson.com); * * Changes * ------- * 23-Oct-2001 : Version 1 (DG); * 16-Jan-2002 : Renamed HorizontalCategoryItemRenderer.java *               --> CategoryItemRenderer.java (DG); * 05-Feb-2002 : Changed return type of the drawCategoryItem method from void *               to Shape, as part of the tooltips implementation (DG) * *               NOTE (30-May-2002) : this has subsequently been changed back *               to void, tooltips are now collected along with entities in *               ChartRenderingInfo (DG); * * 14-Mar-2002 : Added the initialise method, and changed all bar plots to use *               this renderer (DG); * 23-May-2002 : Added ChartRenderingInfo to the initialise method (DG); * 29-May-2002 : Added the getAxisArea(Rectangle2D) method (DG); * 06-Jun-2002 : Updated Javadoc comments (DG); * 26-Jun-2002 : Added range axis to the initialise method (DG); * 24-Sep-2002 : Added getLegendItem() method (DG); * 23-Oct-2002 : Added methods to get/setToolTipGenerator (DG); * 05-Nov-2002 : Replaced references to CategoryDataset with TableDataset (DG); * 06-Nov-2002 : Added the domain axis to the drawCategoryItem method.  Renamed *               drawCategoryItem() --> drawItem() (DG); * 20-Nov-2002 : Changed signature of drawItem() method to reflect use of *               TableDataset (DG); * 26-Nov-2002 : Replaced the isStacked() method with the getRangeType() *               method (DG); * 08-Jan-2003 : Changed getSeriesCount() --> getRowCount() and *               getCategoryCount() --> getColumnCount() (DG); * 09-Jan-2003 : Changed name of grid-line methods (DG); * 21-Jan-2003 : Merged TableDataset with CategoryDataset (DG); * 10-Apr-2003 : Changed CategoryDataset to KeyedValues2DDataset in *               drawItem() method (DG); * 29-Apr-2003 : Eliminated Renderer interface (DG); * 02-Sep-2003 : Fix for bug 790407 (DG); * 16-Sep-2003 : Changed ChartRenderingInfo --> PlotRenderingInfo (DG); * 20-Oct-2003 : Added setOutlinePaint() method (DG); * 06-Feb-2004 : Added missing methods, and moved deprecated methods (DG); * 19-Feb-2004 : Added extra setXXXLabelsVisible() methods (DG); * 29-Apr-2004 : Changed Integer --> int in initialise() method (DG); * 18-May-2004 : Added methods for item label paint (DG); * 05-Nov-2004 : Added getPassCount() method and 'pass' parameter to drawItem() *               method (DG); * 07-Jan-2005 : Renamed getRangeExtent() --> findRangeBounds (DG); * 11-Jan-2005 : Removed deprecated code in preparation for 1.0.0 release (DG); * 23-Feb-2005 : Now extends LegendItemSource (DG); * 20-Apr-2005 : Renamed CategoryLabelGenerator *               --> CategoryItemLabelGenerator (DG); * 20-May-2005 : Added drawDomainMarker() method (DG); * ------------- JFREECHART 1.0.x --------------------------------------------- * 20-Feb-2007 : Updated API docs (DG); * 19-Apr-2007 : Deprecated seriesVisible and seriesVisibleInLegend flags (DG); * 20-Apr-2007 : Deprecated paint, fillPaint, outlinePaint, stroke, *               outlineStroke, shape, itemLabelsVisible, itemLabelFont, *               itemLabelPaint, positiveItemLabelPosition, *               negativeItemLabelPosition and createEntities override *               fields (DG); * 26-Jun-2008 : Added new method required for crosshair support - THIS CHANGES *               THE API as of version 1.0.11 (DG); * */"
+// suppresses compiler warnings
+// don't bother with parsing
+// report this?
+// FIXME: implement this, low priority
+// add the new chart
+// diamond
+// nothing defined - do we autoPopulate?
+// minorTickLength
+// calculate the sum and count
+// now handle specific plot types (and yes, I know this is some // really ugly code that has to be manually updated any time a new // plot type is added - I should have written something much cooler, // but I didn't and neither did anyone else).
+//apply lower margin by decreasing lower bound:
+/* TimeSeries s = */
+// check that there is some data to display...
+// FIXME: add setBaseItemURLGenerator(CategoryURLGenerator, boolean) ?
+// if we are rendering the values as percentages, we need to calculate // the total for the current item.  Unfortunately here we end up // repeating the calculation more times than is strictly necessary - // hopefully I'll come back to this and find a way to add the // total(s) to the renderer state.  The other problem is we implicitly // assume the dataset has no negative values...perhaps that can be // fixed too.
+// if a subtrahend is not specified, assume it is zero
+// period
+// Now split the segment as needed
+// name
+// CASE 2 : Comparing to another TimePeriod object // -----------------------------------------------
+// draw outliers
+// unused in parent
+// all attributes are immutable, so we can just return the super.clone() // FIXME: in fact, the generator itself is immutable, so cloning is // not necessary
+// check that the listener lists are independent
+// update (x1, y1), (x2, y2) and f1 and f2 using intersections // then recheck
+// frame
+// calculate the bounds of the template value
+// outline paint index
+// calculate the maximum allowed candle width from the axis...
+// FIXME:  it probably makes sense to allocate an array of 256 Colors // and lazily populate this array...
+// we'll have to use the method in the interface, but // this doesn't have the paint and stroke settings...
+// handle tool tips in a simple way
+// hack to ensure the newly created awt fonts will be rendered with the // same height as the swt one
+// use gradients and white borders for the section colours
+// intentionally blank
+// now we should be allowed to change s1's key to anything but "S2"
+// try a listener type that isn't registered
+// get the current data item...
+// units
+// FIXME: need a locale as well as a timezone
+//gridBandPaint
+// the first axis in the list is used for data <--> Java2D
+// openTickPaint
+// FIXME: what if value is null on next line?
+// not implemented
+// ITEM LABEL GENERATOR
+// calculate the data area...
+// draw range crosshair if required...
+// TODO: is this a good idea?
+// calculate the adjusted data area taking into account the 3D effect... // this assumes that there is a 3D renderer, all this 3D effect is a // bit of an ugly hack...
+/** These constants control test cycles in the validateXXXX methods. */
+// and finishes at back
+// try negative row index
+// the first initialization must precede creation of the ValueSet array: // establishes length of each array
+//same as for ChartEntity!
+// with no buffer, we use XOR to draw the rectangle "over" the // chart...
+// FIXME: add setSeriesStroke(int, Stroke, boolean) ?
+// starts at the back and finishes at the front // (wrapping the left side)
+// null is ignored
+// try an array containing a single Number
+// TODO: implement this properly
+// no need to create entity if we can't save it anyways...
+// the URL text should already have been escaped by the URL generator
+// SERIES VISIBLE IN LEGEND (not yet respected by all renderers)
+//private double tipRadius;
+// OPTIONAL CUSTOMISATION COMPLETED.
+//TODO: shift block down by half
+// startAngle
+// FIXME: No getValueFormat() method?
+//setup flag based on bounds values
+// return a new chart containing the overlaid plot...
+// draw the polygon series...
+/*&& state.getBarWidth() > renderer.BAR_OUTLINE_WIDTH_THRESHOLD*/
+/* shapeFilled=*/
+// starts at the back, wraps around front, and // finishes at back again
+// reserve space for the range axes...
+// These are deliberately not bounded to minimums/maxCandleWidth to //  retain old behaviour.
+// adjust for insets...
+//itemLabelPaint;
+//// SECTION PAINT ////////////////////////////////////////////////////////
+// TODO:  add constructors for combinations of number and date formatters.
+// by default the outline and background won't be visible
+// second point is outside, so we update it against one of the // four sides then continue
+// only relevant when this is a subplot
+// try negative column index
+// intercept
+// compute common deltas
+//negatives not allowed and upper bound between 0 & 1 //round up to nearest significant digit for bound: //get negative exponent:
+// stroke sequence
+// shapeVisible
+//// LEGEND ITEMS /////////////////////////////////////////////////////////
+// increment an unknown column
+// we create an event with a special flag set...the purpose of // this is to communicate to the plot (the default receiver of // the event) that series visibility has changed so the axis // ranges might need updating...
+//labelLinkStyle;
+// only add an exception if it is currently an included segment
+// try a dataset with two values
+// TODO: we didn't check the width yet
+// if there is no specific font, use the general one...
+// draw the plot background and axes...
+// FIXME: Check that there isn't already a series with the same key
+// TODO see if we need to apply some line color and style to the // axis traces
+//return toTimelineValue(dateDomainValue.getTime());
+// this may be negative
+// Find min, max for the x and y axes
+// subcategories
+// category
+// a column of all null values is still counted...
+// draw the shared axis
+// domainGridlinePaint
+// TODO find a better localization key
+// no translation needed
+// BAR Y
+// high
+// backgroundAlpha
+// now we handle some special cases - yes, UGLY code alert!
+// we assume that all other Paint instances implement equals() and // hashCode()...of course that might not be true, but what can we // do about it?
+// do we need to update the crosshair values?
+// font
+// make the link area a square if the pie chart is to be circular... // is circular?
+// upperMargin
+//  Remove series 1
+// linkMargin
+// first test for equality (contains or contained)
+// valueAnchor
+// horizontal rectangle
+// stripWidth
+// make the background of the buffer clear and transparent
+// TODO: check threshold
+//TODO replace getSize by getBounds ?
+// FIXME: Clone the attributed string if it is not null
+//decrement to do 1.0 tick now
+// fillPaint
+// advance the subtrahend if needed
+// initialize ChartPanel-specific tool tip delays with // values the from ToolTipManager.sharedInstance()
+// this may be obsolete (not used anywhere)
+// FIXME: draw outliers
+// cycle bound mapping
+// set up popup menu...
+// shadowYOffset
+// TODO:  move the above to the plot state
+// LineRenderer3D
+// try unknown column key
+/* ComparableObjectItem item1 = */
+// TODO:  this needs to move into the renderer state
+// if the axis has a fixed dimension, return it...
+// axisOffset...
+// configure the range axis...
+// or: x1s + 2*(x1-x1s)
+// range description
+// CASE 1 : Comparing to another Month object // --------------------------------------------
+// parent plot...
+// test a customised instance
+// this is a paint we don't recognise
+// FIXME: the XYItemRenderer interface doesn't specify the // getAnnotations() method but it should
+// add an entity for the item, but only if it falls within the data // area...
+// FIXME:  this code means that it is not possible to use more than // one domain axis for the combined plots...
+// get the source coordinate - this plot has always a VERTICAL // orientation
+//get major dimension
+// override default
+// work out the trailing gap
+// Remove all the series from the collection and notify listeners.
+// row 3
+// make the link area a square if the pie chart is to be circular...
+// if multiple axes are mapped, the first in the list should be // returned...
+// TODO: could change this to itemFillPaint().  For backwards // compatibility, it might require a useFillPaint flag.
+// FIXME: this attribute is never used - deprecate?
+// Performs the actual drawing here ...
+// FIXME: this attribute is not used - deprecate?
+// FIXME: perhaps we should clone the data list
+// change the shape and make sure it only affects p1
+// Saturday and Sundays are non business hours
+// I know it's bad to create object. better idea?
+// all tick labels have the same width (equal to the height of the // font)...
+// make sure there are no exceptions
+//  Add chart to deletion list in session
+// do we need to fill the buffer?
+//this.key = null;
+// otherwise look up the stroke table
+//key
+// TODO : complete this
+// test 1...
+// prior to 1.0.14, we just fired a PropertyChange - so we need to // keep doing this
+// TODO: for now we are ignoring the height constraint
+// check that a null dataset returns null bounds
+// default instances
+//private NumberFormat numberFormatOverride;
+// switch x and y
+// axis line stroke...
+// key
+// a redraw should NOT trigger another change event
+// vertical orientation
+// FIXME: this should generate a series change event
+// 'itemLabelsVisible' : immutable, no need to clone reference
+//FIXME we should really assert a value
+// do nothing if item is not visible
+// FIXME: add setBaseItemLabelFont(Font, boolean) ?
+// draw shared domain axis...
+// fill in the exceptions
+// ignoreZeroValues
+//this handles the need to perform a 'step'. // calculate the step point
+// draw the range grid lines, if any...
+// try a Double.NEGATIVE_INFINITY
+// cases 5, 6, 7 and 8
+// here we tweak the notify flag on the plot so that only // one notification happens even though we update multiple // axes...
+//create "log10"-type label
+// add the chart title, if one has been specified...
+// skip any items that don't need including...
+// hack to ensure the newly created swt fonts will be rendered with the // same height as the awt one
+// could make this configurable
+// TODO: complete this
+// capLength
+// create dataset 2...
+// then extrapolate...
+// end class wafermaprenderer
+// time zone
+// defer argument checking
+// tickLabelPaint2
+// did zero tick last iteration //no label //clear flag
+// figure out what type of axis we have and instantiate the // appropriate panel
+// TODO: implement properly
+// allocate storage for datasets, axes and renderers (all optional)
+// ensure no drawing occurs outside chart area...
+// a row of all null values is still counted...
+// check a NaN
+/// a kludge to make everything work when no rows returned
+// TODO: implement the entity for the annotation
+// first day of week is Sunday
+/* Ignore alpha-channel -> */
+// here we could probably be a little faster by searching for both // indices simultaneously, but I'll look at that later if it seems // like it matters...
+// update cached range values
+// draw start of normal range
+// go through each zoom menu item and decide whether or not to // enable it...
+// category 2
+// TODO:  this attribute should be transferred to the renderer state.
+// unused but must return something, so while we are at it...
+// TODO: URLEncode?
+// tickUnit
+// CREATE ENTITIES // FIXME:  these methods should be defined
+//tick value not between 0 & 1 //show tick label if it's the first or last in // the set, or if it's 1-5; beyond that show // fewer as the values get larger:
+// FIXME: add setSeriesItemURLGenerator(int, CategoryURLGenerator, boolean)?
+// check a null value
+// verify that baseTimeline is compatible with us
+// now overwrite group "G2"...
+// handle special case of IntervalXYDataset
+// get the data point...
+// if the axis is not visible, don't draw it...
+// polygon definitions
+// now find the text anchor point
+// try an array containing a single Number and a null
+//TODO: shift block down to bottom
+"/**     * Returns a string representing the week (e.g. ""Week 9, 2002"").     *     * TODO: look at internationalisation.     *     * @return A string representing the week.     */"
+// valueFormat
+// TODO: move to plot state
+// fill paint
+// domainAxisLocations...
+// draw the error bar for the y-interval
+// all methods are static, no need to instantiate
+// check if initial polygon needs to be clipped
+// an empty dataset should return null for bounds
+// now when the default group is mapped to, it shouldn't increase the // group count...
+// FIXME: clone generator
+// draw the item shapes
+// axis line paint...
+// Now actually plot each of the series polygons..
+// FIXME: add setSeriesOutlinePaint(int, Paint, boolean)?
+// outlineStrokeList
+"/* =========================================================== * JFreeChart : a free chart library for the Java(tm) platform * =========================================================== * * (C) Copyright 2000-2014, by Object Refinery Limited and Contributors. * * Project Info:  http://www.jfree.org/jfreechart/index.html * * This library is free software; you can redistribute it and/or modify it * under the terms of the GNU Lesser General Public License as published by * the Free Software Foundation; either version 2.1 of the License, or * (at your option) any later version. * * This library is distributed in the hope that it will be useful, but * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public * License for more details. * * You should have received a copy of the GNU Lesser General Public * License along with this library; if not, write to the Free Software * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, * USA. * * [Oracle and Java are registered trademarks of Oracle and/or its affiliates. * Other names may be trademarks of their respective owners.] * * ----------------- * CategoryPlot.java * ----------------- * (C) Copyright 2000-2014, by Object Refinery Limited and Contributors. * * Original Author:  David Gilbert (for Object Refinery Limited); * Contributor(s):   Jeremy Bowman; *                   Arnaud Lelievre; *                   Richard West, Advanced Micro Devices, Inc.; *                   Ulrich Voigt - patch 2686040; *                   Peter Kolb - patches 2603321 and 2809117; * * Changes * ------- * 21-Jun-2001 : Removed redundant JFreeChart parameter from constructors (DG); * 21-Aug-2001 : Added standard header. Fixed DOS encoding problem (DG); * 18-Sep-2001 : Updated header (DG); * 15-Oct-2001 : Data source classes moved to com.jrefinery.data.* (DG); * 22-Oct-2001 : Renamed DataSource.java --> Dataset.java etc. (DG); * 23-Oct-2001 : Changed intro and trail gaps on bar plots to use percentage of *               available space rather than a fixed number of units (DG); * 12-Dec-2001 : Changed constructors to protected (DG); * 13-Dec-2001 : Added tooltips (DG); * 16-Jan-2002 : Increased maximum intro and trail gap percents, plus added *               some argument checking code.  Thanks to Taoufik Romdhane for *               suggesting this (DG); * 05-Feb-2002 : Added accessor methods for the tooltip generator, incorporated *               alpha-transparency for Plot and subclasses (DG); * 06-Mar-2002 : Updated import statements (DG); * 14-Mar-2002 : Renamed BarPlot.java --> CategoryPlot.java, and changed code *               to use the CategoryItemRenderer interface (DG); * 22-Mar-2002 : Dropped the getCategories() method (DG); * 23-Apr-2002 : Moved the dataset from the JFreeChart class to the Plot *               class (DG); * 29-Apr-2002 : New methods to support printing values at the end of bars, *               contributed by Jeremy Bowman (DG); * 11-May-2002 : New methods for label visibility and overlaid plot support, *               contributed by Jeremy Bowman (DG); * 06-Jun-2002 : Removed the tooltip generator, this is now stored with the *               renderer.  Moved constants into the CategoryPlotConstants *               interface.  Updated Javadoc comments (DG); * 10-Jun-2002 : Overridden datasetChanged() method to update the upper and *               lower bound on the range axis (if necessary), updated *               Javadocs (DG); * 25-Jun-2002 : Removed redundant imports (DG); * 20-Aug-2002 : Changed the constructor for Marker (DG); * 28-Aug-2002 : Added listener notification to setDomainAxis() and *               setRangeAxis() (DG); * 23-Sep-2002 : Added getLegendItems() method and fixed errors reported by *               Checkstyle (DG); * 28-Oct-2002 : Changes to the CategoryDataset interface (DG); * 05-Nov-2002 : Base dataset is now TableDataset not CategoryDataset (DG); * 07-Nov-2002 : Renamed labelXXX as valueLabelXXX (DG); * 18-Nov-2002 : Added grid settings for both domain and range axis (previously *               these were set in the axes) (DG); * 19-Nov-2002 : Added axis location parameters to constructor (DG); * 17-Jan-2003 : Moved to com.jrefinery.chart.plot package (DG); * 14-Feb-2003 : Fixed bug in auto-range calculation for secondary axis (DG); * 26-Mar-2003 : Implemented Serializable (DG); * 02-May-2003 : Moved render() method up from subclasses. Added secondary *               range markers. Added an attribute to control the dataset *               rendering order.  Added a drawAnnotations() method.  Changed *               the axis location from an int to an AxisLocation (DG); * 07-May-2003 : Merged HorizontalCategoryPlot and VerticalCategoryPlot into *               this class (DG); * 02-Jun-2003 : Removed check for range axis compatibility (DG); * 04-Jul-2003 : Added a domain gridline position attribute (DG); * 21-Jul-2003 : Moved DrawingSupplier to Plot superclass (DG); * 19-Aug-2003 : Added equals() method and implemented Cloneable (DG); * 01-Sep-2003 : Fixed bug 797466 (no change event when secondary dataset *               changes) (DG); * 02-Sep-2003 : Fixed bug 795209 (wrong dataset checked in render2 method) and *               790407 (initialise method) (DG); * 08-Sep-2003 : Added internationalization via use of properties *               resourceBundle (RFE 690236) (AL); * 08-Sep-2003 : Fixed bug (wrong secondary range axis being used).  Changed *               ValueAxis API (DG); * 10-Sep-2003 : Fixed bug in setRangeAxis() method (DG); * 15-Sep-2003 : Fixed two bugs in serialization, implemented *               PublicCloneable (DG); * 23-Oct-2003 : Added event notification for changes to renderer (DG); * 26-Nov-2003 : Fixed bug (849645) in clearRangeMarkers() method (DG); * 03-Dec-2003 : Modified draw method to accept anchor (DG); * 21-Jan-2004 : Update for renamed method in ValueAxis (DG); * 10-Mar-2004 : Fixed bug in axis range calculation when secondary renderer is *               stacked (DG); * 12-May-2004 : Added fixed legend items (DG); * 19-May-2004 : Added check for null legend item from renderer (DG); * 02-Jun-2004 : Updated the DatasetRenderingOrder class (DG); * 05-Nov-2004 : Renamed getDatasetsMappedToRangeAxis() *               --> datasetsMappedToRangeAxis(), and ensured that returned *               list doesn't contain null datasets (DG); * 12-Nov-2004 : Implemented new Zoomable interface (DG); * 07-Jan-2005 : Renamed getRangeExtent() --> findRangeBounds() in *               CategoryItemRenderer (DG); * 04-May-2005 : Fixed serialization of range markers (DG); * 05-May-2005 : Updated draw() method parameters (DG); * 20-May-2005 : Added setDomainAxes() and setRangeAxes() methods, as per *               RFE 1183100 (DG); * 01-Jun-2005 : Upon deserialization, register plot as a listener with its *               axes, dataset(s) and renderer(s) - see patch 1209475 (DG); * 02-Jun-2005 : Added support for domain markers (DG); * 06-Jun-2005 : Fixed equals() method for use with GradientPaint (DG); * 09-Jun-2005 : Added setRenderers(), as per RFE 1183100 (DG); * 16-Jun-2005 : Added getDomainAxisCount() and getRangeAxisCount() methods, to *               match XYPlot (see RFE 1220495) (DG); * ------------- JFREECHART 1.0.x --------------------------------------------- * 11-Jan-2006 : Added configureRangeAxes() to rendererChanged(), since the *               renderer might influence the axis range (DG); * 27-Jan-2006 : Added various null argument checks (DG); * 18-Aug-2006 : Added getDatasetCount() method, plus a fix for bug drawing *               category labels, thanks to Adriaan Joubert (1277726) (DG); * 05-Sep-2006 : Added MarkerChangeEvent support (DG); * 30-Oct-2006 : Added getDomainAxisIndex(), datasetsMappedToDomainAxis() and *               getCategoriesForAxis() methods (DG); * 22-Nov-2006 : Fire PlotChangeEvent from setColumnRenderingOrder() and *               setRowRenderingOrder() (DG); * 29-Nov-2006 : Fix for bug 1605207 (IntervalMarker exceeds bounds of data *               area) (DG); * 26-Feb-2007 : Fix for bug 1669218 (setDomainAxisLocation() notify argument *               ignored) (DG); * 13-Mar-2007 : Added null argument checks for setRangeCrosshairPaint() and *               setRangeCrosshairStroke(), fixed clipping for *               annotations (DG); * 07-Jun-2007 : Override drawBackground() for new GradientPaint handling (DG); * 10-Jul-2007 : Added getRangeAxisIndex(ValueAxis) method (DG); * 24-Sep-2007 : Implemented new zoom methods (DG); * 25-Oct-2007 : Added some argument checks (DG); * 05-Nov-2007 : Applied patch 1823697, by Richard West, for removal of domain *               and range markers (DG); * 14-Nov-2007 : Added missing event notifications (DG); * 25-Mar-2008 : Added new methods with optional notification - see patch *               1913751 (DG); * 07-Apr-2008 : Fixed NPE in removeDomainMarker() and *               removeRangeMarker() (DG); * 23-Apr-2008 : Fixed equals() and clone() methods (DG); * 26-Jun-2008 : Fixed crosshair support (DG); * 10-Jul-2008 : Fixed outline visibility for 3D renderers (DG); * 12-Aug-2008 : Added rendererCount() method (DG); * 25-Nov-2008 : Added facility to map datasets to multiples axes (DG); * 15-Dec-2008 : Cleaned up grid drawing methods (DG); * 18-Dec-2008 : Use ResourceBundleWrapper - see patch 1607918 by *               Jess Thrysoee (DG); * 21-Jan-2009 : Added rangeMinorGridlinesVisible flag (DG); * 18-Mar-2009 : Modified anchored zoom behaviour (DG); * 19-Mar-2009 : Implemented Pannable interface - see patch 2686040 (DG); * 19-Mar-2009 : Added entity support - see patch 2603321 by Peter Kolb (DG); * 24-Jun-2009 : Implemented AnnotationChangeListener (see patch 2809117 by *               PK) (DG); * 06-Jul-2009 : Fix for cloning of renderers - see bug 2817504 (DG) * 10-Jul-2009 : Added optional drop shadow generator (DG); * 27-Sep-2011 : Fixed annotation import (DG); * 18-Oct-2011 : Fixed tooltip offset with shadow generator (DG); * 20-Nov-2011 : Initialise shadow generator as null (DG); * 02-Jul-2013 : Use ParamChecks (DG); * 12-Sep-2013 : Check for KEY_SUPPRESS_SHADOW_GENERATION rendering hint (DG); * 10-Mar-2014 : Updated Javadocs for issue #1123 (DG); * 09-Apr-2014 : Remove use of ObjectList (DG); *  */"

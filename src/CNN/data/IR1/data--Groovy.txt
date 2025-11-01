@@ -1,0 +1,498 @@
+//  GROOVY-5890
+// todo should the colon be postfixed to the label?
+//  FRICKIN' HACK!!!!! For some reason, deleting a string at offset 0   does not get done properly, so first replace and remove after parsing
+//  TODO FIX if empty, AssertionWriter fails because source text is null
+//  warning - do...while... ignored
+//  8K
+//  guards for receiver and parameter
+//  TODO: spread safe should be handled inside
+//         currently char isn't found due to a bug, so go with Object
+//  we add a package if there is none yet and the module has one. But we   do not add that if the type is a ConstructedClassWithPackage. The code in ConstructedClassWithPackage   hasPackageName() will return true if ConstructedClassWithPackage#className has no dots.   but since the prefix may have them and the code there does ignore that
+// TODO: more cases here
+//  todo: inner class nodes don't have an objectInitializers field available
+//  TODO need returnType.qualifiedTypeName() here
+//  we already had a match so we don't make a direct call at all
+//  TODO find a way to inject any GroovyLexer/GroovyRecognizer
+//  we have a duplicate class!   One possibility for this is, that we declared a script and a   class in the same file and named the class like the file
+//  order matters here!
+//  not thread safe
+//  --   --   --   - (negation)
+//  Implementation note - there are several ways for the Groovy compiler   to report an unexpected EOF. Perhaps this implementation misses some.   If you find another way, please add it.
+//  any further use of that variable can trigger uninitialized ot not final errors
+// TODO: Cater for comments?
+//  Will store already created indents.
+//  TODO refactor PIPE to be BITWISE_OR
+//  below not true for DGM#push and also co-variant return scenarios  && method.getReturnType().equals(m.getReturnType())
+//  Manually wire beans together.
+//         final Class[] argClasses = MetaClassHelper.convertToTypeArray(arguments);            unwrap(arguments);
+//  getProperty
+/*  dist binary layout:    * 0-20: interface    * 21-22: primitive dist    * 23-43: object dist    * 44-48: vargs penalty     */
+/*          * Handle empty elements like '<br/>', '<img/> or '<hr noshade="noshade"/>.          */
+//  dynamic properties
+//  swallow for strict security managers, module systems, android or others
+//  perhaps it's a meta-annotation, e.g. jqwik @Example is annotated with @Property
+/*      * TODO: Should return the URI for this source, but we can't know what it is here.     *     * @return null      */
+//     public GroovyTag[] tags(String arg0) {/*todo*/return null;}
+/*          * TODO : Enable auto ".groovy" extension replacing here!         * http://cvs.groovy.codehaus.org/viewrep/groovy/groovy/groovy-core/src/main/groovy/servlet/GroovyServlet.java?r=1.10#l259          */
+//  package local
+//  Check and ignore empty statements
+//  todo: above is not quite the spacing I would expect, but good enough for now...
+//  if the meta class call fails we may still want to fall back to call   GroovyObject#invokeMethod if the receiver is a GroovyObject
+//  TODO a better way to do this?
+// todo: these fail because regexp_literals are converted into string_literals on the antlr AST
+//  used to store type information on class nodes   in flow analysis, represents the type of the declaration node lhs   used to store inferred return type for methods and closures   used to store closure argument types on a variable expression   used to tell that a property expression refers to a readonly property   used to store the default expression for a parameter   used to store the MethodNode a MethodCallExpression should target   used to store the delegation strategy and delegate type of a closure when declared with @DelegatesTo   if the receiver is implicit but not "this", store the name of the receiver (delegate or owner)   set of private fields that are accessed from closures or inner classes   set of private fields that are set from closures or inner classes   set of private methods that are accessed from closures or inner classes   call recognized by a type checking extension as a dynamic method call   used to store the list of MOP methods that still have to be generated
+// TODO: that is just a quick prototype, not the real thing!
+//  @todo should try with just a node as the child
+//  TODO: move somewhere else
+//  we need special code for arrays to store the result (like for a[1]++)
+// FIXME the warning message will NPE with what I have :(
+// TODO: maybe use more specialized type here
+//  GROOVY-5202   there might be a non public listener of some kind   we skip that here
+//  exclusive   multi-line strings are always placed on new lines
+//  visitNullTreeLookahead     not used explicitly by parser.
+//  same class in same source
+//  text might be null and indicates no replacement text
+//  Groovy allows more characters than Character.isValidJavaIdentifier() would allow   if we find a good way to encode special chars we could remove (some of) these checks
+// TODO After 1.1 we should introspect the meta property and set editable to false if the property is read only
+//  should we throw invalid binding exception?  or fail quietly?
+//  TODO should this really be static???   cleared on build(), to be safe
+//  Convenience hack: try convert single-char strings to ints
+//  TODO GroovyDoc doesn't parse this file as our java.g doesn't handle this JDK7 syntax
+// ---------------------------------------------------------------------------   WARNING LEVELS
+//  can be replaced with a direct constructor call
+//  visitDigit ...      never created/visited
+//  initialize hints
+//  TODO: this should go away once we have proper tags
+// TODO: maybe use a different bootstrap method since no arguments are needed here
+//  FIXME no implementation?          SoftDoubleKeyMap.Entry val = (SoftDoubleKeyMap.Entry) assignableMap.getOrPut(klazz, aClass, null);
+//  todo: remove after putAt(Splice) gets deleted
+//       h i     j     k     l     m     n     o
+//  Mock methods used for testing  -------------------------------------------------------------------------
+// mv.visitInsn(ACONST_NULL);  stack.replace(OBJECT_TYPE);
+//  DO NOTHING
+// pop fb
+//  TODO make this a method to be called from TupleConstructor xform, add check for 'defaults'?
+// TODO (blackdrag): this if branch needs a rework. There should be no direct method calls be produced, the   handling of this/super could be much simplified (see visitAttributeExpression), the field accessibility check   could be moved directly into the search, which would also no longer require the GroovyBugError then   the outer class field access seems to be without any tests (if there are tests for that, then the code   here is dead code)
+//  for additional options to be passed to javac.
+//  BUG! exception in phase 'conversion' in source unit 'Script1.groovy' null   fails after parser
+//  todo: above is not quite the spacing I would expect, but good enough for now...   todo not yet implemented in parser: assertEquals("(new Outer()).super()", pretty("(new Outer()).super()"));
+//  TODO make EmptyExpression work   partially works but not if only thing in script   return EmptyExpression.INSTANCE;
+//  Test subclass of GroovyObjectSupport
+/*  ******** java.time.OffsetTime extension methods ********  */
+//  GROOVY-8914: pre-compiled classes lose synthetic boolean - TODO fix earlier as per GROOVY-4346 then remove extra check here
+//  Keep the same default source encoding with the one used by #parseClass(InputStream, String)   TODO should we use org.codehaus.groovy.control.CompilerConfiguration.DEFAULT_SOURCE_ENCODING instead?
+//  since 2.4, we can also register precompiled type checking extensions which are not scripts
+//  now lets try some methods on each item in the list
+//  Don't do this in static initializer because we may never be needed.   TODO: Put this lineSeparator property somewhere everyone can use it.
+//  and prevents from infinite loops
+//  check that first item is now SIZE
+//  the current meta class
+//  TODO below will be deleted once we fix type checker to understand   readonly Map otherwise seen as Map<String, Serializable>
+//  It's normally safe to ignore exceptions during cleanup but here if there is   a closed statement in the cache, the cache is possibly corrupted, hence log   at slightly elevated level than similar cases.
+//  if this is not a generics placeholder, first compare that types represent the same type
+//  default statement can be grouped with previous case
+//  We need @InheritConstructors from parent classes processed first   so force that order here. The transformation is benign on an already   processed node so processing twice in any order won't matter bar   a very small time penalty.
+//  create a shell
+//  compare a list shorter than the range
+// todo: doesn't parse correctly...   assertEquals("class Foo<T super C> {T t}",pretty("class Foo<T super C> {T t}"));
+//  HACK: JavaStubGenerator could have snuck in a constructor we don't want
+//  TODO: For GROOVY-2599 do we need something like below but it breaks other things              return (String) invokeMethod(arguments, "toString", EMPTY_ARGS);
+//  todo - 17 July 2006 - test fine, however this parses but causes error in AntlrParserPlugin   fails after parser
+//  TODO add generics support so this can be used for @EAHC
+// TODO Joche: replace with real implementation
+//  no processing if existing constructors found unless forced or ImmutableBase in play
+/*      * If the byte has the form 1110xxx, then it's the first byte of a six-bytes sequence character.     *     * @param b a byte.     * @return true if it's the first byte of a six-bytes sequence.      */
+//  Properties  -------------------------------------------------------------------------
+//  only descend if we have annotations to look for
+// compare
+//  stores if implicit or explicit this is used.
+// TODO: this Object[] can be constant
+//  we already visited the sub expression
+// TODO: inner classes mean a different this-type. This is ignored here!
+//  major hack here...!
+//  ignore   TODO should use a low priority logger
+//  todo need process multi
+//  TODO @Deprecated
+// return null;
+// There HAS to be a better way to do this!
+//  while anything inside a static initializer block is appended   we don't want to append in the case we have a initialization   expression of a static field. In that case we want to add   before the other statements
+//  this should always be the case, but adding a test is safer
+//  TODO: have to think about how to optimize this!
+// TODO: get the type's of the expressions to specify the   map type to Map<X> if possible.
+//  the supplied AST was null
+//  Shall we allow this ? Using Boolean ctors is usually not what user wants...
+//  todo will 'super' be allowed in non-parentheses method call styles?
+// TODO: implement int operations for this
+//  Binary expressions
+// todo we should flag this when the path is created that this is a field not a prop...   try direct method...
+//    FIXME: Use List<String> here, current version is not safe
+//  TODO : Parse pattern compile flags (literal names).
+//  the groovy.compiler.strictNames system property is experimental and may change default value or be removed in a future version of Groovy
+//  GROOVY-4043: Do this check up the hierarchy, if needed
+/*  (non-Javadoc)    * @see java.io.Writer#write(char[], int, int)     */
+//  Test class implementing GroovyObject
+//  getTarget(var) can be null in buggy xform code, e.g. Spock <= 1.1   TODO consider removing fixVar once Spock 1.2 is released - replace with informational exception?
+/*              * TODO treble equal?             return binaryExpression(Types.COMPARE_IDENTICAL, node);             case ???:             return binaryExpression(Types.LOGICAL_AND_EQUAL, node);             case ???:             return binaryExpression(Types.LOGICAL_OR_EQUAL, node);              */
+/*  *  todo: order methods alphabetically (implement compareTo enough?)  */
+/*          *  Damage must be overridden whenever the paint method is overridden         *  (The damaged area is the area the caret is painted in. We must         *  consider the area for the default caret and this caret)          */
+//  add property getter
+//  otherwise, latest position in line not part of mlr
+//  the name might be null if the method name is a GString for example
+//  and collect the name of the methods for which delegation is active
+//  don't forget to tell the class about this default constructor.
+/*  fix for GROOVY-5809  */
+//  we can't have a specialized version of call(Object...) because the dispatch logic in ClosureMetaClass   is too complex!
+//      that case is handled above already when params and args have the same length
+/*      * Compiler configuration.     * <p>     * Used to specify the debug output to print stacktraces in case something fails.     * TODO: Could probably be reused to specify the encoding of the files to load or other properties.      */
+//  fast/slow path generation
+//  todo: should this be directly handled by getPlainNodeReference?
+//  br for setting on the LocalVariableTable in the class file   these fields should probably go to jvm Operand class
+//  look if really compare
+// ----------------------------------------------------------------------
+//  only accepts AssertStatementS so that better error messages can be produced
+// TODO: if we would know exactly which paths require the exceptions        and which paths not, we can sometimes save this guard
+/*  @todo we should check if we have the property with the metaClass instead of try/catch   */
+//  todo: handle vargs!
+//  this is a limitation that must be removed in a future version   we cannot check generic type arguments if there are default parameters!
+//  TODO instead of catching Object<T> here stop it from being placed into type in first place
+//  Write out number of buckets
+/*  @todo maybe a double dispatch thing to handle new large numbers?  */
+//  TODO intern types?   TODO configureAST(...)
+// TODO: maybe implement the case localDistance==distance
+//  TODO is this needed so we can click through on default values?      @Override
+//  TODO decide if we should support VOLATILE
+//  Compute the appropriate capacity
+//  by default use GrapeIvy  TODO META-INF/services resolver?
+/*      * NOTE: as per the class javadoc, this class doesn't obey the normal equals/hashCode contract.     * The following field and method could assist some scenarios which required a similar sort of contract     * (but between equals and the custom canonicalHashCode). Currently commented out since we haven't     * found a real need. We will likely remove this commented out code if no usage is identified soon.      */
+//  @todo refactor this path
+/*  @todo we should use the real Josh Bloch algorithm here  */
+//  for example, LHS is List<ConcreteClass> and RHS is List<T> where T is a placeholder
+//  GROOVY-6337 HACK: in case newly created field is @Lazy
+//  execute fold:
+//  ignore, too bad so sad they don't follow conventions, we'll just leave the listener attached
+//  TODO: maybe define a Throwable and use it here instead of Object
+//  for MetaClassImpl we try to pick meta method,
+//  currently just for empty literals, not for e.g. Collections.emptyList() at present
+//  next entry to return   current slot
+//  todo: replace with a real fast path unary expression helper when available
+//  for each method defined in the class, generate the appropriate delegation bytecode
+// TODO: the case of a NoClassDefFoundError needs a bit more research   a simple recompilation is not possible it seems. The current class   we are searching for is there, so we should mark that somehow.   Basically the missing class needs to be completely compiled before   we can again search for the current name.
+/*      * These runners were originally included directly in GroovyShell.     * Since they are part of core they are added directly to the     * GroovyRunnerRegistry rather than via a provider configuration     * file in META-INF/services. If any of these runners are moved     * out to a submodule then they should be registered using the     * provider configuration file (see groovy-testng).     *     * These are internal classes and not meant to be referenced     * outside of the GroovyRunnerRegistry.      */
+// TODO in Groovy 2.0 use varargs?
+//  TODO: investigate the trait exclusion a bit further, needed otherwise   CallMethodOfTraitInsideClosureAndClosureParamTypeInference fails saying   not static method can't be called from a static context
+//  todo : confirm that TYPE_LOWER_BOUNDS does not have multiple children
+// TODO: optimize: add guard based on type Closure
+//  Normalise negative indices.
+/*  (non-Javadoc)     * @see groovy.lang.MetaClassRegistry.MetaClassCreationHandle#create(java.lang.Class, groovy.lang.MetaClassRegistry)      */
+//  resolve constant-looking expressions statically (do here as they get transformed away later)
+//  does this operator make any sense?
+//  todo : type inference on maps and lists, if possible
+// nothing else possible
+//  lazily initialized factory
+//  TODO should we make ProxyGenerator singleton?
+//  should we use a finer grained lock than this?
+//  Don't cache scripts
+//  not in java   not in java
+//  TODO validate args?
+//  no checks on the sun.reflect classes for reflection speed-up   in particular ConstructorAccessorImpl, MethodAccessorImpl, FieldAccessorImpl and SerializationConstructorAccessorImpl   which are generated at runtime by the JDK
+//  and understandability of this solution over more complex but efficient alternatives)
+//  ------------------------------------------------------------------------------------------   Below, you will find various helper methods aimed at simplifying algorithms for subclasses   ------------------------------------------------------------------------------------------
+//  According to http://michaelscharf.blogspot.jp/2006/11/javaneturlequals-and-hashcode-make.html, use java.net.URI instead.
+//  should always be the case, but safe guard is better
+//  cater for explicit href in e.g. @see, TODO: push this earlier?
+//  TODO: is there a better way to do this?
+/*     The basic strategy is an optimistic-style scheme based on    the guarantee that the hash table and its lists are always    kept in a consistent enough state to be read without locking:    * Read operations first proceed without locking, by traversing the       apparently correct list of the apparently correct bin. If an       entry is found, but not invalidated (value field null), it is       returned. If not found, operations must recheck (after a memory       barrier) to make sure they are using both the right list and       the right table (which can change under re-sizes). If       invalidated, reads must acquire main update lock to wait out       the update, and then re-traverse.    * All list additions are at the front of each bin, making it easy       to check changes, and also fast to traverse.  Entry next       pointers are never assigned. Remove() builds new nodes when       necessary to preserve this.    * Remove() (also clear()) invalidates removed nodes to alert read       operations that they must wait out the full modifications.   */
+//  TODO this won't strictly be true when using list expansion in argument calls
+//  create the base list of classes which have possible methods to be overloaded
+//  TODO: do we need to lock down things like: $ownClass
+//  AST transformations state data
+//  TODO: this might not do enough or too much   But it is a good start without spreading logic everywhere
+//  todo: performance would be better if we created a StringBuilder
+// TODO: These are the arguments for -p and -i.  Why are we searching using Groovy script extensions?   Where is this documented?
+//  TODO Jochen: replace with new MetaMethod
+//    HACK: For now force all classes to compile, so we pick up stub changes
+/*  Return only directories?  */
+//  package-privates
+//  TODO: is it safe to remove this? What was the original intention?
+//  try to get a better error message location based on the property
+//  TODO handle ACC_SYNTHETIC for enum method parameters?
+/*  todo these special cases should be special MetaClasses maybe  */
+//  GROOVY-8174: we'd like stricter checking here but many drivers currently in use just aren't consistent enough, so we log
+//  remove all static, private and package private methods
+// todo test newlines inside strings somehow...
+//     private Integer canonicalHashCodeCache = null;
+//  TODO handle the owner and delegate cases better for nested scenarios and potentially remove the need for the implicit this case
+//  Quick method for scalars.
+//  is method object correct type?
+//  TODO consider moving initcode to <clinit> and remaking field final
+//    FIXME: For now just save the first error, should really roll a new message with all of the details
+//  fail early with a direct message if possible')
+//  GROOVY-7316 : it is an apparently legal thing to allow this. It's not type safe,
+// TODO: apply generics on parameter[0]?                                  storeType(pexp, setter.getParameters()[0].getType());
+//  new let's strip everything up to and including the path separators
+/*  To swap two children of node t...     *     *<pre>     *   (t)     *    |     *    |     *   (a) -- (b)     *     * t.down = firstNode     * a.right = b     * b.right = null     *</pre>     * becomes     *<pre>     *   (t)     *    |     *    |     *   (b) -- (a)     *     * t.down = b     * a.right = null     * b.right = a     *</pre>     *     * todo - build API of basic tree mutations like this method.      */
+//  TODO shouldn't really be treating annotation fields as methods - remove this hack
+//  TODO: Add methods like addMetaConstructor, addMetaAttribute, addMetaAnnotation etc.
+//  TODO: delete this constant?
+//  try to find a declaration of a variable
+//  not a primitive type, so call booleanUnbox
+//  e.g. x[a] += b   to avoid loading x and a twice we transform the expression to use   ExpressionAsVariableSlot   -> subscript=a, receiver=x, receiver[subscript]+b, =, receiver[subscript]   -> subscript=a, receiver=x, receiver#getAt(subscript)#plus(b), =, receiver#putAt(subscript)   -> subscript=a, receiver=x, receiver#putAt(subscript, receiver#getAt(subscript)#plus(b))   the result of x[a] += b is x[a]+b, thus:   -> subscript=a, receiver=x, receiver#putAt(subscript, ret=receiver#getAt(subscript)#plus(b)), ret
+//  since the calling code will push the type again, we better remove it here
+//  TODO: move somewhere else GROOVY-1874
+//  tag::jsr223_imports[]
+//  Use a doPrivileged here as many different properties need to be   read, and the policy shouldn't have to list them all.
+//  TODO remove this once we support declarations in the while condition
+//  todo - possibly check for line/col with values of 0 or less...
+//  making this false helps find matches
+// TODO: more finals?
+//  Bad enough to have side effects but worse if their behavior is wonky.
+/*  (non-Javadoc)    * @see org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)     */
+//  TODO includes? excludes?
+// TODO: if rhs is VariableSlotLoader already, then skip crating a new one
+/*  here is a different implementation that uses getProperties(). I have left         * it commented out because it returns a slightly different list of properties;         * i.e. it does not return privates. I don't know what dump() really should be doing,         * although IMO showing private fields is a no-no          */
+//  add method:   PropertyChangeListener[] getPropertyChangeListeners(String name) {     return this$propertyChangeSupport.getPropertyChangeListeners(name)
+// TODO: maybe use more special type StringBuffer here
+//  TODO: should be able to remove the klazz field once 2.5 becomes the mainline release   Gradle has a cleanup mechanism in place to reflectively access this klazz field.   The klazz field is being kept for compatibility so as to not break builds that depend   on versions of Groovy after the field was changed to a WeakReference (classRef).  It   appears that Gradle only performs the cleanup when it detects a groovy version of 2.4.x,   so the klazz field and placeholder Sentinel class can likely be safely removed once   the release version bumps to 2.5 (or beyond).   See:   https://github.com/gradle/gradle/blob/711f64/subprojects/core/src/main/java/org/gradle/api/internal/classloading/LeakyOnJava7GroovySystemLoader.java#L74
+//  if no method was found, try to find a closure defined as a field of the class and run it
+//  top is not primitive so unbox   leave that BH#doCast later
+//   TODO: I (ait) don't know why these strange tricks needed and comment following as it effects some Grails tests
+//  may be we have C[k1:v1] -> should become (C)([k1:v1])
+/*          * Handle normal element like <html> ... </html>.          */
+//  TODO: change this exception type
+//  TODO: if our code can never access inspect in this way, it would be better
+//  class[]. All of that but the closure must be provided here
+//  this line should be useless, but well, just in case
+//  Funky rule so that names like 'pNAME' will still work.
+// This is an arbitrary value, picked as a reasonable choice for a rounding point
+/*                  * Handle raw new line characters.                  */
+/*      * Load a possibly filtered path. Filters are defined     * by using the * wildcard like in any shell.      */
+//  TODO remove?
+//  Create one script per socket connection.   This is purposefully not caching the Script   so that the script source file can be changed on the fly,   as each connection is made to the server.  FIXME: Groovy has other mechanisms specifically for watching to see if source code changes.   We should probably be using that here.   See also the comment about the fact we recompile a script that can't change.
+//  Opening of files and such   Lexing, parsing, and AST building   CST to AST conversion   AST semantic analysis and elucidation   AST completion   Class generation, phase 1   Class generation, phase 2   Output of class to disk   Cleanup   Synonym for full compilation
+//  TODO consider moving next two statements "up a level", i.e. have just one more widely invoked
+//  this is just a simple set field handling static and non-static, but not Closure and inner classes
+//  GROOVY-5985
+//  temporary hack
+//  remove from here and let the caller reposition it
+//  todo: the check for isWildcard should be replaced with a more complete check
+/*  (non-Javadoc)      * @see groovy.lang.GroovyObject#getProperty(java.lang.String)       */
+//  should we check interfaces as well?  if so at what level?
+// TODO: create a WriteOnlyException class?
+//  if origBoolean and withoutCustomHandle
+//  todo: this might not work correctly for absolute paths
+//  TODO don't allow override?
+//  add method:   PropertyChangeListener[] getPropertyChangeListeners() {     return this$propertyChangeSupport.getPropertyChangeListeners
+//  force no interfaces implemented
+//  copy generic type information if available
+// TODO: this method should really return some kind of meta ClassNode   representing the combination of all bounds. The code here, just picks   something out to be able to proceed and is not actually correct
+//  set up method listeners (such as attributeListener and Operation Listeners)   item -> [Map[methodListener:[target:"", tpe:"", callback:&Closure], ... ,]]
+//  TODO store this on root node? reset bodyText?
+/*  Should we make the following method private?  */
+//  ugly hack   type definition, i.e.   int[] x;
+//  TODO should we check package node doesn't already exist? conflict?
+// todo spacing is odd, c.f. last space in class vs interface above
+// TODO: in case of the array we could maybe make a partial check
+//  Since we use the data: scheme for StringReaderSources (which are fairly common)
+//  A little bit of paranoid checking here? Most drivers will throw BatchUpdateException perhaps?
+//  todo: inner class nodes don't have a constructors field available
+//  wrap arguments into an array
+//  FIXME: all labeled arguments should follow any unlabeled arguments
+//  Java2Groovy produces a slightly different tree structure (TODO fix converter or java.g instead?)
+/*  * @todo multi threaded compiling of the same class but with different roots * for compilation... T1 compiles A, which uses B, T2 compiles B... mark A and B * as parsed and then synchronize compilation. Problems: How to synchronize? * How to get error messages? *  */
+//  TODO: add more tests in here (is there a way to share snippets with SourcePrinterTest?)
+//  TODO use PackageNode instead here?
+//  hack to reformat other groovydoc block tags (@see, @return, @param, @throws, @author, @since) into html
+//  compensate for closure's time
+//  we can get actual parameters directly
+/*  ---------------- Builder --------------  */
+//  TODO could be made more efficient by using a reverse index
+//  defines the first variable index usable after
+//  we have to declare the namespace - choose a tag   If the namespace has been declared in the GPath expression use that tag
+//  TODO fix
+//  if this operation has brought in more phase ops for ast transforms, keep recording them
+//  at this point, should *always* stay empty
+//  todo is ',' deprecated now?  assertEquals("assert b == true , 99", pretty("assert b==true,99"));
+//  to extract the parameters.
+// @todo - is this useful?
+//  primitive to primitive conversion. Those case are also solved by explicitCastArguments.
+//  TODO expose this for other usage scenarios, e.g. stream based stripping?
+/*      * TODO(jwagenleitner): remove or fix in future release     *     * According to the spec getContentEncoding() returns the Content-Encoding     * HTTP Header which typically carries values such as 'gzip' or 'deflate'     * and is not the character set encoding. For compatibility in 2.4.x,     * this behavior is retained but should be removed or fixed (parse     * charset from Content-Type header) in future releases.     *     * see GROOVY-8056 and https://github.com/apache/groovy/pull/500      */
+//  TODO This is the only area where this MetaClass needs to do some interception because Groovy's current   MetaClass uses hard coded references to the java.lang.reflect.Constructor class so you can't simply   inject Constructor like you can do properties, methods and fields. When Groovy's MetaClassImpl is   refactored we can fix this
+/*  ******** java.time.OffsetDateTime extension methods ********  */
+//  TODO expose this for stream based stripping?
+/*     A better set of more complete tests of everything below is on the way!     */
+//  Set up the scripting engine
+//  TODO check specified type is assignable from declared param type?   ClassNode type = getMemberClassValue(namedParam, "type");
+//  safe to return null here because then we'll get the default provider
+//  assigned later by init()   may be changed by init()   may be changed by init()
+//  generic fallback to castToType
+//  TODO consider creating an element for this
+// TODO: report multiple missing labels of the same name only once?
+//  Get verbosity hint.
+//  incompatible assignment
+//  is method name correct?
+//  Inner classes
+// TODO: set correct type here   if setting type and a methodcall is the last expression in a method,   then the method will return null if the method itself is not void too!   (in bytecode after call: aconst_null, areturn)
+//  TODO: can STCV be made smarter to avoid this check?
+// LOGME   do we ignore it, or fail?
+// Clean up all recursive references to File objects
+//  there are three case for vargs   (1) varg part is left out (there's one less argument than there are parameters)   (2) last argument is put in the vargs array
+//  Entry was invalidated during deletion. But it could   have been re-inserted, so we must re-traverse.   To avoid useless contention, get lock to wait out modifications   before re-traversing.
+/*  never true for batchSize of 0  */
+//  For querying, ignore all errors   Warning indicates likely error   Warning indicates possible error   Warning indicates paranoia on the part of the compiler
+//  TODO implement below if/when needed
+//                     TODO: should be better check for case when only diff in modifiers can be SYNTHETIC flag                      && method.getModifiers() == aMethod.getModifiers()
+//  TODO the buffer is not read up to the end, but up to length - 6
+// TODO: don't ignore inner static classes completely
+//  hack warning! fragile! TODO find a better way
+// public static final Expression EMPTY_ARRAY = new PropertyExpression(new ClassExpression(ArgumentListExpression.class.getName()), "EMPTY_ARRAY");
+//  call closure
+// todo AntlrParserPlugin: Unexpected node type: '.' found when expecting type: an identifier   fails after parser
+//  TODO this really should find "best" match or find all matches and complain about ambiguity if more than one   TODO handle getAt with more than one parameter   TODO handle default getAt methods on Java 8 interfaces
+//  effort to get more logging in case a dependency of a class is loaded   although it shouldn't have
+//  if a positive index is accessed not initialized so far   initialization up to that index takes place
+// TODO: replace with normal String, p not needed
+//         "The method 'java.lang.Object vo()' has an incorrect modifier volatile.";
+/*  (non-Javadoc)         * @see java.lang.Object#equals(java.lang.Object)          */
+//             //TODO: test if this is OK with new MOP, should be changed!              // we don't want the exception being unwrapped if it is a IllegalArgumentException              // but in the case it is for example a IllegalThreadStateException, we want the unwrapping              // from the runtime              //Note: the reason we want unwrapping sometimes and sometimes not is that the method              // invocation tries to invoke the method with and then reacts with type transformation              // if the invocation failed here. This is OK for IllegalArgumentException, but it is              // possible that a Reflector will be used to execute the call and then an Exception from inside              // the method is not wrapped in a InvocationTargetException and we will end here.              boolean setReason = e.getClass() != IllegalArgumentException.class || this instanceof org.codehaus.groovy.reflection.GeneratedMetaMethod;              return MetaClassHelper.createExceptionText("failed to invoke method: ", this, object, argumentArray, e, setReason);          }
+// TODO: we should consider calling this one directly for MetaClassImpl,        then we save the new method selection
+//  ex: Comparable<Integer> <=> Comparable<? super T>
+//  TODO expose this for stream based scenarios?
+// TODO: change that to get the correct scope
+// TODO: get the type's of the expressions to specify the   list type to List<X> if possible.
+//  hack warning!   TODO handle , and ) when they occur within Strings
+//  lets call the closures now
+//  Write out keys and values (alternating)
+//  tag::bsf_simple[]
+//  static alias only for inner classes and must be at end of chain
+//  in groovy, methods and classes are assumed public, unless informed otherwise
+//  ---------------------------------------------------------------   feature?: allow break/continue to labeled statement from loops? (is this even right syntax, or parser bug???)
+// reload saved value
+//  unicode now contains the four hex digits   which represents our unicode character
+//  TODO: checking for isThisOrSuper is enough for AttributeExpression, but if this is moved into   visitAttributeOrProperty to handle attributes and properties equally, then the extended check should be done
+//  note: def not needed in parameter declarations, but it is valid  todo: is it ok to strip out 'def' from parameter declarations?
+//  TODO refactor to retain richer type information rather than converting to String
+//  access to a private field from a section of code that normally doesn't have access to it, like a   closure or an inner class
+//  TODO: Should we have some unified function like PrintWriter.checkError()?
+//  if there is no missing return in the finally block and the block exists   there is nothing to do
+//  RFC 2045 says that I'm allowed to take the presence of   these characters as evidence of data corruption   So I will   TODO: change this exception type
+//  itself in the list of receivers already;
+//  note: BigInteger and BigDecimal are also imported by default
+//  LEFT_SHIFT               280   RIGHT_SHIFT              281   RIGHT_SHIFT_UNSIGNED     282
+// TODO: more than one lower bound for wildcards?
+/*         * Try to locate the resource and return an opened connection to it.         */
+//  return type
+//  local inner classes do not specify the outer class name
+//  false part: load false expression and cast to S
+/*  explicit  */
+//  TODO: Shouldn't these extensions be kept elsewhere?  What about CompilerConfiguration?   This method probably shouldn't be in GroovyMain either.
+// TODO: maybe do something here?
+//  closure within inner class
+//  protected static VetoableChangeSupport this$vetoableChangeSupport = new java.beans.VetoableChangeSupport(this)
+//   Single node on list
+//  generate a field node
+//  TODO remove dupe with SimpleGroovyType
+//  After normalisation, 'from' may be greater than 'to'. In that   case, we need to reverse them and make sure the range's 'reverse'   property is correct.   TODO We should probably use DefaultGroovyMethodsSupport.subListBorders(),
+//   --------------------------------------------------------                normal method invocation
+/* @ClosureParams(value=FromString.class, options="?,Integer") */
+//  todo - the visitor doesn't always take PrintStreams as constructor params!  Could be a more reusable implementation than this...
+//  TODO: remove this visit
+//  TODO we might wanna only try to resolve the name if we are   on the left hand side of an expression or before a dot?
+//  The Great Computer Language Shootout   http://shootout.alioth.debian.org/   Fastest version under 100 LOC. Contributed by Jon Harrop, 2005
+//  compile Java and clean up
+//  register with server
+// ---------------------------------------------------------------------------   PROCESSING
+//  ensure exact matches are preferred over vargs
+//  this is a corner case, you should not   compare two class nodes if one of them is null
+//  todo windows??
+/*  (non-Javadoc)     * @see groovy.lang.MetaClass#invokeConstructor(java.lang.Object[])      */
+/*      * Represents GenericsType name     * TODO In order to distinguish GenericsType with same name(See GROOVY-8409), we should add a property to keep the declaring class.     *     * fixing GROOVY-8409 steps:     * 1) change the signature of constructor GenericsTypeName to `GenericsTypeName(String name, ClassNode declaringClass)`     * 2) try to fix all compilation errors(if `GenericsType` has declaringClass property, the step would be a bit easy to fix...)     * 3) run all tests to see whether the change breaks anything     * 4) if all tests pass, congratulations! but if some tests are broken, try to debug and find why...     *     * We should find a way to set declaring class for `GenericsType` first, it can be completed at the resolving phase.      */
+//  the interface beeing added is more specific than the one in the list, replace it
+//  TODO track Deprecated usage and give a warning?
+//  Clone all remaining nodes
+//  Apply all pending writes
+//  translate the graphics origin upwards so the area of the page we   want to print is in the origin; the clipping region auto set
+/*      * Should be called when descending into a loop that defines     * also a scope. Calls pushVariableScope and prepares labels     * for a loop structure. Creates a element for the state stack     * so pop has to be called later, TODO: @Deprecate      */
+//  Only look at things we can actually call
+//  we found multiple matching methods   this is a problem, because we can use only one   if it is a getter, then use the most general return   type to decide which method to use. If it is a setter
+//  TODO: not sure why but groovy.ui.view.BasicContentPane#buildOutputArea classDoc is null
+//  normally we would do the following   handle = MethodHandles.dropArguments(handle,0,Class.class);   but because there is a bug in invokedynamic in all jdk7 versions    maybe use Unsafe.ensureClassInitialized
+//  group 1: tag name, group 2: tag body
+/*              * Other internal error. Perhaps syntax?!              */
+/*               Currently leaving BigInteger and BigDecimal in list but see:              http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6348370              Also, Color is not final so while not normally used with child              classes, it isn't strictly immutable. Use at your own risk.              This list can by extended by providing "known immutable" classes              via Immutable.knownImmutableClasses              */
+/*  for later class resolution  */
+//  use last one if we stored a character
+//  (next, result) = [ result, next+result ]   -->   def tmp1 = result   def tmp2 = next+result   next = tmp1   result = tmp2
+//  are we a local variable?   it should not be an explicitly "this" qualified method call   and the current class should have a possible method
+//  TODO check that we reset everything here
+// TODO: This logic mostly duplicates InvokerHelper.createScript.  They should probably be unified.
+//  or a member of a class used in a 'with'
+//  receivers
+// A transposition and a casemodification
+//  we need to handle only assignment to arrays combined with an operation   special here. e.g x[a] += b
+//  We can compare here by length, because pname is always   a substring of name, so same length means they are equal.
+//  @todo - refactor pulling generic parser interface up
+//  todo - inline open block is great, but it doesn't work as one would expect (yet). (c.f. with)   slist inside a method body (needed label to distinguish from a closure)   slist inside each case body...
+// workaround for Groovy-835
+//  TODO: this method is very similar to StaticTypesCheckingSupport#extractGenericsConnections,   but operates on ClassNodes instead of GenericsType
+// more than one matching method found --> ambiguous!
+//  TODO make @CS lookup smarter so that we don't need both these maps
+// ---------------------------------------------------------------------------   MEMBER ACCESS
+/*      * NOTE: as per the class javadoc, this class doesn't obey the normal equals/hashCode contract.     * The following field and method could assist some scenarios which required a similar sort of contract     * (but between fastEquals and the custom fastHashCode). Currently commented out since we haven't     * found a real need. We will likely remove this commented out code if no usage is identified soon.      */
+/*     * create a subset of the original dataset     */
+//  GROOVY-5681: initial expressions should be visited too!
+//  GROOVY-1262
+//  we use a map in addition to the internal caching mechanism of Groovy because the latter   will always read from the URL even if it's cached
+/*          * TODO: Remove after JDK9 is the minimum JDK supported         *         * JDK9+ correctly accounts for the synthetic parameter and when it becomes         * the minimum version this method should no longer be required.          */
+// TODO: implement
+//  {@link processing hack}
+//         "The class 'DodgyClass' has an incorrect modifier synchronized.";
+//     public static Boolean putAt(boolean[] array, int idx, Boolean newValue) {          return (Boolean) primitiveArrayPut(array, idx, newValue);      }        public static Byte putAt(byte[] array, int idx, Object newValue) {
+//  method call receivers are :     - possible "with" receivers     - the actual receiver as found in the method call expression     - any of the potential receivers found in the instanceof temporary table   in that order
+//  we want to remove the BOM windows adds from a file if the encoding is UTF-8   in other cases we depend on the charsets
+//  create MIN_VALUE and MAX_VALUE fields
+//  todo: is there anything to do with the module ???
+//  search for nested class
+//  TODO also check for phase after sourceUnit.getPhase()? but will be ignored anyway?   TODO we should only copy those annotations with FIELD_TARGET but haven't visited annotations   and gathered target info at this phase, so we can't do this:   return annotation.isTargetAllowed(AnnotationNode.FIELD_TARGET);   instead just don't copy ourselves for now
+//  this is only correct in this context here, normally   we would have to compile against compareTo if available   but since we don't compile here, this one is enough
+// guard checks
+/*      * Get all properties including JavaBean pseudo properties matching JavaBean getter or setter conventions.     *     * @param type the ClassNode     * @param includeSuperProperties whether to include super properties     * @param includeStatic whether to include static properties     * @param includePseudoGetters whether to include JavaBean pseudo (getXXX/isYYY) properties with no corresponding field     * @param includePseudoSetters whether to include JavaBean pseudo (setXXX) properties with no corresponding field     * @param superFirst are properties gathered first from parent classes     * @return the list of found property nodes      */
+//  if original boolean meta class
+//  Cannot add static compilation of init method because of GROOVY-7217, see example 2 of test case  AnnotationNode an = new AnnotationNode(TraitComposer.COMPILESTATIC_CLASSNODE);  initializer.addAnnotation(an);  cNode.addTransform(StaticCompileTransformation.class, an);
+//  GROOVY-5814: Immutable is not compatible with @CompileStatic
+// TODO: remove this method if possible by switchpoint usage
+//  todo - incomplete, as body of do...while... should be executed at least once, which this doesn't provide.
+//  load this   load delegate   using InvokerHelper to allow potential intercepted calls
+//  load argument array
+//  wrong line information
+// todo the following is legal Java, but pretty strange...?   fails after parser
+/*                      * todo there is no CompileUnit in scope so class name                     * checking won't work but that mostly affects the bytecode                     * generation rather than viewing the AST                      */
+//  cast with explicit weaker generics for now to keep jdk6 happy, TODO: find better fix
+/*  The Ant project  */
+//  TODO cache these??
+//  todo suspicious spacing in the following assertion
+// ---------------------------------------------------------------------------   CONSTRUCTION AND DATA ACCESS
+// todo, the spacing here is... unusual
+// FIXME: do we really want this() to create a new object regardless   the position.. for example not as first statement in a constructor   this=first statement in constructor is handled by specialConstructorCallExpression
+//  TODO: enforce stricter behavior?   given Map.Entry is an interface, we get a proxy which gives us lots   of flexibility but sometimes the error messages might be unexpected
+//  all Blocks do know the label, so use all finally blocks
+//  case of: def foo = new HashMap<>()
+//  it's better to cache class instances by the source code   GCL will load the unique class instance for the same source code   and avoid occupying Permanent Area/Metaspace repeatedly
+//  int, Integer
+//  includes another Groovy template   includes raw content, escaped before rendering
+//  the vargs argument is missing, so fill it with an empty array
+// TODO: check if this part is actually used
+//  unbox
+//  <1>
+//  TODO IllegalArgumentException for marginChar.length() > 1 ? Or support String as marker?
+//  type conversions
+//  load array: load x and DUP [load sub, call arrayGet, load b, call operation, load sub, call arraySet]
+// TODO: need errors for write-only too!
+//  multiple assignment check
+// TODO: apply right generics here!
+//  declares the package scope   declares an external class   used in import statements to create an alias
+//  INSTANCE VARIABLES
+//  try matching against 'prefix:localname'
+//  FIXME:  What should we use as the base URI?   It is unlikely we get to this point with a relative URI since making a URL   from will make it absolute I think.  But lets handle the simple case of   using file paths and turning that into an absolute file URI.   So we will use the current working directory as the base.
+//  GROOVY-6903: May happen in some special environment, like under Android, due   to classloading issues
+//  todo : are there other import types that can be specified?
